@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mimosa's Study Kingdom</title>
+<link rel="stylesheet" href="assets/kingdom.css">
+<script src="assets/kingdom.js" defer></script>
+<style>
+  body { --c1:#4c1d95; --c2:#db2777; --c3:#f59e0b; --soft:#f5f3ff; --soft-2:#fdf2f8; }
+  .castle-hero { text-align:center; padding:40px 24px 30px;
+    background:
+      radial-gradient(circle at 15% 25%, rgba(255,255,255,.9) 0 2px, transparent 3px),
+      radial-gradient(circle at 80% 15%, rgba(255,255,255,.9) 0 2px, transparent 3px),
+      radial-gradient(circle at 65% 40%, rgba(255,255,255,.7) 0 1.5px, transparent 2.5px),
+      radial-gradient(circle at 30% 60%, rgba(255,255,255,.7) 0 1.5px, transparent 2.5px),
+      radial-gradient(circle at 90% 70%, rgba(255,255,255,.8) 0 2px, transparent 3px),
+      linear-gradient(160deg, #1e1b4b 0%, #4c1d95 45%, #db2777 100%); }
+  .castle-hero h1 { font-size:2.9rem; margin:.1em 0; }
+  .castle-hero .hero-sub { margin:0 auto; }
+  .castle-hero .hero-chips { justify-content:center; }
+  .countdown { display:inline-block; margin:18px auto 4px; background:rgba(255,255,255,.14); border:2px solid rgba(255,255,255,.35);
+    border-radius:24px; padding:12px 26px; }
+  .countdown b { display:block; font-family:var(--font-head); font-size:3.6rem; line-height:1; color:#fde68a; }
+  .countdown span { font-weight:800; letter-spacing:.05em; }
+  .start-steps .step { border-color:#db2777; }
+  .realm { border-radius:24px; overflow:hidden; background:#fff; box-shadow:var(--shadow); display:flex; flex-direction:column; }
+  .realm-head { padding:18px 20px 14px; color:#fff; position:relative; }
+  .realm-head .big { font-size:2.6rem; float:right; line-height:1; }
+  .realm-head small { color:#fff; opacity:.9; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+  .realm-head h3 { color:#fff; margin:.15em 0 .1em; font-size:1.4rem; }
+  .realm-head p { margin:0; opacity:.95; font-size:.95rem; }
+  .realm-head b { color:#fff; }
+  .realms { display:grid; grid-template-columns: repeat(2, 1fr); gap:18px; margin:14px 0; }
+  @media (max-width:760px) { .realms { grid-template-columns: 1fr; } }
+  .realm-body { padding:14px 18px 18px; flex:1; display:flex; flex-direction:column; }
+  .unit-link { display:flex; gap:10px; align-items:center; text-decoration:none; color:var(--ink); font-weight:700;
+    padding:8px 10px; border-radius:12px; margin:4px 0; background:#f9fafb; border:2px solid #f3f4f6; font-size:.95rem; }
+  .unit-link:hover { border-color:currentColor; }
+  .unit-link .u { flex:none; width:34px; height:34px; border-radius:10px; display:grid; place-items:center; color:#fff; font-family:var(--font-head); }
+  .unit-link .t { flex:1; }
+  .unit-link .h { font-size:.75rem; color:var(--ink-soft); white-space:nowrap; }
+  .unit-link.is-done { background:#fef9c3; border-color:#fde68a; }
+  .unit-link.is-done .h::after { content:" ✅"; }
+  .pyq-link { display:block; text-align:center; margin-top:10px; padding:10px; border-radius:14px; color:#fff; text-decoration:none; font-family:var(--font-head); font-size:1.05rem; }
+  .realm .meter { margin-top:10px; }
+  .legend .callout { margin:8px 0; padding:10px 14px; }
+  @media (max-width:640px) { .castle-hero h1 { font-size:2rem; } .countdown b { font-size:2.6rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="topbar">
+  <a href="index.html">🏰 Home</a>
+  <a href="00-Study-Plan/study-plan.html">🗓️ Study Plan</a>
+  <a href="#realms">📚 Subjects</a>
+  <a href="#exam">📝 Exam pattern</a>
+  <span class="spacer"></span>
+  <a href="#legend">🎨 Colour guide</a>
+</nav>
+
+<header class="hero castle-hero">
+  <div class="hero-kicker">College of Pharmacy, Anjarakandy · KUHS · B.Pharm Semester VIII (2017 scheme)</div>
+  <h1>🏰 Mimosa's Study Kingdom ✨</h1>
+  <p class="hero-sub">Four magical realms, twenty units, one very clever princess pharmacist. Everything you need for the final semester exam, in one place.</p>
+  <div class="countdown"><b data-countdown="2026-12-28">–</b><span>days until the first paper · 28 December 2026</span></div>
+  <div class="hero-chips">
+    <span class="chip">📅 <span data-today></span></span>
+    <span class="chip">📚 4 papers · 20 units</span>
+    <span class="chip">📜 Real KUHS questions 2022–2023</span>
+    <span class="chip">🪞 8 mock papers</span>
+  </div>
+</header>
+
+<section class="wish">
+  <div class="wish-to">Dear Mimosa,</div>
+  <p>Welcome to your very own kingdom! 👑 I built this so the last semester feels less like a mountain and more like a Disney movie marathon: Judy Hopps will teach you research, Baymax will take care of public health, Rapunzel will guard the herbal garden, and the Fairy Godmother will run your beauty lab.</p>
+  <p>Every unit has a story, pictures, tricks to remember, real KUHS questions with model answers, flashcards and a badge at the end. Follow the plan one day at a time, collect your golden pins, and on 28 December walk into that exam hall like a queen walking into her ball. I believe in you more than anything. 💖</p>
+  <div class="wish-hook">One day, one page, one pin at a time → B.Pharm Mimosa by the new year!</div>
+  <div class="wish-from">— with love, your biggest fan ✨</div>
+</section>
+
+<section class="section">
+  <h2><span class="num">🚀</span> Start here (3 steps)</h2>
+  <div class="flow numbered start-steps">
+    <div class="step"><span class="e">🗓️</span>Open the <a href="00-Study-Plan/study-plan.html">Study Plan</a><small>tap "📍 Jump to today"</small></div>
+    <div class="step"><span class="e">📖</span>Do today's 2 quests<small>tap the coloured tags to open the unit</small></div>
+    <div class="step"><span class="e">✅</span>Tick the boxes<small>finished days turn into golden pins</small></div>
+    <div class="step"><span class="e">🏆</span>Finish a unit?<small>press "Mark unit complete" at its end</small></div>
+  </div>
+  <p class="hand" style="text-align:center">Psst, Mimosa… your ticks are saved in this browser, so always open the files in the same browser. 😉</p>
+</section>
+
+<section id="realms">
+  <h2 style="text-align:center;font-size:2.1rem;color:#4c1d95">📚 The Four Realms</h2>
+  <div class="realms">
+
+    <!-- RMB -->
+    <article class="realm">
+      <div class="realm-head" style="background:linear-gradient(135deg,#2563eb,#f97316)">
+        <span class="big">🐰🔍</span><small>BP801T · Core paper</small>
+        <h3>Research Methodology &amp; Biostatistics</h3>
+        <p>🏙️ <b>Zootopia Detective Bureau</b>: solve cases with Judy Hopps</p>
+      </div>
+      <div class="realm-body">
+        <a class="unit-link" style="color:#2563eb" href="01-Research-Methodology-Biostatistics/unit-1.html" data-unit-status="rmb-1"><span class="u" style="background:#2563eb">1</span><span class="t">Introduction to Research</span><span class="h">10 h</span></a>
+        <a class="unit-link" style="color:#2563eb" href="01-Research-Methodology-Biostatistics/unit-2.html" data-unit-status="rmb-2"><span class="u" style="background:#2563eb">2</span><span class="t">Types of Data &amp; Data Collection</span><span class="h">6 h</span></a>
+        <a class="unit-link" style="color:#2563eb" href="01-Research-Methodology-Biostatistics/unit-3.html" data-unit-status="rmb-3"><span class="u" style="background:#2563eb">3</span><span class="t">Epidemiological Methods</span><span class="h">8 h</span></a>
+        <a class="unit-link" style="color:#2563eb" href="01-Research-Methodology-Biostatistics/unit-4.html" data-unit-status="rmb-4"><span class="u" style="background:#2563eb">4</span><span class="t">Biostatistics &amp; Sampling</span><span class="h">8 h</span></a>
+        <a class="unit-link" style="color:#2563eb" href="01-Research-Methodology-Biostatistics/unit-5.html" data-unit-status="rmb-5"><span class="u" style="background:#2563eb">5</span><span class="t">Hypothesis Testing &amp; Thesis Writing</span><span class="h">13 h</span></a>
+        <div class="meter" data-subject-meter="rmb-1,rmb-2,rmb-3,rmb-4,rmb-5"><i></i></div><small data-subject-label>0 of 5 units done</small>
+        <a class="pyq-link" style="background:linear-gradient(135deg,#2563eb,#f97316)" href="01-Research-Methodology-Biostatistics/pyq-bank.html">📜 PYQ Treasure Chest + Mock Papers</a>
+      </div>
+    </article>
+
+    <!-- SPP -->
+    <article class="realm">
+      <div class="realm-head" style="background:linear-gradient(135deg,#e11d48,#0d9488)">
+        <span class="big">🤖❤️</span><small>BP802T · Core paper</small>
+        <h3>Social &amp; Preventive Pharmacy</h3>
+        <p>🏥 <b>Baymax Health Mission</b>: your personal healthcare companion</p>
+      </div>
+      <div class="realm-body">
+        <a class="unit-link" style="color:#e11d48" href="02-Social-Preventive-Pharmacy/unit-1.html" data-unit-status="spp-1"><span class="u" style="background:#e11d48">1</span><span class="t">Concept of Health &amp; Disease</span><span class="h">10 h</span></a>
+        <a class="unit-link" style="color:#e11d48" href="02-Social-Preventive-Pharmacy/unit-2.html" data-unit-status="spp-2"><span class="u" style="background:#e11d48">2</span><span class="t">Preventive Medicine</span><span class="h">10 h</span></a>
+        <a class="unit-link" style="color:#e11d48" href="02-Social-Preventive-Pharmacy/unit-3.html" data-unit-status="spp-3"><span class="u" style="background:#e11d48">3</span><span class="t">National Health Programmes</span><span class="h">10 h</span></a>
+        <a class="unit-link" style="color:#e11d48" href="02-Social-Preventive-Pharmacy/unit-4.html" data-unit-status="spp-4"><span class="u" style="background:#e11d48">4</span><span class="t">National Health Intervention Programmes</span><span class="h">8 h</span></a>
+        <a class="unit-link" style="color:#e11d48" href="02-Social-Preventive-Pharmacy/unit-5.html" data-unit-status="spp-5"><span class="u" style="background:#e11d48">5</span><span class="t">Community Services: Rural, Urban &amp; School</span><span class="h">7 h</span></a>
+        <div class="meter" data-subject-meter="spp-1,spp-2,spp-3,spp-4,spp-5"><i></i></div><small data-subject-label>0 of 5 units done</small>
+        <a class="pyq-link" style="background:linear-gradient(135deg,#e11d48,#0d9488)" href="02-Social-Preventive-Pharmacy/pyq-bank.html">📜 PYQ Treasure Chest + Mock Papers</a>
+      </div>
+    </article>
+
+    <!-- QC -->
+    <article class="realm">
+      <div class="realm-head" style="background:linear-gradient(135deg,#7c3aed,#16a34a)">
+        <span class="big">🌼🌿</span><small>BP806ET · Elective I</small>
+        <h3>Quality Control &amp; Standardization of Herbals</h3>
+        <p>🗼 <b>Tangled Herb Garden</b>: guard Rapunzel's golden flower</p>
+      </div>
+      <div class="realm-body">
+        <a class="unit-link" style="color:#7c3aed" href="03-QC-Standardization-Herbals/unit-1.html" data-unit-status="qc-1"><span class="u" style="background:#7c3aed">1</span><span class="t">Basic Tests &amp; WHO Quality Control</span><span class="h">10 h</span></a>
+        <a class="unit-link" style="color:#7c3aed" href="03-QC-Standardization-Herbals/unit-2.html" data-unit-status="qc-2"><span class="u" style="background:#7c3aed">2</span><span class="t">QA: cGMP, GAP, GLP &amp; GACP</span><span class="h">10 h</span></a>
+        <a class="unit-link" style="color:#7c3aed" href="03-QC-Standardization-Herbals/unit-3.html" data-unit-status="qc-3"><span class="u" style="background:#7c3aed">3</span><span class="t">EU &amp; ICH Guidelines · Safety &amp; Efficacy</span><span class="h">10 h</span></a>
+        <a class="unit-link" style="color:#7c3aed" href="03-QC-Standardization-Herbals/unit-4.html" data-unit-status="qc-4"><span class="u" style="background:#7c3aed">4</span><span class="t">Stability, Chromatography &amp; Regulatory Documents</span><span class="h">8 h</span></a>
+        <a class="unit-link" style="color:#7c3aed" href="03-QC-Standardization-Herbals/unit-5.html" data-unit-status="qc-5"><span class="u" style="background:#7c3aed">5</span><span class="t">Regulations, Pharmacovigilance, Pharmacopoeias &amp; Markers</span><span class="h">7 h</span></a>
+        <div class="meter" data-subject-meter="qc-1,qc-2,qc-3,qc-4,qc-5"><i></i></div><small data-subject-label>0 of 5 units done</small>
+        <a class="pyq-link" style="background:linear-gradient(135deg,#7c3aed,#16a34a)" href="03-QC-Standardization-Herbals/pyq-bank.html">📜 PYQ Treasure Chest + Mock Papers</a>
+      </div>
+    </article>
+
+    <!-- COS -->
+    <article class="realm">
+      <div class="realm-head" style="background:linear-gradient(135deg,#db2777,#0ea5e9)">
+        <span class="big">✨👗</span><small>BP809ET · Elective II</small>
+        <h3>Cosmetic Science</h3>
+        <p>🪄 <b>Fairy Godmother's Beauty Lab</b>: formulate a little magic</p>
+      </div>
+      <div class="realm-body">
+        <a class="unit-link" style="color:#db2777" href="04-Cosmetic-Science/unit-1.html" data-unit-status="cos-1"><span class="u" style="background:#db2777">1</span><span class="t">Cosmetics, Excipients, Skin, Hair &amp; Oral Cavity</span><span class="h">10 h</span></a>
+        <a class="unit-link" style="color:#db2777" href="04-Cosmetic-Science/unit-2.html" data-unit-status="cos-2"><span class="u" style="background:#db2777">2</span><span class="t">Formulating Skin, Hair &amp; Oral Care Products</span><span class="h">10 h</span></a>
+        <a class="unit-link" style="color:#db2777" href="04-Cosmetic-Science/unit-3.html" data-unit-status="cos-3"><span class="u" style="background:#db2777">3</span><span class="t">Sun Protection, Herbs &amp; Cosmetic Analysis</span><span class="h">10 h</span></a>
+        <a class="unit-link" style="color:#db2777" href="04-Cosmetic-Science/unit-4.html" data-unit-status="cos-4"><span class="u" style="background:#db2777">4</span><span class="t">Cosmetic Evaluation Instruments</span><span class="h">7 h</span></a>
+        <a class="unit-link" style="color:#db2777" href="04-Cosmetic-Science/unit-5.html" data-unit-status="cos-5"><span class="u" style="background:#db2777">5</span><span class="t">Skin &amp; Hair Problems · Antiperspirants</span><span class="h">8 h</span></a>
+        <div class="meter" data-subject-meter="cos-1,cos-2,cos-3,cos-4,cos-5"><i></i></div><small data-subject-label>0 of 5 units done</small>
+        <a class="pyq-link" style="background:linear-gradient(135deg,#db2777,#0ea5e9)" href="04-Cosmetic-Science/pyq-bank.html">📜 PYQ Treasure Chest + Mock Papers</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="section" id="exam" style="margin-top:26px">
+  <h2><span class="num">📝</span> The KUHS Exam: know your enemy</h2>
+  <p class="lead">Checked against your official model papers and real KUHS papers from May 2022, Nov 2022, Jul 2023 and Dec 2023. Every theory paper follows the same pattern.</p>
+  <div class="grid-3">
+    <div class="card c1"><span class="card-icon">📜</span><h4>Essays · 2 × 10 = 20</h4>~25 min each · 2½–3 pages · intro → headings → diagram/table → conclusion.</div>
+    <div class="card c2"><span class="card-icon">📝</span><h4>Short notes · 7 × 5 = 35</h4>~12 min each · 1–1½ pages · definition + 5–8 points + a small diagram/table.</div>
+    <div class="card c1"><span class="card-icon">⚡</span><h4>Answer briefly · 10 × 2 = 20</h4>~3½ min each · definition + 2–4 key points or one example.</div>
+  </div>
+  <div class="timebar">
+    <div style="flex:50;background:#dc2626">Essays · 50 min</div>
+    <div style="flex:85;background:#f59e0b">Short notes · 85 min</div>
+    <div style="flex:35;background:#16a34a">Brief · 35 min</div>
+    <div style="flex:10;background:#6b7280">✔ 10</div>
+  </div>
+  <div class="grid-2">
+    <div class="callout warn"><span class="callout-title">⚠️ There is NO choice</span>KUHS says "Answer all questions". Every one of the 19 questions must be attempted, so cover the whole syllabus instead of skipping units.</div>
+    <div class="callout tip"><span class="callout-title">⭐ Marks love structure</span>Headings, underlined keywords, labelled diagrams, comparison tables. Each unit page shows you exactly how to lay out the answer.</div>
+  </div>
+  <p><small>Each theory paper is a 75-mark university exam (3 hours). Internal assessment marks are added separately by the college.</small></p>
+</section>
+
+<section class="section" id="legend">
+  <h2><span class="num">🎨</span> Colour guide: how to read every unit page</h2>
+  <div class="grid-2 legend">
+    <div class="callout def"><span class="callout-title">📘 Blue box = exam definition</span>Write these lines word for word in the exam.</div>
+    <div class="callout story"><span class="callout-title">🎬 Green box = story mode</span>The Disney scene that makes the idea click.</div>
+    <div class="callout mnemonic"><span class="callout-title">🧠 Purple box = mnemonic</span>A memory trick to recall a list in the hall.</div>
+    <div class="callout tip"><span class="callout-title">⭐ Gold box = exam tip</span>How to present it for full marks.</div>
+    <div class="callout warn"><span class="callout-title">⚠️ Red box = common mistake</span>Traps where students lose marks.</div>
+    <div class="callout pyq"><span class="callout-title">📜 Pink box = asked by KUHS</span>Real past-paper questions from this topic.</div>
+    <div class="callout example"><span class="callout-title">💊 Teal box = pharmacy example</span>Real-world pharmacy or clinical example.</div>
+    <div class="callout"><span class="callout-title" style="color:#4c1d95">🃏 Flashcards &amp; 🎯 quiz</span>Tap to flip. Say the answer aloud before you look!</div>
+  </div>
+  <p><span class="pill essay">Essay 10m</span> <span class="pill short">Short 5m</span> <span class="pill brief">Brief 2m</span> <span class="pill model">Predicted</span> <span class="stars">★★★</span> = asked often → study first</p>
+</section>
+
+<section class="section">
+  <h2><span class="num">🔎</span> What this kingdom is built from</h2>
+  <ul>
+    <li><b>Official syllabus</b> (PCI / KUHS 2017 scheme): BP801T, BP802T, BP806ET, BP809ET, from your <i>Syllabus.pdf</i>.</li>
+    <li><b>KUHS model question papers</b> for all four subjects (your WhatsApp photos).</li>
+    <li><b>Real KUHS university papers</b>: May 2022, Nov 2022, Jul 2023, Dec 2023 for RMB, SPP and Cosmetic Science. QC Herbals has no KUHS papers online, so its bank uses the KUHS model paper plus RGUHS, MGR and AKTU papers on the same PCI syllabus.</li>
+    <li><b>Your class material</b>: the Social &amp; Preventive Pharmacy textbook chapters and your teacher's herbal QC slides (WHO guidelines, NDA, export registration).</li>
+    <li><b>Standard textbooks</b> named in the syllabus (Kothari, Mahajan, Park, Kokate, Sharma, Harry's), with WHO, ICH, EMA and Government of India sources used to check facts. Where a programme or rule has been renamed recently, notes show the textbook name first plus a 🆕 update.</li>
+  </ul>
+</section>
+
+<section class="badge-unlock">
+  <span class="medal">🏰💖</span>
+  <h2>Your quest begins today</h2>
+  <p>21 October 2026 → 28 December 2026. Open the plan, do Day 1, and collect your first golden pin tonight!</p>
+  <a class="done-btn" style="display:inline-block;text-decoration:none" href="00-Study-Plan/study-plan.html">🗓️ Open my Study Plan</a>
+</section>
+
+<p class="footer-love">Made with 💖 for Mimosa · B.Pharm Final Semester · College of Pharmacy, Anjarakandy · KUHS 2017 Scheme</p>
+</div>
+</body>
+</html>

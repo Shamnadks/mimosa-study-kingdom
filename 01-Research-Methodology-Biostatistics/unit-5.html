@@ -1,0 +1,1451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RMB Unit 5 · Hypothesis Testing &amp; Thesis Writing</title>
+<link rel="stylesheet" href="../assets/kingdom.css">
+<script src="../assets/kingdom.js" defer></script>
+</head>
+<body class="theme-rmb">
+<div class="wrap">
+
+<!-- ===== 1. TOP NAV ===== -->
+<nav class="topbar">
+  <a href="../index.html">🏰 Kingdom Home</a>
+  <a href="../00-Study-Plan/study-plan.html">🗓️ Study Plan</a>
+  <a href="pyq-bank.html">📜 PYQ Bank</a>
+  <span class="spacer"></span>
+  <a href="unit-1.html">U1</a><a href="unit-2.html">U2</a><a href="unit-3.html">U3</a><a href="unit-4.html">U4</a><a href="unit-5.html">U5</a>
+</nav>
+
+<!-- ===== 2. HERO ===== -->
+<header class="hero">
+  <div class="hero-emoji">🐰⚖️</div>
+  <div class="hero-kicker">BP801T · Research Methodology &amp; Biostatistics · Unit 5 of 5</div>
+  <h1>Hypothesis Testing &amp; Thesis Writing</h1>
+  <p class="hero-sub">Officer Mimosa, every case starts with a suspect (the hypothesis) and ends with a verdict (the p-value). Then the Bureau wants a neat case report (the thesis) with honest credits (references) and no stolen evidence (plagiarism). This is the biggest, highest-scoring unit of the paper!</p>
+  <div class="hero-chips">
+    <span class="chip">⏱️ 13 syllabus hours (heaviest unit)</span>
+    <span class="chip">📜 Asked 20× in KUHS (2022–23) + 6× model paper</span>
+    <span class="chip">🔥 5 of the 8 real KUHS essays came from here</span>
+    <span class="chip">🎯 Priority: TOP</span>
+    <span class="chip">📖 ~110 min read</span>
+  </div>
+</header>
+
+<!-- ===== 3. WISH CARD ===== -->
+<section class="wish">
+  <div class="wish-to">Dear Mimosa,</div>
+  <p>Remember Chicken Little running through Oakey Oaks shouting "The sky is falling!" because an acorn bonked his head? The whole town panicked over nothing: that is a <b>Type I error</b>, a false alarm. And later, when real aliens actually showed up, nobody believed him: that is a <b>Type II error</b>, missing something real. Statistics is simply the art of not being fooled either way. You, my love, are far too clever to be fooled by any acorn. 🐥💙</p>
+  <div class="wish-hook">Chicken Little: panic over an acorn = TYPE I (α, false positive); ignoring the real aliens = TYPE II (β, false negative). Court rule: H₀ is innocent until p &lt; 0.05 proves it guilty.</div>
+  <div class="wish-from">— with love, your biggest fan ✨</div>
+</section>
+
+<!-- ===== 4. UNIT MAP ===== -->
+<section class="section">
+  <h2><span class="num">🗺️</span> Unit Map</h2>
+  <div class="map">
+    <div class="map-center">⚖️ Hypothesis Testing &amp; Thesis Writing</div>
+    <div class="branch"><span class="ico">❓</span><b>Research question</b><span>PICO, FINER</span></div>
+    <div class="branch"><span class="ico">💡</span><b>Hypothesis</b><span>Definition, types, characteristics</span></div>
+    <div class="branch"><span class="ico">🏛️</span><b>Testing of hypothesis</b><span>H₀/H₁, α, tails, critical region, df</span></div>
+    <div class="branch"><span class="ico">🪜</span><b>Procedure</b><span>7 steps from H₀ to conclusion</span></div>
+    <div class="branch"><span class="ico">🧪</span><b>Tests for significance</b><span>z, t, χ², F</span></div>
+    <div class="branch"><span class="ico">🎯</span><b>P value</b><span>Meaning &amp; interpretation</span></div>
+    <div class="branch"><span class="ico">🐥</span><b>Type I &amp; II errors</b><span>α, β, power</span></div>
+    <div class="branch"><span class="ico">🌳</span><b>Parametric vs non-parametric</b><span>Differences + which test when</span></div>
+    <div class="branch"><span class="ico">📏</span><b>Parametric tests</b><span>z, t (3 types), ANOVA, Pearson</span></div>
+    <div class="branch"><span class="ico">🔢</span><b>Non-parametric tests</b><span>χ², Mann–Whitney, Wilcoxon, Kruskal–Wallis…</span></div>
+    <div class="branch"><span class="ico">🔍</span><b>Interpretation of results</b><span>Statistical vs clinical significance</span></div>
+    <div class="branch"><span class="ico">💻</span><b>Computer software</b><span>SPSS, R, MINITAB, Excel, SAS…</span></div>
+    <div class="branch"><span class="ico">📕</span><b>Thesis components</b><span>Preliminary · main body · end matter</span></div>
+    <div class="branch"><span class="ico">🦹</span><b>Paraphrasing &amp; plagiarism</b><span>Types, UGC levels, tools</span></div>
+    <div class="branch"><span class="ico">📚</span><b>References &amp; bibliography</b><span>Differences, styles</span></div>
+    <div class="branch"><span class="ico">📰</span><b>Publication, impact factor, ethics</b><span>IF formula, COPE, ICMJE</span></div>
+  </div>
+  <p><b>Syllabus checklist</b> (tick as you finish):</p>
+  <ul class="checklist">
+    <li><label><input type="checkbox"> Research question and hypothesis; characteristics of good hypothesis</label></li>
+    <li><label><input type="checkbox"> Testing of hypothesis &amp; procedure for hypothesis testing</label></li>
+    <li><label><input type="checkbox"> Tests for significance, P value</label></li>
+    <li><label><input type="checkbox"> Type I and Type II errors</label></li>
+    <li><label><input type="checkbox"> Parametric and non-parametric tests and their applications (incl. ANOVA)</label></li>
+    <li><label><input type="checkbox"> Interpretation of results</label></li>
+    <li><label><input type="checkbox"> Computer software in biostatistical analysis</label></li>
+    <li><label><input type="checkbox"> Thesis writing: components of thesis</label></li>
+    <li><label><input type="checkbox"> Paraphrasing and plagiarism</label></li>
+    <li><label><input type="checkbox"> References and bibliography</label></li>
+    <li><label><input type="checkbox"> Research publication, impact factor and publication ethics</label></li>
+  </ul>
+  <div class="meter" data-meter=".section .checklist"><i></i></div>
+</section>
+
+<!-- ===== 5. WHAT KUHS ASKS ===== -->
+<section class="section">
+  <h2><span class="num">📜</span> What KUHS Asks From This Unit</h2>
+  <p class="lead">This unit gave KUHS <b>5 of its 8 essays</b> in 2022–23. Parametric vs non-parametric tests is the single most repeated essay of the whole subject.</p>
+  <div class="pyq-row"><div class="q">Differentiate parametric and non-parametric tests; explain any three of each / Explain various types of parametric and non-parametric tests / With examples discuss parametric and non-parametric tests.</div><span class="pill essay">Essay 10m</span><span class="pill">May 22 · Dec 23 · Model</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">What is hypothesis testing? Points to consider while formulating a hypothesis; types of statistical hypothesis; basic concepts concerning testing of hypothesis (1+2+2+5).</div><span class="pill essay">Essay 10m</span><span class="pill">Nov 22</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Describe hypothesis testing in research. Explain how computers and software are helpful in statistical analysis.</div><span class="pill essay">Essay 10m</span><span class="pill">Jul 23</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Describe various components of a thesis. Add a note on publication ethics.</div><span class="pill essay">Essay 10m</span><span class="pill">May 22</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Components of a thesis.</div><span class="pill short">Short 5m</span><span class="pill">Jul 23</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Explain the procedure involved in testing of hypothesis.</div><span class="pill short">Short 5m</span><span class="pill">Dec 23</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Describe TWO parametric tests used in context of testing hypothesis.</div><span class="pill short">Short 5m</span><span class="pill">Jul 23</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">Name various software used in biostatistics; explain features of any one / Applications of commonly used software in biostatistical analysis.</div><span class="pill short">Short 5m</span><span class="pill">Nov 22 · Model</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Write the difference between references and bibliography.</div><span class="pill short">Short 5m</span><span class="pill">May 22 (+ Model brief)</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">What are basic concepts in writing a research paper?</div><span class="pill short">Short 5m</span><span class="pill">Dec 23</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">Write briefly on publication ethics and plagiarism.</div><span class="pill short">Short 5m</span><span class="pill model">Model paper</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">Type I and Type II errors / Type II errors in research / What is Type I error in hypothesis testing?</div><span class="pill brief">Brief 2m</span><span class="pill">May 22 · Nov 22 · Dec 23 · Model</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Characteristics of good hypothesis.</div><span class="pill brief">Brief 2m</span><span class="pill">May 22</span><span class="stars">★</span></div>
+  <div class="pyq-row"><div class="q">Define hypothesis. Write their types with suitable examples.</div><span class="pill brief">Brief 2m</span><span class="pill">Jul 23</span><span class="stars">★</span></div>
+  <div class="pyq-row"><div class="q">Define analysis of variance.</div><span class="pill brief">Brief 2m</span><span class="pill">May 22</span><span class="stars">★</span></div>
+  <div class="pyq-row"><div class="q">Name some software used in biostatistics.</div><span class="pill brief">Brief 2m</span><span class="pill">May 22</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">Define plagiarism.</div><span class="pill brief">Brief 2m</span><span class="pill">Dec 23</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">Define bibliography / Difference between reference and bibliography.</div><span class="pill brief">Brief 2m</span><span class="pill">Dec 23 · Model</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">What is meant by "impact factor" in research publication?</div><span class="pill brief">Brief 2m</span><span class="pill model">Model paper</span><span class="stars">★</span></div>
+  <div class="callout tip"><span class="callout-title">⭐ Smart-study verdict</span>
+    <span class="priority must">MUST</span> Parametric vs non-parametric essay, hypothesis testing (concepts + procedure), Type I/II errors, components of thesis, references vs bibliography, software.
+    <span class="priority high">HIGH</span> Publication ethics, plagiarism, writing a research paper, ANOVA, t-test, χ².
+    <span class="priority med">MED</span> Impact factor, paraphrasing, research question (PICO/FINER), interpretation of results.</div>
+  <p class="hand">Psst, Mimosa… if you only had one evening, spend it on Sections 8–10 and the thesis section. That's 30+ marks hiding in plain sight! 🥕</p>
+</section>
+
+<!-- ===== 6. CONTENT ===== -->
+
+<!-- T1 -->
+<section class="section" id="t1">
+  <h2><span class="num">1</span> The Research Question</h2>
+  <p class="lead">Every case file at the Bureau starts with one clear question on the cover.</p>
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>Judy doesn't write "find out stuff about missing animals". She writes: "Are the missing predators in Zootopia going savage because of a toxin, compared with predators who are not missing?" Specific population, exposure, comparison and outcome. That's a researchable question!</p></div>
+  <div class="callout def"><span class="callout-title">📘 Definition</span>
+    <p>A <b>research question</b> is a clear, focused, answerable question that states exactly what the study aims to find out. It guides the design, sample, data collection and analysis, and is later converted into a testable <b>hypothesis</b>.</p></div>
+  <div class="grid-2">
+    <div class="card c1"><h4>PICO(T) framework</h4><ul>
+      <li><b>P</b>opulation / patient: adults with type-2 diabetes</li>
+      <li><b>I</b>ntervention / exposure: drug X 10 mg daily</li>
+      <li><b>C</b>omparison: metformin</li>
+      <li><b>O</b>utcome: change in HbA1c</li>
+      <li><b>T</b>ime: over 24 weeks</li></ul>
+      <p><small>"In adults with T2DM, does drug X compared with metformin reduce HbA1c more over 24 weeks?"</small></p></div>
+    <div class="card c2"><h4>FINER: a good question is…</h4><ul>
+      <li><b>F</b>easible (subjects, time, money, skills)</li>
+      <li><b>I</b>nteresting (to the investigator and field)</li>
+      <li><b>N</b>ovel (fills a research gap)</li>
+      <li><b>E</b>thical (approvable by ethics committee)</li>
+      <li><b>R</b>elevant (to science, patients, policy)</li></ul></div>
+  </div>
+  <div class="flow">
+    <div class="step"><span class="e">🧐</span>Broad topic<small>diabetes care</small></div>
+    <div class="step"><span class="e">🕳️</span>Research gap<small>from literature review</small></div>
+    <div class="step"><span class="e">❓</span>Research question<small>PICO + FINER</small></div>
+    <div class="step"><span class="e">💡</span>Hypothesis<small>H₀ and H₁</small></div>
+    <div class="step"><span class="e">🧪</span>Design &amp; test</div>
+  </div>
+</section>
+
+<!-- T2 -->
+<section class="section" id="t2">
+  <h2><span class="num">2</span> Hypothesis: Definition, Types &amp; Characteristics</h2>
+  <p class="lead">A hypothesis is the detective's suspect: a guess precise enough to be proved wrong.</p>
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>Judy's hunch: "Night-howler flowers make predators go savage." That's a <b>research hypothesis</b>. In court, Chief Bogo insists on starting from "no connection between night-howlers and savagery" (<b>null hypothesis, H₀</b>) until the evidence is overwhelming. Judy's claim becomes the <b>alternative hypothesis, H₁</b>.</p></div>
+  <div class="callout def"><span class="callout-title">📘 Exam definition</span>
+    <p>A <b>hypothesis</b> is a tentative, testable statement or proposition about the relationship between two or more variables, formulated as a provisional answer to the research question and verified by collecting and analysing data. (Kothari describes it as a proposition set forth to explain a group of facts, accepted provisionally as a basis for investigation.)</p></div>
+
+  <h3>Types of hypothesis (with examples)</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Type</th><th>Meaning</th><th>Example</th></tr>
+    <tr><td>Research / working hypothesis</td><td>The investigator's expected answer, stated in words</td><td>Probiotics reduce antibiotic-associated diarrhoea in children</td></tr>
+    <tr><td>Null hypothesis (H₀)</td><td>States <b>no difference / no relationship / no effect</b>; the hypothesis that is actually tested statistically</td><td>H₀: μ<sub>drug</sub> = μ<sub>placebo</sub> (drug X has no effect on SBP)</td></tr>
+    <tr><td>Alternative hypothesis (H₁ / Hₐ)</td><td>States that a difference/relationship <b>exists</b>; accepted when H₀ is rejected</td><td>H₁: μ<sub>drug</sub> ≠ μ<sub>placebo</sub></td></tr>
+    <tr><td>Directional (one-tailed)</td><td>Specifies the direction of the difference</td><td>Drug X lowers SBP more than placebo (μ₁ &lt; μ₂)</td></tr>
+    <tr><td>Non-directional (two-tailed)</td><td>Difference exists, direction not stated</td><td>SBP differs between drug X and placebo (μ₁ ≠ μ₂)</td></tr>
+    <tr><td>Simple</td><td>Relationship between one independent and one dependent variable</td><td>Smoking causes lung cancer</td></tr>
+    <tr><td>Complex (composite)</td><td>Two or more independent and/or dependent variables</td><td>Smoking and alcohol increase the risk of oral and liver cancer</td></tr>
+    <tr><td>Associative vs causal</td><td>Variables change together vs one causes the other</td><td>Obesity is associated with diabetes / Drug X causes weight loss</td></tr>
+    <tr><td>Statistical hypothesis</td><td>Statement about a population parameter, expressed as H₀ and H₁</td><td>H₀: π = 0.30 (30% prevalence)</td></tr>
+  </table></div>
+  <div class="callout warn"><span class="callout-title">⚠️ Common mistake</span><p>We never "prove" H₀. We either <b>reject H₀</b> or <b>fail to reject H₀</b> (not enough evidence). Like a court saying "not guilty" rather than "innocent".</p></div>
+
+  <h3>Characteristics of a good hypothesis (KUHS May 2022)</h3>
+  <div class="grid-4">
+    <div class="card"><span class="card-icon">🧪</span><h4>Testable</h4>Can be verified empirically within reasonable time.</div>
+    <div class="card"><span class="card-icon">🔎</span><h4>Clear &amp; precise</h4>Concepts defined, no ambiguity.</div>
+    <div class="card"><span class="card-icon">🎯</span><h4>Specific</h4>Limited in scope; one idea at a time.</div>
+    <div class="card"><span class="card-icon">🔗</span><h4>States a relationship</h4>Between independent and dependent variables.</div>
+    <div class="card"><span class="card-icon">📚</span><h4>Consistent</h4>With known facts and existing theory.</div>
+    <div class="card"><span class="card-icon">✏️</span><h4>Simple</h4>In plain, understandable language.</div>
+    <div class="card"><span class="card-icon">🧠</span><h4>Logical</h4>Internally consistent, based on observation/literature.</div>
+    <div class="card"><span class="card-icon">💡</span><h4>Explanatory / predictive</h4>Explains the problem and predicts outcomes; is falsifiable.</div>
+  </div>
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic: a good hypothesis is TESTABLE</span>
+    <div class="acro"><span><b>T</b>Testable</span><span><b>E</b>Empirical</span><span><b>S</b>Specific &amp; clear</span><span><b>T</b>Two-variable relation</span><span><b>A</b>Agrees with facts</span><span><b>B</b>Brief &amp; simple</span><span><b>L</b>Logical</span><span><b>E</b>Explains / predicts</span></div></div>
+
+  <h3>Points to consider while formulating a hypothesis (Nov 2022)</h3>
+  <ol>
+    <li>Start from a clearly defined research problem and a thorough literature review.</li>
+    <li>Identify the variables (independent, dependent, confounders) and define them operationally.</li>
+    <li>State the expected relationship in simple, precise and testable terms; decide directional or non-directional.</li>
+    <li>Make sure suitable methods, data and statistical tests exist to verify it within available time and resources.</li>
+    <li>Convert into statistical form: H₀ (no difference) and H₁ (difference) before collecting data.</li>
+    <li>Keep it consistent with known facts, limited in scope and ethically testable.</li>
+  </ol>
+  <p><b>Functions of a hypothesis</b>: gives direction to research, identifies relevant facts/variables, suggests the design and tests, links theory to observation, and provides a framework for conclusions.</p>
+</section>
+
+<!-- T3 -->
+<section class="section" id="t3">
+  <h2><span class="num">3</span> Testing of Hypothesis: Basic Concepts</h2>
+  <p class="lead">The statistical courtroom. These six concepts are exactly the "5 marks" of the Nov 2022 essay.</p>
+  <div class="callout story"><span class="callout-title">🎬 Story mode: the Zootopia courtroom</span>
+    <p>The accused (H₀ "no effect") is presumed innocent. Judy brings evidence (sample data). The judge sets a rule in advance: "Convict only if evidence this strong would happen less than 5 times in 100 by pure chance" (α = 0.05). Convicting an innocent animal = Type I error; letting a guilty one walk free = Type II error.</p></div>
+  <div class="callout def"><span class="callout-title">📘 Definition</span>
+    <p><b>Hypothesis testing</b> (test of significance) is a statistical procedure that uses sample data to decide whether there is enough evidence to reject a null hypothesis about a population parameter, at a pre-chosen level of significance, i.e., whether an observed difference is real or merely due to chance (sampling variation).</p></div>
+
+  <div class="grid-2">
+    <div class="card c1"><h4>1. Null &amp; alternative hypothesis</h4>H₀: no difference (μ₁ = μ₂). H₁: difference exists (μ₁ ≠ μ₂, or μ₁ &gt; μ₂). H₀ is the one tested; H₁ is accepted only when H₀ is rejected.</div>
+    <div class="card c2"><h4>2. Level of significance (α)</h4>The maximum probability of a Type I error the researcher accepts, fixed <b>before</b> the test: usually <b>5% (0.05)</b> or 1% (0.01). Confidence level = 1 − α (95%).</div>
+    <div class="card c2"><h4>3. Test statistic &amp; decision rule</h4>A value calculated from sample data (z, t, χ², F) and compared with the <b>critical value</b> from tables. Rule: if calculated |value| ≥ critical value (or p ≤ α) → reject H₀.</div>
+    <div class="card c1"><h4>4. Critical (rejection) region vs acceptance region</h4>The part of the sampling distribution where H₀ is rejected. For z at α = 0.05: beyond ±1.96 (two-tailed) or beyond +1.645 (one-tailed).</div>
+    <div class="card c1"><h4>5. One-tailed vs two-tailed test</h4>Two-tailed when H₁ is non-directional (≠): α split equally into both tails (2.5% each). One-tailed when H₁ is directional (&gt; or &lt;): all of α in one tail.</div>
+    <div class="card c2"><h4>6. Type I &amp; Type II errors, power, df, SE</h4>Type I (α): rejecting a true H₀. Type II (β): failing to reject a false H₀. Power = 1 − β. Degrees of freedom (usually n − 1). Standard error measures sampling variability of the statistic.</div>
+  </div>
+
+  <figure class="fig">
+    <svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two-tailed and one-tailed rejection regions">
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <path d="M30,190 L30,189.2 L34,188.9 L38,188.6 L42,188.2 L46,187.8 L50,187.2 L54,186.5 L58,185.7 L62,184.7 L66,183.5 L70,182.1 L74,180.5 L78,178.6 L82,176.4 L86,173.9 L90,171.1 L92,169.5 L92,190 Z" fill="#f87171"/>
+        <path d="M288,190 L288,169.5 L292,172.5 L296,175.2 L300,177.6 L304,179.6 L308,181.4 L312,182.9 L316,184.1 L320,185.2 L324,186.1 L328,186.9 L332,187.5 L336,188.0 L340,188.4 L344,188.8 L348,189.0 L350,189.2 L350,190 Z" fill="#f87171"/>
+        <path d="M30,189.2 L36,188.8 L42,188.2 L48,187.5 L54,186.5 L60,185.2 L66,183.5 L72,181.4 L78,178.6 L84,175.2 L90,171.1 L96,166.1 L102,160.2 L108,153.5 L114,145.9 L120,137.5 L126,128.3 L132,118.6 L138,108.5 L144,98.3 L150,88.3 L156,78.9 L162,70.3 L168,62.9 L174,57.0 L180,52.8 L186,50.4 L192,50.1 L198,51.8 L204,55.4 L210,60.8 L216,67.7 L222,75.9 L228,85.1 L234,94.9 L240,105.1 L246,115.2 L252,125.1 L258,134.5 L264,143.2 L270,151.1 L276,158.1 L282,164.2 L288,169.5 L294,173.9 L300,177.6 L306,180.5 L312,182.9 L318,184.7 L324,186.1 L330,187.2 L336,188.0 L342,188.6 L348,189.0 L350,189.2" fill="none" stroke="#2563eb" stroke-width="3"/>
+        <line x1="20" y1="190" x2="360" y2="190" stroke="#334155" stroke-width="2"/>
+        <line x1="92" y1="120" x2="92" y2="190" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+        <line x1="288" y1="120" x2="288" y2="190" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="190" y="160" text-anchor="middle" font-size="14" font-weight="800" fill="#1e3a8a">Acceptance region</text>
+        <text x="190" y="177" text-anchor="middle" font-size="13" fill="#1e3a8a">95%</text>
+        <text x="60" y="150" text-anchor="middle" font-size="12" font-weight="800" fill="#b91c1c">2.5%</text>
+        <text x="320" y="150" text-anchor="middle" font-size="12" font-weight="800" fill="#b91c1c">2.5%</text>
+        <text x="92" y="208" text-anchor="middle" font-size="12" font-weight="800" fill="#b91c1c">−1.96</text>
+        <text x="288" y="208" text-anchor="middle" font-size="12" font-weight="800" fill="#b91c1c">+1.96</text>
+        <text x="190" y="208" text-anchor="middle" font-size="12" fill="#334155">0</text>
+        <text x="190" y="236" text-anchor="middle" font-size="15" font-weight="800" fill="#1e3a8a">Two-tailed (H₁: μ₁ ≠ μ₂)</text>
+        <path d="M652,190 L652,153.5 L656,158.1 L660,162.3 L664,166.1 L668,169.5 L672,172.5 L676,175.2 L680,177.6 L684,179.6 L688,181.4 L692,182.9 L696,184.1 L700,185.2 L704,186.1 L708,186.9 L712,187.5 L716,188.0 L720,188.4 L724,188.8 L728,189.0 L730,189.2 L730,190 Z" fill="#f87171"/>
+        <path d="M410,189.2 L416,188.8 L422,188.2 L428,187.5 L434,186.5 L440,185.2 L446,183.5 L452,181.4 L458,178.6 L464,175.2 L470,171.1 L476,166.1 L482,160.2 L488,153.5 L494,145.9 L500,137.5 L506,128.3 L512,118.6 L518,108.5 L524,98.3 L530,88.3 L536,78.9 L542,70.3 L548,62.9 L554,57.0 L560,52.8 L566,50.4 L572,50.1 L578,51.8 L584,55.4 L590,60.8 L596,67.7 L602,75.9 L608,85.1 L614,94.9 L620,105.1 L626,115.2 L632,125.1 L638,134.5 L644,143.2 L650,151.1 L656,158.1 L662,164.2 L668,169.5 L674,173.9 L680,177.6 L686,180.5 L692,182.9 L698,184.7 L704,186.1 L710,187.2 L716,188.0 L722,188.6 L728,189.0 L730,189.2" fill="none" stroke="#f97316" stroke-width="3"/>
+        <line x1="400" y1="190" x2="740" y2="190" stroke="#334155" stroke-width="2"/>
+        <line x1="652" y1="110" x2="652" y2="190" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="568" y="160" text-anchor="middle" font-size="14" font-weight="800" fill="#9a3412">Acceptance region</text>
+        <text x="568" y="177" text-anchor="middle" font-size="13" fill="#9a3412">95%</text>
+        <text x="702" y="150" text-anchor="middle" font-size="12" font-weight="800" fill="#b91c1c">5%</text>
+        <text x="652" y="208" text-anchor="middle" font-size="12" font-weight="800" fill="#b91c1c">+1.645</text>
+        <text x="570" y="208" text-anchor="middle" font-size="12" fill="#334155">0</text>
+        <text x="570" y="236" text-anchor="middle" font-size="15" font-weight="800" fill="#9a3412">One-tailed (H₁: μ₁ &gt; μ₂)</text>
+        <text x="380" y="24" text-anchor="middle" font-size="13" font-weight="800" fill="#b91c1c">red = critical (rejection) region at α = 0.05 (z test)</text>
+      </g>
+    </svg>
+    <figcaption>Fig 5.1 — Critical regions for two-tailed and one-tailed tests. Draw this in every "basic concepts of hypothesis testing" answer.</figcaption>
+  </figure>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Critical z values</th><th>α = 0.05</th><th>α = 0.01</th></tr>
+    <tr><td>Two-tailed</td><td>±1.96</td><td>±2.58</td></tr>
+    <tr><td>One-tailed</td><td>1.645</td><td>2.33</td></tr>
+  </table></div>
+  <div class="callout def"><span class="callout-title">📘 Degrees of freedom</span><p>The number of independent values that are free to vary after certain restrictions (like a fixed mean) are imposed. One-sample/paired t: df = n − 1; unpaired t: n₁ + n₂ − 2; χ²: (r − 1)(c − 1); ANOVA: k − 1 (between) and N − k (within).</p></div>
+</section>
+
+<!-- T4 -->
+<section class="section" id="t4">
+  <h2><span class="num">4</span> Procedure for Hypothesis Testing</h2>
+  <p class="lead">Seven steps. Learn them as a staircase and you can answer any hypothesis question.</p>
+  <div class="flow vertical numbered">
+    <div class="step"><span class="e">📝</span>State H₀ and H₁<small>in words and symbols, before seeing data (e.g., H₀: μ₁ = μ₂; H₁: μ₁ ≠ μ₂)</small></div>
+    <div class="step"><span class="e">🎚️</span>Choose the level of significance α<small>usually 0.05 (or 0.01); decide one- or two-tailed</small></div>
+    <div class="step"><span class="e">🧪</span>Select the appropriate test<small>based on data type, distribution, number of groups, paired/independent, sample size (z, t, χ², F, non-parametric)</small></div>
+    <div class="step"><span class="e">🧮</span>Compute the test statistic<small>from sample data, with its degrees of freedom</small></div>
+    <div class="step"><span class="e">📖</span>Find the critical value / p-value<small>from statistical tables or software</small></div>
+    <div class="step"><span class="e">⚖️</span>Make the decision<small>|calculated| ≥ critical (or p ≤ α) → reject H₀; otherwise fail to reject H₀</small></div>
+    <div class="step"><span class="e">🗣️</span>Interpret &amp; conclude<small>in plain words, with p-value, CI and clinical meaning</small></div>
+  </div>
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic: "Happy Little Tigers Count Carrots, Deciding Carefully"</span>
+    <div class="acro"><span><b>H</b>Hypotheses</span><span><b>L</b>Level α</span><span><b>T</b>Test choice</span><span><b>C</b>Compute</span><span><b>C</b>Critical value / p</span><span><b>D</b>Decide</span><span><b>C</b>Conclude</span></div></div>
+
+  <h3>🧮 Worked example using the 7 steps (paired t-test)</h3>
+  <p>Serum digoxin (ng/mL) in 9 patients at 4 h and 8 h after a dose (practice data from question banks):</p>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Patient</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+    <tr><th>4 h</th><td>1.0</td><td>0.9</td><td>1.0</td><td>1.3</td><td>1.0</td><td>1.3</td><td>0.9</td><td>1.1</td><td>1.0</td></tr>
+    <tr><th>8 h</th><td>1.0</td><td>0.7</td><td>1.0</td><td>1.2</td><td>0.9</td><td>1.3</td><td>0.8</td><td>1.0</td><td>1.0</td></tr>
+    <tr><th>d</th><td>0</td><td>0.2</td><td>0</td><td>0.1</td><td>0.1</td><td>0</td><td>0.1</td><td>0.1</td><td>0</td></tr>
+  </table></div>
+  <ol>
+    <li><b>H₀</b>: mean difference μ<sub>d</sub> = 0 (no change in level); <b>H₁</b>: μ<sub>d</sub> ≠ 0.</li>
+    <li>α = 0.05, two-tailed.</li>
+    <li>Same patients measured twice → <b>paired t-test</b>.</li>
+    <li>Σd = 0.6 → d̄ = 0.0667; Σ(d − d̄)² = 0.04 → s<sub>d</sub> = √(0.04/8) = 0.0707; SE = 0.0707/√9 = 0.0236; <b>t = d̄/SE = 2.83</b>, df = 8.</li>
+    <li>Critical t (df 8, α 0.05 two-tailed) = <b>2.306</b>.</li>
+    <li>2.83 &gt; 2.306 → <b>reject H₀</b> (p &lt; 0.05).</li>
+    <li>The serum digoxin level fell significantly between 4 h and 8 h (mean fall 0.07 ng/mL).</li>
+  </ol>
+</section>
+
+<!-- T5 -->
+<section class="section" id="t5">
+  <h2><span class="num">5</span> Tests for Significance (overview)</h2>
+  <p class="lead">Which "lie detector" does the Bureau use? Depends on the kind of evidence.</p>
+  <div class="callout def"><span class="callout-title">📘 Definition</span><p>A <b>test of significance</b> is a statistical method used to determine whether the difference between a sample statistic and a hypothesised parameter, or between two or more sample statistics, is statistically significant (real) or due to sampling variation (chance).</p></div>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Test</th><th>Used for</th><th>Statistic</th><th>df</th></tr>
+    <tr><td>z-test</td><td>Large samples (n ≥ 30) or known σ; means or proportions</td><td>z = (x̄ − μ)/(σ/√n); two means: z = (x̄₁ − x̄₂)/√(s₁²/n₁ + s₂²/n₂)</td><td>not needed</td></tr>
+    <tr><td>One-sample t</td><td>Small sample mean vs a known value</td><td>t = (x̄ − μ)/(s/√n)</td><td>n − 1</td></tr>
+    <tr><td>Unpaired (independent) t</td><td>Means of two independent small groups</td><td>t = (x̄₁ − x̄₂) / [S<sub>p</sub> √(1/n₁ + 1/n₂)]</td><td>n₁ + n₂ − 2</td></tr>
+    <tr><td>Paired t</td><td>Before–after in same subjects / matched pairs</td><td>t = d̄ / (s<sub>d</sub>/√n)</td><td>n − 1</td></tr>
+    <tr><td>F-test / ANOVA</td><td>Equality of variances / means of 3 or more groups</td><td>F = MS<sub>between</sub>/MS<sub>within</sub></td><td>k − 1, N − k</td></tr>
+    <tr><td>Chi-square (χ²)</td><td>Frequencies of categorical data: association, goodness of fit</td><td>χ² = Σ(O − E)²/E</td><td>(r − 1)(c − 1)</td></tr>
+  </table></div>
+  <p><small>S<sub>p</sub> = pooled SD = √{[(n₁ − 1)s₁² + (n₂ − 1)s₂²]/(n₁ + n₂ − 2)}</small></p>
+</section>
+
+<!-- T6 -->
+<section class="section" id="t6">
+  <h2><span class="num">6</span> The P Value</h2>
+  <p class="lead">"How surprised should we be if the suspect were actually innocent?"</p>
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>Nick claims a coin is fair (H₀). Judy flips it 10 times and gets 10 heads. If the coin really were fair, 10 heads in a row would happen only about once in 1000 tries (p ≈ 0.001). Such a small p makes Judy doubt Nick's claim: she rejects H₀. Sly fox!</p></div>
+  <div class="callout def"><span class="callout-title">📘 Exam definition</span><p>The <b>P value</b> is the probability of obtaining a result as extreme as, or more extreme than, the one observed, assuming the null hypothesis is true. A small p value means the observed data are unlikely under H₀, giving evidence against H₀.</p></div>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>P value</th><th>Usual interpretation</th><th>Decision at α = 0.05</th></tr>
+    <tr><td>p &gt; 0.05</td><td>Not statistically significant (NS)</td><td>Fail to reject H₀</td></tr>
+    <tr><td>p ≤ 0.05</td><td>Significant (*)</td><td>Reject H₀</td></tr>
+    <tr><td>p ≤ 0.01</td><td>Highly significant (**)</td><td>Reject H₀</td></tr>
+    <tr><td>p ≤ 0.001</td><td>Very highly significant (***)</td><td>Reject H₀</td></tr>
+  </table></div>
+  <div class="grid-2">
+    <div class="card c1"><h4>✅ P value IS</h4><ul><li>A measure of evidence against H₀</li><li>Compared with α to decide</li><li>Reported exactly (p = 0.032) by software</li></ul></div>
+    <div class="card c2"><h4>❌ P value is NOT</h4><ul><li>The probability that H₀ is true</li><li>The size or importance of the effect</li><li>Proof of clinical usefulness</li><li>A guarantee that the study had no bias</li></ul></div>
+  </div>
+  <div class="callout warn"><span class="callout-title">⚠️ Statistical vs clinical significance</span><p>A huge trial may find that drug X lowers SBP by 1 mmHg with p = 0.001: statistically significant, clinically useless. Always report the <b>effect size</b> and the <b>95% confidence interval</b> along with p. If the 95% CI of a difference does not include 0 (or of a ratio does not include 1), p &lt; 0.05.</p></div>
+</section>
+
+<!-- T7 -->
+<section class="section" id="t7">
+  <h2><span class="num">7</span> Type I &amp; Type II Errors</h2>
+  <p class="lead">Asked in 4 of 5 KUHS papers. Chicken Little will make sure you never forget it.</p>
+  <div class="callout story"><span class="callout-title">🎬 Story mode: Chicken Little</span>
+    <p>An acorn hits Chicken Little and he rings the school bell: "The sky is falling!" The town panics; there was nothing (H₀ "nothing is happening" was <b>true</b>, but he rejected it) → <b>Type I error, false alarm</b>. Months later a real alien piece falls and the town refuses to listen (H₀ was <b>false</b>, but they failed to reject it) → <b>Type II error, a missed alarm</b>.</p></div>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Decision ↓ / Truth →</th><th>H₀ true (no real effect)</th><th>H₀ false (real effect exists)</th></tr>
+    <tr><td>Reject H₀</td><td>❌ <b>Type I error</b> (α), false positive 🐥 acorn panic</td><td>✅ Correct decision: <b>Power (1 − β)</b></td></tr>
+    <tr><td>Fail to reject H₀</td><td>✅ Correct decision (1 − α)</td><td>❌ <b>Type II error</b> (β), false negative 👽 aliens ignored</td></tr>
+  </table></div>
+  <div class="vs">
+    <div class="card c1"><h4>Type I error (α)</h4><ul><li>Rejecting a <b>true</b> null hypothesis</li><li>"False positive", seeing a difference that isn't there</li><li>Probability = level of significance α (0.05)</li><li>e.g., concluding an ineffective drug works → useless drug reaches patients</li><li>Reduced by choosing smaller α (0.01)</li></ul></div>
+    <div class="mid">VS</div>
+    <div class="card c2"><h4>Type II error (β)</h4><ul><li>Failing to reject a <b>false</b> null hypothesis</li><li>"False negative", missing a real difference</li><li>Probability = β (often accepted 0.1–0.2)</li><li>e.g., concluding a truly effective drug is useless → patients lose a good drug</li><li>Reduced by increasing sample size / power</li></ul></div>
+  </div>
+  <figure class="fig">
+    <svg viewBox="0 0 760 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Overlapping H0 and H1 distributions showing alpha and beta">
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <path d="M200,230 L200,229.9 L205,229.9 L210,229.9 L215,229.9 L220,229.8 L225,229.8 L230,229.7 L235,229.7 L240,229.6 L245,229.4 L250,229.3 L255,229.1 L260,228.9 L265,228.6 L270,228.2 L275,227.8 L280,227.3 L285,226.7 L290,226.0 L295,225.1 L300,224.1 L305,223.0 L310,221.6 L315,220.1 L320,218.3 L325,216.2 L330,213.9 L335,211.3 L340,208.3 L345,205.1 L350,201.5 L355,197.5 L360,193.2 L365,188.5 L370,183.5 L375,178.1 L375,230 Z" fill="#fdba74" opacity=".85"/>
+        <path d="M375,230 L375,188.5 L380,193.2 L385,197.5 L390,201.5 L395,205.1 L400,208.3 L405,211.3 L410,213.9 L415,216.2 L420,218.3 L425,220.1 L430,221.6 L435,223.0 L440,224.1 L445,225.1 L450,226.0 L455,226.7 L460,227.3 L465,227.8 L470,228.2 L475,228.6 L480,228.9 L485,229.1 L490,229.3 L495,229.4 L500,229.6 L505,229.7 L510,229.7 L515,229.8 L520,229.8 L525,229.9 L530,229.9 L535,229.9 L540,229.9 L545,230.0 L550,230.0 L555,230.0 L560,230.0 L560,230 Z" fill="#f87171" opacity=".9"/>
+        <path d="M40,228.9 L48,228.4 L56,227.7 L64,226.8 L72,225.7 L80,224.1 L88,222.2 L96,219.7 L104,216.6 L112,212.9 L120,208.3 L128,203.0 L136,196.7 L144,189.5 L152,181.3 L160,172.3 L168,162.5 L176,152.1 L184,141.3 L192,130.2 L200,119.2 L208,108.6 L216,98.7 L224,89.8 L232,82.3 L240,76.4 L248,72.3 L256,70.3 L264,70.3 L272,72.3 L280,76.4 L288,82.3 L296,89.8 L304,98.7 L312,108.6 L320,119.2 L328,130.2 L336,141.3 L344,152.1 L352,162.5 L360,172.3 L368,181.3 L376,189.5 L384,196.7 L392,203.0 L400,208.3 L408,212.9 L416,216.6 L424,219.7 L432,222.2 L440,224.1 L448,225.7 L456,226.8 L464,227.7 L472,228.4 L480,228.9 L488,229.2 L496,229.5 L504,229.6 L512,229.8 L520,229.8 L528,229.9 L536,229.9 L544,230.0 L552,230.0 L560,230.0" fill="none" stroke="#2563eb" stroke-width="3.5"/>
+        <path d="M200,229.9 L208,229.9 L216,229.9 L224,229.8 L232,229.7 L240,229.6 L248,229.3 L256,229.0 L264,228.6 L272,228.1 L280,227.3 L288,226.3 L296,224.9 L304,223.2 L312,221.0 L320,218.3 L328,214.9 L336,210.7 L344,205.8 L352,199.9 L360,193.2 L368,185.5 L376,176.9 L384,167.5 L392,157.4 L400,146.7 L408,135.7 L416,124.7 L424,113.8 L432,103.5 L440,94.1 L448,85.9 L456,79.1 L464,74.1 L472,71.0 L480,70.0 L488,71.0 L496,74.1 L504,79.1 L512,85.9 L520,94.1 L528,103.5 L536,113.8 L544,124.7 L552,135.7 L560,146.7 L568,157.4 L576,167.5 L584,176.9 L592,185.5 L600,193.2 L608,199.9 L616,205.8 L624,210.7 L632,214.9 L640,218.3 L648,221.0 L656,223.2 L664,224.9 L672,226.3 L680,227.3 L688,228.1 L696,228.6 L704,229.0 L712,229.3 L720,229.6" fill="none" stroke="#16a34a" stroke-width="3.5"/>
+        <line x1="30" y1="230" x2="740" y2="230" stroke="#334155" stroke-width="2"/>
+        <line x1="375" y1="40" x2="375" y2="240" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="7 5"/>
+        <text x="375" y="34" text-anchor="middle" font-size="13" font-weight="800" fill="#6d28d9">critical value (decision line)</text>
+        <text x="260" y="60" text-anchor="middle" font-size="15" font-weight="800" fill="#1e3a8a">H₀ true</text>
+        <text x="480" y="60" text-anchor="middle" font-size="15" font-weight="800" fill="#166534">H₁ true</text>
+        <text x="420" y="258" text-anchor="middle" font-size="13" font-weight="800" fill="#b91c1c">α = Type I 🐥</text>
+        <text x="330" y="258" text-anchor="middle" font-size="13" font-weight="800" fill="#c2410c">β = Type II 👽</text>
+        <text x="200" y="280" text-anchor="middle" font-size="12" fill="#1e3a8a">← fail to reject H₀</text>
+        <text x="560" y="280" text-anchor="middle" font-size="12" fill="#b91c1c">reject H₀ →</text>
+        <text x="560" y="120" text-anchor="start" font-size="13" font-weight="800" fill="#166534">Power = 1 − β</text>
+        <text x="560" y="136" text-anchor="start" font-size="12" fill="#166534">(area of H₁ right of the line)</text>
+      </g>
+    </svg>
+    <figcaption>Fig 5.2 — α and β on overlapping H₀ and H₁ curves. Moving the line right lowers α but raises β; only a bigger sample (narrower curves) lowers both. Draw this for a 5-mark Type I/II answer.</figcaption>
+  </figure>
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic</span><p><b>Type I = "I" see something that isn't there</b> (acorn panic). <b>Type II = "II" (too) blind to see what is there</b> (aliens ignored). Alternatively: α = <b>A</b>larm false; β = <b>B</b>lind.</p></div>
+  <div class="callout example"><span class="callout-title">💊 Pharmacy examples</span><p><b>Type I</b>: a BE study wrongly concludes a generic is bioequivalent when it is not → consumer's risk. <b>Type II</b>: a small trial fails to show that a genuinely effective antihypertensive works, and development is dropped → loss to patients and sponsor.</p></div>
+  <div class="callout tip"><span class="callout-title">⭐ Exam tip</span><p>For a 2-mark brief: definition of both + the 2×2 table + "α is the level of significance; power = 1 − β". That's full marks in 4 lines.</p></div>
+</section>
+
+<!-- T8 -->
+<section class="section" id="t8">
+  <h2><span class="num">8</span> Parametric vs Non-parametric Tests</h2>
+  <p class="lead">THE most repeated KUHS essay (May 2022, Dec 2023, model paper). Learn the table, the family tree and the decision chart.</p>
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>Judy has two kinds of evidence. Sometimes she has <b>exact measurements</b> (paw-print length in cm, nicely bell-shaped across suspects): she uses precise "parametric" tools that rely on the mean and SD. Sometimes she only has <b>rankings</b> ("Duke Weaselton looked more nervous than Flash"), or very few, lopsided observations: she switches to "non-parametric" tools that work with ranks and don't care about the bell shape.</p></div>
+  <div class="callout def"><span class="callout-title">📘 Exam definitions</span>
+    <p><b>Parametric tests</b> are tests of significance that assume the data come from a population with a specified distribution (usually normal) and test hypotheses about population <b>parameters</b> (mean, variance), using interval/ratio data. e.g., z-test, t-test, ANOVA, Pearson's r.</p>
+    <p><b>Non-parametric (distribution-free) tests</b> make no (or minimal) assumption about the population distribution; they are based on ranks, signs or frequencies and are used for ordinal/nominal data, skewed data or small samples. e.g., χ², Mann–Whitney U, Wilcoxon, Kruskal–Wallis.</p></div>
+
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Basis</th><th>Parametric tests</th><th>Non-parametric tests</th></tr>
+    <tr><td>Assumption about distribution</td><td>Normal distribution of population</td><td>Distribution-free</td></tr>
+    <tr><td>Type of data / scale</td><td>Quantitative: interval or ratio</td><td>Ordinal, nominal; also skewed quantitative</td></tr>
+    <tr><td>Measure of central tendency used</td><td>Mean</td><td>Median (ranks)</td></tr>
+    <tr><td>Information used</td><td>Actual values</td><td>Ranks, signs, frequencies</td></tr>
+    <tr><td>Other assumptions</td><td>Homogeneity of variance, independence, random sampling</td><td>Few (random, independent observations)</td></tr>
+    <tr><td>Sample size</td><td>Usually larger samples</td><td>Suitable even for very small samples</td></tr>
+    <tr><td>Effect of outliers</td><td>Strongly affected</td><td>Robust (little affected)</td></tr>
+    <tr><td>Power / efficiency</td><td>More powerful when assumptions hold</td><td>Less powerful (need more n to detect the same effect)</td></tr>
+    <tr><td>Calculation</td><td>More complex</td><td>Simple, quick</td></tr>
+    <tr><td>Examples</td><td>z-test, t-tests, ANOVA, Pearson r, F-test</td><td>χ², Mann–Whitney U, Wilcoxon signed-rank, Kruskal–Wallis, Friedman, Spearman ρ, sign test</td></tr>
+  </table></div>
+
+  <figure class="fig">
+    <svg viewBox="0 0 760 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Parametric tests and their non-parametric counterparts">
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <rect x="260" y="8" width="240" height="44" rx="16" fill="#1e3a8a"/>
+        <text x="380" y="36" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">TESTS OF SIGNIFICANCE</text>
+        <path d="M380 52 L185 78" stroke="#2563eb" stroke-width="3"/><path d="M380 52 L575 78" stroke="#f97316" stroke-width="3"/>
+        <rect x="40" y="78" width="290" height="54" rx="16" fill="#2563eb"/>
+        <text x="185" y="101" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">PARAMETRIC</text>
+        <text x="185" y="121" text-anchor="middle" font-size="12" fill="#e0e7ff">normal · interval/ratio · mean &amp; SD</text>
+        <rect x="430" y="78" width="290" height="54" rx="16" fill="#f97316"/>
+        <text x="575" y="101" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">NON-PARAMETRIC</text>
+        <text x="575" y="121" text-anchor="middle" font-size="12" fill="#fff7ed">any distribution · ordinal/nominal · ranks</text>
+        <g font-size="13" font-weight="700">
+          <rect x="40" y="150" width="290" height="40" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/><text x="185" y="175" text-anchor="middle" fill="#1e3a8a">One-sample t-test / z-test</text>
+          <rect x="430" y="150" width="290" height="40" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/><text x="575" y="175" text-anchor="middle" fill="#9a3412">Sign test / one-sample Wilcoxon</text>
+          <rect x="40" y="200" width="290" height="40" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/><text x="185" y="225" text-anchor="middle" fill="#1e3a8a">Unpaired (independent) t-test</text>
+          <rect x="430" y="200" width="290" height="40" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/><text x="575" y="225" text-anchor="middle" fill="#9a3412">Mann–Whitney U (Wilcoxon rank-sum)</text>
+          <rect x="40" y="250" width="290" height="40" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/><text x="185" y="275" text-anchor="middle" fill="#1e3a8a">Paired t-test</text>
+          <rect x="430" y="250" width="290" height="40" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/><text x="575" y="275" text-anchor="middle" fill="#9a3412">Wilcoxon signed-rank test</text>
+          <rect x="40" y="300" width="290" height="40" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/><text x="185" y="325" text-anchor="middle" fill="#1e3a8a">One-way ANOVA</text>
+          <rect x="430" y="300" width="290" height="40" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/><text x="575" y="325" text-anchor="middle" fill="#9a3412">Kruskal–Wallis H test</text>
+          <rect x="40" y="350" width="290" height="40" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/><text x="185" y="375" text-anchor="middle" fill="#1e3a8a">Repeated-measures / two-way ANOVA</text>
+          <rect x="430" y="350" width="290" height="40" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/><text x="575" y="375" text-anchor="middle" fill="#9a3412">Friedman test</text>
+          <rect x="40" y="400" width="290" height="40" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/><text x="185" y="425" text-anchor="middle" fill="#1e3a8a">Pearson's r / linear regression</text>
+          <rect x="430" y="400" width="290" height="40" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/><text x="575" y="425" text-anchor="middle" fill="#9a3412">Spearman's rank correlation ρ</text>
+          <rect x="40" y="450" width="290" height="54" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4"/><text x="185" y="474" text-anchor="middle" fill="#475569">(nominal counts have no</text><text x="185" y="492" text-anchor="middle" fill="#475569">parametric equivalent)</text>
+          <rect x="430" y="450" width="290" height="54" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/><text x="575" y="474" text-anchor="middle" fill="#9a3412">χ² test · Fisher's exact ·</text><text x="575" y="492" text-anchor="middle" fill="#9a3412">McNemar (categorical data)</text>
+        </g>
+        <g font-size="20" font-weight="800" fill="#16a34a" text-anchor="middle">
+          <text x="380" y="177">⇄</text><text x="380" y="227">⇄</text><text x="380" y="277">⇄</text><text x="380" y="327">⇄</text><text x="380" y="377">⇄</text><text x="380" y="427">⇄</text>
+        </g>
+        <text x="380" y="146" text-anchor="middle" font-size="11" font-weight="800" fill="#166534">counterpart</text>
+      </g>
+    </svg>
+    <figcaption>Fig 5.3 — The family tree: each parametric test and its non-parametric "twin". Draw this in the parametric vs non-parametric essay; it earns the diagram marks.</figcaption>
+  </figure>
+
+  <h3>Which test when? (decision chart)</h3>
+  <figure class="fig">
+    <svg viewBox="0 0 780 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision chart for choosing a statistical test">
+      <defs><marker id="u5f4-arr" viewBox="0 0 10 10" markerWidth="4" markerHeight="4" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1e3a8a"/></marker></defs>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <rect x="230" y="8" width="320" height="44" rx="16" fill="#1e3a8a"/>
+        <text x="390" y="36" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">What kind of OUTCOME data?</text>
+        <path d="M390 52 L130 88" stroke="#1e3a8a" stroke-width="3" marker-end="url(#u5f4-arr)"/>
+        <path d="M390 52 L390 88" stroke="#1e3a8a" stroke-width="3" marker-end="url(#u5f4-arr)"/>
+        <path d="M390 52 L650 88" stroke="#1e3a8a" stroke-width="3" marker-end="url(#u5f4-arr)"/>
+        <rect x="15" y="92" width="230" height="50" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+        <text x="130" y="113" text-anchor="middle" font-size="14" font-weight="800" fill="#166534">🏷️ Categorical</text>
+        <text x="130" y="131" text-anchor="middle" font-size="12" fill="#166534">nominal counts / proportions</text>
+        <rect x="275" y="92" width="230" height="50" rx="14" fill="#ffedd5" stroke="#f97316" stroke-width="2.5"/>
+        <text x="390" y="113" text-anchor="middle" font-size="14" font-weight="800" fill="#9a3412">📶 Ordinal / skewed</text>
+        <text x="390" y="131" text-anchor="middle" font-size="12" fill="#9a3412">or very small n → NON-PARAMETRIC</text>
+        <rect x="535" y="92" width="230" height="50" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+        <text x="650" y="113" text-anchor="middle" font-size="14" font-weight="800" fill="#1e3a8a">📏 Continuous &amp; normal</text>
+        <text x="650" y="131" text-anchor="middle" font-size="12" fill="#1e3a8a">→ PARAMETRIC</text>
+        <g font-size="12.5" font-weight="700">
+          <rect x="15" y="160" width="230" height="58" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+          <text x="130" y="184" text-anchor="middle" fill="#166534">χ² test of association</text>
+          <text x="130" y="202" text-anchor="middle" fill="#166534">or goodness of fit</text>
+          <rect x="15" y="228" width="230" height="58" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+          <text x="130" y="252" text-anchor="middle" fill="#166534">expected count &lt; 5 →</text>
+          <text x="130" y="270" text-anchor="middle" fill="#166534">Fisher's exact test</text>
+          <rect x="15" y="296" width="230" height="58" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+          <text x="130" y="320" text-anchor="middle" fill="#166534">paired yes/no (before–after)</text>
+          <text x="130" y="338" text-anchor="middle" fill="#166534">→ McNemar test</text>
+          <rect x="275" y="160" width="230" height="40" rx="12" fill="#fff" stroke="#f97316" stroke-width="2"/><text x="390" y="185" text-anchor="middle" fill="#9a3412">2 independent → Mann–Whitney U</text>
+          <rect x="275" y="208" width="230" height="40" rx="12" fill="#fff" stroke="#f97316" stroke-width="2"/><text x="390" y="233" text-anchor="middle" fill="#9a3412">2 paired → Wilcoxon signed-rank</text>
+          <rect x="275" y="256" width="230" height="40" rx="12" fill="#fff" stroke="#f97316" stroke-width="2"/><text x="390" y="281" text-anchor="middle" fill="#9a3412">≥3 independent → Kruskal–Wallis</text>
+          <rect x="275" y="304" width="230" height="40" rx="12" fill="#fff" stroke="#f97316" stroke-width="2"/><text x="390" y="329" text-anchor="middle" fill="#9a3412">≥3 related → Friedman</text>
+          <rect x="275" y="352" width="230" height="40" rx="12" fill="#fff" stroke="#f97316" stroke-width="2"/><text x="390" y="377" text-anchor="middle" fill="#9a3412">association → Spearman ρ</text>
+          <rect x="535" y="160" width="230" height="40" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2"/><text x="650" y="185" text-anchor="middle" fill="#1e3a8a">1 sample vs μ → one-sample t / z</text>
+          <rect x="535" y="208" width="230" height="40" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2"/><text x="650" y="233" text-anchor="middle" fill="#1e3a8a">2 independent → unpaired t</text>
+          <rect x="535" y="256" width="230" height="40" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2"/><text x="650" y="281" text-anchor="middle" fill="#1e3a8a">2 paired → paired t</text>
+          <rect x="535" y="304" width="230" height="40" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2"/><text x="650" y="329" text-anchor="middle" fill="#1e3a8a">≥3 groups → ANOVA + post-hoc</text>
+          <rect x="535" y="352" width="230" height="40" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2"/><text x="650" y="377" text-anchor="middle" fill="#1e3a8a">relationship → Pearson r / regression</text>
+        </g>
+        <text x="390" y="412" text-anchor="middle" font-size="12" fill="#475569">Large samples (n ≥ 30) with known σ: z-test for means or proportions</text>
+      </g>
+    </svg>
+    <figcaption>Fig 5.4 — "Which test when" decision chart. Perfect for the "applications" part of any tests answer.</figcaption>
+  </figure>
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic: the twins</span>
+    <p><b>Mann</b>–Whitney goes out with the <b>un</b>paired t · <b>Wil</b>coxon <b>signed</b>-rank is <b>paired</b> · <b>K</b>ruskal–Wallis is <b>ANOVA's K</b>id · <b>F</b>riedman <b>F</b>ollows the same subjects (repeated measures) · <b>S</b>pearman <b>S</b>hadows Pearson.</p></div>
+  <div class="callout warn"><span class="callout-title">⚠️ Common mistake</span><p>Wilcoxon <b>rank-sum</b> (= Mann–Whitney, independent groups) and Wilcoxon <b>signed-rank</b> (paired data) are different tests. Also, χ² is applied to <b>frequencies</b> (counts), never to percentages or means.</p></div>
+</section>
+
+<!-- T9 -->
+<section class="section" id="t9">
+  <h2><span class="num">9</span> Parametric Tests &amp; Their Applications</h2>
+  <p class="lead">z, t, ANOVA, F and Pearson: the precision tools.</p>
+
+  <h3>A. z-test (standard normal deviate test)</h3>
+  <ul>
+    <li><b>When</b>: large samples (n ≥ 30) or population SD known; data approximately normal.</li>
+    <li><b>Uses</b>: sample mean vs population mean; difference between two means; difference between two proportions.</li>
+    <li>z = (x̄ − μ)/(σ/√n); for two proportions z = (p₁ − p₂)/√[pq(1/n₁ + 1/n₂)].</li>
+    <li>Reject H₀ if |z| ≥ 1.96 (5%) or 2.58 (1%).</li>
+    <li><b>Example</b>: comparing mean haemoglobin of 100 pregnant women with a standard value; comparing cure rates of two antibiotics in 200 patients each.</li>
+  </ul>
+
+  <h3>B. Student's t-test</h3>
+  <div class="callout def"><span class="callout-title">📘 Definition</span><p>The <b>t-test</b> is a parametric test used to compare means when the sample is small (usually n &lt; 30) and the population SD is unknown. It was described in 1908 by W. S. Gosset, who published under the pen-name "Student". The test statistic follows the t-distribution with specific degrees of freedom.</p></div>
+  <p><b>Assumptions</b>: random sampling; data from a normally distributed population; interval/ratio scale; independent observations; equal variances in the two groups (for unpaired t; otherwise Welch's correction).</p>
+  <div class="grid-3">
+    <div class="card c1"><h4>1. One-sample t</h4><div class="formula" style="font-size:1rem">t = (x̄ − μ)/(s/√n), df = n − 1</div>Mean content of 10 tablets vs label claim 500 mg.</div>
+    <div class="card c1"><h4>2. Unpaired (independent) t</h4><div class="formula" style="font-size:1rem">t = (x̄₁ − x̄₂)/[S<sub>p</sub>√(1/n₁ + 1/n₂)], df = n₁ + n₂ − 2</div>Drug group vs placebo group; batch A vs batch B dissolution.</div>
+    <div class="card c1"><h4>3. Paired t</h4><div class="formula" style="font-size:1rem">t = d̄/(s<sub>d</sub>/√n), df = n − 1</div>BP before vs after treatment in the same patients; crossover BA studies.</div>
+  </div>
+  <details class="more"><summary>🧮 Mini worked example: unpaired t-test (tablet hardness, kg/cm²)</summary><div>
+    <p>Formulation A: 5, 6, 7 (mean 6, s₁² = 1). Formulation B: 8, 9, 10 (mean 9, s₂² = 1).</p>
+    <p>S<sub>p</sub> = √{[(2 × 1) + (2 × 1)]/4} = 1. t = (9 − 6)/[1 × √(1/3 + 1/3)] = 3/0.816 = <b>3.67</b>, df = 4.</p>
+    <p>Critical t (df 4, 0.05 two-tailed) = 2.776 → 3.67 &gt; 2.776 → reject H₀: hardness differs significantly. (Practice numbers.)</p>
+    <p>The paired t example (digoxin, t = 2.83) is solved step by step in Section 4.</p></div></details>
+  <p><b>Applications in pharmacy</b>: comparing efficacy of drug vs placebo; before–after studies; comparing two formulations, two analytical methods or two batches; bioavailability comparisons; animal pharmacology (treated vs control).</p>
+
+  <h3>C. Analysis of variance (ANOVA)</h3>
+  <div class="callout def"><span class="callout-title">📘 Definition (KUHS May 2022 brief)</span><p><b>Analysis of variance (ANOVA)</b> is a parametric statistical technique, developed by R. A. Fisher, that tests whether the means of <b>three or more groups</b> differ significantly by partitioning the total variation in the data into variation <b>between</b> groups and variation <b>within</b> groups, and comparing them by the F ratio: F = MS<sub>between</sub> / MS<sub>within</sub>.</p></div>
+  <div class="grid-2">
+    <div class="card c1"><h4>Types</h4><ul><li><b>One-way ANOVA</b>: one factor (e.g., 3 binders → disintegration time)</li><li><b>Two-way ANOVA</b>: two factors and their interaction (binder × compression force)</li><li><b>Repeated-measures ANOVA</b>: same subjects measured several times</li></ul></div>
+    <div class="card c2"><h4>Assumptions</h4><ul><li>Normal distribution within each group</li><li>Homogeneity of variances (homoscedasticity)</li><li>Independent, random observations</li><li>Interval/ratio dependent variable</li></ul></div>
+  </div>
+  <p><b>Why not several t-tests?</b> With 3 groups you'd need 3 t-tests; the chance of at least one false positive rises to 1 − 0.95³ ≈ <b>14%</b> instead of 5%. ANOVA keeps the overall α at 5%. If F is significant, a <b>post-hoc test</b> (Tukey's HSD, Bonferroni, Dunnett's vs control, Scheffé) shows which pairs differ.</p>
+  <h4>🧮 Worked one-way ANOVA (disintegration time in min, practice numbers)</h4>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Binder</th><th>Values</th><th>Group mean</th><th>Σ(x − group mean)²</th></tr>
+    <tr><td>A (starch)</td><td>4, 5, 6</td><td>5</td><td>2</td></tr>
+    <tr><td>B (PVP)</td><td>6, 7, 8</td><td>7</td><td>2</td></tr>
+    <tr><td>C (gelatin)</td><td>9, 10, 11</td><td>10</td><td>2</td></tr>
+  </table></div>
+  <p>Grand mean = 66/9 = 7.33. SS<sub>between</sub> = 3[(5 − 7.33)² + (7 − 7.33)² + (10 − 7.33)²] = 3(5.44 + 0.11 + 7.11) = <b>38</b>. SS<sub>within</sub> = 2 + 2 + 2 = <b>6</b>. SS<sub>total</sub> = 44.</p>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Source</th><th>SS</th><th>df</th><th>MS = SS/df</th><th>F</th></tr>
+    <tr><td>Between groups</td><td>38</td><td>k − 1 = 2</td><td>19</td><td><b>F = 19/1 = 19</b></td></tr>
+    <tr><td>Within groups (error)</td><td>6</td><td>N − k = 6</td><td>1</td><td></td></tr>
+    <tr><td>Total</td><td>44</td><td>N − 1 = 8</td><td></td><td></td></tr>
+  </table></div>
+  <p>Critical F(2, 6) at 0.05 = 5.14. Since 19 &gt; 5.14 → reject H₀: at least one binder gives a different mean disintegration time (post-hoc tests would then locate it; clearly C).</p>
+  <p><b>Applications</b>: comparing ≥3 formulations, doses or treatment groups; dose–response in animals; analytical method validation (inter-day/inter-analyst variation); factorial designs in formulation optimisation; stability (batch poolability).</p>
+
+  <h3>D. Pearson's correlation coefficient &amp; regression</h3>
+  <p>Tests linear association between two normally distributed continuous variables (r from −1 to +1). Significance of r: t = r√(n − 2)/√(1 − r²), df = n − 2. Regression Y = a + bX predicts Y from X (see <a href="unit-4.html#t7">Unit 4, Section 7</a>). <b>Applications</b>: calibration curves, PK parameter estimation, shelf-life prediction, IVIVC.</p>
+  <h3>E. F-test for equality of variances</h3>
+  <p>F = larger variance / smaller variance (s₁²/s₂²), df (n₁ − 1, n₂ − 1). Used to check the equal-variance assumption before an unpaired t-test, and to compare the precision of two analytical methods.</p>
+  <p class="hand">Psst, Mimosa… t-test for TWO groups, ANOVA for THREE or more. Judy needs one partner; a whole precinct needs Chief Bogo! 🐃</p>
+</section>
+
+<!-- T10 -->
+<section class="section" id="t10">
+  <h2><span class="num">10</span> Non-parametric Tests &amp; Their Applications</h2>
+  <p class="lead">Rank-and-count tools for when the bell curve fails.</p>
+
+  <h3>A. Chi-square (χ²) test</h3>
+  <div class="callout def"><span class="callout-title">📘 Definition</span><p>The <b>chi-square test</b> (Karl Pearson, 1900) is a non-parametric test that compares <b>observed frequencies (O)</b> with <b>expected frequencies (E)</b> (expected if H₀ were true) to test association between categorical variables or the goodness of fit of data to a distribution. χ² = Σ(O − E)²/E; df = (r − 1)(c − 1).</p></div>
+  <div class="grid-3">
+    <div class="card"><h4>Uses</h4><ul><li><b>Test of independence/association</b> (smoking vs cancer)</li><li><b>Goodness of fit</b> (do observed counts fit an expected ratio?)</li><li><b>Test of homogeneity</b> (same proportion in several groups)</li></ul></div>
+    <div class="card"><h4>Conditions</h4><ul><li>Random sample, independent observations</li><li>Data as frequencies (not %)</li><li>Expected frequency ≥ 5 in each cell (else Fisher's exact; Yates' correction for small 2×2)</li><li>Total N reasonably large</li></ul></div>
+    <div class="card"><h4>2×2 short-cut</h4><div class="formula" style="font-size:1rem">χ² = N(ad − bc)² / [(a+b)(c+d)(a+c)(b+d)]</div></div>
+  </div>
+  <h4>🧮 Worked example: does the night-howler antidote work? (practice numbers)</h4>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Group</th><th>Recovered</th><th>Not recovered</th><th>Total</th></tr>
+    <tr><td>Antidote</td><td>30 (E 24)</td><td>10 (E 16)</td><td>40</td></tr>
+    <tr><td>Placebo</td><td>18 (E 24)</td><td>22 (E 16)</td><td>40</td></tr>
+    <tr><td>Total</td><td>48</td><td>32</td><td>80</td></tr>
+  </table></div>
+  <p>E = (row total × column total)/N, e.g., 40 × 48/80 = 24. χ² = (30 − 24)²/24 + (10 − 16)²/16 + (18 − 24)²/24 + (22 − 16)²/16 = 1.5 + 2.25 + 1.5 + 2.25 = <b>7.5</b>; df = (2 − 1)(2 − 1) = 1.</p>
+  <p>Critical χ² (df 1) = 3.84 at 0.05 (6.63 at 0.01). 7.5 &gt; 6.63 → reject H₀ (p &lt; 0.01): recovery is significantly associated with the antidote. (Check with the short-cut: 80 × (660 − 180)² / (40 × 40 × 48 × 32) = 7.5 ✔)</p>
+  <details class="more"><summary>➕ Extra practice from the question banks: scabies by gender</summary><div>
+    <p>Male: 1173 with / 10410 without (11583); Female: 547 / 7640 (8187); total 1720 / 18050 (19770). Expected for males with scabies = 11583 × 1720/19770 = 1007.7 (others: 10575.3, 712.3, 7474.7). χ² ≈ <b>71.7</b> &gt; 10.83 (df 1, p 0.001) → prevalence differs very highly significantly between genders.</p></div></details>
+
+  <h3>B. Rank-based tests</h3>
+  <div class="grid-2">
+    <div class="card c2"><h4>Mann–Whitney U test (= Wilcoxon rank-sum)</h4>
+      <p>Alternative to the <b>unpaired t-test</b>: compares two <b>independent</b> groups on ordinal or non-normal data.</p>
+      <p><b>Steps</b>: pool both samples → rank from lowest to highest (average ranks for ties) → sum ranks of each group (R₁, R₂) → U₁ = n₁n₂ + n₁(n₁ + 1)/2 − R₁, U₂ = n₁n₂ − U₁ → U = smaller value → reject H₀ if U ≤ table value.</p>
+      <p><b>e.g.</b>, pain scores (0–10) with two analgesics; ADR severity grades in two groups.</p></div>
+    <div class="card c2"><h4>Wilcoxon signed-rank test</h4>
+      <p>Alternative to the <b>paired t-test</b>: two related measurements on the same subjects.</p>
+      <p><b>Steps</b>: find differences (after − before) → drop zero differences → rank absolute differences → give each rank the sign of its difference → T = smaller of the sums of + and − ranks → reject H₀ if T ≤ table value.</p>
+      <p><b>e.g.</b>, symptom scores before and after a herbal cough syrup.</p></div>
+    <div class="card c2"><h4>Kruskal–Wallis H test</h4>
+      <p>Alternative to <b>one-way ANOVA</b>: three or more independent groups.</p>
+      <p>H = [12/(N(N + 1))] Σ(R<sub>i</sub>²/n<sub>i</sub>) − 3(N + 1), compared with χ² (df k − 1).</p>
+      <p><b>e.g.</b>, patient-satisfaction ranks across three pharmacies.</p></div>
+    <div class="card c2"><h4>Friedman test</h4>
+      <p>Alternative to <b>repeated-measures (two-way) ANOVA</b>: three or more related conditions in the same subjects (randomised block).</p>
+      <p><b>e.g.</b>, the same 10 volunteers ranking the taste of three paediatric syrup flavours.</p></div>
+    <div class="card c2"><h4>Spearman's rank correlation (ρ)</h4>
+      <p>Alternative to <b>Pearson's r</b>: association between two ranked/ordinal variables.</p>
+      <p>ρ = 1 − 6Σd²/[n(n² − 1)], d = difference between ranks.</p>
+      <p><b>e.g.</b>, ranking of students in pharmacology vs pharmaceutics.</p></div>
+    <div class="card c2"><h4>Sign test, McNemar &amp; Fisher's exact</h4>
+      <p><b>Sign test</b>: uses only + / − signs of paired differences (simplest).</p>
+      <p><b>McNemar</b>: paired nominal data (yes/no before and after counselling).</p>
+      <p><b>Fisher's exact</b>: 2×2 tables with small expected counts (&lt; 5).</p></div>
+  </div>
+  <div class="vs">
+    <div class="card c1"><h4>✅ Advantages of non-parametric tests</h4><ul><li>No normality assumption</li><li>Work with ordinal/nominal data and ranks</li><li>Suitable for very small samples</li><li>Robust to outliers</li><li>Simple and quick</li></ul></div>
+    <div class="mid">VS</div>
+    <div class="card c2"><h4>❌ Disadvantages</h4><ul><li>Less powerful than parametric tests when assumptions hold</li><li>Waste information (values reduced to ranks)</li><li>Test medians, not means; effect size harder to express</li><li>Tables needed for many tests; ties complicate</li></ul></div>
+  </div>
+</section>
+
+<!-- T11 -->
+<section class="section" id="t11">
+  <h2><span class="num">11</span> Interpretation of Results</h2>
+  <p class="lead">The verdict must make sense to Chief Bogo, not just to the computer.</p>
+  <div class="callout def"><span class="callout-title">📘 Definition</span><p><b>Interpretation</b> is the process of drawing meaningful, valid inferences from the analysed data: explaining what the statistical results mean in relation to the research question, the hypothesis, existing knowledge and practical (clinical) importance.</p></div>
+  <div class="flow numbered">
+    <div class="step"><span class="e">✔️</span>Check test choice &amp; assumptions</div>
+    <div class="step"><span class="e">🎯</span>Read p value vs α<small>reject / fail to reject H₀</small></div>
+    <div class="step"><span class="e">📏</span>Look at effect size &amp; 95% CI</div>
+    <div class="step"><span class="e">🏥</span>Judge clinical importance</div>
+    <div class="step"><span class="e">🕵️</span>Rule out chance, bias, confounding</div>
+    <div class="step"><span class="e">📚</span>Compare with literature</div>
+    <div class="step"><span class="e">🌍</span>State limitations &amp; generalisability</div>
+  </div>
+  <div class="callout example"><span class="callout-title">💊 How a good result sentence looks (illustrative)</span><p>"After 12 weeks, mean SBP fell by 12.4 mmHg with drug X versus 4.1 mmHg with placebo (difference 8.3 mmHg; 95% CI 4.0 to 12.6; unpaired t-test, p = 0.001). The reduction is statistically significant and clinically meaningful."</p></div>
+  <div class="callout warn"><span class="callout-title">⚠️ Pitfalls in interpretation</span><ul>
+    <li>Equating "not significant" with "no effect" (maybe the study was underpowered).</li>
+    <li>Confusing association with causation.</li>
+    <li>Over-generalising beyond the study population (remember the inclusion criteria!).</li>
+    <li>Ignoring dropouts, multiple comparisons, or selective reporting of only significant outcomes.</li></ul></div>
+</section>
+
+<!-- T12 -->
+<section class="section" id="t12">
+  <h2><span class="num">12</span> Computer Software in Biostatistical Analysis</h2>
+  <p class="lead">Asked as a brief (May 2022), short note (Nov 2022, model) and half an essay (Jul 2023).</p>
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>Remember Flash the sloth at the DMV? Hand-calculating an ANOVA for 500 patients feels just as slow. Software is the Bureau's supercomputer: Judy types the data once, clicks "Analyze", and gets the p-value before Flash finishes his smile.</p></div>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Software</th><th>Key facts</th><th>Typical uses</th></tr>
+    <tr><td>SPSS (IBM SPSS Statistics)</td><td>Originally "Statistical Package for the Social Sciences" (first developed 1968); now owned by IBM; menu-driven</td><td>Descriptives, t-tests, ANOVA, χ², correlation, regression, non-parametric tests, survival analysis; popular for clinical and survey data</td></tr>
+    <tr><td>SAS (Statistical Analysis System)</td><td>Powerful commercial suite, programming based</td><td>Large clinical-trial databases, pharmaceutical industry and regulatory submissions</td></tr>
+    <tr><td>R</td><td>Free, open-source language and environment; created by Ross Ihaka and Robert Gentleman (University of Auckland), first released 1993; thousands of add-on packages (CRAN)</td><td>Any analysis from basic to advanced (mixed models, Bayesian, PK, bioinformatics); excellent graphics</td></tr>
+    <tr><td>MINITAB</td><td>Developed at Pennsylvania State University in 1972; very easy menus</td><td>Quality control and Six Sigma: control charts, process capability, DoE, regression, ANOVA</td></tr>
+    <tr><td>Microsoft Excel</td><td>Spreadsheet; functions + <b>Analysis ToolPak</b> add-in</td><td>Data entry, AVERAGE, MEDIAN, STDEV.S, CORREL, T.TEST, CHISQ.TEST; descriptive statistics, t-tests, ANOVA, regression, charts</td></tr>
+    <tr><td>GraphPad Prism</td><td>Biology-friendly, guided analysis</td><td>Dose–response curves (EC50/IC50), non-linear regression, t-test, ANOVA with post-hoc tests, publication-quality graphs</td></tr>
+    <tr><td>Others</td><td>Stata; Epi Info (free, from the US CDC); Design-Expert (DoE); Phoenix WinNonlin (PK); G*Power (sample size)</td><td>Epidemiology, formulation optimisation, pharmacokinetics/BE, power calculation</td></tr>
+  </table></div>
+  <h3>SPSS in detail (best choice for "features of any one")</h3>
+  <div class="grid-2">
+    <div class="card c1"><h4>Features</h4><ul>
+      <li>Spreadsheet-like <b>Data View</b> (rows = cases, columns = variables) and <b>Variable View</b> (name, type, labels, values, measure: nominal/ordinal/scale)</li>
+      <li>Menu-driven <b>Analyze</b> menu: no programming needed</li>
+      <li>Wide range of tests: descriptives, crosstabs + χ², t-tests, ANOVA with post-hoc, correlation, regression (linear, logistic), non-parametric tests, reliability (Cronbach's α), factor analysis, survival</li>
+      <li><b>Chart Builder</b> for histograms, bar, pie, box plots, scatter plots</li>
+      <li><b>Output Viewer</b> with tables and charts exportable to Word/Excel/PDF</li>
+      <li><b>Syntax Editor</b> for reproducible analysis</li>
+      <li>Imports Excel, CSV, text and database files; handles missing values</li></ul></div>
+    <div class="card c2"><h4>Steps to run a test in SPSS</h4>
+      <div class="flow vertical">
+        <div class="step"><span class="e">🗂️</span>Define variables (Variable View)</div>
+        <div class="step"><span class="e">⌨️</span>Enter / import data (Data View)</div>
+        <div class="step"><span class="e">📊</span>Analyze → choose test<small>e.g., Compare Means → Independent-Samples T Test</small></div>
+        <div class="step"><span class="e">📄</span>Read output<small>t, df, p ("Sig."), CI</small></div>
+        <div class="step"><span class="e">🗣️</span>Interpret &amp; report</div>
+      </div></div>
+  </div>
+  <h3>How computers help in statistical analysis (Jul 2023 essay part)</h3>
+  <div class="grid-3">
+    <div class="card"><span class="card-icon">⚡</span><h4>Speed</h4>Complex calculations in seconds.</div>
+    <div class="card"><span class="card-icon">🎯</span><h4>Accuracy</h4>Eliminates arithmetic errors.</div>
+    <div class="card"><span class="card-icon">🗄️</span><h4>Large data</h4>Stores, sorts, codes and retrieves thousands of records.</div>
+    <div class="card"><span class="card-icon">🧠</span><h4>Advanced analysis</h4>Multivariate, survival, mixed models, simulations impossible by hand.</div>
+    <div class="card"><span class="card-icon">📈</span><h4>Graphics</h4>Instant tables, charts and publication-quality figures.</div>
+    <div class="card"><span class="card-icon">🔁</span><h4>Reproducibility</h4>Syntax/scripts allow re-analysis and audit trails.</div>
+    <div class="card"><span class="card-icon">📏</span><h4>Design support</h4>Sample-size/power calculation, randomisation lists, DoE.</div>
+    <div class="card"><span class="card-icon">🌐</span><h4>Sharing</h4>Data exported, shared and archived easily.</div>
+    <div class="card"><span class="card-icon">⚠️</span><h4>Limitations</h4>"Garbage in, garbage out"; a wrong test still gives a wrong answer; licence cost; needs training.</div>
+  </div>
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic: "Sweet Sloths Run Mini Errands Gracefully"</span>
+    <div class="acro"><span><b>S</b>SPSS</span><span><b>S</b>SAS</span><span><b>R</b>R</span><span><b>M</b>MINITAB</span><span><b>E</b>Excel</span><span><b>G</b>GraphPad</span></div></div>
+</section>
+
+
+<!-- T13 -->
+<section class="section" id="t13">
+  <h2><span class="num">13</span> Thesis Writing: Components of a Thesis</h2>
+  <p class="lead">The final case report of the Bureau, bound and signed. Asked as an essay (May 2022) and short note (Jul 2023).</p>
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>After cracking the night-howler case, Judy can't just tell Chief Bogo "I solved it!". She submits a full report: a cover page, who certified it, what the problem was, what earlier cases said, exactly how she investigated, what she found, what it means, and the list of every file she used. That organised report is a <b>thesis</b>.</p></div>
+  <div class="callout def"><span class="callout-title">📘 Exam definition</span><p>A <b>thesis</b> (dissertation) is a formal, structured, written document submitted to a university in partial fulfilment of the requirements for a degree, presenting the candidate's original research: the problem, review of literature, methodology, results, discussion and conclusions, with full references, in the format prescribed by the university.</p></div>
+
+  <figure class="fig">
+    <svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three parts of a thesis">
+      <defs><marker id="u5f5-arr" viewBox="0 0 10 10" markerWidth="4" markerHeight="4" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f97316"/></marker></defs>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <rect x="10" y="10" width="740" height="98" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+        <text x="30" y="36" font-size="15" font-weight="800" fill="#1e3a8a">① PRELIMINARY PAGES (front matter, roman page numbers)</text>
+        <g font-size="12.5" font-weight="700" fill="#1e3a8a">
+          <rect x="25" y="50" width="88" height="44" rx="10" fill="#fff"/><text x="69" y="76" text-anchor="middle">Title page</text>
+          <rect x="119" y="50" width="96" height="44" rx="10" fill="#fff"/><text x="167" y="76" text-anchor="middle">Certificates</text>
+          <rect x="221" y="50" width="94" height="44" rx="10" fill="#fff"/><text x="268" y="76" text-anchor="middle">Declaration</text>
+          <rect x="321" y="50" width="124" height="44" rx="10" fill="#fff"/><text x="383" y="76" text-anchor="middle">Acknowledgement</text>
+          <rect x="451" y="50" width="88" height="44" rx="10" fill="#fff"/><text x="495" y="76" text-anchor="middle">Contents</text>
+          <rect x="545" y="50" width="112" height="44" rx="10" fill="#fff"/><text x="601" y="70" text-anchor="middle">Lists of tables,</text><text x="601" y="86" text-anchor="middle">figures, abbrev.</text>
+          <rect x="663" y="50" width="78" height="44" rx="10" fill="#fff"/><text x="702" y="76" text-anchor="middle">Abstract</text>
+        </g>
+        <rect x="10" y="122" width="740" height="140" rx="18" fill="#ffedd5" stroke="#f97316" stroke-width="2.5"/>
+        <text x="30" y="148" font-size="15" font-weight="800" fill="#9a3412">② MAIN BODY (chapters, arabic page numbers)</text>
+        <g font-size="12.5" font-weight="800" fill="#9a3412">
+          <rect x="22" y="164" width="92" height="80" rx="12" fill="#fff"/><text x="68" y="194" text-anchor="middle">1</text><text x="68" y="214" text-anchor="middle">Introduction</text>
+          <rect x="128" y="164" width="92" height="80" rx="12" fill="#fff"/><text x="174" y="194" text-anchor="middle">2</text><text x="174" y="214" text-anchor="middle">Aim &amp;</text><text x="174" y="230" text-anchor="middle">objectives</text>
+          <rect x="234" y="164" width="92" height="80" rx="12" fill="#fff"/><text x="280" y="194" text-anchor="middle">3</text><text x="280" y="214" text-anchor="middle">Review of</text><text x="280" y="230" text-anchor="middle">literature</text>
+          <rect x="340" y="164" width="92" height="80" rx="12" fill="#fff"/><text x="386" y="194" text-anchor="middle">4</text><text x="386" y="214" text-anchor="middle">Materials</text><text x="386" y="230" text-anchor="middle">&amp; methods</text>
+          <rect x="446" y="164" width="92" height="80" rx="12" fill="#fff"/><text x="492" y="194" text-anchor="middle">5</text><text x="492" y="214" text-anchor="middle">Results</text>
+          <rect x="552" y="164" width="92" height="80" rx="12" fill="#fff"/><text x="598" y="194" text-anchor="middle">6</text><text x="598" y="214" text-anchor="middle">Discussion</text>
+          <rect x="658" y="164" width="84" height="80" rx="12" fill="#fff"/><text x="700" y="194" text-anchor="middle">7</text><text x="700" y="214" text-anchor="middle">Summary &amp;</text><text x="700" y="230" text-anchor="middle">conclusion</text>
+        </g>
+        <g stroke="#f97316" stroke-width="2.5" marker-end="url(#u5f5-arr)">
+          <path d="M114 204 L126 204"/><path d="M220 204 L232 204"/><path d="M326 204 L338 204"/><path d="M432 204 L444 204"/><path d="M538 204 L550 204"/><path d="M644 204 L656 204"/>
+        </g>
+        <rect x="10" y="276" width="740" height="94" rx="18" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+        <text x="30" y="302" font-size="15" font-weight="800" fill="#166534">③ END MATTER (back matter)</text>
+        <g font-size="12.5" font-weight="700" fill="#166534">
+          <rect x="25" y="314" width="220" height="44" rx="10" fill="#fff"/><text x="135" y="340" text-anchor="middle">References / Bibliography</text>
+          <rect x="255" y="314" width="330" height="44" rx="10" fill="#fff"/><text x="420" y="333" text-anchor="middle">Appendices / Annexures: ethics approval, consent</text><text x="420" y="349" text-anchor="middle">form, questionnaire / CRF, raw data, certificates</text>
+          <rect x="595" y="314" width="146" height="44" rx="10" fill="#fff"/><text x="668" y="333" text-anchor="middle">Publications /</text><text x="668" y="349" text-anchor="middle">presentations</text>
+        </g>
+      </g>
+    </svg>
+    <figcaption>Fig 5.5 — The thesis "sandwich": front matter, main body, end matter. Draw this as the centrepiece of a "components of thesis" answer.</figcaption>
+  </figure>
+
+  <h3>Each component in 1–2 lines</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Component</th><th>What it contains</th></tr>
+    <tr><td>Title page</td><td>Title (concise, specific), candidate's name, degree, guide, department, institution, university, month &amp; year</td></tr>
+    <tr><td>Certificates</td><td>From guide/supervisor, head of department and principal certifying the work is bona fide</td></tr>
+    <tr><td>Declaration</td><td>Candidate's statement that the work is original and not submitted elsewhere</td></tr>
+    <tr><td>Acknowledgement</td><td>Thanks to guide, institution, funding agencies, participants, family</td></tr>
+    <tr><td>Table of contents &amp; lists</td><td>Chapters with page numbers; lists of tables, figures and abbreviations</td></tr>
+    <tr><td>Abstract</td><td>Brief summary (background, objectives, methods, results, conclusion) with keywords</td></tr>
+    <tr><td>1. Introduction</td><td>Background of the problem, its significance, research gap and rationale ("why this study?")</td></tr>
+    <tr><td>2. Aim &amp; objectives</td><td>Primary and secondary objectives, hypothesis, plan of work</td></tr>
+    <tr><td>3. Review of literature</td><td>Critical summary of previous studies, drug/disease profile, identifying the gap</td></tr>
+    <tr><td>4. Materials &amp; methods</td><td>Study design, setting, duration, population, sample size, inclusion/exclusion criteria, materials/instruments, procedure, ethics approval, statistical analysis</td></tr>
+    <tr><td>5. Results</td><td>Findings presented objectively in tables, graphs and statistics (no discussion)</td></tr>
+    <tr><td>6. Discussion</td><td>Interpretation of results, comparison with earlier studies, explanations, strengths and limitations</td></tr>
+    <tr><td>7. Summary &amp; conclusion</td><td>Key findings, answer to the objectives, recommendations, future scope</td></tr>
+    <tr><td>References / bibliography</td><td>All cited sources in a uniform style (Vancouver/APA)</td></tr>
+    <tr><td>Appendices</td><td>Ethics committee approval, informed consent forms, questionnaires/case record forms, raw data, plagiarism certificate</td></tr>
+  </table></div>
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic for the main body: "I Always Read My Report Daily, Chief!"</span>
+    <div class="acro"><span><b>I</b>Introduction</span><span><b>A</b>Aim &amp; objectives</span><span><b>R</b>Review of literature</span><span><b>M</b>Materials &amp; methods</span><span><b>R</b>Results</span><span><b>D</b>Discussion</span><span><b>C</b>Conclusion</span></div></div>
+  <div class="vs">
+    <div class="card c1"><h4>📕 Thesis</h4><ul><li>For a university degree</li><li>Long (often 60–150+ pages), detailed review</li><li>Evaluated by examiners; viva</li><li>Format set by university</li></ul></div>
+    <div class="mid">VS</div>
+    <div class="card c2"><h4>📰 Research paper</h4><ul><li>For publication in a journal</li><li>Short, concise (IMRaD)</li><li>Peer reviewed by journal reviewers</li><li>Format set by journal's author guidelines</li></ul></div>
+  </div>
+  <div class="callout tip"><span class="callout-title">⭐ Exam tip</span><p>Draw Fig 5.5 first, then write each chapter as a heading with 2 lines. Add "General guidelines": consistent font and spacing, numbered tables/figures with titles, past tense for methods and results, plagiarism check, binding as per university rules.</p></div>
+</section>
+
+<!-- T14 -->
+<section class="section" id="t14">
+  <h2><span class="num">14</span> Paraphrasing &amp; Plagiarism</h2>
+  <p class="lead">Hans of the Southern Isles: charming, convincing, and a credit thief.</p>
+  <div class="callout story"><span class="callout-title">🎬 Story mode: Frozen</span>
+    <p>Hans tells the dignitaries of Arendelle a moving story in which he is the hero who exchanged vows with Anna, and he steps forward to take the kingdom. It was never his story or his deed. Presenting someone else's work or ideas as your own, without credit, is exactly what <b>plagiarism</b> is. Elsa and Anna's true act of love, credited to the right people, is the honest ending.</p></div>
+  <div class="callout def"><span class="callout-title">📘 Exam definitions</span>
+    <p><b>Plagiarism</b> (KUHS Dec 2023) is the act of using another person's words, ideas, data, images or work and presenting them as one's own without proper acknowledgement (citation). It is a form of research and publication misconduct.</p>
+    <p><b>Paraphrasing</b> is restating someone else's idea or passage <b>in your own words and sentence structure</b>, keeping the original meaning, and <b>citing the source</b>.</p></div>
+  <div class="grid-3">
+    <div class="card"><h4>Quoting</h4>Exact words in "quotation marks" + citation. Use sparingly.</div>
+    <div class="card"><h4>Paraphrasing</h4>Same idea, your own words and structure, similar length + citation.</div>
+    <div class="card"><h4>Summarising</h4>Only the main idea, much shorter, your words + citation.</div>
+  </div>
+  <h3>Steps of good paraphrasing</h3>
+  <div class="flow numbered">
+    <div class="step"><span class="e">📖</span>Read &amp; understand fully</div>
+    <div class="step"><span class="e">🙈</span>Put the source away</div>
+    <div class="step"><span class="e">✍️</span>Write from memory in your own words &amp; structure</div>
+    <div class="step"><span class="e">🔍</span>Compare with original (meaning kept? no copied phrases?)</div>
+    <div class="step"><span class="e">📌</span>Cite the source</div>
+  </div>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Version</th><th>Text (a sentence written for this example)</th><th>Verdict</th></tr>
+    <tr><td>Original</td><td>"Paracetamol is preferred over aspirin for fever in children because aspirin has been linked to Reye's syndrome, a rare but serious condition affecting the liver and brain."</td><td>Source</td></tr>
+    <tr><td>Patchwriting</td><td>Paracetamol is chosen over aspirin for fever in kids since aspirin has been connected to Reye's syndrome, a rare but serious condition of the liver and brain.</td><td>❌ Plagiarism (only synonyms swapped, no citation)</td></tr>
+    <tr><td>Good paraphrase</td><td>Because aspirin can trigger Reye's syndrome, an uncommon disorder that damages the brain and liver, doctors avoid it in feverish children and use paracetamol instead [1].</td><td>✅ New structure, own words, cited</td></tr>
+  </table></div>
+  <h3>Types of plagiarism</h3>
+  <div class="grid-3">
+    <div class="card c2"><h4>Direct / verbatim</h4>Copying text word-for-word without quotes or citation.</div>
+    <div class="card c2"><h4>Mosaic / patchwriting</h4>Mixing copied phrases with own words, or swapping synonyms.</div>
+    <div class="card c2"><h4>Self-plagiarism</h4>Reusing one's own published text/data without disclosure (duplicate or redundant publication).</div>
+    <div class="card c2"><h4>Paraphrasing plagiarism</h4>Rewording an idea well but not citing it.</div>
+    <div class="card c2"><h4>Source / citation plagiarism</h4>Citing wrong or non-existent sources; copying someone's reference list.</div>
+    <div class="card c2"><h4>Idea, data &amp; image plagiarism</h4>Stealing hypotheses, results, figures or photographs; also ghost-written work and accidental plagiarism.</div>
+  </div>
+  <h3>UGC (India) 2018 regulations: similarity levels</h3>
+  <p>The UGC (Promotion of Academic Integrity and Prevention of Plagiarism in Higher Educational Institutions) Regulations, 2018 grade similarity in theses as follows (quotations, references and common knowledge are generally excluded):</p>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Level</th><th>Similarity</th><th>Consequence for students (thesis/dissertation)</th></tr>
+    <tr><td>Level 0</td><td>Up to 10%</td><td>Minor similarity, no penalty</td></tr>
+    <tr><td>Level 1</td><td>&gt;10% to 40%</td><td>Submit a revised script within 6 months</td></tr>
+    <tr><td>Level 2</td><td>&gt;40% to 60%</td><td>Debarred from submitting a revised script for 1 year</td></tr>
+    <tr><td>Level 3</td><td>&gt;60%</td><td>Registration for the programme cancelled</td></tr>
+  </table></div>
+  <div class="grid-2">
+    <div class="card c1"><h4>Detection tools</h4><ul><li>Turnitin / iThenticate (journals)</li><li>DrillBit (provided to Indian universities by INFLIBNET under ShodhShuddhi; earlier Ouriginal/URKUND)</li><li>Grammarly, Copyleaks and other online checkers</li></ul></div>
+    <div class="card c2"><h4>How to avoid plagiarism</h4><ul><li>Cite every source of words, ideas, data and figures</li><li>Use quotation marks for exact words</li><li>Paraphrase properly; take notes in your own words</li><li>Use a reference manager (Mendeley, Zotero, EndNote)</li><li>Run a similarity check before submission</li><li>Get permission for reused figures/tables</li></ul></div>
+  </div>
+  <p><b>Consequences</b>: rejection or retraction of papers, cancellation of degree, disciplinary action, loss of credibility and career damage.</p>
+  <p class="hand">Psst, Mimosa… don't be a Hans! Cite like Anna: honest, warm, and always giving credit. ❄️</p>
+</section>
+
+<!-- T15 -->
+<section class="section" id="t15">
+  <h2><span class="num">15</span> References &amp; Bibliography</h2>
+  <p class="lead">Belle's library holds every book she ever read; her essay quotes only a few.</p>
+  <div class="callout story"><span class="callout-title">🎬 Story mode: Beauty and the Beast</span>
+    <p>Belle has read almost every book in the Beast's enormous library: that full reading list is her <b>bibliography</b>. But when she writes a letter to convince the Beast, she quotes just three books and names them right where she uses them: those are her <b>references</b>.</p></div>
+  <div class="callout def"><span class="callout-title">📘 Exam definitions</span>
+    <p><b>References</b>: the list of sources that are <b>actually cited</b> in the text of a thesis or paper, each linked to an in-text citation.</p>
+    <p><b>Bibliography</b> (KUHS Dec 2023): a list of <b>all sources consulted</b> during the work (cited and not cited) for background reading, usually arranged alphabetically by author.</p></div>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Point</th><th>References</th><th>Bibliography</th></tr>
+    <tr><td>Meaning</td><td>Sources cited in the text</td><td>All sources consulted/read</td></tr>
+    <tr><td>In-text citation</td><td>Each entry has a matching citation [1] or (Author, year)</td><td>Not necessarily cited in text</td></tr>
+    <tr><td>Purpose</td><td>Support specific statements; allow verification</td><td>Show background reading and further reading</td></tr>
+    <tr><td>Arrangement</td><td>Order of citation (Vancouver) or alphabetical (APA/Harvard)</td><td>Alphabetical (author surname)</td></tr>
+    <tr><td>Scope</td><td>Narrower</td><td>Wider</td></tr>
+    <tr><td>Used in</td><td>Research papers, theses (mandatory)</td><td>Books, theses, project reports</td></tr>
+    <tr><td>Placement</td><td>End of paper/chapter</td><td>End of book/thesis</td></tr>
+  </table></div>
+  <h3>Common citation styles</h3>
+  <div class="grid-2">
+    <div class="card c1"><h4>Vancouver (numbered; biomedical &amp; pharmacy journals)</h4>
+      <p>In text: "...linked to Reye's syndrome [1]." or superscript¹. List in order of first citation.</p>
+      <p><small>Journal: 1. Hopps J, Wilde N. Night-howler toxin and predator behaviour: a case series. Zootopia J Pharm Sci. 2016;12(3):45-52.<br>Book: 2. Bogo C. Police statistics made easy. 2nd ed. Zootopia: Precinct One Press; 2015. p. 10-25.</small></p></div>
+    <div class="card c2"><h4>APA / Harvard (author–date)</h4>
+      <p>In text: (Hopps &amp; Wilde, 2016). List alphabetically by surname.</p>
+      <p><small>Hopps, J., &amp; Wilde, N. (2016). Night-howler toxin and predator behaviour: A case series. <i>Zootopia Journal of Pharmaceutical Sciences, 12</i>(3), 45–52.</small></p>
+      <p><small>(Fictional examples, just to show the format.)</small></p></div>
+  </div>
+  <p><b>Elements of a reference</b>: author(s), title of article/book, journal name (abbreviated in Vancouver) or publisher and place, year, volume (issue), pages, edition, DOI/URL with access date for web sources. Other styles: MLA, Chicago, IEEE. <b>Reference managers</b>: Mendeley, Zotero (free, open source), EndNote.</p>
+  <div class="callout tip"><span class="callout-title">⭐ Exam tip</span><p>For the 5-mark "references vs bibliography": two definitions + the 7-row table + one Vancouver and one APA example. Belle's library story in one line makes the examiner smile.</p></div>
+</section>
+
+<!-- T16 -->
+<section class="section" id="t16">
+  <h2><span class="num">16</span> Research Publication, Impact Factor &amp; Publication Ethics</h2>
+  <p class="lead">From the Bureau's case file to the front page of the Zootopia News Network.</p>
+
+  <h3>A. Research publication &amp; writing a research paper</h3>
+  <div class="callout def"><span class="callout-title">📘 Definition</span><p><b>Research publication</b> is the process of communicating original research findings to the scientific community, usually as a peer-reviewed article in a scholarly journal, so that the work can be verified, used and built upon.</p></div>
+  <div class="grid-3">
+    <div class="card"><h4>Types of articles</h4><ul><li>Original research article</li><li>Review (narrative, systematic, meta-analysis)</li><li>Short communication</li><li>Case report / case series</li><li>Letter to the editor, editorial</li></ul></div>
+    <div class="card"><h4>IMRaD structure</h4><ul><li>Title, authors, affiliations, abstract, keywords</li><li><b>I</b>ntroduction: known, gap, aim</li><li><b>M</b>ethods: enough detail to repeat</li><li><b>R</b>esults: facts, tables, figures</li><li><b>a</b>nd <b>D</b>iscussion: meaning, comparison, limitations, conclusion</li><li>Acknowledgement, conflict of interest, funding, references</li></ul></div>
+    <div class="card"><h4>Good-writing principles</h4><ul><li>Clear, concise, accurate, logical flow</li><li>Follow the journal's "Instructions to authors"</li><li>Past tense for methods/results</li><li>Reporting guidelines: CONSORT (RCTs), STROBE (observational), PRISMA (systematic reviews), CARE (case reports), ARRIVE (animal studies)</li><li>Ethics approval, consent, trial registration stated</li></ul></div>
+  </div>
+  <figure class="fig">
+    <svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Journal publication process with peer review loop">
+      <defs><marker id="u5f6-arr" viewBox="0 0 10 10" markerWidth="4" markerHeight="4" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
+      <marker id="u5f6-arr2" viewBox="0 0 10 10" markerWidth="4" markerHeight="4" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f97316"/></marker></defs>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12.5" font-weight="800" text-anchor="middle">
+        <rect x="10" y="40" width="100" height="62" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="60" y="66" fill="#1e3a8a">Write</text><text x="60" y="84" fill="#1e3a8a">manuscript</text>
+        <rect x="135" y="40" width="100" height="62" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="185" y="66" fill="#1e3a8a">Choose</text><text x="185" y="84" fill="#1e3a8a">journal</text>
+        <rect x="260" y="40" width="100" height="62" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="310" y="66" fill="#1e3a8a">Submit +</text><text x="310" y="84" fill="#1e3a8a">cover letter</text>
+        <rect x="385" y="40" width="100" height="62" rx="14" fill="#fef3c7" stroke="#d97706" stroke-width="2"/><text x="435" y="66" fill="#92400e">Editor</text><text x="435" y="84" fill="#92400e">screening</text>
+        <rect x="510" y="40" width="100" height="62" rx="14" fill="#ffedd5" stroke="#f97316" stroke-width="2"/><text x="560" y="66" fill="#9a3412">Peer</text><text x="560" y="84" fill="#9a3412">review</text>
+        <rect x="635" y="40" width="115" height="62" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="692" y="66" fill="#166534">Accept →</text><text x="692" y="84" fill="#166534">proofs → publish</text>
+        <rect x="510" y="160" width="100" height="56" rx="14" fill="#fff" stroke="#f97316" stroke-width="2" stroke-dasharray="6 4"/><text x="560" y="184" fill="#9a3412">Revise &amp;</text><text x="560" y="201" fill="#9a3412">respond</text>
+        <rect x="385" y="160" width="100" height="56" rx="14" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="435" y="184" fill="#991b1b">Reject →</text><text x="435" y="201" fill="#991b1b">try another</text>
+        <rect x="635" y="160" width="115" height="56" rx="14" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/><text x="692" y="184" fill="#166534">Indexed, DOI,</text><text x="692" y="201" fill="#166534">cited → IF</text>
+      </g>
+      <g stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#u5f6-arr)">
+        <path d="M110 71 L133 71"/><path d="M235 71 L258 71"/><path d="M360 71 L383 71"/><path d="M485 71 L508 71"/><path d="M610 71 L633 71"/><path d="M692 102 L692 158"/>
+      </g>
+      <g stroke="#f97316" stroke-width="3" fill="none" marker-end="url(#u5f6-arr2)">
+        <path d="M575 102 L575 158"/><path d="M545 160 L545 104"/><path d="M435 102 L435 158"/>
+      </g>
+      <text x="380" y="24" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800" fill="#475569">Journal publication pipeline (the revise ⇄ review loop may repeat)</text>
+      <text x="537" y="128" text-anchor="end" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#9a3412">minor/major</text><text x="537" y="143" text-anchor="end" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#9a3412">revision</text>
+    </svg>
+    <figcaption>Fig 5.6 — How a paper gets published. Sketch it for "basic concepts in writing a research paper" or "research publication".</figcaption>
+  </figure>
+  <div class="grid-3">
+    <div class="card c1"><h4>Peer review types</h4>Single-blind (reviewers know authors), double-blind (neither knows), open (identities disclosed).</div>
+    <div class="card c1"><h4>Indexing databases</h4>PubMed/MEDLINE, Scopus, Web of Science, Embase, DOAJ; in India, the UGC-CARE list guides recognised journals.</div>
+    <div class="card c1"><h4>Predatory journals 🚩</h4>Guaranteed fast acceptance, no real peer review, fake or "global" impact factors, spam invitations, hidden fees. Avoid them!</div>
+  </div>
+
+  <h3>B. Impact factor (model paper brief)</h3>
+  <div class="callout def"><span class="callout-title">📘 Exam definition</span><p>The <b>(Journal) Impact Factor</b> is a journal-level metric that indicates the average number of citations received in a given year by the citable items (articles and reviews) the journal published in the <b>previous two years</b>. It is calculated annually by Clarivate and published in the Journal Citation Reports (JCR); the idea was introduced by Eugene Garfield.</p></div>
+  <div class="formula">IF (2025) = Citations in 2025 to items published in 2023 + 2024 ÷ Number of citable items published in 2023 + 2024</div>
+  <p><b>Example (fictional journal)</b>: Zootopia J Pharm Sci published 90 citable items in 2023 and 110 in 2024 (total 200). In 2025 these were cited 600 times. IF 2025 = 600/200 = <b>3.0</b>, i.e., an average article is cited about three times a year in its first two years.</p>
+  <div class="grid-2">
+    <div class="card c1"><h4>Uses</h4><ul><li>Compare journals within the same field</li><li>Help authors choose where to submit</li><li>Library subscription decisions</li><li>One of many indicators in academic evaluation</li></ul></div>
+    <div class="card c2"><h4>Limitations</h4><ul><li>Journal-level, not a measure of an individual article or author</li><li>Varies widely between fields</li><li>Skewed by a few highly cited papers; reviews attract more citations</li><li>Can be manipulated (excess self-citation, citation stacking)</li><li>Two-year window is short for slow-citing fields</li></ul></div>
+  </div>
+  <p><b>Other metrics</b>: 5-year impact factor; <b>CiteScore</b> (Scopus/Elsevier, 4-year window); SJR and SNIP; <b>h-index</b> (an author has index h if h of their papers have at least h citations each; proposed by J. E. Hirsch in 2005); <b>i10-index</b> (Google Scholar: papers with ≥ 10 citations); altmetrics (social-media and news attention).</p>
+
+  <h3>C. Publication ethics</h3>
+  <div class="callout def"><span class="callout-title">📘 Definition</span><p><b>Publication ethics</b> is the set of moral principles and standards that govern honest, transparent and responsible conduct by authors, editors, reviewers and publishers throughout the reporting and publication of research.</p></div>
+  <div class="grid-2">
+    <div class="card c1"><h4>Guiding bodies</h4><ul>
+      <li><b>COPE</b> (Committee on Publication Ethics, founded 1997): guidance and flowcharts for editors on misconduct</li>
+      <li><b>ICMJE</b>: "Recommendations for the Conduct, Reporting, Editing and Publication of Scholarly Work in Medical Journals" (authorship, conflicts of interest, trial registration)</li>
+      <li>WAME, CSE; in India, UGC and ICMR ethical guidelines; trial registration in CTRI (Clinical Trials Registry–India)</li></ul></div>
+    <div class="card c2"><h4>ICMJE authorship: all 4 criteria</h4><ol>
+      <li>Substantial contribution to conception/design, or data acquisition, analysis or interpretation</li>
+      <li>Drafting the work or revising it critically for important intellectual content</li>
+      <li>Final approval of the version to be published</li>
+      <li>Agreement to be accountable for all aspects of the work</li></ol></div>
+  </div>
+  <h4>Publication misconduct (what NOT to do)</h4>
+  <div class="grid-3">
+    <div class="card"><span class="card-icon">🧪</span><h4>Fabrication</h4>Making up data or results.</div>
+    <div class="card"><span class="card-icon">✂️</span><h4>Falsification</h4>Manipulating data, images or methods to change results.</div>
+    <div class="card"><span class="card-icon">🦹</span><h4>Plagiarism</h4>Using others' work without credit. (F + F + P = "FFP")</div>
+    <div class="card"><span class="card-icon">📑</span><h4>Duplicate / redundant publication</h4>Publishing the same study twice; simultaneous submission to two journals.</div>
+    <div class="card"><span class="card-icon">🍕</span><h4>Salami slicing</h4>Splitting one study into many small papers.</div>
+    <div class="card"><span class="card-icon">👻</span><h4>Authorship abuse</h4>Gift/honorary, guest or ghost authorship.</div>
+    <div class="card"><span class="card-icon">💰</span><h4>Undisclosed conflict of interest</h4>Hiding funding or financial ties.</div>
+    <div class="card"><span class="card-icon">🧾</span><h4>Ethics lapses</h4>No ethics approval/informed consent; breach of patient confidentiality.</div>
+    <div class="card"><span class="card-icon">🔁</span><h4>Citation &amp; peer-review manipulation</h4>Citation cartels, coercive citation, fake reviewers.</div>
+  </div>
+  <p><b>Corrective actions</b>: correction (erratum/corrigendum), expression of concern, <b>retraction</b> of the article, institutional investigation and sanctions.</p>
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic: the three deadly sins = "FFP"</span><p><b>F</b>abrication · <b>F</b>alsification · <b>P</b>lagiarism. Think "<b>F</b>ake <b>F</b>ox <b>P</b>apers": the scams Nick would have run before joining the Bureau! 🦊</p></div>
+</section>
+
+
+<!-- ===== 7. MODEL ANSWERS ===== -->
+<section class="section" id="answers">
+  <h2><span class="num">✍️</span> Model Answers (KUHS style)</h2>
+  <p class="lead">Every Unit 5 question KUHS has asked, in exam-ready form. Essays ≈ 3 pages (25 min), short notes ≈ 1.5 pages (12 min), briefs ≈ 4 lines.</p>
+
+  <!-- E1 -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Differentiate between parametric and nonparametric tests. Briefly explain any three parametric and non-parametric tests each used in hypothesis testing.</div>
+      <div class="meta">Essay · 10 marks · KUHS May 2022 · ~25 min · ~3 pages</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Intro + definitions (1) → difference table, 8 points (3) → 3 parametric tests: t-test, ANOVA, Pearson r (3) → 3 non-parametric: χ², Mann–Whitney, Wilcoxon (3) → twin diagram + conclusion</div>
+      <h4>1. Introduction</h4>
+      <p>Tests of significance decide whether an observed difference is real or due to chance. They are of two types depending on whether assumptions about the population distribution are made.</p>
+      <p><b>Parametric tests</b> assume that the data are drawn from a normally distributed population and test hypotheses about parameters (mean, variance) using interval/ratio data. <b>Non-parametric tests</b> are distribution-free tests based on ranks, signs or frequencies, used for ordinal/nominal or non-normal data.</p>
+      <h4>2. Differences</h4>
+      <div class="table-wrap"><table class="nice">
+        <tr><th>Point</th><th>Parametric</th><th>Non-parametric</th></tr>
+        <tr><td>Distribution</td><td>Normal assumed</td><td>No assumption</td></tr>
+        <tr><td>Data</td><td>Interval/ratio</td><td>Nominal/ordinal (or skewed)</td></tr>
+        <tr><td>Central value</td><td>Mean</td><td>Median</td></tr>
+        <tr><td>Uses</td><td>Actual values</td><td>Ranks, signs, counts</td></tr>
+        <tr><td>Sample size</td><td>Larger</td><td>Small samples possible</td></tr>
+        <tr><td>Outliers</td><td>Sensitive</td><td>Robust</td></tr>
+        <tr><td>Power</td><td>More powerful</td><td>Less powerful</td></tr>
+        <tr><td>Examples</td><td>z, t, ANOVA, Pearson r</td><td>χ², Mann–Whitney, Wilcoxon, Kruskal–Wallis, Spearman</td></tr>
+      </table></div>
+      <h4>3. Parametric tests</h4>
+      <p><b>(a) Student's t-test</b> (Gosset, 1908): compares means of small samples (n &lt; 30) with unknown σ. Types: one-sample t = (x̄ − μ)/(s/√n); unpaired t = (x̄₁ − x̄₂)/[S<sub>p</sub>√(1/n₁ + 1/n₂)] with df n₁ + n₂ − 2; paired t = d̄/(s<sub>d</sub>/√n) with df n − 1. Assumptions: normality, random samples, equal variances. Use: drug vs placebo, BP before vs after treatment.</p>
+      <p><b>(b) ANOVA</b> (R. A. Fisher): compares means of three or more groups by partitioning total variance into between- and within-group variance; F = MS<sub>between</sub>/MS<sub>within</sub>, df (k − 1, N − k). If significant, post-hoc tests (Tukey, Dunnett) locate the difference. Use: comparing three formulations or doses.</p>
+      <p><b>(c) Pearson's correlation coefficient (r)</b>: measures linear association between two normally distributed continuous variables; r = Σ(x − x̄)(y − ȳ)/√[Σ(x − x̄)²Σ(y − ȳ)²], range −1 to +1; significance by t = r√(n − 2)/√(1 − r²). Use: calibration curves, dose vs response. (z-test for large samples may be written as an alternative.)</p>
+      <h4>4. Non-parametric tests</h4>
+      <p><b>(a) Chi-square test</b> (Karl Pearson): compares observed with expected frequencies: χ² = Σ(O − E)²/E, df = (r − 1)(c − 1). Uses: association between categorical variables, goodness of fit, homogeneity. Condition: expected frequency ≥ 5 per cell. Example: cure rate (cured/not cured) with drug vs placebo.</p>
+      <p><b>(b) Mann–Whitney U test</b>: alternative to unpaired t-test for two independent groups. Pool and rank the data, sum ranks R₁, R₂; U₁ = n₁n₂ + n₁(n₁ + 1)/2 − R₁; the smaller U is compared with table value. Example: pain scores with two analgesics.</p>
+      <p><b>(c) Wilcoxon signed-rank test</b>: alternative to paired t-test. Find differences, ignore zeros, rank absolute differences, attach signs, T = smaller sum of ranks; compare with table. Example: symptom scores before and after treatment in the same patients.</p>
+      <p><i>(Draw Fig 5.3: parametric tests on the left with their non-parametric twins on the right.)</i></p>
+      <h4>5. Conclusion</h4>
+      <p>Parametric tests are preferred when their assumptions are met because they are more powerful; non-parametric tests are valuable for ordinal or nominal data, small samples and skewed distributions. Choosing the right test according to data type, distribution, number of groups and pairing is essential for valid conclusions.</p>
+    </div>
+  </div>
+
+  <!-- E2 -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Explain various types of parametric and non-parametric tests used in hypothesis testing. / With suitable examples discuss the different parametric and nonparametric tests used in the testing of hypothesis.</div>
+      <div class="meta">Essay · 10 marks · KUHS Dec 2023 &amp; Model paper · ~25 min · ~3 pages</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definitions + classification chart (2) → parametric: z, t (3 types), ANOVA, Pearson/regression, F with one pharmacy example each (4) → non-parametric: χ², Mann–Whitney, Wilcoxon, Kruskal–Wallis, Friedman, Spearman, sign with examples (3) → decision chart + conclusion (1)</div>
+      <h4>1. Introduction &amp; classification</h4>
+      <p>Hypothesis testing uses tests of significance to decide whether to reject H₀. Parametric tests assume a normal population and use actual values (means, SD); non-parametric tests are distribution-free and use ranks or frequencies.</p>
+      <div class="table-wrap"><table class="nice">
+        <tr><th>Parametric</th><th>Non-parametric counterpart</th></tr>
+        <tr><td>One-sample t / z-test</td><td>Sign test, one-sample Wilcoxon</td></tr>
+        <tr><td>Unpaired t-test</td><td>Mann–Whitney U</td></tr>
+        <tr><td>Paired t-test</td><td>Wilcoxon signed-rank</td></tr>
+        <tr><td>One-way ANOVA</td><td>Kruskal–Wallis H</td></tr>
+        <tr><td>Two-way / repeated-measures ANOVA</td><td>Friedman</td></tr>
+        <tr><td>Pearson r</td><td>Spearman ρ</td></tr>
+        <tr><td>(none)</td><td>χ², Fisher's exact, McNemar for nominal data</td></tr>
+      </table></div>
+      <h4>2. Parametric tests with examples</h4>
+      <ul>
+        <li><b>z-test</b> (n ≥ 30): z = (x̄ − μ)/(σ/√n). e.g., mean Hb of 100 antenatal women vs standard 11 g/dL; comparing cure proportions of two antibiotics.</li>
+        <li><b>One-sample t</b>: mean assay of 10 tablets vs label claim.</li>
+        <li><b>Unpaired t</b>: mean fall in BP with drug (n = 15) vs placebo (n = 15).</li>
+        <li><b>Paired t</b>: serum digoxin at 4 h vs 8 h in the same 9 patients (t = 2.83 &gt; 2.306, significant).</li>
+        <li><b>ANOVA</b>: disintegration time with three binders (F = 19 &gt; 5.14, significant) followed by Tukey's test.</li>
+        <li><b>Pearson r and regression</b>: absorbance vs concentration (r = 0.9996), shelf-life prediction.</li>
+        <li><b>F-test</b>: comparing precision (variances) of two analytical methods.</li>
+      </ul>
+      <h4>3. Non-parametric tests with examples</h4>
+      <ul>
+        <li><b>Chi-square</b>: χ² = Σ(O − E)²/E. e.g., recovery with antidote vs placebo (χ² = 7.5, df 1, significant); association of smoking with peptic ulcer.</li>
+        <li><b>Mann–Whitney U</b>: pain scores (0–10) with two analgesics in different patients.</li>
+        <li><b>Wilcoxon signed-rank</b>: symptom scores before and after a herbal cough syrup in the same patients.</li>
+        <li><b>Kruskal–Wallis</b>: satisfaction ranks among three pharmacies.</li>
+        <li><b>Friedman</b>: the same volunteers ranking three syrup flavours.</li>
+        <li><b>Spearman ρ</b> = 1 − 6Σd²/[n(n² − 1)]: rank correlation of exam ranks in two subjects.</li>
+        <li><b>Sign test / McNemar</b>: paired +/− changes; yes/no before and after counselling.</li>
+      </ul>
+      <h4>4. Choosing the test</h4>
+      <p>Decide by (1) type of data, (2) distribution, (3) number of groups, (4) paired or independent, (5) sample size. (Draw Fig 5.4 decision chart.)</p>
+      <h4>Conclusion</h4>
+      <p>Parametric tests give the most powerful inferences when assumptions hold; non-parametric tests provide robust alternatives for ranked, categorical or non-normal data. Both are indispensable in clinical trials, formulation development and quality control.</p>
+    </div>
+  </div>
+
+  <!-- E3 -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. What is hypothesis testing? What are the main points to be considered while formulating the hypothesis? Write the types of statistical hypothesis. Discuss the basic concepts concerning testing of hypothesis. (1+2+2+5)</div>
+      <div class="meta">Essay · 10 marks · KUHS Nov 2022 · ~25 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Follow the marks split exactly: definition (1) → 6 formulation points (2) → H₀/H₁ with one/two-tailed examples (2) → basic concepts: H₀/H₁, α, test statistic &amp; critical region, one/two tail, Type I/II, df &amp; SE, with Fig 5.1 (5)</div>
+      <h4>a) Hypothesis testing (1 mark)</h4>
+      <p>Hypothesis testing is a statistical procedure in which sample data are used to decide, at a predetermined level of significance, whether a null hypothesis about a population parameter should be rejected, i.e., whether an observed difference is real or due to chance.</p>
+      <h4>b) Points while formulating a hypothesis (2 marks)</h4>
+      <ul>
+        <li>Based on a clearly defined problem and adequate literature review.</li>
+        <li>Clear, precise and stated in simple language.</li>
+        <li>Testable empirically, within reasonable time and resources.</li>
+        <li>States the relationship between variables (independent and dependent).</li>
+        <li>Specific and limited in scope; consistent with known facts.</li>
+        <li>Stated in advance as H₀ and H₁ (directional or non-directional).</li>
+      </ul>
+      <h4>c) Types of statistical hypothesis (2 marks)</h4>
+      <p><b>Null hypothesis (H₀)</b>: no difference or no relationship; e.g., H₀: μ<sub>drug</sub> = μ<sub>placebo</sub>. <b>Alternative hypothesis (H₁)</b>: a difference exists. It may be <b>two-tailed/non-directional</b> (H₁: μ₁ ≠ μ₂) or <b>one-tailed/directional</b> (H₁: μ₁ &gt; μ₂ or μ₁ &lt; μ₂). Hypotheses may also be simple (specify the parameter exactly, e.g., μ = 500 mg) or composite (a range, e.g., μ &gt; 500 mg).</p>
+      <h4>d) Basic concepts concerning testing of hypothesis (5 marks)</h4>
+      <ol>
+        <li><b>Null and alternative hypothesis</b>: H₀ is tested; H₁ is accepted only if H₀ is rejected. We "reject" or "fail to reject" H₀; we never prove it.</li>
+        <li><b>Level of significance (α)</b>: maximum risk of rejecting a true H₀ that we accept, fixed in advance: 5% (0.05) or 1%. Confidence level = 1 − α.</li>
+        <li><b>Test statistic and decision rule</b>: a value computed from the sample (z, t, χ², F) and compared with the critical value from tables; if |calculated| ≥ critical (or p ≤ α), reject H₀.</li>
+        <li><b>Critical region and acceptance region</b>: the area of the sampling distribution where H₀ is rejected; for z at 5%, beyond ±1.96.</li>
+        <li><b>One-tailed and two-tailed tests</b>: two-tailed when H₁ is ≠ (α split into both tails, 2.5% each, z = ±1.96); one-tailed when H₁ is &gt; or &lt; (5% in one tail, z = 1.645). <i>(Draw Fig 5.1.)</i></li>
+        <li><b>Type I and Type II errors</b>: Type I (α) = rejecting a true H₀ (false positive); Type II (β) = accepting a false H₀ (false negative); power = 1 − β. Reduced by proper α and adequate sample size.</li>
+        <li><b>Degrees of freedom and standard error</b>: df = number of independent values free to vary (n − 1 etc.); SE = SD/√n measures sampling variability and is the denominator of most test statistics.</li>
+      </ol>
+      <p><b>Conclusion</b>: these concepts form the logical framework that allows researchers to draw objective, probability-based conclusions from samples.</p>
+    </div>
+  </div>
+
+  <!-- E4 -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Describe hypothesis testing in research. Explain how computers and softwares are helpful in statistical analysis.</div>
+      <div class="meta">Essay · 10 marks · KUHS Jul 2023 · ~25 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Part A (5): definition, H₀/H₁, α, 7-step procedure flow, Type I/II table → Part B (5): role of computers (8 points) + software table (SPSS, SAS, R, MINITAB, Excel) + limitations</div>
+      <h4>A. Hypothesis testing</h4>
+      <p><b>Definition</b>: a statistical method of making decisions about a population parameter using sample data, by testing a null hypothesis against an alternative at a chosen level of significance.</p>
+      <p><b>Hypotheses</b>: H₀ (no difference) and H₁ (difference), e.g., H₀: new antihypertensive and amlodipine lower BP equally.</p>
+      <p><b>Procedure</b> (draw as a staircase):</p>
+      <ol>
+        <li>State H₀ and H₁.</li>
+        <li>Fix level of significance (α = 0.05) and one/two-tailed test.</li>
+        <li>Choose the test (t, z, χ², F, non-parametric) according to the data.</li>
+        <li>Calculate the test statistic and df.</li>
+        <li>Obtain critical value or p value.</li>
+        <li>Decide: reject H₀ if p ≤ α.</li>
+        <li>Interpret in the context of the research question.</li>
+      </ol>
+      <p><b>Errors</b>: Type I (reject true H₀, probability α) and Type II (fail to reject false H₀, probability β); power = 1 − β.</p>
+      <h4>B. Role of computers and software</h4>
+      <ul>
+        <li><b>Speed and accuracy</b>: complex calculations done instantly, without arithmetic errors.</li>
+        <li><b>Data management</b>: entry, coding, cleaning, storage and retrieval of large data sets.</li>
+        <li><b>Wide range of analyses</b>: descriptive statistics, t-tests, ANOVA, χ², regression, non-parametric, multivariate and survival analysis.</li>
+        <li><b>Graphics</b>: histograms, bar/pie charts, box plots, scatter plots of publication quality.</li>
+        <li><b>Exact p values and confidence intervals</b> instead of table look-ups.</li>
+        <li><b>Planning support</b>: sample-size/power calculation, randomisation, design of experiments.</li>
+        <li><b>Reproducibility</b>: syntax/scripts; easy re-analysis and sharing.</li>
+      </ul>
+      <div class="table-wrap"><table class="nice">
+        <tr><th>Software</th><th>Use</th></tr>
+        <tr><td>SPSS</td><td>Menu-driven; clinical and survey data; t, ANOVA, χ², regression</td></tr>
+        <tr><td>SAS</td><td>Large clinical-trial data; industry and regulatory work</td></tr>
+        <tr><td>R</td><td>Free, open-source; any analysis; graphics</td></tr>
+        <tr><td>MINITAB</td><td>Quality control, control charts, DoE</td></tr>
+        <tr><td>MS Excel</td><td>Data entry, functions, Analysis ToolPak</td></tr>
+        <tr><td>GraphPad Prism</td><td>Dose–response, pharmacology graphs</td></tr>
+      </table></div>
+      <p><b>Limitations</b>: results are only as good as the data ("garbage in, garbage out"); the user must still choose the right test and interpret it; licences can be costly; training is needed.</p>
+      <p><b>Conclusion</b>: hypothesis testing provides the logic for drawing conclusions; computers make the process fast, accurate and reproducible.</p>
+    </div>
+  </div>
+
+  <!-- E5 -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Describe various components of a thesis. Add a note on publication ethics.</div>
+      <div class="meta">Essay · 10 marks · KUHS May 2022 · ~25 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Thesis definition (1) → Fig 5.5 + preliminary pages (2) → main body chapters (3) → end matter (1) → publication ethics: definition, COPE/ICMJE, misconduct list, authorship, corrective actions (3)</div>
+      <h4>1. Thesis</h4>
+      <p>A thesis is a formal written document submitted for a degree, presenting original research in a prescribed format. Its components fall into three parts (draw Fig 5.5).</p>
+      <h4>2. Preliminary pages</h4>
+      <p>Title page (title, candidate, degree, guide, institution, year); certificates from guide, HOD and principal; declaration by the candidate; acknowledgement; table of contents; lists of tables, figures and abbreviations; abstract (background, objectives, methods, results, conclusion; keywords).</p>
+      <h4>3. Main body</h4>
+      <ul>
+        <li><b>Introduction</b>: background, significance, research gap, rationale.</li>
+        <li><b>Aim and objectives</b>: primary and secondary objectives, hypothesis, plan of work.</li>
+        <li><b>Review of literature</b>: critical summary of earlier work; disease/drug profile.</li>
+        <li><b>Materials and methods</b>: study design, site, duration, population, sample size, inclusion/exclusion criteria, materials and instruments, procedure, ethics approval, statistical methods.</li>
+        <li><b>Results</b>: objective presentation in tables and figures with statistics.</li>
+        <li><b>Discussion</b>: interpretation, comparison with literature, strengths and limitations.</li>
+        <li><b>Summary and conclusion</b>: key findings, recommendations, future scope.</li>
+      </ul>
+      <h4>4. End matter</h4>
+      <p>References/bibliography in a uniform style (Vancouver/APA); appendices: ethics committee approval, informed consent form, questionnaire/case record form, raw data, plagiarism report, publications.</p>
+      <h4>5. Publication ethics</h4>
+      <p>Publication ethics are the principles of honesty, integrity, transparency and accountability that govern authors, reviewers, editors and publishers in publishing research. They are promoted by COPE (Committee on Publication Ethics) and the ICMJE recommendations.</p>
+      <ul>
+        <li><b>Authorship</b>: only those meeting all four ICMJE criteria (substantial contribution, drafting/revising, final approval, accountability); no gift, guest or ghost authors.</li>
+        <li><b>Avoid misconduct</b>: fabrication, falsification, plagiarism (FFP); duplicate/redundant publication; salami slicing; simultaneous submission; image manipulation.</li>
+        <li><b>Disclosure</b>: conflicts of interest and funding.</li>
+        <li><b>Ethical approval and informed consent</b>; confidentiality of patient data; trial registration (CTRI).</li>
+        <li><b>Reviewer and editor ethics</b>: confidentiality, unbiased and timely review.</li>
+        <li><b>Corrections</b>: errata, expressions of concern and retraction when errors or misconduct are found.</li>
+      </ul>
+      <p><b>Conclusion</b>: a well-structured thesis and ethical publication practices ensure that research is credible, reproducible and useful to society.</p>
+    </div>
+  </div>
+
+  <!-- SN1 -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Write the difference between references and bibliography.</div>
+      <div class="meta">Short note · 5 marks · KUHS May 2022 (Model paper brief too) · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Two definitions (1) → 7-point table (2.5) → one Vancouver + one APA example (1) → styles &amp; managers (0.5)</div>
+      <p><b>References</b>: the list of sources actually cited in the text, each linked to an in-text citation. <b>Bibliography</b>: a list of all sources consulted for the work, whether cited or not, for background and further reading.</p>
+      <div class="table-wrap"><table class="nice">
+        <tr><th>Point</th><th>References</th><th>Bibliography</th></tr>
+        <tr><td>Content</td><td>Only cited sources</td><td>All sources consulted</td></tr>
+        <tr><td>In-text link</td><td>Yes, every entry</td><td>Not necessary</td></tr>
+        <tr><td>Purpose</td><td>Support statements, allow verification</td><td>Show background reading</td></tr>
+        <tr><td>Order</td><td>Numerical (Vancouver) or alphabetical (APA)</td><td>Alphabetical</td></tr>
+        <tr><td>Scope</td><td>Narrow</td><td>Broad</td></tr>
+        <tr><td>Used in</td><td>Research papers, theses</td><td>Books, theses, reports</td></tr>
+        <tr><td>Placement</td><td>End of article/chapter</td><td>End of book/thesis</td></tr>
+      </table></div>
+      <p><b>Vancouver</b>: 1. Hopps J, Wilde N. Night-howler toxin and predator behaviour. Zootopia J Pharm Sci. 2016;12(3):45-52. <b>APA</b>: Hopps, J., &amp; Wilde, N. (2016). Night-howler toxin and predator behaviour. <i>Zootopia Journal of Pharmaceutical Sciences, 12</i>(3), 45–52. <small>(format examples)</small></p>
+      <p>Styles: Vancouver, APA, Harvard, MLA, Chicago. Managers: Mendeley, Zotero, EndNote.</p>
+    </div>
+  </div>
+
+  <!-- SN2 -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Name various softwares used in biostatistics. Explain the features of any one.</div>
+      <div class="meta">Short note · 5 marks · KUHS Nov 2022 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">List 8 software (1) → SPSS: origin, data/variable view, analyses, graphs, output, syntax, import (3) → steps flow + advantages/limits (1)</div>
+      <p><b>Software</b>: SPSS, SAS, R, MINITAB, Microsoft Excel (Analysis ToolPak), GraphPad Prism, Stata, Epi Info, Design-Expert, Phoenix WinNonlin, G*Power.</p>
+      <h4>Features of SPSS (IBM SPSS Statistics)</h4>
+      <ul>
+        <li>Originally "Statistical Package for the Social Sciences" (developed 1968), now owned by IBM; widely used in health research.</li>
+        <li><b>Data View</b> (spreadsheet of cases × variables) and <b>Variable View</b> (name, type, labels, value codes, measurement level).</li>
+        <li><b>Menu-driven</b> analysis (Analyze menu) needing no programming.</li>
+        <li><b>Procedures</b>: descriptive statistics, frequencies, crosstabs with χ², t-tests, one/two-way ANOVA with post-hoc tests, correlation, linear and logistic regression, non-parametric tests, reliability analysis, factor analysis, survival analysis.</li>
+        <li><b>Chart Builder</b>: histograms, bar, pie, box and scatter plots.</li>
+        <li><b>Output Viewer</b>: tables with exact p ("Sig.") and confidence intervals; exportable to Word/Excel/PDF.</li>
+        <li><b>Syntax Editor</b> for reproducible analysis; imports Excel, CSV and database files; handles missing values.</li>
+      </ul>
+      <p><b>Steps</b>: define variables → enter/import data → Analyze → choose test → read output → interpret. <b>Limitations</b>: licensed (costly), less flexible than R for advanced methods.</p>
+    </div>
+  </div>
+
+  <!-- SN3 -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Components of a thesis.</div>
+      <div class="meta">Short note · 5 marks · KUHS Jul 2023 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition (½) → Fig 5.5 (1) → preliminary pages (1) → 7 chapters, one line each (2) → end matter (½)</div>
+      <p>A thesis is a structured report of original research submitted for a degree. Its components (draw Fig 5.5):</p>
+      <p><b>A. Preliminary pages</b>: title page, certificates (guide, HOD, principal), declaration, acknowledgement, table of contents, lists of tables/figures/abbreviations, abstract.</p>
+      <p><b>B. Main body</b>: (1) Introduction: background, need, research gap; (2) Aim and objectives, hypothesis, plan of work; (3) Review of literature; (4) Materials and methods: design, setting, sample size, inclusion/exclusion, procedure, ethics approval, statistical analysis; (5) Results: tables and graphs; (6) Discussion: interpretation, comparison, limitations; (7) Summary and conclusion with recommendations.</p>
+      <p><b>C. End matter</b>: references/bibliography; appendices (ethics approval, consent form, questionnaire/CRF, raw data, plagiarism certificate).</p>
+      <p><small>Memory hook: "I Always Read My Report Daily, Chief!"</small></p>
+    </div>
+  </div>
+
+  <!-- SN4 -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Describe TWO parametric tests used in context of testing hypothesis.</div>
+      <div class="meta">Short note · 5 marks · KUHS Jul 2023 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">One line on parametric tests (½) → Student's t-test: definition, assumptions, 3 types with formulae, application (2) → ANOVA: definition, assumptions, F, table, post-hoc, application (2) → line on when to use each (½)</div>
+      <p>Parametric tests assume normally distributed populations and test hypotheses about means/variances using interval or ratio data.</p>
+      <h4>1. Student's t-test</h4>
+      <p>Used to compare means when n is small (&lt; 30) and σ is unknown (W. S. Gosset, "Student", 1908). <b>Assumptions</b>: normality, random independent samples, equal variances (unpaired). <b>Types</b>: one-sample t = (x̄ − μ)/(s/√n), df n − 1; unpaired t = (x̄₁ − x̄₂)/[S<sub>p</sub>√(1/n₁ + 1/n₂)], df n₁ + n₂ − 2; paired t = d̄/(s<sub>d</sub>/√n), df n − 1. If calculated t ≥ table t, reject H₀. <b>Applications</b>: drug vs placebo, before–after BP, two batches or two analytical methods.</p>
+      <h4>2. Analysis of variance (ANOVA)</h4>
+      <p>Compares the means of three or more groups (R. A. Fisher) by splitting total variation into between-group and within-group variation. F = MS<sub>between</sub>/MS<sub>within</sub> with df (k − 1, N − k). <b>Assumptions</b>: normality, homogeneity of variances, independence. <b>Types</b>: one-way, two-way, repeated measures. A significant F is followed by post-hoc tests (Tukey, Bonferroni, Dunnett). <b>Applications</b>: comparing three formulations, doses or treatment groups; inter-day precision in method validation.</p>
+      <p>t-test for two groups; ANOVA for three or more (multiple t-tests would inflate Type I error).</p>
+    </div>
+  </div>
+
+  <!-- SN5 -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. What are basic concepts in writing a research paper?</div>
+      <div class="meta">Short note · 5 marks · KUHS Dec 2023 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition (½) → pre-writing steps (1) → IMRaD components (2) → writing principles + reporting guidelines + ethics (1) → submission pipeline sketch (½)</div>
+      <p>A research paper is a concise, peer-reviewed report of original research published in a scientific journal.</p>
+      <h4>Before writing</h4>
+      <p>Be clear on the key message; choose a suitable journal (scope, indexing, impact factor, open access) and follow its "Instructions to authors"; decide authorship using ICMJE criteria.</p>
+      <h4>Structure (IMRaD)</h4>
+      <ul>
+        <li><b>Title</b>: short, specific, informative; <b>authors and affiliations</b>, corresponding author.</li>
+        <li><b>Abstract</b>: structured summary within the word limit; <b>keywords</b> (MeSH).</li>
+        <li><b>Introduction</b>: what is known, the gap, the aim/hypothesis.</li>
+        <li><b>Methods</b>: design, subjects, interventions, measurements, ethics approval, statistics, with enough detail to replicate.</li>
+        <li><b>Results</b>: findings in logical order using tables/figures, without interpretation.</li>
+        <li><b>Discussion</b>: meaning, comparison with other studies, limitations, implications; <b>conclusion</b>.</li>
+        <li>Acknowledgements, funding, conflicts of interest, <b>references</b>.</li>
+      </ul>
+      <h4>Principles</h4>
+      <p>Clarity, brevity, accuracy and logical flow; past tense for methods and results; consistent units and abbreviations; follow reporting guidelines (CONSORT, STROBE, PRISMA, CARE, ARRIVE); avoid plagiarism; cite properly; register clinical trials. Then submit with a cover letter → editorial screening → peer review → revision → acceptance → publication (Fig 5.6).</p>
+    </div>
+  </div>
+
+  <!-- SN6 -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Explain the procedure involved in testing of hypothesis.</div>
+      <div class="meta">Short note · 5 marks · KUHS Dec 2023 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition (½) → 7 steps as a vertical flow with one line each (3) → short worked illustration (1) → Type I/II line (½)</div>
+      <p>Testing of hypothesis is a systematic procedure to decide, using sample data, whether to reject a null hypothesis at a chosen level of significance.</p>
+      <ol>
+        <li><b>State the hypotheses</b>: H₀ (no difference, μ₁ = μ₂) and H₁ (μ₁ ≠ μ₂, or directional).</li>
+        <li><b>Set the level of significance</b> (α = 0.05 or 0.01) and decide one- or two-tailed.</li>
+        <li><b>Select the appropriate test</b> based on data type, distribution, sample size, number of groups and pairing (z, t, F, χ² or non-parametric).</li>
+        <li><b>Compute the test statistic</b> from sample data and determine df.</li>
+        <li><b>Find the critical value</b> from tables (or the p value from software).</li>
+        <li><b>Decision</b>: if calculated value ≥ critical value (p ≤ α), reject H₀; otherwise fail to reject H₀.</li>
+        <li><b>Conclusion and interpretation</b> in terms of the research problem.</li>
+      </ol>
+      <p><b>Example</b>: digoxin levels at 4 h vs 8 h in 9 patients: paired t = 2.83 &gt; 2.306 (df 8) → reject H₀; the level fell significantly.</p>
+      <p>Errors possible: Type I (α) and Type II (β); power = 1 − β.</p>
+    </div>
+  </div>
+
+  <!-- SN7 -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Discuss the applications of some commonly used computer software in biostatistical analysis.</div>
+      <div class="meta">Short note · 5 marks · KUHS Model paper · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Intro on why software (½) → table of 6 software with applications (3) → general applications list (1) → limitation line (½)</div>
+      <p>Statistical software performs data management, analysis and graphics quickly and accurately.</p>
+      <ul>
+        <li><b>SPSS</b>: menu-driven; descriptive statistics, t-tests, ANOVA, χ², correlation, regression, non-parametric tests; used in clinical, epidemiological and survey research (KAP studies, drug-utilisation studies).</li>
+        <li><b>SAS</b>: handling and analysing large clinical-trial data sets; pharmaceutical industry and regulatory submissions.</li>
+        <li><b>R</b>: free, open source; advanced modelling, bioequivalence, PK, meta-analysis, high-quality graphics.</li>
+        <li><b>MINITAB</b>: quality control charts, process capability, design of experiments, regression; used in pharmaceutical manufacturing.</li>
+        <li><b>MS Excel</b>: data entry, functions (AVERAGE, STDEV.S, T.TEST, CORREL), Analysis ToolPak for descriptives, t-test, ANOVA, regression; charts.</li>
+        <li><b>GraphPad Prism</b>: pharmacology: dose–response curves, EC50/IC50, non-linear regression, ANOVA with post-hoc tests.</li>
+        <li><b>Others</b>: Epi Info (epidemiology, free), Design-Expert (formulation optimisation), Phoenix WinNonlin (PK/BE), G*Power (sample size).</li>
+      </ul>
+      <p><b>Applications overall</b>: sample-size calculation, randomisation, data cleaning, hypothesis testing, exact p values and CIs, graphs, report generation. <b>Caution</b>: correct test selection and interpretation remain the researcher's job.</p>
+    </div>
+  </div>
+
+  <!-- SN8 -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Write briefly on publication ethics and plagiarism.</div>
+      <div class="meta">Short note · 5 marks · KUHS Model paper · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Publication ethics: definition + COPE/ICMJE + 6 key issues (2.5) → Plagiarism: definition, types, UGC levels, tools, prevention (2.5)</div>
+      <h4>Publication ethics</h4>
+      <p>The principles of honesty, transparency and accountability that govern authors, editors, reviewers and publishers. Guided by COPE and ICMJE recommendations.</p>
+      <ul>
+        <li>Authorship only for those meeting ICMJE criteria; no gift/ghost authorship.</li>
+        <li>No fabrication, falsification or plagiarism (FFP); no duplicate publication or salami slicing.</li>
+        <li>Disclosure of conflicts of interest and funding.</li>
+        <li>Ethics committee approval, informed consent, confidentiality; trial registration.</li>
+        <li>Confidential, unbiased peer review.</li>
+        <li>Corrections and retractions when errors or misconduct are found.</li>
+      </ul>
+      <h4>Plagiarism</h4>
+      <p>Presenting another person's words, ideas, data or images as one's own without acknowledgement. <b>Types</b>: direct/verbatim, mosaic/patchwriting, paraphrasing without citation, self-plagiarism, citation plagiarism, image/data plagiarism. <b>UGC Regulations 2018</b>: up to 10% similarity = level 0 (no penalty); &gt;10–40% level 1; &gt;40–60% level 2; &gt;60% level 3 (registration cancelled for students). <b>Detection</b>: Turnitin, iThenticate, DrillBit. <b>Prevention</b>: cite sources, quote exact words, paraphrase properly, use reference managers, run similarity checks.</p>
+    </div>
+  </div>
+
+  <!-- BRIEFS -->
+  <h3>Brief answers (2 marks each)</h3>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Characteristics of good hypothesis.</div><div class="meta">Brief · 2 marks · May 2022</div></div>
+    <div class="answer-body"><p>A good hypothesis is (1) clear and precise, (2) testable/verifiable empirically within reasonable time, (3) states the relationship between variables, (4) specific and limited in scope, (5) consistent with known facts and theory, (6) stated in simple language, (7) logical, and (8) has explanatory and predictive power (falsifiable). Memory hook: <b>TESTABLE</b>.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Define hypothesis. Write their types with suitable examples.</div><div class="meta">Brief · 2 marks · Jul 2023</div></div>
+    <div class="answer-body"><p>A hypothesis is a tentative, testable statement about the relationship between two or more variables, proposed as a provisional answer to a research question. <b>Types</b>: <b>null (H₀)</b>, "drug X has no effect on BP"; <b>alternative (H₁)</b>, "drug X lowers BP"; <b>directional</b> (μ₁ &lt; μ₂) and <b>non-directional</b> (μ₁ ≠ μ₂); <b>simple</b> (one IV, one DV: "smoking causes lung cancer") and <b>complex</b> (several variables); <b>research/working</b> hypothesis.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Define analysis of variance.</div><div class="meta">Brief · 2 marks · May 2022</div></div>
+    <div class="answer-body"><p>Analysis of variance (ANOVA) is a parametric test, developed by R. A. Fisher, used to compare the means of three or more groups by dividing the total variation into between-group and within-group components and computing F = MS<sub>between</sub>/MS<sub>within</sub>. A significant F shows at least one mean differs (post-hoc tests identify which). Types: one-way, two-way. e.g., comparing disintegration time with three binders.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Name some software used in biostatistics.</div><div class="meta">Brief · 2 marks · May 2022</div></div>
+    <div class="answer-body"><p>SPSS (IBM SPSS Statistics), SAS, R (free, open source), MINITAB, Microsoft Excel with Analysis ToolPak, GraphPad Prism, Stata, Epi Info, Design-Expert and Phoenix WinNonlin. They are used for data management, descriptive and inferential statistics and graphs.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. What is Type I and Type II errors in research? / Explain Type I error and Type II error.</div><div class="meta">Brief · 2 marks · May 2022, Nov 2022</div></div>
+    <div class="answer-body"><p><b>Type I error (α)</b>: rejecting the null hypothesis when it is actually true (false positive), e.g., concluding an ineffective drug works; its probability is the level of significance (usually 0.05). <b>Type II error (β)</b>: failing to reject the null hypothesis when it is actually false (false negative), e.g., missing a truly effective drug. Power = 1 − β; increasing sample size reduces β.</p>
+      <div class="table-wrap"><table class="nice"><tr><th>Decision</th><th>H₀ true</th><th>H₀ false</th></tr><tr><td>Reject H₀</td><td>Type I (α)</td><td>Correct (power)</td></tr><tr><td>Accept H₀</td><td>Correct</td><td>Type II (β)</td></tr></table></div></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Type II errors in research.</div><div class="meta">Brief · 2 marks · Dec 2023</div></div>
+    <div class="answer-body"><p>A Type II error occurs when a researcher fails to reject a false null hypothesis, i.e., concludes there is no difference when a real difference exists (false negative). Its probability is β; power = 1 − β (usually planned at 80–90%). Causes: small sample size, high variability, small effect size, very low α. Reduced mainly by increasing sample size. Example: a small trial wrongly concludes an effective antihypertensive is no better than placebo.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. What is Type I error in hypothesis testing?</div><div class="meta">Brief · 2 marks · Model paper</div></div>
+    <div class="answer-body"><p>Type I error is rejecting a null hypothesis that is actually true, i.e., concluding a difference or effect exists when it does not (false positive). Its probability equals the level of significance α (commonly 0.05, i.e., 5% risk). It can be reduced by choosing a smaller α (0.01), at the cost of increasing Type II error unless sample size is increased. Example: approving a drug that is really no better than placebo.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Define plagiarism.</div><div class="meta">Brief · 2 marks · Dec 2023</div></div>
+    <div class="answer-body"><p>Plagiarism is the use of another person's words, ideas, data, images or work, and presenting them as one's own without proper acknowledgement. Types: verbatim, mosaic, paraphrasing without citation, self-plagiarism. It is research misconduct; in India the UGC 2018 regulations allow up to 10% similarity without penalty. Detected by software such as Turnitin, iThenticate and DrillBit; avoided by proper citation and paraphrasing.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Define bibliography.</div><div class="meta">Brief · 2 marks · Dec 2023</div></div>
+    <div class="answer-body"><p>A bibliography is a list of all the sources (books, journal articles, reports, websites) consulted during the preparation of a thesis, book or report, whether or not they are cited in the text, usually arranged alphabetically by author's surname in a standard style. It differs from references, which list only the sources actually cited.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. What is the difference between reference and bibliography?</div><div class="meta">Brief · 2 marks · Model paper</div></div>
+    <div class="answer-body"><p><b>References</b> list only sources cited in the text, each linked to an in-text citation and arranged by citation number (Vancouver) or alphabetically (APA); they support specific statements. A <b>bibliography</b> lists all sources consulted, cited or not, arranged alphabetically, to show background reading. References are narrower and mandatory in research papers; bibliographies are broader and common in books and theses.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. What is meant by the term "impact factor" in research publication?</div><div class="meta">Brief · 2 marks · Model paper</div></div>
+    <div class="answer-body"><p>The journal impact factor is a measure of how frequently the average article in a journal is cited: the number of citations received in a year by items published in the previous two years, divided by the number of citable items published in those two years. It is published annually by Clarivate in the Journal Citation Reports (concept introduced by Eugene Garfield). e.g., 600 citations / 200 items = IF 3.0. It is a journal-level metric and varies across fields.</p></div>
+  </div>
+
+  <!-- PREDICTED -->
+  <h3>🔮 Predicted questions (not yet asked by KUHS, frequent in question banks)</h3>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Explain null and alternative hypothesis, Type I and Type II errors, level of significance and P value.</div>
+      <div class="meta"><span class="pill model">Predicted</span> Essay · 10 marks · ~25 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Hypothesis definitions with example (2) → level of significance + Fig 5.1 (2) → Type I/II table + Fig 5.2 + power (3) → P value definition, interpretation table, cautions (2) → conclusion (1)</div>
+      <p><b>Null hypothesis</b> H₀: no difference/no effect (μ₁ = μ₂). <b>Alternative</b> H₁: difference exists (μ₁ ≠ μ₂ two-tailed; μ₁ &gt; μ₂ one-tailed). Example: H₀: new analgesic and placebo give equal pain relief.</p>
+      <p><b>Level of significance (α)</b>: the probability of Type I error the researcher is willing to accept, fixed before the study (0.05 or 0.01); it defines the critical region (z beyond ±1.96 for two-tailed 5%).</p>
+      <p><b>Type I error</b>: rejecting a true H₀ (false positive, probability α). <b>Type II error</b>: failing to reject a false H₀ (false negative, probability β). <b>Power</b> = 1 − β. Lowering α increases β unless n increases; both errors fall with larger samples. (Draw the 2×2 table and Fig 5.2.)</p>
+      <p><b>P value</b>: probability of getting results at least as extreme as observed if H₀ were true. p ≤ α → reject H₀ (significant); p &gt; α → fail to reject. p &lt; 0.01 highly significant. A p value does not measure the size or clinical importance of an effect, so report effect size and 95% CI too.</p>
+      <p><b>Conclusion</b>: these four concepts together decide how confidently a researcher can claim that a drug or intervention truly works.</p>
+    </div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Explain chi-square test and its applications.</div><div class="meta"><span class="pill model">Predicted</span> Short note · 5 marks</div></div>
+    <div class="answer-body"><p>Definition (Karl Pearson): χ² = Σ(O − E)²/E compares observed and expected frequencies; E = row total × column total / grand total; df = (r − 1)(c − 1). Conditions: random sample, frequencies not %, expected ≥ 5 per cell (else Fisher's exact/Yates' correction). Applications: test of association (smoking and ulcer), goodness of fit, homogeneity; comparing cure rates or ADR incidence between drugs. Worked: antidote vs placebo, χ² = 7.5 &gt; 3.84 (df 1) → significant association.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. P value / One-tailed and two-tailed tests / Degrees of freedom / Paraphrasing.</div><div class="meta"><span class="pill model">Predicted</span> Brief · 2 marks each</div></div>
+    <div class="answer-body">
+      <p><b>P value</b>: probability of obtaining a result as extreme as, or more extreme than, the observed one if H₀ is true; p ≤ 0.05 → significant, reject H₀.</p>
+      <p><b>One- vs two-tailed</b>: two-tailed test when H₁ is non-directional (≠), with α split into both tails (±1.96 at 5%); one-tailed when H₁ is directional (&gt; or &lt;), with α in one tail (1.645).</p>
+      <p><b>Degrees of freedom</b>: the number of independent observations free to vary after restrictions are imposed; n − 1 for one-sample/paired t, n₁ + n₂ − 2 for unpaired t, (r − 1)(c − 1) for χ².</p>
+      <p><b>Paraphrasing</b>: restating another author's idea in one's own words and sentence structure, keeping the meaning, with citation of the source; a key way to avoid plagiarism.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== 8. FLASHCARDS + QUIZ ===== -->
+<section class="section">
+  <h2><span class="num">🃏</span> Magic Flashcards</h2>
+  <p>Tap a card to reveal ✨, saying the answer aloud first!</p>
+  <div class="flashcards">
+    <details class="flash"><summary>H₀ vs H₁?</summary><div>H₀ = no difference/no effect (tested); H₁ = a difference exists (accepted if H₀ is rejected).</div></details>
+    <details class="flash"><summary>Type I error = ?</summary><div>Rejecting a TRUE H₀: false positive, probability α. Chicken Little's acorn panic 🐥.</div></details>
+    <details class="flash"><summary>Type II error = ?</summary><div>Failing to reject a FALSE H₀: false negative, probability β. Ignoring the real aliens 👽.</div></details>
+    <details class="flash"><summary>Power = ?</summary><div>1 − β; increases with sample size, effect size and α.</div></details>
+    <details class="flash"><summary>P value definition?</summary><div>Probability of a result as extreme as, or more extreme than, observed if H₀ is true.</div></details>
+    <details class="flash"><summary>Critical z values?</summary><div>Two-tailed: 1.96 (5%), 2.58 (1%). One-tailed: 1.645 (5%), 2.33 (1%).</div></details>
+    <details class="flash"><summary>7 steps of hypothesis testing?</summary><div>Hypotheses → Level α → Test choice → Compute → Critical value/p → Decide → Conclude.</div></details>
+    <details class="flash"><summary>Non-parametric twin of unpaired t?</summary><div>Mann–Whitney U (= Wilcoxon rank-sum).</div></details>
+    <details class="flash"><summary>Non-parametric twin of paired t?</summary><div>Wilcoxon signed-rank test.</div></details>
+    <details class="flash"><summary>Non-parametric twin of one-way ANOVA?</summary><div>Kruskal–Wallis H test (Friedman for repeated measures).</div></details>
+    <details class="flash"><summary>ANOVA F = ?</summary><div>MS between / MS within; df (k − 1, N − k). Developed by R. A. Fisher.</div></details>
+    <details class="flash"><summary>χ² formula and df?</summary><div>Σ(O − E)²/E; df = (r − 1)(c − 1); expected ≥ 5 per cell.</div></details>
+    <details class="flash"><summary>References vs bibliography?</summary><div>References = only cited sources; bibliography = all sources consulted (Belle's whole library).</div></details>
+    <details class="flash"><summary>UGC 2018 similarity levels?</summary><div>≤10% level 0 · &gt;10–40% L1 · &gt;40–60% L2 · &gt;60% L3.</div></details>
+    <details class="flash"><summary>Impact factor formula?</summary><div>Citations in year Y to items of Y−1 and Y−2 ÷ citable items published in Y−1 and Y−2.</div></details>
+    <details class="flash"><summary>ICMJE authorship criteria?</summary><div>Substantial contribution + drafting/revising + final approval + accountability: all four.</div></details>
+  </div>
+
+  <h2 style="margin-top:1em"><span class="num">🎯</span> 1-Minute Quiz</h2>
+  <div class="quiz">
+    <div class="qitem">Rejecting a true null hypothesis is…
+      <div class="opts"><button class="opt" data-right>Type I error</button><button class="opt">Type II error</button><button class="opt">Power</button></div>
+      <div class="why">False alarm = Type I (α). Chicken Little and the acorn!</div></div>
+    <div class="qitem">Pain scores (0–10) compared between two independent groups: best test?
+      <div class="opts"><button class="opt">Paired t-test</button><button class="opt" data-right>Mann–Whitney U</button><button class="opt">Pearson r</button></div>
+      <div class="why">Ordinal data, two independent groups → Mann–Whitney U.</div></div>
+    <div class="qitem">Comparing mean disintegration time of FOUR formulations (normal data)…
+      <div class="opts"><button class="opt">Several t-tests</button><button class="opt" data-right>One-way ANOVA</button><button class="opt">Chi-square</button></div>
+      <div class="why">Three or more means → ANOVA; multiple t-tests inflate Type I error.</div></div>
+    <div class="qitem">p = 0.03 with α = 0.05 means…
+      <div class="opts"><button class="opt" data-right>Reject H₀</button><button class="opt">Accept H₀ as proven</button><button class="opt">The effect is clinically large</button></div>
+      <div class="why">p ≤ α → reject H₀; p says nothing about effect size.</div></div>
+    <div class="qitem">Increasing the sample size will…
+      <div class="opts"><button class="opt">Increase β</button><button class="opt" data-right>Increase power</button><button class="opt">Increase α</button></div>
+      <div class="why">Bigger n → smaller SE → less overlap → higher power, lower β.</div></div>
+    <div class="qitem">A list of every source you read, cited or not, is a…
+      <div class="opts"><button class="opt">Reference list</button><button class="opt" data-right>Bibliography</button><button class="opt">Appendix</button></div>
+      <div class="why">Belle's whole library = bibliography.</div></div>
+    <div class="qitem">Splitting one study into several small papers is called…
+      <div class="opts"><button class="opt">Ghost authorship</button><button class="opt" data-right>Salami slicing</button><button class="opt">Paraphrasing</button></div>
+      <div class="why">Salami slicing is a form of redundant publication.</div></div>
+    <div class="qitem">Which chapter of a thesis states sample size, inclusion/exclusion criteria and statistics used?
+      <div class="opts"><button class="opt">Introduction</button><button class="opt">Results</button><button class="opt" data-right>Materials &amp; methods</button></div>
+      <div class="why">Methods must let another researcher repeat the study.</div></div>
+  </div>
+</section>
+
+<!-- ===== 9. CHEAT SHEET ===== -->
+<section class="cheatsheet">
+  <h2>📝 One-Page Cheat Sheet: Unit 5</h2>
+  <p><small>Read this the night before the exam. Everything important, nothing extra.</small></p>
+  <div class="grid-3">
+    <div class="card"><h4>Question &amp; hypothesis</h4><ul><li>PICO(T) · FINER</li><li>Hypothesis = tentative, testable statement about variables</li><li>Types: H₀, H₁, directional/non-directional, simple/complex, research</li><li>Good: TESTABLE</li></ul></div>
+    <div class="card"><h4>Testing concepts</h4><ul><li>H₀ vs H₁ · α (0.05/0.01)</li><li>Test statistic vs critical value</li><li>Two-tailed ±1.96 · one-tailed 1.645</li><li>df · SE · Type I/II · power</li></ul></div>
+    <div class="card"><h4>Procedure (7)</h4><ul><li>Hypotheses → Level → Test → Compute → Critical/p → Decide → Conclude</li><li>"Happy Little Tigers Count Carrots, Deciding Carefully"</li></ul></div>
+    <div class="card"><h4>P value &amp; errors</h4><ul><li>p = P(result this extreme | H₀ true)</li><li>p ≤ α → reject H₀</li><li>Type I = reject true H₀ (α) 🐥</li><li>Type II = keep false H₀ (β) 👽 · power 1 − β</li></ul></div>
+    <div class="card"><h4>Parametric</h4><ul><li>Normal, interval/ratio, mean</li><li>z (n ≥ 30) · t: one-sample, unpaired, paired</li><li>ANOVA F = MSB/MSW (+ post-hoc)</li><li>Pearson r · regression · F-test</li></ul></div>
+    <div class="card"><h4>Non-parametric twins</h4><ul><li>Unpaired t → Mann–Whitney U</li><li>Paired t → Wilcoxon signed-rank</li><li>ANOVA → Kruskal–Wallis · Friedman</li><li>Pearson → Spearman · counts → χ²</li></ul></div>
+    <div class="card"><h4>Software</h4><ul><li>SPSS (1968, IBM) · SAS · R (1993, free)</li><li>MINITAB (1972, Penn State) · Excel ToolPak</li><li>GraphPad Prism · Epi Info · Stata</li><li>Speed, accuracy, graphs, reproducibility</li></ul></div>
+    <div class="card"><h4>Thesis</h4><ul><li>Front: title, certificates, declaration, acknowledgement, contents, abstract</li><li>Body: I-A-R-M-R-D-C</li><li>End: references, appendices</li></ul></div>
+    <div class="card"><h4>Integrity &amp; publication</h4><ul><li>Plagiarism types · UGC 10/40/60%</li><li>References (cited) vs bibliography (all read)</li><li>IF = citations Y ÷ items (Y−1, Y−2)</li><li>COPE, ICMJE 4 criteria, FFP, salami slicing</li></ul></div>
+  </div>
+</section>
+
+<!-- ===== 10. BADGE ===== -->
+<section class="badge-unlock">
+  <span class="medal">🐥🏅</span>
+  <h2>Badge Unlocked: Sky-Is-Not-Falling Statistician!</h2>
+  <p>Mimosa, you now know when the sky is really falling and when it's just an acorn. You can choose the right test, judge a p-value, and write a thesis Judy and Chief Bogo would frame on the precinct wall. Chicken Little is proud of you, and so am I. 💙</p>
+  <ul class="checklist">
+    <li><label><input type="checkbox"> I can define a hypothesis, list its types and characteristics, and write H₀/H₁</label></li>
+    <li><label><input type="checkbox"> I can explain the basic concepts and 7-step procedure of hypothesis testing with Fig 5.1</label></li>
+    <li><label><input type="checkbox"> I can explain P value, Type I and Type II errors and power with the 2×2 table</label></li>
+    <li><label><input type="checkbox"> I can differentiate parametric and non-parametric tests and explain three of each</label></li>
+    <li><label><input type="checkbox"> I can name statistical software and describe SPSS features</label></li>
+    <li><label><input type="checkbox"> I can list thesis components, and explain plagiarism, references vs bibliography, impact factor and publication ethics</label></li>
+  </ul>
+  <button class="done-btn" data-unit="rmb-5">🏆 Mark Unit 5 complete</button>
+</section>
+
+<!-- ===== 11. FOOTER NAV ===== -->
+<nav class="next-nav">
+  <a href="unit-4.html"><small>⬅ Previous adventure</small>Unit 4 · Biostatistics &amp; Sampling</a>
+  <a class="next" href="pyq-bank.html"><small>Next adventure ➜</small>📜 PYQ Treasure Chest &amp; Mock Papers</a>
+</nav>
+<p class="footer-love">Made with 💖 for Mimosa · B.Pharm Final Semester · KUHS 2017 Scheme</p>
+
+</div>
+</body>
+</html>

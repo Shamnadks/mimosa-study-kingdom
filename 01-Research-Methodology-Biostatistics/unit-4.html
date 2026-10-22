@@ -1,0 +1,1431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RMB Unit 4 · Biostatistics &amp; Sampling Fundamentals</title>
+<link rel="stylesheet" href="../assets/kingdom.css">
+<script src="../assets/kingdom.js" defer></script>
+</head>
+<body class="theme-rmb">
+<div class="wrap">
+
+<!-- ===== 1. TOP NAV ===== -->
+<nav class="topbar">
+  <a href="../index.html">🏰 Kingdom Home</a>
+  <a href="../00-Study-Plan/study-plan.html">🗓️ Study Plan</a>
+  <a href="pyq-bank.html">📜 PYQ Bank</a>
+  <span class="spacer"></span>
+  <a href="unit-1.html">U1</a><a href="unit-2.html">U2</a><a href="unit-3.html">U3</a><a href="unit-4.html">U4</a><a href="unit-5.html">U5</a>
+</nav>
+
+<!-- ===== 2. HERO ===== -->
+<header class="hero">
+  <div class="hero-emoji">🐰📊</div>
+  <div class="hero-kicker">BP801T · Research Methodology &amp; Biostatistics · Unit 4 of 5</div>
+  <h1>Biostatistics &amp; Sampling Fundamentals</h1>
+  <p class="hero-sub">Officer Mimosa, Chief Bogo just dropped a mountain of case files on your desk. Judy says numbers never lie, but you have to know how to make them talk. Today you learn to summarise a crowd with one number, measure the spread, and pick the right witnesses!</p>
+  <div class="hero-chips">
+    <span class="chip">⏱️ 8 syllabus hours</span>
+    <span class="chip">📜 Asked 17× in KUHS (2022–23) + 2× model paper</span>
+    <span class="chip">🎯 Priority: MUST-DO (a numerical every year)</span>
+    <span class="chip">📖 ~85 min read</span>
+  </div>
+</header>
+
+<!-- ===== 3. WISH CARD ===== -->
+<section class="wish">
+  <div class="wish-to">Dear Mimosa,</div>
+  <p>Think of Snow White's seven little friends lining up at the cottage door: tall Doc, grumpy Grumpy, tiny Dopey… seven different heights, yet Snow White can describe the whole gang with just two magic numbers: <b>how tall they are on average</b> and <b>how much they differ</b>. That is biostatistics in one picture! And when Cinderella's glass slipper decides who can enter the story, you already know what <b>inclusion criteria</b> are. Heigh-ho, my clever girl, this unit is pure marks. 💙🍎</p>
+  <div class="wish-hook">Seven Dwarfs → MEAN tells the middle, SD tells the spread. Slipper fits = INCLUDED, step-sisters = EXCLUDED, gone at midnight = DROPOUT.</div>
+  <div class="wish-from">— with love, your biggest fan ✨</div>
+</section>
+
+<!-- ===== 4. UNIT MAP ===== -->
+<section class="section">
+  <h2><span class="num">🗺️</span> Unit Map</h2>
+  <div class="map">
+    <div class="map-center">📊 Biostatistics &amp; Sampling Fundamentals</div>
+    <div class="branch"><span class="ico">📘</span><b>Biostatistics</b><span>Definition + applications in pharmacy</span></div>
+    <div class="branch"><span class="ico">🏷️</span><b>Various terms</b><span>Population, sample, parameter, statistic, variables, scales</span></div>
+    <div class="branch"><span class="ico">🎯</span><b>Central tendency</b><span>Mean, median, mode (+ GM, HM), grouped data</span></div>
+    <div class="branch"><span class="ico">↔️</span><b>Dispersion</b><span>Range, QD, MD, SD, variance, CV, SEM</span></div>
+    <div class="branch"><span class="ico">🔮</span><b>Inferential statistics</b><span>Estimation, hypothesis testing, models</span></div>
+    <div class="branch"><span class="ico">🎲</span><b>Probability</b><span>Definitions, rules, distributions</span></div>
+    <div class="branch"><span class="ico">📈</span><b>Correlation &amp; regression</b><span>r, Spearman ρ, Y = a + bX</span></div>
+    <div class="branch"><span class="ico">🥄</span><b>Need for sampling</b><span>Census vs sample, frame, errors</span></div>
+    <div class="branch"><span class="ico">🎟️</span><b>Probability &amp; non-probability sampling</b><span>SRS, systematic, stratified, cluster… convenience, quota…</span></div>
+    <div class="branch"><span class="ico">🔢</span><b>Sample size</b><span>Factors, formulae, power</span></div>
+    <div class="branch"><span class="ico">👠</span><b>Inclusion &amp; exclusion</b><span>Who may enter the study</span></div>
+    <div class="branch"><span class="ico">🕛</span><b>Dropouts</b><span>Reasons, ITT vs PP, CONSORT</span></div>
+  </div>
+  <p><b>Syllabus checklist</b> (tick as you finish):</p>
+  <ul class="checklist">
+    <li><label><input type="checkbox"> Biostatistics: definition and application</label></li>
+    <li><label><input type="checkbox"> Various terms in statistics (incl. types of variables)</label></li>
+    <li><label><input type="checkbox"> Descriptive statistics: measures of central tendency</label></li>
+    <li><label><input type="checkbox"> Measures of dispersion</label></li>
+    <li><label><input type="checkbox"> Inferential statistics: different areas of inferential statistics</label></li>
+    <li><label><input type="checkbox"> Probability, correlation &amp; regression (scope topics)</label></li>
+    <li><label><input type="checkbox"> Sampling fundamentals: need for sampling</label></li>
+    <li><label><input type="checkbox"> Probability and non-probability sampling</label></li>
+    <li><label><input type="checkbox"> Sample size</label></li>
+    <li><label><input type="checkbox"> Criteria for inclusion and exclusion</label></li>
+    <li><label><input type="checkbox"> Dropouts</label></li>
+  </ul>
+  <div class="meter" data-meter=".section .checklist"><i></i></div>
+</section>
+
+<!-- ===== 5. WHAT KUHS ASKS ===== -->
+<section class="section">
+  <h2><span class="num">📜</span> What KUHS Asks From This Unit</h2>
+  <p class="lead">Every real KUHS question (May 2022, Nov 2022, Jul 2023, Dec 2023) and model-paper question that lands in Unit 4. Sampling appears in <b>every single paper</b>.</p>
+  <div class="pyq-row"><div class="q">What is meant by sampling in epidemiology studies? Discuss its relevance and the different types of sampling techniques in detail.</div><span class="pill essay">Essay 10m</span><span class="pill model">Model paper</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">What are the different sampling techniques? Describe any ONE technique.</div><span class="pill short">Short 5m</span><span class="pill">Nov 22</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Explain the probability sampling methods.</div><span class="pill short">Short 5m</span><span class="pill">Jul 23</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">What are measures of central tendency? Explain how it is calculated.</div><span class="pill short">Short 5m</span><span class="pill">May 22</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Calculate median for the grouped data (0-10 … 51-60; f = 48, 62, 130, 105, 58, 52).</div><span class="pill short">Short 5m</span><span class="pill">Nov 22</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">With suitable examples, explain various types of variables.</div><span class="pill short">Short 5m</span><span class="pill">Nov 22</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">Explain inferential statistics. Write note on different models.</div><span class="pill short">Short 5m</span><span class="pill">May 22</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">Different types of sampling techniques / Probability sampling / Non-probability sampling methods: enlist four.</div><span class="pill brief">Brief 2m</span><span class="pill">May 22 · Dec 23 · Jul 23</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">What are the measures of central tendency? / Define mode.</div><span class="pill brief">Brief 2m</span><span class="pill">Nov 22 · Dec 23</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Define dropouts / What are dropouts in clinical research?</div><span class="pill brief">Brief 2m</span><span class="pill">Dec 23 · Model</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">Why sample size is important for the analysis? / Relationship between sample size and power of the test.</div><span class="pill brief">Brief 2m</span><span class="pill">Nov 22 · Jul 23</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">Define sample and population.</div><span class="pill brief">Brief 2m</span><span class="pill">May 22</span><span class="stars">★</span></div>
+  <div class="pyq-row"><div class="q">Define probability.</div><span class="pill brief">Brief 2m</span><span class="pill">May 22</span><span class="stars">★</span></div>
+  <div class="pyq-row"><div class="q">Define statistics.</div><span class="pill brief">Brief 2m</span><span class="pill">May 22</span><span class="stars">★</span></div>
+  <div class="callout tip"><span class="callout-title">⭐ Smart-study verdict</span>
+    <span class="priority must">MUST</span> Sampling techniques (probability + non-probability), central tendency with calculation, grouped median, dropouts.
+    <span class="priority high">HIGH</span> Types of variables, inferential statistics, sample size &amp; power, dispersion/SD calculation.
+    <span class="priority med">MED</span> Probability definition, correlation/regression, inclusion/exclusion criteria.</div>
+</section>
+
+<!-- ===== 6. CONTENT ===== -->
+
+<!-- T1 -->
+<section class="section" id="t1">
+  <h2><span class="num">1</span> Biostatistics: Definition &amp; Applications</h2>
+  <p class="lead">Why does a pharmacist need maths about crowds? Because every drug decision is made on groups of patients.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>Chief Bogo drops 500 files about missing mammals on Judy's desk. She can't read every file aloud at the briefing, so she says: "On average, they went missing 3 days ago, most of them near Tundratown." That's <b>describing</b> data. Then she checks 50 random burrows and announces something about <i>all</i> of Zootopia. That's <b>inferring</b>. Both together = statistics. When the data are about living things (patients, rats, microbes, tablets for patients), we call it <b>biostatistics</b>.</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definitions (write exactly this)</span>
+    <p><b>Statistics</b> (singular sense) is the science of collecting, organising, presenting, analysing and interpreting numerical data to draw valid conclusions and make decisions under uncertainty. <i>Croxton &amp; Cowden</i> define it as “the collection, presentation, analysis and interpretation of numerical data” (four stages of every statistical study). In the <b>plural sense</b>, "statistics" means numerical facts themselves (e.g., vital statistics, sales statistics).</p>
+    <p><b>Biostatistics</b> is the branch of statistics that applies statistical methods to biological, medical, pharmaceutical and public-health data: to design studies, collect and summarise data, and draw valid conclusions in spite of natural biological variation.</p></div>
+
+  <h3>Two branches</h3>
+  <div class="vs">
+    <div class="card c1"><h4>📋 Descriptive statistics</h4><ul><li>Organises and <b>summarises</b> the data you actually have</li><li>Tables, graphs, mean, median, mode, SD, range</li><li>No conclusion beyond the data</li><li>e.g., "Mean age of our 60 patients was 52 years"</li></ul></div>
+    <div class="mid">VS</div>
+    <div class="card c2"><h4>🔮 Inferential statistics</h4><ul><li>Uses a <b>sample</b> to draw conclusions about the <b>population</b></li><li>Estimation (CI), hypothesis tests, regression</li><li>Uses probability; always has some uncertainty</li><li>e.g., "Drug X lowers BP in hypertensives (p = 0.01)"</li></ul></div>
+  </div>
+
+  <h3>Characteristics of statistics (as data)</h3>
+  <ul>
+    <li><b>Aggregates of facts</b>: a single value (one patient's BP) is not statistics; many values are.</li>
+    <li><b>Numerically expressed</b> and <b>reasonably accurate</b>.</li>
+    <li><b>Affected by many causes</b> (BP depends on age, salt, stress, genes…).</li>
+    <li><b>Collected systematically</b> for a <b>pre-determined purpose</b>.</li>
+    <li><b>Comparable</b>: placed in relation to each other (groups, time periods).</li>
+  </ul>
+
+  <h3>Applications of biostatistics in pharmacy</h3>
+  <div class="grid-3">
+    <div class="card"><span class="card-icon">🧪</span><h4>Drug discovery &amp; preclinical</h4>Dose–response curves, LD50/ED50 (probit analysis), QSAR regression, comparing treated vs control animals.</div>
+    <div class="card"><span class="card-icon">⚖️</span><h4>Bioavailability / Bioequivalence</h4>AUC, Cmax compared statistically; the 90% confidence interval of the test/reference ratio must lie within 80–125%.</div>
+    <div class="card"><span class="card-icon">🏥</span><h4>Clinical trials</h4>Sample size, randomisation, blinding plans, efficacy and safety comparisons (t-test, χ², survival analysis), interim analysis.</div>
+    <div class="card"><span class="card-icon">💉</span><h4>Pharmacokinetics</h4>Regression of log C vs time gives elimination rate constant (k) and half-life; population PK modelling.</div>
+    <div class="card"><span class="card-icon">🧴</span><h4>Formulation &amp; optimisation</h4>Design of experiments, factorial designs, response-surface methods to find the best formula.</div>
+    <div class="card"><span class="card-icon">✅</span><h4>Quality control</h4>Sampling plans, control charts, process validation, weight/content uniformity, %RSD, dissolution profile comparison.</div>
+    <div class="card"><span class="card-icon">⏳</span><h4>Stability studies</h4>Regression of assay vs time to estimate shelf life (ICH Q1E evaluation of stability data).</div>
+    <div class="card"><span class="card-icon">🌍</span><h4>Epidemiology &amp; public health</h4>Prevalence, incidence, relative risk, odds ratio, vital statistics, planning health programmes.</div>
+    <div class="card"><span class="card-icon">📣</span><h4>Pharmacovigilance &amp; economics</h4>Signal detection from ADR reports, drug-utilisation studies, cost-effectiveness, market surveys.</div>
+  </div>
+
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic: "Dear Bogo, Clever Police Find Quick, Stable Evidence"</span>
+    <div class="acro"><span><b>D</b>Drug discovery</span><span><b>B</b>BA/BE</span><span><b>C</b>Clinical trials</span><span><b>P</b>Pharmaco-kinetics</span><span><b>F</b>Formulation (DoE)</span><span><b>Q</b>Quality control</span><span><b>S</b>Stability</span><span><b>E</b>Epidemiology / PV</span></div></div>
+
+  <h3>Limitations of statistics</h3>
+  <ul>
+    <li>Deals with <b>groups, not individuals</b>: "average patient" may not exist.</li>
+    <li>Studies only <b>quantitative</b> facts (qualities must be coded first).</li>
+    <li>Results are true <b>on average and with a probability</b>, never 100% certain.</li>
+    <li>Can be <b>misused</b> (biased samples, wrong tests, selective reporting): "statistics can prove anything" only in untrained hands.</li>
+  </ul>
+  <div class="callout tip"><span class="callout-title">⭐ Exam tip</span><p>For a 2-mark "Define statistics": definition + the 4 key words (collection, presentation, analysis, interpretation) + one line on biostatistics. For 5 marks, add the descriptive/inferential split and 6 pharmacy applications.</p></div>
+</section>
+
+<!-- T2 -->
+<section class="section" id="t2">
+  <h2><span class="num">2</span> Various Terms in Statistics &amp; Types of Variables</h2>
+  <p class="lead">The detective's vocabulary. Half the brief questions are just these definitions.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>All mammals living in Zootopia = the <b>population</b>. The 50 animals Judy actually interviews = the <b>sample</b>. The true average age of all Zootopians = a <b>parameter</b> (nobody knows it exactly). The average age of her 50 witnesses = a <b>statistic</b> (she can calculate it). Age, species, and height change from animal to animal, so they are <b>variables</b>.</p></div>
+
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Term</th><th>Meaning</th><th>Pharmacy example</th></tr>
+    <tr><td>Population (universe)</td><td>The entire group of individuals/items about which information is wanted</td><td>All type-2 diabetics in Kerala; all 1 lakh tablets of a batch</td></tr>
+    <tr><td>Sample</td><td>A representative part of the population actually studied</td><td>200 diabetics from 5 hospitals; 20 tablets drawn for testing</td></tr>
+    <tr><td>Parameter</td><td>A numerical value describing the <b>population</b> (Greek letters: μ, σ, π, ρ)</td><td>True mean HbA1c of all diabetics (μ)</td></tr>
+    <tr><td>Statistic</td><td>A numerical value calculated from the <b>sample</b> (Roman letters: x̄, s, p, r); used to estimate the parameter</td><td>Mean HbA1c of the 200 patients (x̄)</td></tr>
+    <tr><td>Variable</td><td>A characteristic that takes different values in different individuals</td><td>Age, sex, BP, plasma drug level</td></tr>
+    <tr><td>Constant</td><td>A value that does not change</td><td>π = 3.1416; dose fixed at 500 mg in a study</td></tr>
+    <tr><td>Observation / datum</td><td>A single recorded value of a variable (plural: data)</td><td>"BP of patient 7 = 138 mmHg"</td></tr>
+    <tr><td>Attribute</td><td>A qualitative characteristic that can only be counted, not measured</td><td>Smoker / non-smoker; blood group</td></tr>
+    <tr><td>Frequency</td><td>Number of times a value or class occurs</td><td>48 patients in age class 0–10</td></tr>
+    <tr><td>Frequency distribution</td><td>Table showing values/classes with their frequencies</td><td>Age groups with number of patients</td></tr>
+    <tr><td>Class interval, limits, boundaries, width, mid-point</td><td>Groups of grouped data; limits as written (11–20), true boundaries (10.5–20.5), width h = 10, mid-point (class mark) = (lower + upper)/2</td><td>Used in grouped mean, median, mode</td></tr>
+    <tr><td>Census</td><td>Study of every unit of the population (complete enumeration)</td><td>Census of India; testing every ampoule for visible particles</td></tr>
+    <tr><td>Sampling frame / unit</td><td>List of all units from which the sample is drawn / each individual element</td><td>OPD register / each patient</td></tr>
+    <tr><td>Outlier</td><td>A value far away from the rest</td><td>One patient with a plasma level 10× the others</td></tr>
+    <tr><td>Degrees of freedom (df)</td><td>Number of values free to vary after restrictions; usually n − 1</td><td>Used in t, χ², F tests (Unit 5)</td></tr>
+    <tr><td>Standard error</td><td>SD of a sampling distribution, e.g. SEM = SD/√n</td><td>Precision of a sample mean</td></tr>
+  </table></div>
+
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic: P–P and S–S</span>
+    <p><b>P</b>opulation has <b>P</b>arameters; <b>S</b>ample has <b>S</b>tatistics. Greek for the Gods (population), Roman for the rest of us (sample).</p></div>
+
+  <h3>Types of variables (KUHS Nov 2022 short note)</h3>
+  <figure class="fig">
+    <svg viewBox="0 0 780 308" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Classification of variables">
+      <defs><marker id="u4f1-arr" viewBox="0 0 10 10" markerWidth="4" markerHeight="4" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker></defs>
+      <rect x="300" y="12" width="180" height="46" rx="18" fill="#2563eb"/>
+      <text x="390" y="42" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="19" fill="#fff">VARIABLES</text>
+      <path d="M390 58 L 230 100" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#u4f1-arr)"/>
+      <path d="M390 58 L 550 100" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#u4f1-arr)"/>
+      <rect x="110" y="102" width="240" height="50" rx="16" fill="#ffedd5" stroke="#f97316" stroke-width="3"/>
+      <text x="230" y="124" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="16" fill="#9a3412">QUALITATIVE</text>
+      <text x="230" y="143" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#9a3412">(categorical · attributes)</text>
+      <rect x="430" y="102" width="240" height="50" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+      <text x="550" y="124" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="16" fill="#166534">QUANTITATIVE</text>
+      <text x="550" y="143" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#166534">(numerical · measured/counted)</text>
+      <path d="M230 152 L 110 196" stroke="#f97316" stroke-width="3" fill="none" marker-end="url(#u4f1-arr)"/>
+      <path d="M230 152 L 290 196" stroke="#f97316" stroke-width="3" fill="none" marker-end="url(#u4f1-arr)"/>
+      <path d="M550 152 L 490 196" stroke="#16a34a" stroke-width="3" fill="none" marker-end="url(#u4f1-arr)"/>
+      <path d="M550 152 L 670 196" stroke="#16a34a" stroke-width="3" fill="none" marker-end="url(#u4f1-arr)"/>
+      <rect x="15" y="198" width="180" height="96" rx="16" fill="#fff7ed" stroke="#f97316" stroke-width="2.5"/>
+      <text x="105" y="222" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="16" fill="#9a3412">Nominal</text>
+      <text x="105" y="244" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">names, no order</text>
+      <text x="105" y="264" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">blood group, sex,</text>
+      <text x="105" y="280" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">dosage form</text>
+      <rect x="205" y="198" width="180" height="96" rx="16" fill="#fff7ed" stroke="#f97316" stroke-width="2.5"/>
+      <text x="295" y="222" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="16" fill="#9a3412">Ordinal</text>
+      <text x="295" y="244" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">ordered categories</text>
+      <text x="295" y="264" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">pain mild/mod/severe,</text>
+      <text x="295" y="280" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">cancer stage, Likert</text>
+      <rect x="395" y="198" width="180" height="96" rx="16" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+      <text x="485" y="222" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="16" fill="#166534">Discrete</text>
+      <text x="485" y="244" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">whole-number counts</text>
+      <text x="485" y="264" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">no. of tablets, seizures</text>
+      <text x="485" y="280" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">per month, children</text>
+      <rect x="585" y="198" width="180" height="96" rx="16" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+      <text x="675" y="222" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="16" fill="#166534">Continuous</text>
+      <text x="675" y="244" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">any value in a range</text>
+      <text x="675" y="264" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">height, weight, BP,</text>
+      <text x="675" y="280" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">plasma concentration</text>
+    </svg>
+    <figcaption>Fig 4.1 — Classification of variables by nature. Draw this tree in the exam: it alone is worth 1–2 marks.</figcaption>
+  </figure>
+
+  <div class="grid-2">
+    <div class="card c1"><h4>🎭 By role in a study</h4><ul>
+      <li><b>Independent (explanatory / predictor)</b>: the presumed cause, manipulated or chosen by the researcher. e.g., dose of drug.</li>
+      <li><b>Dependent (outcome / response)</b>: the effect that is measured. e.g., fall in BP.</li>
+      <li><b>Confounding</b>: linked to both exposure and outcome, distorting the true relation. e.g., age in a study of smoking and heart disease.</li>
+      <li><b>Extraneous</b>: any other variable that could affect the outcome; must be controlled.</li>
+      <li><b>Control variable</b>: kept constant deliberately. e.g., same diet for all rats.</li>
+      <li><b>Intervening / mediating</b>: lies on the causal path (drug → lowers LDL → fewer heart attacks).</li>
+    </ul></div>
+    <div class="card c2"><h4>📏 By scale of measurement (NOIR)</h4><ul>
+      <li><b>Nominal</b>: categories only, no order (blood group A/B/AB/O).</li>
+      <li><b>Ordinal</b>: ordered, but gaps unequal (ADR severity mild &lt; moderate &lt; severe).</li>
+      <li><b>Interval</b>: equal gaps, <b>no true zero</b> (temperature in °C; 0 °C is not "no heat").</li>
+      <li><b>Ratio</b>: equal gaps <b>and true zero</b> (weight, height, drug concentration; 20 mg is twice 10 mg).</li>
+    </ul><p><small>Nominal and ordinal = qualitative; interval and ratio = quantitative.</small></p></div>
+  </div>
+
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic: every detective story is NOIR</span>
+    <div class="acro"><span><b>N</b>Nominal<br>names</span><span><b>O</b>Ordinal<br>order</span><span><b>I</b>Interval<br>no true 0</span><span><b>R</b>Ratio<br>true 0</span></div>
+    <p>Nick Wilde loves a film-noir mystery: each letter adds one more power (name → order → equal gaps → true zero).</p></div>
+
+  <div class="callout warn"><span class="callout-title">⚠️ Common mistake</span><p>A number does not make a variable quantitative! Patient ID numbers or ward numbers are <b>nominal</b>. Pain score 0–10 is usually treated as <b>ordinal</b>. And "dichotomous/binary" (yes/no, dead/alive) is a special nominal variable with only two categories.</p></div>
+  <div class="callout example"><span class="callout-title">💊 Pharmacy example</span><p>In a trial of an antidiabetic: <b>independent</b> = drug vs placebo (nominal); <b>dependent</b> = HbA1c (continuous, ratio); <b>confounder</b> = baseline BMI; patient satisfaction on a 5-point Likert scale = ordinal; number of hypoglycaemic episodes = discrete.</p></div>
+</section>
+
+<!-- T3 -->
+<section class="section" id="t3">
+  <h2><span class="num">3</span> Descriptive Statistics: Measures of Central Tendency</h2>
+  <p class="lead">One number that represents the whole crowd: the "average".</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode: Snow White's hat problem</span>
+    <p>Snow White wants to knit hats and needs to know the "typical" dwarf height. She lines them up in the cottage. (These heights are <b>made up for practice</b>, not from any film!) She can add them all and share equally (<b>mean</b>), pick the dwarf standing in the exact middle (<b>median</b>), or choose the height that appears most often (<b>mode</b>). Three honest answers, three different ideas of "typical".</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definition</span>
+    <p>A <b>measure of central tendency</b> (an "average") is a single value that represents the centre of a distribution, the value around which the observations tend to cluster. It summarises the whole data set and allows comparison between groups.</p></div>
+
+  <h3>Characteristics of an ideal average (Yule)</h3>
+  <div class="grid-3">
+    <div class="card"><span class="card-icon">📐</span><h4>Rigidly defined</h4>Same answer whoever calculates it.</div>
+    <div class="card"><span class="card-icon">🙂</span><h4>Easy to understand &amp; calculate</h4>Even a non-statistician can follow.</div>
+    <div class="card"><span class="card-icon">🧮</span><h4>Based on all observations</h4>Every value contributes.</div>
+    <div class="card"><span class="card-icon">➕</span><h4>Capable of algebraic treatment</h4>Can be used in further formulae (SD, tests).</div>
+    <div class="card"><span class="card-icon">🛡️</span><h4>Stable</h4>Least affected by sampling fluctuations.</div>
+    <div class="card"><span class="card-icon">🪨</span><h4>Not unduly affected by extremes</h4>One odd value shouldn't drag it far.</div>
+  </div>
+
+  <h3>Types</h3>
+  <div class="vs">
+    <div class="card c1"><h4>Mathematical averages</h4><ul><li>Arithmetic mean (simple, weighted)</li><li>Geometric mean</li><li>Harmonic mean</li></ul></div>
+    <div class="mid">+</div>
+    <div class="card c2"><h4>Positional averages</h4><ul><li>Median</li><li>Mode</li><li>(Partition values: quartiles, deciles, percentiles)</li></ul></div>
+  </div>
+
+  <h3>📏 The Seven Dwarfs dataset (practice numbers, invented)</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Dwarf</th><th>Doc</th><th>Grumpy</th><th>Happy</th><th>Sleepy</th><th>Bashful</th><th>Sneezy</th><th>Dopey</th><th>Σ</th></tr>
+    <tr><td>Height x (cm)</td><td>98</td><td>95</td><td>92</td><td>95</td><td>90</td><td>95</td><td>86</td><td>651</td></tr>
+  </table></div>
+
+  <h4>1) Arithmetic mean</h4>
+  <div class="formula">x̄ = Σx / n <small>Ungrouped data: sum of observations ÷ number of observations</small></div>
+  <p>Dwarfs: x̄ = 651 / 7 = <span class="hl"><b>93 cm</b></span>.</p>
+  <div class="grid-3">
+    <div class="card"><h4>Grouped – direct</h4><div class="formula" style="font-size:1.05rem">x̄ = Σfx / Σf</div>x = class mid-point, f = frequency.</div>
+    <div class="card"><h4>Assumed-mean (short-cut)</h4><div class="formula" style="font-size:1.05rem">x̄ = A + Σfd / N</div>d = x − A (A = an assumed mean).</div>
+    <div class="card"><h4>Step-deviation</h4><div class="formula" style="font-size:1.05rem">x̄ = A + (Σfu / N) × h</div>u = (x − A)/h, h = class width.</div>
+  </div>
+  <p><b>Weighted mean</b> x̄<sub>w</sub> = Σwx / Σw, used when values have unequal importance (e.g., CGPA from credit-weighted grades; average price when different quantities were bought).</p>
+
+  <h4>2) Geometric mean (GM) and 3) Harmonic mean (HM)</h4>
+  <div class="grid-2">
+    <div class="card"><div class="formula" style="font-size:1.05rem">GM = ⁿ√(x₁·x₂·…·xₙ) = antilog(Σlog x / n)</div>Best for <b>ratios, rates of growth, and values that multiply</b>: antibody titres, bacterial counts, population growth. Example: titres 2, 8, 32 → GM = ∛(2×8×32) = ∛512 = <b>8</b>.</div>
+    <div class="card"><div class="formula" style="font-size:1.05rem">HM = n / Σ(1/x)</div>Best for <b>rates and speeds</b> (equal distances, different speeds). Example: an ambulance goes 30 km/h out and 60 km/h back: HM = 2 / (1/30 + 1/60) = <b>40 km/h</b>, not 45.</div>
+  </div>
+  <p>For any set of positive values: <b>AM ≥ GM ≥ HM</b> (all equal only when every value is the same).</p>
+
+  <h4>4) Median</h4>
+  <div class="callout def"><span class="callout-title">📘 Definition</span><p>The <b>median</b> is the middle value of the data arranged in ascending or descending order; it divides the distribution into two equal halves (50% below, 50% above).</p></div>
+  <ul>
+    <li>Odd n: median = value at position <b>(n + 1)/2</b>.</li>
+    <li>Even n: median = average of values at positions <b>n/2</b> and <b>(n/2) + 1</b>.</li>
+  </ul>
+  <p>Dwarfs sorted: 86, 90, 92, <b>95</b>, 95, 95, 98 → (7+1)/2 = 4th value = <span class="hl"><b>95 cm</b></span>.</p>
+  <p>Now Snow White (150 cm, also invented) joins the line: n = 8 → 86, 90, 92, 95, <b>95</b>, 95, 98, 150 → median = (95 + 95)/2 = <b>95 cm</b> (unchanged!) but the mean jumps to 801/8 = <b>100.1 cm</b>. <span class="hl-p">The median resists outliers; the mean does not.</span></p>
+  <div class="formula">Median (grouped) = L + [ (N/2 − cf) / f ] × h
+    <small>L = lower boundary of median class · N = Σf · cf = cumulative frequency of the class BEFORE the median class · f = frequency of median class · h = class width</small></div>
+
+  <h4>5) Mode</h4>
+  <div class="callout def"><span class="callout-title">📘 Definition (KUHS Dec 2023 brief)</span><p>The <b>mode</b> is the value that occurs most frequently in a data set, the most "fashionable" value. A distribution may be unimodal, bimodal, multimodal, or have no mode.</p></div>
+  <p>Dwarfs: 95 occurs three times (Grumpy, Sleepy, Sneezy) → mode = <span class="hl"><b>95 cm</b></span>.</p>
+  <div class="formula">Mode (grouped) = L + [ (f₁ − f₀) / (2f₁ − f₀ − f₂) ] × h
+    <small>f₁ = frequency of modal class · f₀ = class before · f₂ = class after · L = lower boundary of modal class</small></div>
+  <p>Empirical relation (moderately skewed data): <b>Mode ≈ 3 Median − 2 Mean</b>.</p>
+
+  <h3>🧮 KUHS Nov 2022 numerical: median of grouped data (fully solved)</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Class (as printed)</th><th>True boundaries</th><th>f</th><th>Cumulative f (cf)</th><th>Mid-point x</th><th>fx</th></tr>
+    <tr><td>0 – 10</td><td>−0.5 – 10.5</td><td>48</td><td>48</td><td>5</td><td>240</td></tr>
+    <tr><td>11 – 20</td><td>10.5 – 20.5</td><td>62</td><td>110</td><td>15.5</td><td>961</td></tr>
+    <tr><td>21 – 30 ⭐</td><td><b>20.5 – 30.5</b></td><td><b>130</b></td><td><b>240</b></td><td>25.5</td><td>3315</td></tr>
+    <tr><td>31 – 40</td><td>30.5 – 40.5</td><td>105</td><td>345</td><td>35.5</td><td>3727.5</td></tr>
+    <tr><td>41 – 50</td><td>40.5 – 50.5</td><td>58</td><td>403</td><td>45.5</td><td>2639</td></tr>
+    <tr><td>51 – 60</td><td>50.5 – 60.5</td><td>52</td><td>455</td><td>55.5</td><td>2886</td></tr>
+    <tr><td>Total</td><td></td><td>N = 455</td><td></td><td></td><td>Σfx = 13768.5</td></tr>
+  </table></div>
+  <div class="flow numbered">
+    <div class="step"><span class="e">🧷</span>Fix boundaries<small>classes are inclusive (10 → 11 gap of 1), so subtract 0.5 from lower and add 0.5 to upper limits</small></div>
+    <div class="step"><span class="e">➕</span>Cumulate f<small>48, 110, 240, 345, 403, 455</small></div>
+    <div class="step"><span class="e">½</span>N/2 = 227.5<small>first cf ≥ 227.5 is 240</small></div>
+    <div class="step"><span class="e">🎯</span>Median class<small>21–30 → L = 20.5, cf = 110, f = 130, h = 10</small></div>
+    <div class="step"><span class="e">✅</span>Substitute<small>20.5 + (117.5/130) × 10</small></div>
+  </div>
+  <div class="formula">Median = 20.5 + [(227.5 − 110) / 130] × 10 = 20.5 + 9.04 = <b>29.54</b></div>
+  <details class="more"><summary>➕ Bonus: mode and mean for the same table (if they ask "calculate mean / mode")</summary><div>
+    <p><b>Mode</b>: modal class = 21–30 (highest f = 130); f₀ = 62, f₂ = 105 → Mode = 20.5 + [(130 − 62)/(260 − 62 − 105)] × 10 = 20.5 + (68/93) × 10 = 20.5 + 7.31 = <b>27.81</b>.</p>
+    <p><b>Mean</b> = Σfx / N = 13768.5 / 455 = <b>30.26</b>.</p>
+    <p>Mean (30.26) &gt; Median (29.54) &gt; Mode (27.81) → the distribution is slightly <b>positively skewed</b>.</p></div></details>
+  <div class="callout warn"><span class="callout-title">⚠️ Boundary trap</span><p>If you forget the correction and use L = 21, you get 21 + 9.04 = 30.04: examiners may cut a mark. If a paper prints <b>exclusive</b> classes (0–10, 10–20, 20–30…), no correction is needed: L = 20 and median = 20 + 9.04 = <b>29.04</b>. Always write one line saying which you used and why.</p></div>
+
+  <h3>Merits &amp; demerits (comparison table)</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Point</th><th>Mean</th><th>Median</th><th>Mode</th></tr>
+    <tr><td>Based on all values?</td><td>Yes</td><td>No (position only)</td><td>No</td></tr>
+    <tr><td>Affected by extreme values?</td><td>Yes, strongly</td><td>No</td><td>No</td></tr>
+    <tr><td>Algebraic treatment</td><td>Yes (used for SD, tests)</td><td>Limited</td><td>No</td></tr>
+    <tr><td>Open-ended classes</td><td>Cannot compute</td><td>Can compute</td><td>Can compute</td></tr>
+    <tr><td>Qualitative data</td><td>No</td><td>Ordinal only</td><td>Yes (even nominal)</td></tr>
+    <tr><td>Graphical location</td><td>No</td><td>Ogive</td><td>Histogram</td></tr>
+    <tr><td>Best used when</td><td>Symmetric, interval/ratio data</td><td>Skewed data, outliers, income, survival time</td><td>Most common value: commonest dose, blood group, tablet size</td></tr>
+  </table></div>
+
+  <h3>Where do they sit? (skewness)</h3>
+  <figure class="fig">
+    <svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Positions of mean median mode in symmetric and skewed curves">
+      <line x1="15" y1="185" x2="250" y2="185" stroke="#94a3b8" stroke-width="2"/>
+      <path d="M20,185 C80,185 90,45 130,45 C170,45 180,185 240,185" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <line x1="130" y1="45" x2="130" y2="185" stroke="#16a34a" stroke-width="3" stroke-dasharray="6 4"/>
+      <text x="130" y="205" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800" fill="#166534">Mean = Median = Mode</text>
+      <text x="130" y="232" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="15" font-weight="800" fill="#1e3a8a">Symmetrical (normal)</text>
+      <line x1="270" y1="185" x2="520" y2="185" stroke="#94a3b8" stroke-width="2"/>
+      <path d="M275,185 C300,185 310,45 340,45 C380,45 420,175 515,183" fill="#ffedd5" stroke="#f97316" stroke-width="3"/>
+      <line x1="340" y1="45" x2="340" y2="185" stroke="#7c3aed" stroke-width="2.5"/>
+      <line x1="362" y1="70" x2="362" y2="185" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <line x1="390" y1="105" x2="390" y2="185" stroke="#dc2626" stroke-width="2.5"/>
+      <text x="334" y="202" text-anchor="end" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#7c3aed">Mode</text>
+      <text x="362" y="216" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#166534">Median</text>
+      <text x="396" y="202" text-anchor="start" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#dc2626">Mean</text>
+      <text x="395" y="236" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="15" font-weight="800" fill="#9a3412">Positive skew (tail → right)</text>
+      <line x1="545" y1="185" x2="795" y2="185" stroke="#94a3b8" stroke-width="2"/>
+      <path d="M550,183 C645,175 685,45 725,45 C755,45 765,185 790,185" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+      <line x1="725" y1="45" x2="725" y2="185" stroke="#7c3aed" stroke-width="2.5"/>
+      <line x1="703" y1="70" x2="703" y2="185" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <line x1="675" y1="105" x2="675" y2="185" stroke="#dc2626" stroke-width="2.5"/>
+      <text x="731" y="202" text-anchor="start" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#7c3aed">Mode</text>
+      <text x="703" y="216" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#166534">Median</text>
+      <text x="669" y="202" text-anchor="end" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#dc2626">Mean</text>
+      <text x="670" y="236" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="15" font-weight="800" fill="#166534">Negative skew (tail ← left)</text>
+    </svg>
+    <figcaption>Fig 4.2 — The mean is always pulled toward the long tail. Draw these three curves when asked "compare mean, median and mode".</figcaption>
+  </figure>
+  <p>Our dwarfs: mean 93 &lt; median 95 = mode 95 → <b>negatively skewed</b>, because little Dopey drags the tail to the left.</p>
+  <p class="hand">Psst, Mimosa… the mean always runs after the tail, like Dopey running after the others! 🏃</p>
+  <div class="callout example"><span class="callout-title">💊 Pharmacy example</span><p>Length of hospital stay after surgery is positively skewed (most go home in 3–4 days, a few stay 30). Report the <b>median</b> stay. Average tablet weight in a batch is symmetric, so report the <b>mean</b>. The most frequently dispensed strength of metformin (500 mg) is the <b>mode</b>.</p></div>
+  <div class="callout tip"><span class="callout-title">⭐ Exam tip</span><p>For "measures of central tendency, explain how calculated" (5 m): definition → types box → formula for mean/median/mode (ungrouped + grouped) → one tiny worked example (the dwarfs!) → merits table → skewness diagram. That is exactly 1.5 pages.</p></div>
+</section>
+
+<!-- T4 -->
+<section class="section" id="t4">
+  <h2><span class="num">4</span> Measures of Dispersion</h2>
+  <p class="lead">The average tells you the centre; dispersion tells you whether you can trust it.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>Two dwarf mining teams both have a mean height of 93 cm. Team A: everyone is 92–94 cm. Team B: one is 70 cm and one is 115 cm! Snow White needs one hat size for Team A, but a whole range for Team B. The mean alone hid this; <b>dispersion</b> reveals it.</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definition</span>
+    <p><b>Dispersion</b> (variability, scatter, spread) is the extent to which individual observations differ from each other or from a central value. A <b>measure of dispersion</b> is a single number describing this spread.</p></div>
+
+  <h3>Why measure dispersion? (significance)</h3>
+  <ul>
+    <li>Tells how <b>reliable/representative the average</b> is (small spread = trustworthy mean).</li>
+    <li><b>Compares consistency</b> of two groups/batches (which machine fills more uniformly?).</li>
+    <li>Basis for <b>further statistics</b>: SE, confidence intervals, t-test, ANOVA, correlation.</li>
+    <li><b>Quality control</b>: content/weight uniformity limits, %RSD in analytical validation, control charts.</li>
+    <li>Sets <b>normal reference ranges</b> (mean ± 2 SD covers about 95% of healthy people).</li>
+    <li>Describes <b>biological variation</b> in drug response.</li>
+  </ul>
+
+  <div class="vs">
+    <div class="card c1"><h4>Absolute measures</h4><p>Same unit as data (cm, mg, mmHg)</p><ul><li>Range</li><li>Quartile deviation (IQR/2)</li><li>Mean deviation</li><li>Standard deviation, variance</li></ul></div>
+    <div class="mid">VS</div>
+    <div class="card c2"><h4>Relative measures</h4><p>Unit-free ratios, to compare different units/means</p><ul><li>Coefficient of range</li><li>Coefficient of QD</li><li>Coefficient of MD</li><li><b>Coefficient of variation (CV)</b></li></ul></div>
+  </div>
+
+  <h3>The dwarfs, worked out completely</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Dwarf</th><th>x (cm)</th><th>d = x − mean (93)</th><th>d²</th><th>|d|</th></tr>
+    <tr><td>Doc</td><td>98</td><td>+5</td><td>25</td><td>5</td></tr>
+    <tr><td>Grumpy</td><td>95</td><td>+2</td><td>4</td><td>2</td></tr>
+    <tr><td>Happy</td><td>92</td><td>−1</td><td>1</td><td>1</td></tr>
+    <tr><td>Sleepy</td><td>95</td><td>+2</td><td>4</td><td>2</td></tr>
+    <tr><td>Bashful</td><td>90</td><td>−3</td><td>9</td><td>3</td></tr>
+    <tr><td>Sneezy</td><td>95</td><td>+2</td><td>4</td><td>2</td></tr>
+    <tr><td>Dopey</td><td>86</td><td>−7</td><td>49</td><td>7</td></tr>
+    <tr><td>Σ</td><td>651</td><td>0 (always!)</td><td><b>96</b></td><td><b>22</b></td></tr>
+  </table></div>
+
+  <div class="grid-2">
+    <div class="card"><h4>1. Range</h4><div class="formula" style="font-size:1.05rem">Range = H − L</div>98 − 86 = <b>12 cm</b>. Coefficient of range = (H − L)/(H + L) = 12/184 = <b>0.065</b>.<br><small>Simplest, but uses only 2 values and is wrecked by outliers. Used in QC charts (R-chart) and weather reports.</small></div>
+    <div class="card"><h4>2. Interquartile range &amp; quartile deviation</h4><div class="formula" style="font-size:1.05rem">IQR = Q₃ − Q₁ ; QD = (Q₃ − Q₁)/2</div>Q₁ = (n+1)/4 = 2nd value = 90; Q₃ = 3(n+1)/4 = 6th value = 95 → IQR = <b>5 cm</b>, QD = <b>2.5 cm</b>.<br><small>Covers the middle 50%; not affected by extremes; good for skewed data (pairs with median).</small></div>
+    <div class="card"><h4>3. Mean deviation (MD)</h4><div class="formula" style="font-size:1.05rem">MD = Σ|x − x̄| / n</div>22 / 7 = <b>3.14 cm</b>.<br><small>Uses all values but ignores signs (mathematically awkward).</small></div>
+    <div class="card"><h4>4. Variance &amp; standard deviation</h4><div class="formula" style="font-size:1.05rem">s² = Σ(x − x̄)² / (n − 1) ; s = √s²</div>s² = 96 / 6 = <b>16 cm²</b>; s = √16 = <b>4 cm</b>.<br><small>Population formula divides by N: σ² = 96/7 = 13.71. Short-cut: s² = [Σx² − (Σx)²/n]/(n − 1) = (60639 − 60543)/6 = 16 ✔</small></div>
+    <div class="card"><h4>5. Coefficient of variation</h4><div class="formula" style="font-size:1.05rem">CV = (SD / x̄) × 100</div>(4 / 93) × 100 = <b>4.3%</b>.<br><small>Unit-free; compares variability of different variables (height vs weight) or batches. In analytical chemistry it is called <b>%RSD</b>.</small></div>
+    <div class="card"><h4>6. Standard error of mean</h4><div class="formula" style="font-size:1.05rem">SEM = SD / √n</div>4 / √7 = 4 / 2.646 = <b>1.51 cm</b>.<br><small>Not spread of individuals but precision of the <i>mean</i>; used for confidence intervals and tests.</small></div>
+  </div>
+
+  <div class="callout def"><span class="callout-title">📘 Standard deviation (definition to write)</span>
+    <p><b>Standard deviation</b> is the positive square root of the mean of squared deviations of observations from their arithmetic mean (Karl Pearson). It is the most widely used, most reliable absolute measure of dispersion because it uses every observation and can be treated algebraically. <b>Variance</b> is the square of the SD.</p></div>
+
+  <div class="formula">Grouped data (step-deviation): SD = h × √[ Σfu²/N − (Σfu/N)² ] <small>u = (x − A)/h · see the solved BP example in Model Answers</small></div>
+
+  <h3>SD + normal curve = the 68–95–99.7 rule</h3>
+  <figure class="fig">
+    <svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Normal curve showing areas within 1, 2 and 3 standard deviations">
+      <defs>
+        <clipPath id="u4f3-clip"><path d="M40,250 L40,249.4 L60,248.9 L80,247.9 L100,246.2 L120,243.5 L140,239.3 L160,233.1 L180,224.3 L200,212.4 L220,197.2 L240,178.7 L260,157.5 L280,134.8 L300,112.0 L320,91.3 L340,74.6 L350,68.4 L360,63.8 L370,60.9 L380,60.0 L390,60.9 L400,63.8 L410,68.4 L420,74.6 L440,91.3 L460,112.0 L480,134.8 L500,157.5 L520,178.7 L540,197.2 L560,212.4 L580,224.3 L600,233.1 L620,239.3 L640,243.5 L660,246.2 L680,247.9 L700,248.9 L720,249.4 L720,250 Z"/></clipPath>
+      </defs>
+      <g clip-path="url(#u4f3-clip)">
+        <rect x="40" y="40" width="680" height="210" fill="#f1f5f9"/>
+        <rect x="80" y="40" width="600" height="210" fill="#fde68a"/>
+        <rect x="180" y="40" width="400" height="210" fill="#fdba74"/>
+        <rect x="280" y="40" width="200" height="210" fill="#93c5fd"/>
+      </g>
+      <path d="M40,249.4 L60,248.9 L80,247.9 L100,246.2 L120,243.5 L140,239.3 L160,233.1 L180,224.3 L200,212.4 L220,197.2 L240,178.7 L260,157.5 L280,134.8 L300,112.0 L320,91.3 L340,74.6 L350,68.4 L360,63.8 L370,60.9 L380,60.0 L390,60.9 L400,63.8 L410,68.4 L420,74.6 L440,91.3 L460,112.0 L480,134.8 L500,157.5 L520,178.7 L540,197.2 L560,212.4 L580,224.3 L600,233.1 L620,239.3 L640,243.5 L660,246.2 L680,247.9 L700,248.9 L720,249.4" fill="none" stroke="#1e3a8a" stroke-width="3"/>
+      <line x1="30" y1="250" x2="730" y2="250" stroke="#334155" stroke-width="2"/>
+      <line x1="380" y1="55" x2="380" y2="250" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="380" y="45" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800" fill="#1e3a8a">mean = median = mode</text>
+      <text x="380" y="190" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="17" font-weight="800" fill="#1e3a8a" stroke="#93c5fd" stroke-width="7" paint-order="stroke">68.3%</text>
+      <text x="230" y="238" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#9a3412">13.6%</text>
+      <text x="530" y="238" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#9a3412">13.6%</text>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#334155" text-anchor="middle">
+        <text x="80" y="268">μ−3σ</text><text x="180" y="268">μ−2σ</text><text x="280" y="268">μ−1σ</text><text x="380" y="268">μ</text><text x="480" y="268">μ+1σ</text><text x="580" y="268">μ+2σ</text><text x="680" y="268">μ+3σ</text>
+        <text x="80" y="284" fill="#f97316">81</text><text x="180" y="284" fill="#f97316">85</text><text x="280" y="284" fill="#f97316">89</text><text x="380" y="284" fill="#f97316">93</text><text x="480" y="284" fill="#f97316">97</text><text x="580" y="284" fill="#f97316">101</text><text x="680" y="284" fill="#f97316">105</text>
+      </g>
+      <rect x="20" y="292" width="14" height="14" rx="3" fill="#93c5fd"/><text x="40" y="304" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">±1 SD ≈ 68.3%</text>
+      <rect x="170" y="292" width="14" height="14" rx="3" fill="#fdba74"/><text x="190" y="304" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">±2 SD ≈ 95.4% (±1.96 SD = 95%)</text>
+      <rect x="420" y="292" width="14" height="14" rx="3" fill="#fde68a"/><text x="440" y="304" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" fill="#1f2937">±3 SD ≈ 99.7%</text>
+      <text x="740" y="304" text-anchor="end" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" fill="#f97316">orange = dwarf cm</text>
+    </svg>
+    <figcaption>Fig 4.3 — Normal curve with SD bands (dwarf example: mean 93, SD 4). A favourite diagram for SD, normal distribution and confidence-interval answers.</figcaption>
+  </figure>
+
+  <h3>SD vs SEM (classic confusion)</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Point</th><th>Standard deviation (SD)</th><th>Standard error of mean (SEM)</th></tr>
+    <tr><td>Describes</td><td>Spread of <b>individual observations</b> around the mean</td><td>Precision of the <b>sample mean</b> as an estimate of population mean</td></tr>
+    <tr><td>Formula</td><td>√[Σ(x − x̄)²/(n − 1)]</td><td>SD/√n</td></tr>
+    <tr><td>With bigger n</td><td>Stays about the same</td><td>Gets smaller</td></tr>
+    <tr><td>Used for</td><td>Descriptive statistics, reference ranges</td><td>Inferential statistics: CI, z/t tests</td></tr>
+  </table></div>
+
+  <div class="callout example"><span class="callout-title">💊 Pharmacy example</span><p>Two tablet presses both give a mean weight of 500 mg. Press A: SD 2 mg (CV 0.4%); Press B: SD 15 mg (CV 3%). Press B will fail weight-variation tests more often, even though the average is perfect. In HPLC method validation, repeatability is reported as <b>%RSD</b> (= CV).</p></div>
+  <div class="callout warn"><span class="callout-title">⚠️ Common mistake</span><p>Σ(x − x̄) is <b>always zero</b>, which is why we square deviations (variance/SD) or take absolute values (MD). Also remember: variance has <b>squared units</b> (cm²), SD has original units (cm).</p></div>
+  <div class="callout tip"><span class="callout-title">⭐ Exam tip</span><p>If you get a "measures of dispersion" essay: definition → significance list → absolute vs relative box → each measure with formula + merits/demerits → worked table like the dwarfs → normal-curve figure → SD vs SEM table.</p></div>
+</section>
+
+<!-- T5 -->
+<section class="section" id="t5">
+  <h2><span class="num">5</span> Inferential Statistics: Areas &amp; Models</h2>
+  <p class="lead">From a handful of witnesses to a verdict about the whole city.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>Judy can't interview all of Zootopia's mammals about the night-howler attacks. She randomly picks 100, finds 18 saw something strange, and tells Chief Bogo: "About 18% of the city saw it, give or take 8%." She went from a <b>sample statistic</b> to a <b>population estimate with a margin of error</b>. That jump, made safe by probability, is inference.</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definition</span>
+    <p><b>Inferential statistics</b> is the branch of statistics that uses data from a sample to draw conclusions, make estimates, test hypotheses and make predictions about the population from which the sample was drawn, with the uncertainty expressed in terms of probability.</p></div>
+
+  <figure class="fig">
+    <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Population to sample to statistic to inference">
+      <defs><marker id="u4f4-arr" viewBox="0 0 10 10" markerWidth="4" markerHeight="4" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f97316"/></marker>
+      <marker id="u4f4-arr2" viewBox="0 0 10 10" markerWidth="4" markerHeight="4" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker></defs>
+      <text x="130" y="28" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="15" fill="#1e3a8a">POPULATION (μ, σ unknown)</text>
+      <ellipse cx="130" cy="130" rx="115" ry="85" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <g fill="#2563eb"><circle cx="80" cy="100" r="5"/><circle cx="105" cy="80" r="5"/><circle cx="140" cy="90" r="5"/><circle cx="175" cy="105" r="5"/><circle cx="70" cy="135" r="5"/><circle cx="130" cy="130" r="5"/><circle cx="200" cy="130" r="5"/><circle cx="120" cy="170" r="5"/><circle cx="155" cy="175" r="5"/><circle cx="185" cy="165" r="5"/><circle cx="60" cy="110" r="5"/><circle cx="145" cy="200" r="5"/></g>
+      <g fill="#f97316"><circle cx="100" cy="125" r="7"/><circle cx="165" cy="140" r="7"/><circle cx="90" cy="165" r="7"/><circle cx="140" cy="90" r="7"/></g>
+      <path d="M248 130 L 330 130" stroke="#f97316" stroke-width="4" marker-end="url(#u4f4-arr)"/>
+      <text x="288" y="118" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800" fill="#9a3412">random</text>
+      <text x="288" y="152" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800" fill="#9a3412">sampling</text>
+      <text x="390" y="64" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="15" fill="#9a3412">SAMPLE (n)</text>
+      <circle cx="390" cy="130" r="52" fill="#ffedd5" stroke="#f97316" stroke-width="3"/>
+      <g fill="#f97316"><circle cx="372" cy="115" r="7"/><circle cx="405" cy="115" r="7"/><circle cx="375" cy="145" r="7"/><circle cx="408" cy="145" r="7"/></g>
+      <path d="M445 130 L 520 130" stroke="#f97316" stroke-width="4" marker-end="url(#u4f4-arr)"/>
+      <text x="482" y="118" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800" fill="#9a3412">calculate</text>
+      <rect x="525" y="92" width="200" height="76" rx="18" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+      <text x="625" y="124" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="16" fill="#166534">STATISTICS</text>
+      <text x="625" y="148" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="15" fill="#166534">x̄, s, p, r</text>
+      <path d="M625 170 C 625 270, 290 280, 212 192" stroke="#16a34a" stroke-width="4" fill="none" stroke-dasharray="8 6" marker-end="url(#u4f4-arr2)"/>
+      <text x="440" y="290" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="14" font-weight="800" fill="#166534">INFERENCE back to the population: estimate &amp; test (with probability)</text>
+    </svg>
+    <figcaption>Fig 4.4 — The logic of inferential statistics. Draw it as the opening of any "inferential statistics" answer.</figcaption>
+  </figure>
+
+  <h3>Different areas of inferential statistics</h3>
+  <div class="grid-2">
+    <div class="card c1"><span class="card-icon">🎯</span><h4>1. Estimation of parameters</h4>
+      <ul><li><b>Point estimate</b>: a single best guess (x̄ estimates μ; sample proportion p estimates π).</li>
+      <li><b>Interval estimate (confidence interval)</b>: a range likely to contain the parameter. 95% CI = x̄ ± 1.96 × SEM (large n) or x̄ ± t × SEM (small n).</li>
+      <li>Dwarfs: 93 ± 2.447 × 1.51 = 93 ± 3.7 → <b>89.3 to 96.7 cm</b> (t for df 6 = 2.447).</li></ul></div>
+    <div class="card c2"><span class="card-icon">⚖️</span><h4>2. Hypothesis testing (tests of significance)</h4>
+      <ul><li>Decides whether an observed difference/association is real or due to chance.</li>
+      <li>H₀ vs H₁, level of significance, p-value, Type I/II errors.</li>
+      <li>z, t, χ², F (ANOVA), non-parametric tests → <a href="unit-5.html">Unit 5</a>.</li></ul></div>
+    <div class="card c2"><span class="card-icon">📈</span><h4>3. Relationship &amp; prediction</h4>
+      <ul><li><b>Correlation</b>: strength/direction of association (r).</li>
+      <li><b>Regression</b>: predicting Y from X (linear, multiple, logistic).</li>
+      <li>e.g., predicting shelf life, PK parameters.</li></ul></div>
+    <div class="card c1"><span class="card-icon">🧩</span><h4>4. Comparison of groups &amp; variance analysis</h4>
+      <ul><li>Comparing 2 groups (t-test) or 3+ groups (ANOVA, Kruskal–Wallis).</li>
+      <li>Underpinned by <b>probability and sampling distributions</b> (normal, t, χ², F) and the <b>central limit theorem</b>.</li></ul></div>
+  </div>
+
+  <div class="callout def"><span class="callout-title">📘 Central limit theorem (the engine of inference)</span>
+    <p>If repeated random samples of size n are drawn from any population with mean μ and SD σ, the distribution of the sample means becomes approximately <b>normal</b> as n increases (usually n ≥ 30), with mean μ and standard error σ/√n. This is why we can use z and t tests even when individual values are not perfectly normal.</p></div>
+
+  <h3>"Different models" of inferential statistics (KUHS May 2022)</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Model</th><th>Idea</th><th>Examples / use</th></tr>
+    <tr><td>Probability-distribution models</td><td>Data assumed to follow a known theoretical distribution</td><td>Normal (continuous data), binomial (yes/no outcomes), Poisson (rare counts), t, χ², F (test statistics)</td></tr>
+    <tr><td>Parametric models</td><td>Assume a distribution (usually normal) defined by parameters μ, σ</td><td>z-test, t-test, ANOVA, Pearson r, linear regression</td></tr>
+    <tr><td>Non-parametric (distribution-free) models</td><td>No distribution assumption; use ranks/signs/frequencies</td><td>χ², Mann–Whitney U, Wilcoxon, Kruskal–Wallis, Spearman ρ</td></tr>
+    <tr><td>Regression (predictive) models</td><td>Express outcome as a function of one or more predictors</td><td>Simple linear Y = a + bX; multiple linear; logistic regression (binary outcome, gives odds ratios); survival models</td></tr>
+    <tr><td>Frequentist vs Bayesian approach</td><td>Frequentist: p-values and CIs from repeated-sampling logic. Bayesian: combines prior belief with data to give posterior probability</td><td>Most pharmacy/clinical papers use frequentist; Bayesian used in adaptive trials</td></tr>
+  </table></div>
+
+  <div class="vs">
+    <div class="card c1"><h4>Descriptive</h4><ul><li>Describes the data in hand</li><li>Sample = whole interest</li><li>Mean, SD, graphs</li><li>No probability needed</li><li>No error of inference</li></ul></div>
+    <div class="mid">VS</div>
+    <div class="card c2"><h4>Inferential</h4><ul><li>Generalises beyond the data</li><li>Sample → population</li><li>CI, p-values, regression</li><li>Based on probability</li><li>Sampling error, Type I/II errors possible</li></ul></div>
+  </div>
+  <div class="callout tip"><span class="callout-title">⭐ Exam tip</span><p>Write the definition, draw Fig 4.4, then the four "areas" as headings, then the models table. Mention the central limit theorem by name: it signals depth to the examiner.</p></div>
+</section>
+
+<!-- T6 -->
+<section class="section" id="t6">
+  <h2><span class="num">6</span> Probability (the language of chance)</h2>
+  <p class="lead">KUHS asked "Define probability" (May 2022). The brainkart banks love "probability and its significance".</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>Snow White writes the seven dwarf names on slips and draws one for dish-washing duty. Chance that Grumpy gets it? 1 out of 7. Chance it's a dwarf whose name ends in "y" (Grumpy, Happy, Sleepy, Sneezy, Dopey)? 5/7. That's probability!</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definition (classical, Laplace)</span>
+    <p><b>Probability</b> of an event is the ratio of the number of outcomes favourable to the event to the total number of equally likely, mutually exclusive and exhaustive outcomes. It is a number between <b>0</b> (impossible) and <b>1</b> (certain).</p>
+    <div class="formula">P(A) = favourable outcomes / total outcomes ; 0 ≤ P(A) ≤ 1</div></div>
+
+  <div class="grid-3">
+    <div class="card"><h4>Classical (a priori)</h4>Outcomes known and equally likely in advance (coin, die, lottery).</div>
+    <div class="card"><h4>Empirical (relative frequency)</h4>P = f/n from long-run observation. e.g., if 20 of 1000 patients got a rash, P(rash) ≈ 0.02.</div>
+    <div class="card"><h4>Subjective / axiomatic</h4>Personal degree of belief (subjective); Kolmogorov's axioms give the mathematical rules.</div>
+  </div>
+
+  <h3>Key terms &amp; rules</h3>
+  <ul>
+    <li><b>Experiment / trial</b>: an act with uncertain outcome. <b>Sample space</b>: set of all possible outcomes. <b>Event</b>: a subset of outcomes.</li>
+    <li><b>Mutually exclusive</b>: cannot happen together. <b>Independent</b>: one does not affect the other. <b>Complementary</b>: P(not A) = 1 − P(A).</li>
+    <li><b>Addition rule</b>: P(A or B) = P(A) + P(B) − P(A and B) (just add if mutually exclusive).</li>
+    <li><b>Multiplication rule</b>: P(A and B) = P(A) × P(B) for independent events; otherwise P(A) × P(B|A).</li>
+  </ul>
+  <p>Example: if the chance of an ADR is 0.02 per patient, P(no ADR) = 0.98; chance that two unrelated patients both get it = 0.02 × 0.02 = 0.0004.</p>
+
+  <h3>Probability distributions to name</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Distribution</th><th>Type of data</th><th>Key facts</th><th>Example</th></tr>
+    <tr><td>Binomial</td><td>Discrete, two outcomes per trial</td><td>n trials, constant p; mean = np, variance = npq</td><td>Number of patients cured out of 10</td></tr>
+    <tr><td>Poisson</td><td>Discrete, rare events in time/space</td><td>mean = variance = λ</td><td>ADR reports per day; colonies per plate</td></tr>
+    <tr><td>Normal (Gaussian)</td><td>Continuous</td><td>Bell-shaped, symmetric, mean = median = mode, asymptotic, total area 1, fixed by μ and σ; z = (x − μ)/σ</td><td>Heights, BP, tablet weights</td></tr>
+  </table></div>
+  <div class="callout example"><span class="callout-title">💊 Significance in statistics</span><p>Probability is the foundation of inference: sampling (each unit's chance of selection), p-values (a probability!), confidence intervals, risk estimates (relative risk, odds), acceptance sampling in QC, and decision-making under uncertainty in clinical trials.</p></div>
+</section>
+
+<!-- T7 -->
+<section class="section" id="t7">
+  <h2><span class="num">7</span> Correlation &amp; Regression (scope topics)</h2>
+  <p class="lead">Do two variables move together? Can one predict the other?</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>Finnick notices: the hotter the day in Sahara Square, the more jumbo-pops he sells. That's <b>correlation</b> (they move together). Nick then draws a line to predict "at 40 °C we'll sell 120 pops": that's <b>regression</b>. But careful: pops don't cause heat!</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Definitions</span>
+    <p><b>Correlation</b> measures the degree and direction of the linear relationship between two quantitative variables; it is expressed by the correlation coefficient <b>r</b> (−1 to +1).</p>
+    <p><b>Regression</b> is a statistical method of estimating (predicting) the value of a dependent variable (Y) from a known independent variable (X) using the line of best fit, Y = a + bX, found by the method of least squares.</p></div>
+
+  <figure class="fig">
+    <svg viewBox="0 0 780 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scatter diagrams of positive, negative and zero correlation">
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <rect x="10" y="10" width="240" height="180" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+        <line x1="30" y1="170" x2="235" y2="170" stroke="#334155" stroke-width="2"/><line x1="30" y1="170" x2="30" y2="25" stroke="#334155" stroke-width="2"/>
+        <g fill="#2563eb"><circle cx="50" cy="155" r="5"/><circle cx="70" cy="148" r="5"/><circle cx="85" cy="130" r="5"/><circle cx="100" cy="128" r="5"/><circle cx="118" cy="110" r="5"/><circle cx="135" cy="100" r="5"/><circle cx="150" cy="92" r="5"/><circle cx="168" cy="72" r="5"/><circle cx="185" cy="66" r="5"/><circle cx="205" cy="48" r="5"/></g>
+        <line x1="45" y1="160" x2="215" y2="42" stroke="#f97316" stroke-width="2.5" stroke-dasharray="6 4"/>
+        <text x="130" y="212" text-anchor="middle" font-weight="800" font-size="15" fill="#1e3a8a">Positive (r → +1)</text>
+        <rect x="270" y="10" width="240" height="180" rx="14" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+        <line x1="290" y1="170" x2="495" y2="170" stroke="#334155" stroke-width="2"/><line x1="290" y1="170" x2="290" y2="25" stroke="#334155" stroke-width="2"/>
+        <g fill="#f97316"><circle cx="310" cy="45" r="5"/><circle cx="330" cy="58" r="5"/><circle cx="345" cy="70" r="5"/><circle cx="362" cy="78" r="5"/><circle cx="380" cy="95" r="5"/><circle cx="398" cy="104" r="5"/><circle cx="415" cy="120" r="5"/><circle cx="432" cy="128" r="5"/><circle cx="450" cy="146" r="5"/><circle cx="470" cy="152" r="5"/></g>
+        <line x1="305" y1="40" x2="475" y2="160" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6 4"/>
+        <text x="390" y="212" text-anchor="middle" font-weight="800" font-size="15" fill="#9a3412">Negative (r → −1)</text>
+        <rect x="530" y="10" width="240" height="180" rx="14" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+        <line x1="550" y1="170" x2="755" y2="170" stroke="#334155" stroke-width="2"/><line x1="550" y1="170" x2="550" y2="25" stroke="#334155" stroke-width="2"/>
+        <g fill="#16a34a"><circle cx="575" cy="60" r="5"/><circle cx="590" cy="140" r="5"/><circle cx="610" cy="95" r="5"/><circle cx="625" cy="45" r="5"/><circle cx="640" cy="150" r="5"/><circle cx="660" cy="80" r="5"/><circle cx="675" cy="125" r="5"/><circle cx="695" cy="55" r="5"/><circle cx="712" cy="110" r="5"/><circle cx="735" cy="145" r="5"/><circle cx="600" cy="115" r="5"/><circle cx="725" cy="75" r="5"/></g>
+        <text x="650" y="212" text-anchor="middle" font-weight="800" font-size="15" fill="#166534">No correlation (r ≈ 0)</text>
+      </g>
+    </svg>
+    <figcaption>Fig 4.5 — Scatter diagrams. Draw these three boxes for any correlation question.</figcaption>
+  </figure>
+
+  <div class="grid-2">
+    <div class="card c1"><h4>Types of correlation</h4><ul>
+      <li>By direction: <b>positive</b> (dose ↑ effect ↑), <b>negative</b> (age ↑ creatinine clearance ↓), <b>zero</b>.</li>
+      <li>By form: <b>linear</b> vs <b>non-linear</b> (curvilinear).</li>
+      <li>By number of variables: <b>simple</b> (2), <b>multiple</b> (3+ together), <b>partial</b> (2, with others held constant).</li></ul></div>
+    <div class="card c2"><h4>Measuring correlation</h4><ul>
+      <li><b>Scatter diagram</b> (visual).</li>
+      <li><b>Karl Pearson's r</b> (parametric, interval/ratio, normal data):<br>r = Σ(x − x̄)(y − ȳ) / √[Σ(x − x̄)² · Σ(y − ȳ)²]</li>
+      <li><b>Spearman's rank ρ</b> (non-parametric, ordinal/skewed): ρ = 1 − 6Σd² / [n(n² − 1)]</li>
+      <li><b>r²</b> = coefficient of determination: proportion of variation in Y explained by X.</li></ul></div>
+  </div>
+
+  <h3>🧮 Worked example: a UV calibration curve (Beer–Lambert)</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Conc. x (µg/mL)</th><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td><td>x̄ = 6</td></tr>
+    <tr><th>Absorbance y</th><td>0.11</td><td>0.21</td><td>0.30</td><td>0.41</td><td>0.50</td><td>ȳ = 0.306</td></tr>
+  </table></div>
+  <p>Σ(x − x̄)(y − ȳ) = 1.96 ; Σ(x − x̄)² = 40 ; Σ(y − ȳ)² = 0.09612</p>
+  <ul>
+    <li>Slope b = 1.96 / 40 = <b>0.049</b> ; intercept a = ȳ − b x̄ = 0.306 − 0.294 = <b>0.012</b> → <b>Y = 0.012 + 0.049X</b></li>
+    <li>r = 1.96 / √(40 × 0.09612) = 1.96 / 1.961 = <b>0.9996</b> (near-perfect positive linearity)</li>
+    <li>An unknown sample with A = 0.35 → X = (0.35 − 0.012)/0.049 = <b>6.90 µg/mL</b></li>
+  </ul>
+  <p><small>(Illustrative practice numbers.)</small></p>
+
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Point</th><th>Correlation</th><th>Regression</th></tr>
+    <tr><td>Purpose</td><td>Degree &amp; direction of association</td><td>Prediction / estimation of Y from X</td></tr>
+    <tr><td>Variables</td><td>Both treated alike (no dependent/independent)</td><td>One dependent (Y), one or more independent (X)</td></tr>
+    <tr><td>Coefficient</td><td>r (−1 to +1), unit-free</td><td>b (slope), has units, any value</td></tr>
+    <tr><td>Symmetry</td><td>r<sub>xy</sub> = r<sub>yx</sub></td><td>Regression of Y on X ≠ X on Y</td></tr>
+    <tr><td>Causation</td><td>Never implies cause</td><td>Models a functional relation (still not proof of cause)</td></tr>
+  </table></div>
+  <div class="callout example"><span class="callout-title">💊 Pharmacy applications</span><p>Calibration curves (UV, HPLC); PK: slope of ln C vs t = −k, t½ = 0.693/k; stability: regression of % assay vs time → shelf life; dose–response; QSAR; in-vitro–in-vivo correlation (IVIVC).</p></div>
+  <div class="callout warn"><span class="callout-title">⚠️ Common mistake</span><p>"Correlation is not causation." Ice-cream sales and drowning deaths correlate (both rise in summer), but ice cream doesn't drown anyone. Summer is the confounder.</p></div>
+</section>
+
+<!-- T8 -->
+<section class="section" id="t8">
+  <h2><span class="num">8</span> Sampling Fundamentals: Need for Sampling</h2>
+  <p class="lead">You don't need to drink the whole pot of payasam to know if it's sweet: one spoon (a good sample) is enough.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode: Cinderella's kingdom</span>
+    <p>After the ball, the Grand Duke tries the glass slipper on <b>every</b> maiden in the kingdom: that's a <b>census</b> (complete enumeration): thorough, but exhausting and slow. When the King planned the ball itself, he couldn't invite the whole kingdom to the palace, so he chose some guests: that's a <b>sample</b>. Whether the ball "represents" the kingdom depends on <i>how</i> he chose them.</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definition</span>
+    <p><b>Sampling</b> is the process of selecting a small, representative part (sample) from a population so that, by studying the sample, valid conclusions can be drawn about the whole population. In epidemiology it is used to estimate disease frequency, risk factors and coverage without examining everyone.</p></div>
+
+  <h3>Need for sampling (advantages)</h3>
+  <div class="grid-3">
+    <div class="card"><span class="card-icon">💰</span><h4>Economy</h4>Fewer subjects → less cost and manpower.</div>
+    <div class="card"><span class="card-icon">⏱️</span><h4>Speed</h4>Quicker results, vital during epidemics and for timely decisions.</div>
+    <div class="card"><span class="card-icon">🎯</span><h4>Greater accuracy</h4>Smaller work-load allows trained staff, better supervision → fewer non-sampling errors.</div>
+    <div class="card"><span class="card-icon">🔥</span><h4>Destructive testing</h4>Sterility, dissolution, hardness tests destroy units; you cannot test the whole batch!</div>
+    <div class="card"><span class="card-icon">♾️</span><h4>Huge / infinite populations</h4>All diabetics in India, all future patients: a census is impossible.</div>
+    <div class="card"><span class="card-icon">🛡️</span><h4>Ethics &amp; feasibility</h4>Exposes fewer people to an experimental drug; more detailed data per subject possible.</div>
+  </div>
+  <p><b>Limitations</b>: sampling error is unavoidable; bias if the method is poor; needs expertise; when the population is small or every unit must be known (e.g., national census, blood-bank screening), a census is better.</p>
+
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Point</th><th>Census</th><th>Sample survey</th></tr>
+    <tr><td>Coverage</td><td>Every unit</td><td>Selected part</td></tr>
+    <tr><td>Cost, time, labour</td><td>High</td><td>Low</td></tr>
+    <tr><td>Sampling error</td><td>None</td><td>Present (can be estimated in probability samples)</td></tr>
+    <tr><td>Non-sampling error</td><td>More (huge workload)</td><td>Less (better supervision)</td></tr>
+    <tr><td>Suitable for</td><td>Small, accessible populations; when exact totals are essential</td><td>Large, scattered, infinite populations; destructive tests</td></tr>
+  </table></div>
+
+  <h3>Sampling vocabulary</h3>
+  <ul>
+    <li><b>Target population</b>: whole group to which results will apply; <b>study (accessible) population</b>: the part you can actually reach.</li>
+    <li><b>Sampling frame</b>: complete list of sampling units (OPD register, voters' list, list of pharmacies). <b>Sampling unit</b>: each element that can be selected (patient, household, village, tablet).</li>
+    <li><b>Sampling fraction</b> = n/N.</li>
+    <li><b>Sampling error</b>: difference between sample statistic and true parameter due to chance alone; reduced by increasing n.</li>
+    <li><b>Non-sampling error (bias)</b>: errors from faulty frame, non-response, measurement or recording errors; NOT reduced by increasing n.</li>
+  </ul>
+  <h3>Characteristics of a good sample</h3>
+  <div class="acro"><span><b>R</b>Representative</span><span><b>A</b>Adequate size</span><span><b>I</b>Independent units</span><span><b>N</b>No bias (random)</span><span><b>P</b>Practical / economical</span></div>
+  <p class="hand">Psst, Mimosa… a good sample keeps the RAIN-P away! ☔ Representative, Adequate, Independent, No bias, Practical.</p>
+  <h3>Steps in sampling</h3>
+  <div class="flow numbered">
+    <div class="step"><span class="e">👥</span>Define target population</div>
+    <div class="step"><span class="e">📋</span>Prepare sampling frame</div>
+    <div class="step"><span class="e">🎲</span>Choose sampling method</div>
+    <div class="step"><span class="e">🔢</span>Determine sample size</div>
+    <div class="step"><span class="e">✋</span>Select units &amp; collect data</div>
+    <div class="step"><span class="e">🔍</span>Check representativeness, analyse</div>
+  </div>
+</section>
+
+<!-- T9 -->
+<section class="section" id="t9">
+  <h2><span class="num">9</span> Probability &amp; Non-probability Sampling</h2>
+  <p class="lead">KUHS has asked sampling methods in EVERY paper plus the model essay. Master this section!</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode: choosing guests for the royal ball</span>
+    <div class="table-wrap"><table class="nice">
+      <tr><th>The King's method</th><th>Sampling technique</th></tr>
+      <tr><td>Every name in the kingdom goes into a giant hat; 100 are drawn</td><td>Simple random sampling</td></tr>
+      <tr><td>From the alphabetical list, start at a random house, then invite every 10th house</td><td>Systematic sampling</td></tr>
+      <tr><td>Split into nobles, merchants, farmers; draw randomly from each group in proportion</td><td>Stratified random sampling</td></tr>
+      <tr><td>Draw 3 whole villages at random and invite everyone in them</td><td>Cluster sampling</td></tr>
+      <tr><td>Draw provinces → then villages → then households</td><td>Multistage sampling</td></tr>
+      <tr><td>Invite whoever is standing near the palace gate</td><td>Convenience sampling</td></tr>
+      <tr><td>The Grand Duke handpicks "eligible maidens" he thinks suitable</td><td>Purposive (judgement) sampling</td></tr>
+      <tr><td>"Bring 50 ladies and 50 gentlemen", chosen any way</td><td>Quota sampling</td></tr>
+      <tr><td>Each guest brings a friend, who brings another</td><td>Snowball sampling</td></tr>
+    </table></div></div>
+
+  <div class="vs">
+    <div class="card c1"><h4>🎲 Probability (random) sampling</h4><p>Every unit has a <b>known, non-zero chance</b> of selection; selection by chance, not by choice.</p><ul><li>Representative, unbiased</li><li>Sampling error can be calculated</li><li>Results can be generalised</li><li>Needs a sampling frame; costlier</li></ul></div>
+    <div class="mid">VS</div>
+    <div class="card c2"><h4>🙋 Non-probability sampling</h4><p>Chance of selection is <b>unknown</b>; units chosen by convenience or judgement.</p><ul><li>Quick, cheap, no frame needed</li><li>Risk of selection bias</li><li>Sampling error cannot be estimated</li><li>Good for pilot, qualitative, rare-disease studies</li></ul></div>
+  </div>
+
+  <figure class="fig">
+    <svg viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Simple random, systematic, stratified and cluster sampling shown with dots">
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <!-- panel 1 SRS -->
+        <rect x="8" y="8" width="186" height="200" rx="16" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+        <g fill="#cbd5e1">
+          <circle cx="40" cy="40" r="9"/><circle cx="75" cy="40" r="9"/><circle cx="110" cy="40" r="9"/><circle cx="145" cy="40" r="9"/>
+          <circle cx="40" cy="80" r="9"/><circle cx="75" cy="80" r="9"/><circle cx="110" cy="80" r="9"/><circle cx="145" cy="80" r="9"/>
+          <circle cx="40" cy="120" r="9"/><circle cx="75" cy="120" r="9"/><circle cx="110" cy="120" r="9"/><circle cx="145" cy="120" r="9"/>
+          <circle cx="40" cy="160" r="9"/><circle cx="75" cy="160" r="9"/><circle cx="110" cy="160" r="9"/><circle cx="145" cy="160" r="9"/>
+        </g>
+        <g fill="#f97316"><circle cx="75" cy="40" r="9"/><circle cx="145" cy="80" r="9"/><circle cx="40" cy="120" r="9"/><circle cx="110" cy="160" r="9"/></g>
+        <text x="101" y="235" text-anchor="middle" font-weight="800" font-size="15" fill="#1e3a8a">Simple random</text>
+        <text x="101" y="252" text-anchor="middle" font-size="12" fill="#475569">lottery / random numbers</text>
+        <!-- panel 2 systematic -->
+        <rect x="206" y="8" width="186" height="200" rx="16" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+        <g fill="#cbd5e1">
+          <circle cx="238" cy="40" r="9"/><circle cx="273" cy="40" r="9"/><circle cx="308" cy="40" r="9"/><circle cx="343" cy="40" r="9"/>
+          <circle cx="238" cy="80" r="9"/><circle cx="273" cy="80" r="9"/><circle cx="308" cy="80" r="9"/><circle cx="343" cy="80" r="9"/>
+          <circle cx="238" cy="120" r="9"/><circle cx="273" cy="120" r="9"/><circle cx="308" cy="120" r="9"/><circle cx="343" cy="120" r="9"/>
+          <circle cx="238" cy="160" r="9"/><circle cx="273" cy="160" r="9"/><circle cx="308" cy="160" r="9"/><circle cx="343" cy="160" r="9"/>
+        </g>
+        <g fill="#f97316"><circle cx="273" cy="40" r="9"/><circle cx="273" cy="80" r="9"/><circle cx="273" cy="120" r="9"/><circle cx="273" cy="160" r="9"/></g>
+        <text x="299" y="235" text-anchor="middle" font-weight="800" font-size="15" fill="#1e3a8a">Systematic</text>
+        <text x="299" y="252" text-anchor="middle" font-size="12" fill="#475569">random start, every k-th (k = 4)</text>
+        <!-- panel 3 stratified -->
+        <rect x="404" y="8" width="186" height="200" rx="16" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+        <rect x="414" y="20" width="166" height="78" rx="10" fill="#dcfce7"/>
+        <rect x="414" y="102" width="166" height="78" rx="10" fill="#fef3c7"/>
+        <g fill="#cbd5e1">
+          <circle cx="436" cy="40" r="9"/><circle cx="471" cy="40" r="9"/><circle cx="506" cy="40" r="9"/><circle cx="541" cy="40" r="9"/>
+          <circle cx="436" cy="80" r="9"/><circle cx="471" cy="80" r="9"/><circle cx="506" cy="80" r="9"/><circle cx="541" cy="80" r="9"/>
+          <circle cx="436" cy="120" r="9"/><circle cx="471" cy="120" r="9"/><circle cx="506" cy="120" r="9"/><circle cx="541" cy="120" r="9"/>
+          <circle cx="436" cy="160" r="9"/><circle cx="471" cy="160" r="9"/><circle cx="506" cy="160" r="9"/><circle cx="541" cy="160" r="9"/>
+        </g>
+        <g fill="#f97316"><circle cx="471" cy="40" r="9"/><circle cx="541" cy="80" r="9"/><circle cx="436" cy="120" r="9"/><circle cx="506" cy="160" r="9"/></g>
+        <text x="573" y="59" text-anchor="middle" font-size="11" font-weight="800" fill="#166534" transform="rotate(-90 573 59)">stratum 1</text>
+        <text x="573" y="141" text-anchor="middle" font-size="11" font-weight="800" fill="#92400e" transform="rotate(-90 573 141)">stratum 2</text>
+        <text x="497" y="235" text-anchor="middle" font-weight="800" font-size="15" fill="#1e3a8a">Stratified</text>
+        <text x="497" y="252" text-anchor="middle" font-size="12" fill="#475569">random from EACH stratum</text>
+        <!-- panel 4 cluster -->
+        <rect x="602" y="8" width="190" height="200" rx="16" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+        <rect x="614" y="22" width="80" height="78" rx="12" fill="#ffedd5" stroke="#f97316" stroke-width="2.5"/>
+        <rect x="700" y="22" width="80" height="78" rx="12" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+        <rect x="614" y="104" width="80" height="78" rx="12" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+        <rect x="700" y="104" width="80" height="78" rx="12" fill="#ffedd5" stroke="#f97316" stroke-width="2.5"/>
+        <g fill="#cbd5e1"><circle cx="722" cy="44" r="8"/><circle cx="758" cy="44" r="8"/><circle cx="722" cy="78" r="8"/><circle cx="758" cy="78" r="8"/><circle cx="636" cy="126" r="8"/><circle cx="672" cy="126" r="8"/><circle cx="636" cy="160" r="8"/><circle cx="672" cy="160" r="8"/></g>
+        <g fill="#f97316"><circle cx="636" cy="44" r="8"/><circle cx="672" cy="44" r="8"/><circle cx="636" cy="78" r="8"/><circle cx="672" cy="78" r="8"/><circle cx="722" cy="126" r="8"/><circle cx="758" cy="126" r="8"/><circle cx="722" cy="160" r="8"/><circle cx="758" cy="160" r="8"/></g>
+        <text x="697" y="235" text-anchor="middle" font-weight="800" font-size="15" fill="#1e3a8a">Cluster</text>
+        <text x="697" y="252" text-anchor="middle" font-size="12" fill="#475569">pick WHOLE groups at random</text>
+      </g>
+    </svg>
+    <figcaption>Fig 4.6 — Four probability sampling methods (orange = selected). Quick to draw, and examiners love it.</figcaption>
+  </figure>
+
+  <h3>A. Probability sampling methods</h3>
+  <div class="grid-2">
+    <div class="card c1"><h4>1. Simple random sampling (SRS)</h4>
+      <p>Every unit has an <b>equal and independent</b> chance of selection.</p>
+      <p><b>Methods</b>: lottery method; random number tables; computer-generated random numbers. With or without replacement.</p>
+      <p><b>Steps</b>: define population → prepare frame and number units 1…N → decide n → draw n random numbers → select matching units.</p>
+      <p>✅ Simple, unbiased, basis of all theory. ❌ Needs complete frame; may miss small subgroups; costly if scattered.</p></div>
+    <div class="card c1"><h4>2. Systematic random sampling</h4>
+      <p>Select every <b>k-th</b> unit after a random start. <b>k = N/n</b> (sampling interval).</p>
+      <p>e.g., 1000 prescriptions, need 100 → k = 10; random start 7 → 7, 17, 27, 37 …</p>
+      <p>✅ Easy, quick, spreads evenly over the list. ❌ <b>Periodicity bias</b> if the list has a hidden cycle (e.g., every 10th bed is near a window).</p></div>
+    <div class="card c1"><h4>3. Stratified random sampling</h4>
+      <p>Divide a <b>heterogeneous</b> population into <b>homogeneous strata</b> (age, sex, ward, socio-economic class), then draw a random sample from <b>each</b> stratum.</p>
+      <p><b>Proportionate</b> (n per stratum ∝ stratum size) or <b>disproportionate</b>.</p>
+      <p>✅ Every subgroup represented; more precise. ❌ Needs information to form strata; more complex.</p></div>
+    <div class="card c1"><h4>4. Cluster sampling</h4>
+      <p>Population divided into natural groups (<b>clusters</b>: villages, schools, wards); clusters selected randomly and <b>all units</b> in chosen clusters studied.</p>
+      <p>e.g., the classic WHO immunisation coverage survey uses <b>30 clusters × 7 children</b>.</p>
+      <p>✅ Cheap and practical for scattered populations; no full frame of individuals needed. ❌ Higher sampling error (people within a cluster are alike).</p></div>
+    <div class="card c1"><h4>5. Multistage sampling</h4>
+      <p>Sampling in successive stages: state → districts → blocks → villages → households. Random selection at each stage.</p>
+      <p>✅ Used in large national health surveys; flexible. ❌ Error adds up at each stage.</p></div>
+    <div class="card c1"><h4>6. Multiphase sampling</h4>
+      <p>Part of the information is collected from the whole sample, and further information from a <b>sub-sample</b>.</p>
+      <p>e.g., all 1000 subjects screened by questionnaire for TB symptoms; only symptomatic ones get sputum test and X-ray.</p></div>
+  </div>
+
+  <h3>B. Non-probability sampling methods</h3>
+  <div class="grid-3">
+    <div class="card c2"><h4>1. Convenience (accidental)</h4>Whoever is easily available: patients attending today's OPD, classmates. Fast but least representative.</div>
+    <div class="card c2"><h4>2. Purposive / judgemental</h4>Researcher hand-picks subjects believed to be typical or information-rich (expert pharmacists for a Delphi survey).</div>
+    <div class="card c2"><h4>3. Quota</h4>Fixed quotas for subgroups (50 men, 50 women) filled non-randomly. The non-random cousin of stratified sampling.</div>
+    <div class="card c2"><h4>4. Snowball (chain referral)</h4>Initial subjects refer others: hidden or rare groups (drug users, people with rare diseases).</div>
+    <div class="card c2"><h4>5. Consecutive</h4>Every eligible patient presenting in a period is enrolled. Common in hospital studies; the best of the non-probability methods.</div>
+    <div class="card c2"><h4>6. Volunteer (self-selection)</h4>Subjects respond to an advertisement; volunteers may differ from the general population.</div>
+  </div>
+
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonics</span>
+    <p><b>Probability</b>: "<b>S</b>ome <b>S</b>mart <b>S</b>quirrels <b>C</b>limb <b>M</b>ountains" → Simple random, Systematic, Stratified, Cluster, Multistage (+ Multiphase).</p>
+    <p><b>Non-probability</b>: "<b>C</b>lawhauser <b>P</b>refers <b>Q</b>uick <b>S</b>nacks" → Convenience, Purposive, Quota, Snowball (+ consecutive, volunteer). 🍩</p></div>
+
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Point</th><th>Probability sampling</th><th>Non-probability sampling</th></tr>
+    <tr><td>Basis of selection</td><td>Random (chance)</td><td>Convenience / judgement</td></tr>
+    <tr><td>Chance of each unit</td><td>Known, non-zero</td><td>Unknown</td></tr>
+    <tr><td>Sampling frame</td><td>Required</td><td>Not required</td></tr>
+    <tr><td>Bias</td><td>Minimal selection bias</td><td>High risk of selection bias</td></tr>
+    <tr><td>Generalisation</td><td>Possible; sampling error measurable</td><td>Limited; error not measurable</td></tr>
+    <tr><td>Cost / time</td><td>More</td><td>Less</td></tr>
+    <tr><td>Used in</td><td>Surveys, prevalence studies, quantitative research</td><td>Pilot, exploratory, qualitative, rare-disease studies</td></tr>
+  </table></div>
+  <div class="callout warn"><span class="callout-title">⚠️ Classic confusion</span><p><b>Stratified vs cluster</b>: in stratified you sample <i>within every</i> group (groups are internally similar, different from each other). In cluster you pick <i>some whole</i> groups (each cluster is a mini-population). And: random <b>sampling</b> (who gets into the study) ≠ random <b>allocation</b> (which arm they get in a trial).</p></div>
+</section>
+
+<!-- T10 -->
+<section class="section" id="t10">
+  <h2><span class="num">10</span> Sample Size</h2>
+  <p class="lead">Too few witnesses and Judy misses the culprit. Too many and she wastes a month of carrots.</p>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definition</span>
+    <p><b>Sample size (n)</b> is the number of subjects/units included in a study. It is calculated <b>before</b> the study (stated in the protocol) so that the study has adequate <b>power</b> to detect a clinically important effect and adequate <b>precision</b> for its estimates.</p></div>
+
+  <h3>Why sample size is important (KUHS Nov 2022 brief)</h3>
+  <ul>
+    <li><b>Power</b>: an adequate n gives a good chance of detecting a real difference (avoids Type II error).</li>
+    <li><b>Precision</b>: larger n → smaller SE → narrower confidence interval.</li>
+    <li><b>Validity &amp; generalisability</b> of conclusions.</li>
+    <li><b>Ethics</b>: too small exposes subjects to risk without a useful answer; too large exposes more people than needed and wastes resources.</li>
+    <li><b>Planning</b> of budget, time and staff; ethics committees and regulators require a justified n.</li>
+  </ul>
+
+  <h3>Factors that determine sample size</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Factor</th><th>Effect on n</th></tr>
+    <tr><td>Level of significance α (5% → 1%)</td><td>Smaller α → <b>larger</b> n</td></tr>
+    <tr><td>Desired power (1 − β), usually 80–90%</td><td>Higher power → <b>larger</b> n</td></tr>
+    <tr><td>Effect size (clinically important difference, Δ)</td><td>Smaller difference to detect → <b>larger</b> n</td></tr>
+    <tr><td>Variability (SD) of outcome</td><td>More variable → <b>larger</b> n</td></tr>
+    <tr><td>One-tailed vs two-tailed test</td><td>Two-tailed → larger n</td></tr>
+    <tr><td>Expected dropout / non-response rate</td><td>More dropouts → inflate n</td></tr>
+    <tr><td>Study design</td><td>Paired/crossover need fewer; cluster designs need more</td></tr>
+    <tr><td>Prevalence (for proportions) &amp; allowable error (precision)</td><td>Smaller allowable error → larger n</td></tr>
+    <tr><td>Resources, time, population size</td><td>Practical limits</td></tr>
+  </table></div>
+
+  <h3>Formulae (with Z values)</h3>
+  <div class="grid-2">
+    <div class="card"><h4>Estimating a proportion (prevalence survey)</h4><div class="formula" style="font-size:1.05rem">n = Z² p q / d²</div>
+      p = expected prevalence, q = 1 − p, d = allowable error, Z = 1.96 (95%).<br>
+      e.g., p = 0.40, d = 0.05 → n = 3.84 × 0.40 × 0.60 / 0.0025 = <b>369</b>.<br><small>Popular shortcut (Z ≈ 2, % values): n = 4pq/L² = 4 × 40 × 60 / 25 = 384.</small></div>
+    <div class="card"><h4>Comparing two means (two-group trial)</h4><div class="formula" style="font-size:1.05rem">n per group = 2 (Z<sub>α/2</sub> + Z<sub>β</sub>)² σ² / Δ²</div>
+      SD σ = 10 mmHg, Δ = 5 mmHg, α = 0.05 (1.96), power 80% (0.84):<br>n = 2 × (2.80)² × 100 / 25 = <b>63 per group</b>.<br>Allowing 10% dropouts: 63 / 0.9 = <b>70 per group</b>.</div>
+  </div>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Setting</th><th>Z value</th></tr>
+    <tr><td>α = 0.05 two-tailed (95% confidence)</td><td>1.96</td></tr>
+    <tr><td>α = 0.01 two-tailed (99% confidence)</td><td>2.58</td></tr>
+    <tr><td>Power 80% (β = 0.20)</td><td>0.84</td></tr>
+    <tr><td>Power 90% (β = 0.10)</td><td>1.28</td></tr>
+  </table></div>
+  <p>Estimating a mean: n = Z²σ²/d². Free calculators/software: G*Power, OpenEpi, Epi Info.</p>
+
+  <h3>Sample size and power (KUHS Jul 2023 brief)</h3>
+  <figure class="fig">
+    <svg viewBox="0 0 720 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Power increases with sample size">
+      <line x1="60" y1="260" x2="680" y2="260" stroke="#334155" stroke-width="2"/>
+      <line x1="60" y1="260" x2="60" y2="30" stroke="#334155" stroke-width="2"/>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" fill="#334155" text-anchor="end">
+        <text x="52" y="264">0</text><text x="52" y="210">0.25</text><text x="52" y="155">0.50</text><text x="52" y="100">0.75</text><text x="52" y="44">1.0</text>
+      </g>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" fill="#334155" text-anchor="middle">
+        <text x="60" y="278">0</text><text x="210" y="278">50</text><text x="360" y="278">100</text><text x="510" y="278">150</text><text x="660" y="278">200</text>
+      </g>
+      <text x="370" y="300" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="14" fill="#1e3a8a">Sample size per group (n)</text>
+      <text x="20" y="150" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="14" fill="#1e3a8a" transform="rotate(-90 20 150)">Power (1 − β)</text>
+      <line x1="60" y1="84" x2="680" y2="84" stroke="#16a34a" stroke-width="2" stroke-dasharray="7 5"/>
+      <text x="676" y="78" text-anchor="end" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800" fill="#166534">80% power (convention)</text>
+      <path d="M72,236.9 L84,222.9 L96,209.2 L108,195.6 L120,182.5 L132,169.8 L144,157.8 L156,146.5 L168,135.9 L180,126.1 L192,117.0 L204,108.7 L216,101.1 L228,94.2 L240,88.0 L252,82.4 L264,77.3 L276,72.8 L288,68.8 L300,65.2 L312,62.0 L324,59.2 L336,56.8 L348,54.6 L360,52.7 L372,51.0 L384,49.5 L396,48.2 L408,47.1 L420,46.1 L432,45.3 L444,44.5 L456,43.9 L468,43.4 L480,42.9 L492,42.5 L504,42.1 L516,41.8 L528,41.5 L540,41.3 L552,41.1 L564,41.0 L576,40.8 L588,40.7 L600,40.6 L612,40.5 L624,40.4 L636,40.4 L648,40.3 L660,40.3" fill="none" stroke="#f97316" stroke-width="4"/>
+      <circle cx="249" cy="84" r="7" fill="#2563eb"/>
+      <text x="262" y="112" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13" font-weight="800" fill="#1e3a8a">n ≈ 63 → 80% power</text>
+      <text x="262" y="128" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" fill="#475569">(effect = 0.5 SD, α = 0.05)</text>
+      <text x="120" y="240" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#dc2626">small n: underpowered,</text>
+      <text x="120" y="254" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#dc2626">Type II error likely</text>
+      <text x="470" y="150" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" font-weight="800" fill="#475569">plateau: extra subjects add little</text>
+    </svg>
+    <figcaption>Fig 4.7 — Power rises with sample size and then flattens (curve calculated for our example). Sketch it for the "sample size vs power" brief.</figcaption>
+  </figure>
+  <p><b>Power = 1 − β</b> = probability of correctly rejecting a false H₀ (finding a difference that truly exists). Increasing n reduces the standard error, so the sampling distributions under H₀ and H₁ overlap less → <b>power increases</b> and the Type II error (β) decreases. Power also rises with a bigger effect size, smaller SD and larger α.</p>
+  <div class="callout tip"><span class="callout-title">⭐ Exam tip</span><p>For the 2-mark "relationship between sample size and power": one-line definition of power (1 − β) + "directly related: as n increases, SE decreases, power increases" + "conventionally 80% power is planned; too small n → Type II error". Sketch the tiny curve for a bonus.</p></div>
+</section>
+
+<!-- T11 -->
+<section class="section" id="t11">
+  <h2><span class="num">11</span> Criteria for Inclusion &amp; Exclusion</h2>
+  <p class="lead">The glass slipper decides who may enter the story.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>The Grand Duke's rule: "Only the maiden whose foot fits the slipper." That's the <b>inclusion criterion</b>: the must-have feature. Anastasia and Drizella try to squeeze in, but their feet clearly don't fit: they are <b>excluded</b>. A good researcher, like the Duke, writes the rules <b>before</b> trying the slipper, so nobody can bend them later (and Lady Tremaine can't trip the footman!).</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definitions</span>
+    <p><b>Inclusion criteria</b> are the characteristics that a prospective subject <b>must have</b> to be eligible for the study (they define the study population): e.g., age range, diagnosis, disease stage, lab values, informed consent.</p>
+    <p><b>Exclusion criteria</b> are the characteristics that <b>disqualify</b> a subject who otherwise meets the inclusion criteria, mainly for safety, ethical reasons, or because they would confound the results or hinder follow-up.</p></div>
+
+  <div class="vs">
+    <div class="card c1"><h4>👠 Inclusion (slipper fits)</h4><ul>
+      <li>Adults aged 18–65 years, either sex</li>
+      <li>Newly diagnosed stage 1 hypertension (SBP 140–159 mmHg)</li>
+      <li>Not on any antihypertensive for 4 weeks</li>
+      <li>Willing to give written informed consent and attend follow-up</li></ul></div>
+    <div class="mid">VS</div>
+    <div class="card c2"><h4>🚫 Exclusion (step-sisters)</h4><ul>
+      <li>Pregnant or lactating women</li>
+      <li>Secondary hypertension; renal or hepatic impairment</li>
+      <li>Known hypersensitivity to the study drug</li>
+      <li>Participation in another trial within the last 30 days; alcohol/drug abuse; inability to comply</li></ul></div>
+  </div>
+  <p><small>Example for a hypothetical trial: "Drug X vs amlodipine in stage 1 hypertension".</small></p>
+
+  <h3>Purpose / importance</h3>
+  <div class="grid-3">
+    <div class="card"><span class="card-icon">🛡️</span><h4>Safety</h4>Protects vulnerable people (pregnancy, organ failure).</div>
+    <div class="card"><span class="card-icon">🎯</span><h4>Homogeneity</h4>Similar subjects reduce variability → smaller n needed.</div>
+    <div class="card"><span class="card-icon">🧹</span><h4>Controls confounding</h4>Removes factors that could explain the outcome.</div>
+    <div class="card"><span class="card-icon">⚖️</span><h4>Ethics &amp; validity</h4>Pre-specified rules prevent selection bias; approved by ethics committee.</div>
+    <div class="card"><span class="card-icon">🔁</span><h4>Reproducibility</h4>Others can repeat the study on the same kind of patients.</div>
+    <div class="card"><span class="card-icon">🌍</span><h4>But…</h4>Too strict criteria reduce <b>generalisability</b> (external validity).</div>
+  </div>
+  <div class="callout warn"><span class="callout-title">⚠️ Common mistake</span><p>Exclusion criteria are <b>not</b> the mirror image of inclusion criteria. If inclusion says "age 18–65", don't write "age below 18" in exclusion; that is redundant. Exclusion lists reasons to drop people who <i>already</i> qualify.</p></div>
+</section>
+
+<!-- T12 -->
+<section class="section" id="t12">
+  <h2><span class="num">12</span> Dropouts</h2>
+  <p class="lead">Cinderella was at the ball, but she ran away at midnight before the story ended.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode</span>
+    <p>Cinderella was properly "enrolled" at the ball (she met every inclusion criterion: invited, dressed, dancing!). But at the stroke of midnight she fled before the final dance: she is a <b>dropout</b>. She even left a glass slipper behind, like the <b>partial data</b> a dropout leaves in a study. The Prince could not just pretend she never came; researchers can't ignore dropouts either.</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definition (KUHS Dec 2023 &amp; model paper)</span>
+    <p><b>Dropouts</b> are subjects who have been enrolled (randomised) in a study but discontinue participation before its completion, so that the final outcome assessment is not available as per protocol, for any reason: adverse events, lack of efficacy, withdrawal of consent, loss to follow-up, etc.</p></div>
+
+  <div class="grid-2">
+    <div class="card c1"><h4>Related terms</h4><ul>
+      <li><b>Withdrawal</b>: subject withdraws consent, or investigator removes the subject (safety, protocol violation).</li>
+      <li><b>Lost to follow-up</b>: cannot be contacted any more.</li>
+      <li><b>Non-compliance</b>: remains in study but doesn't take drug as directed.</li>
+      <li><b>Screen failure</b>: failed eligibility before enrolment, NOT a dropout.</li></ul></div>
+    <div class="card c2"><h4>Reasons for dropout</h4><ul>
+      <li>Adverse drug reactions</li><li>Lack of efficacy / patient feels cured</li><li>Withdrawal of consent</li><li>Relocation, travel cost, frequent visits</li><li>Intercurrent illness, pregnancy, death</li><li>Protocol violation</li></ul></div>
+  </div>
+
+  <h3>Why dropouts matter</h3>
+  <ul>
+    <li>Reduce effective sample size → <b>loss of power</b>.</li>
+    <li>Cause <b>attrition bias</b> if dropouts differ between groups (e.g., more ADR dropouts in the drug arm).</li>
+    <li>Create <b>missing data</b> and threaten internal validity.</li>
+  </ul>
+  <h3>Handling dropouts</h3>
+  <div class="grid-3">
+    <div class="card"><h4>At planning</h4>Inflate sample size: n<sub>adjusted</sub> = n / (1 − dropout rate). (63 → 70 for 10%).</div>
+    <div class="card"><h4>Intention-to-treat (ITT)</h4>Analyse every randomised subject in the group originally assigned ("once randomised, always analysed"). Preserves randomisation; conservative.</div>
+    <div class="card"><h4>Per-protocol (PP)</h4>Analyse only those who completed as per protocol; shows effect under ideal use but can be biased.</div>
+    <div class="card"><h4>Missing data methods</h4>Last observation carried forward (LOCF), multiple imputation, sensitivity analysis.</div>
+    <div class="card"><h4>Report transparently</h4>Number and reasons of dropouts in each arm in a CONSORT flow diagram.</div>
+    <div class="card"><h4>Prevent / minimise</h4>Careful selection, run-in period, simple schedule, reminders, travel reimbursement, good rapport, prompt ADR management, multiple contact details.</div>
+  </div>
+
+  <figure class="fig">
+    <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CONSORT style participant flow diagram with dropouts">
+      <defs><marker id="u4f8-arr" viewBox="0 0 10 10" markerWidth="4" markerHeight="4" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker></defs>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <rect x="250" y="10" width="260" height="46" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+        <text x="380" y="39" text-anchor="middle" font-weight="800" font-size="15" fill="#1e3a8a">Assessed for eligibility (n = 160)</text>
+        <path d="M380 56 L380 112" stroke="#2563eb" stroke-width="3" marker-end="url(#u4f8-arr)"/>
+        <path d="M380 82 L520 82" stroke="#2563eb" stroke-width="3" marker-end="url(#u4f8-arr)"/>
+        <rect x="525" y="62" width="225" height="58" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+        <text x="637" y="84" text-anchor="middle" font-weight="800" font-size="13" fill="#991b1b">Excluded (n = 20)</text>
+        <text x="637" y="104" text-anchor="middle" font-size="12" fill="#1f2937">not meeting criteria 15 · declined 5</text>
+        <rect x="270" y="116" width="220" height="44" rx="14" fill="#2563eb"/>
+        <text x="380" y="144" text-anchor="middle" font-weight="800" font-size="15" fill="#fff">Randomised (n = 140)</text>
+        <path d="M380 160 L200 200" stroke="#2563eb" stroke-width="3" marker-end="url(#u4f8-arr)"/>
+        <path d="M380 160 L560 200" stroke="#2563eb" stroke-width="3" marker-end="url(#u4f8-arr)"/>
+        <rect x="80" y="202" width="240" height="44" rx="12" fill="#ffedd5" stroke="#f97316" stroke-width="2.5"/>
+        <text x="200" y="229" text-anchor="middle" font-weight="800" font-size="14" fill="#9a3412">Allocated to Drug X (n = 70)</text>
+        <rect x="440" y="202" width="240" height="44" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+        <text x="560" y="229" text-anchor="middle" font-weight="800" font-size="14" fill="#166534">Allocated to control (n = 70)</text>
+        <path d="M200 246 L200 278" stroke="#f97316" stroke-width="3" marker-end="url(#u4f8-arr)"/>
+        <path d="M560 246 L560 278" stroke="#16a34a" stroke-width="3" marker-end="url(#u4f8-arr)"/>
+        <rect x="60" y="280" width="280" height="62" rx="12" fill="#fff" stroke="#f97316" stroke-width="2" stroke-dasharray="6 4"/>
+        <text x="200" y="302" text-anchor="middle" font-weight="800" font-size="13" fill="#9a3412">🕛 Dropouts (n = 6)</text>
+        <text x="200" y="322" text-anchor="middle" font-size="12" fill="#1f2937">ADR 3 · lost to follow-up 2 ·</text>
+        <text x="200" y="337" text-anchor="middle" font-size="12" fill="#1f2937">withdrew consent 1</text>
+        <rect x="420" y="280" width="280" height="62" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 4"/>
+        <text x="560" y="302" text-anchor="middle" font-weight="800" font-size="13" fill="#166534">🕛 Dropouts (n = 5)</text>
+        <text x="560" y="322" text-anchor="middle" font-size="12" fill="#1f2937">lack of efficacy 3 · relocated 2</text>
+        <path d="M200 342 L200 362" stroke="#f97316" stroke-width="3" marker-end="url(#u4f8-arr)"/>
+        <path d="M560 342 L560 362" stroke="#16a34a" stroke-width="3" marker-end="url(#u4f8-arr)"/>
+        <rect x="60" y="364" width="280" height="48" rx="12" fill="#ffedd5" stroke="#f97316" stroke-width="2.5"/>
+        <text x="200" y="385" text-anchor="middle" font-weight="800" font-size="13" fill="#9a3412">Analysed: ITT n = 70 · PP n = 64</text>
+        <rect x="420" y="364" width="280" height="48" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+        <text x="560" y="385" text-anchor="middle" font-weight="800" font-size="13" fill="#166534">Analysed: ITT n = 70 · PP n = 65</text>
+        <text x="200" y="403" text-anchor="middle" font-size="11" fill="#475569">ITT keeps everyone randomised</text>
+        <text x="560" y="403" text-anchor="middle" font-size="11" fill="#475569">PP keeps only completers</text>
+      </g>
+    </svg>
+    <figcaption>Fig 4.8 — CONSORT-style flow showing exclusions, dropouts and ITT vs per-protocol analysis (illustrative numbers). Draw a mini version in a dropouts answer.</figcaption>
+  </figure>
+  <p class="hand">Psst, Mimosa… "once randomised, always analysed": even Cinderella stays on the guest list after midnight! 👠</p>
+  <div class="callout tip"><span class="callout-title">⭐ Exam tip</span><p>2-mark "Define dropouts": definition + 3 reasons + "handled by inflating sample size and ITT analysis". 5-mark: add consequences (power, attrition bias), ITT vs PP, prevention, and the mini CONSORT box.</p></div>
+</section>
+
+<!-- ===== 7. MODEL ANSWERS ===== -->
+<section class="section" id="answers">
+  <h2><span class="num">✍️</span> Model Answers (KUHS style)</h2>
+  <p class="lead">Every Unit 4 question KUHS has asked, written the way examiners like it. Essays ≈ 3 pages, short notes ≈ 1.5 pages, briefs ≈ 4 lines.</p>
+
+  <!-- ESSAY: Sampling (model) -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. What is meant by sampling in epidemiology studies? Discuss its relevance and the different types of sampling techniques in detail.</div>
+      <div class="meta">Essay · 10 marks · KUHS Model paper (also covers Nov 2022 &amp; Jul 2023 short notes) · ~25 min · ~3 pages</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition + terms (1.5 m) → Relevance/need (2 m) → Classification chart (1 m) → Probability methods with examples (3 m) → Non-probability methods (1.5 m) → Comparison table / diagram + conclusion (1 m)</div>
+      <h4>1. Introduction &amp; definition</h4>
+      <p>In epidemiology we want to know the frequency and determinants of disease in a population, but examining every person (a census) is rarely possible. <b>Sampling</b> is the process of selecting a representative part (the sample) of a population so that, by studying it, valid conclusions about the whole population can be drawn. The <b>population</b> is the entire group of interest; the <b>sample</b> is the selected part; the <b>sampling frame</b> is the list of all units; the <b>sampling unit</b> is the individual element (person, household, village).</p>
+      <h4>2. Relevance / need for sampling in epidemiology</h4>
+      <ul>
+        <li><b>Economy</b> of money, manpower and materials.</li>
+        <li><b>Speed</b>: quick estimates during outbreaks and for planning programmes.</li>
+        <li><b>Accuracy</b>: smaller scale allows trained investigators and quality control → fewer non-sampling errors.</li>
+        <li><b>Feasibility</b>: large, scattered or infinite populations (all diabetics in India) cannot be fully enumerated.</li>
+        <li><b>Destructive/invasive tests</b>: blood tests, biopsies, QC tests can only be done on samples.</li>
+        <li><b>Ethics</b>: fewer people exposed to procedures or experimental drugs.</li>
+        <li>Used for: prevalence surveys, immunisation coverage evaluation, case-control and cohort studies, drug-utilisation studies, KAP surveys.</li>
+      </ul>
+      <p>A good sample is <b>representative, adequate in size, unbiased (random), independent and practical</b>. Sampling error (due to chance) reduces as n increases; non-sampling error (bias) does not.</p>
+      <h4>3. Classification</h4>
+      <div class="table-wrap"><table class="nice">
+        <tr><th>Probability (random) sampling</th><th>Non-probability sampling</th></tr>
+        <tr><td>Simple random · Systematic · Stratified · Cluster · Multistage · Multiphase</td><td>Convenience · Purposive (judgement) · Quota · Snowball · Consecutive · Volunteer</td></tr>
+      </table></div>
+      <h4>4. Probability sampling methods</h4>
+      <p><b>(a) Simple random sampling</b>: every unit has an equal and independent chance. Units are numbered and selected by the lottery method, random number tables or computer. e.g., selecting 100 patients from a numbered register of 1000 diabetics. Merits: unbiased, simple theory. Demerits: needs a complete frame; may miss small subgroups.</p>
+      <p><b>(b) Systematic sampling</b>: sampling interval k = N/n; first unit chosen randomly between 1 and k, then every k-th unit. e.g., N = 1000, n = 100, k = 10; random start 7 → 7, 17, 27… Merits: easy, evenly spread. Demerit: periodicity bias.</p>
+      <p><b>(c) Stratified random sampling</b>: population divided into homogeneous strata (age group, sex, urban/rural), and simple random samples drawn from each stratum, proportionately or disproportionately. e.g., prevalence of anaemia sampled separately among urban and rural women. Merits: all subgroups represented; higher precision.</p>
+      <p><b>(d) Cluster sampling</b>: natural groups (villages, schools, wards) are the sampling units; clusters are selected at random and all individuals within them studied. e.g., the WHO 30-cluster × 7-children immunisation coverage survey. Merits: cheap, practical, frame of individuals not needed. Demerit: larger sampling error (design effect).</p>
+      <p><b>(e) Multistage sampling</b>: selection in stages: districts → blocks → villages → households. Used in large health surveys.</p>
+      <p><b>(f) Multiphase sampling</b>: some information from the whole sample and further information from a sub-sample (e.g., questionnaire screening of all, laboratory test for symptomatic).</p>
+      <h4>5. Non-probability sampling methods</h4>
+      <ul>
+        <li><b>Convenience</b>: easily available subjects (today's OPD patients).</li>
+        <li><b>Purposive/judgement</b>: researcher selects information-rich subjects.</li>
+        <li><b>Quota</b>: fixed numbers from each category, chosen non-randomly.</li>
+        <li><b>Snowball</b>: subjects refer others; hidden populations (IV drug users).</li>
+        <li><b>Consecutive</b>: all eligible patients over a period, common in clinical studies.</li>
+      </ul>
+      <p>These are quick and cheap, but selection bias is likely and the sampling error cannot be calculated, so results are hard to generalise.</p>
+      <h4>6. Comparison (draw Fig 4.6 here)</h4>
+      <div class="table-wrap"><table class="nice">
+        <tr><th>Point</th><th>Probability</th><th>Non-probability</th></tr>
+        <tr><td>Selection</td><td>By chance; known probability</td><td>By convenience/judgement</td></tr>
+        <tr><td>Frame</td><td>Needed</td><td>Not needed</td></tr>
+        <tr><td>Bias / generalisation</td><td>Low bias; generalisable</td><td>High bias; limited</td></tr>
+        <tr><td>Cost</td><td>Higher</td><td>Lower</td></tr>
+      </table></div>
+      <h4>Conclusion</h4>
+      <p>Sampling makes epidemiological research economical, quick and often more accurate than a census. Probability sampling (especially stratified, cluster and multistage designs) gives representative samples whose error can be measured, while non-probability methods suit pilot and qualitative work. The choice depends on objective, population, frame availability and resources, and an adequate sample size must always be calculated beforehand.</p>
+    </div>
+  </div>
+
+  <!-- SN: central tendency -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. What are measures of central tendency? Explain how it is calculated.</div>
+      <div class="meta">Short note · 5 marks · KUHS May 2022 · ~12 min · 1.5 pages</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition (½) → list + ideal characteristics (1) → mean/median/mode each with formula + example (2.5) → when to use / skewness sketch (1)</div>
+      <h4>Definition</h4>
+      <p>A measure of central tendency is a single value that represents the centre of a set of data, around which the observations cluster. Types: arithmetic mean, median, mode (also geometric and harmonic mean). An ideal average is rigidly defined, easy to calculate, based on all observations, capable of algebraic treatment and not unduly affected by extreme values.</p>
+      <h4>Calculation (example: heights 98, 95, 92, 95, 90, 95, 86 cm)</h4>
+      <p><b>1. Arithmetic mean</b> = Σx/n = 651/7 = <b>93 cm</b>. Grouped data: x̄ = Σfx/Σf (x = mid-point), or A + (Σfu/N) × h.</p>
+      <p><b>2. Median</b>: arrange in order (86, 90, 92, 95, 95, 95, 98); median = ((n+1)/2)th value = 4th = <b>95 cm</b>. For even n, average of the two middle values. Grouped: Median = L + [(N/2 − cf)/f] × h.</p>
+      <p><b>3. Mode</b>: most frequent value = <b>95 cm</b>. Grouped: Mode = L + [(f₁ − f₀)/(2f₁ − f₀ − f₂)] × h. Empirical: Mode = 3 Median − 2 Mean.</p>
+      <p><b>4. GM</b> = ⁿ√(x₁x₂…xₙ) (for ratios, titres); <b>HM</b> = n/Σ(1/x) (for rates). AM ≥ GM ≥ HM.</p>
+      <h4>Choice</h4>
+      <p>Mean for symmetric data; median for skewed data or outliers (e.g., hospital stay); mode for nominal data (commonest blood group or dose). In a symmetric distribution mean = median = mode; in positive skew mean &gt; median &gt; mode (sketch Fig 4.2).</p>
+    </div>
+  </div>
+
+  <!-- SN: grouped median -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Calculate median for the following data: Class 0-10, 11-20, 21-30, 31-40, 41-50, 51-60; Frequency 48, 62, 130, 105, 58, 52.</div>
+      <div class="meta">Short note (numerical) · 5 marks · KUHS Nov 2022 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Formula with symbols (1) → table with boundaries + cf (2) → locate median class (1) → substitute + answer with unit/interpretation (1)</div>
+      <p><b>Formula</b>: Median = L + [(N/2 − cf)/f] × h, where L = lower boundary of median class, N = total frequency, cf = cumulative frequency before the median class, f = frequency of median class, h = class width.</p>
+      <p>The classes are inclusive (gap of 1 between 10 and 11), so convert to class boundaries by subtracting 0.5 from lower limits and adding 0.5 to upper limits.</p>
+      <div class="table-wrap"><table class="nice">
+        <tr><th>Class</th><th>Boundaries</th><th>f</th><th>cf</th></tr>
+        <tr><td>0–10</td><td>−0.5–10.5</td><td>48</td><td>48</td></tr>
+        <tr><td>11–20</td><td>10.5–20.5</td><td>62</td><td>110</td></tr>
+        <tr><td>21–30</td><td>20.5–30.5</td><td>130</td><td>240 ← median class</td></tr>
+        <tr><td>31–40</td><td>30.5–40.5</td><td>105</td><td>345</td></tr>
+        <tr><td>41–50</td><td>40.5–50.5</td><td>58</td><td>403</td></tr>
+        <tr><td>51–60</td><td>50.5–60.5</td><td>52</td><td>455</td></tr>
+      </table></div>
+      <p>N = 455 → N/2 = 227.5. The first cumulative frequency ≥ 227.5 is 240, so the median class is <b>21–30 (20.5–30.5)</b>.</p>
+      <p>L = 20.5, cf = 110, f = 130, h = 10</p>
+      <div class="formula">Median = 20.5 + [(227.5 − 110)/130] × 10 = 20.5 + (117.5/130) × 10 = 20.5 + 9.04 = <b>29.54</b></div>
+      <p><b>Interpretation</b>: half of the 455 observations lie below 29.54 and half above. (Without the boundary correction the value would be 30.04; with exclusive classes 0–10, 10–20… it would be 29.04.)</p>
+    </div>
+  </div>
+
+  <!-- SN: types of variables -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. With suitable examples, explain various types of variables.</div>
+      <div class="meta">Short note · 5 marks · KUHS Nov 2022 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition (½) → tree diagram by nature (1½) → by role (1½) → scales NOIR (1) → pharmacy example (½)</div>
+      <p><b>Variable</b>: a characteristic that varies from one individual or object to another and can be measured, counted or categorised (e.g., age, BP, blood group).</p>
+      <h4>A. According to nature (draw Fig 4.1)</h4>
+      <ul>
+        <li><b>Qualitative (categorical)</b>: describe a quality. <b>Nominal</b>: categories without order (sex, blood group, dosage form). <b>Ordinal</b>: ordered categories (pain mild/moderate/severe, NYHA class, cancer stage). <b>Dichotomous</b>: two categories (alive/dead).</li>
+        <li><b>Quantitative (numerical)</b>: measured or counted. <b>Discrete</b>: whole numbers (number of tablets, number of seizures per month). <b>Continuous</b>: any value within a range (height, weight, BP, serum drug level).</li>
+      </ul>
+      <h4>B. According to role in research</h4>
+      <ul>
+        <li><b>Independent</b> (cause/predictor): dose of drug, type of treatment.</li>
+        <li><b>Dependent</b> (effect/outcome): fall in blood sugar, cure rate.</li>
+        <li><b>Confounding</b>: related to both exposure and outcome (age, smoking).</li>
+        <li><b>Extraneous / control</b>: other factors kept constant (diet, temperature).</li>
+        <li><b>Intervening</b>: on the causal path (statin → ↓LDL → ↓MI).</li>
+      </ul>
+      <h4>C. According to scale of measurement</h4>
+      <p>Nominal, Ordinal, Interval (equal intervals, no true zero: °C), Ratio (true zero: weight, concentration).</p>
+      <h4>Example</h4>
+      <p>In a trial of a new antidiabetic drug: treatment group (independent, nominal), HbA1c (dependent, continuous, ratio), age (confounder), number of hypoglycaemic episodes (discrete).</p>
+    </div>
+  </div>
+
+  <!-- SN: inferential -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Explain inferential statistics. Write note on different models.</div>
+      <div class="meta">Short note · 5 marks · KUHS May 2022 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition + diagram (1½) → areas: estimation, hypothesis testing, relationship/prediction (2) → models table (1½)</div>
+      <p><b>Inferential statistics</b> is the branch of statistics that draws conclusions about a population from a random sample, using probability to express uncertainty. (Draw Fig 4.4: population → random sample → statistic → inference.) It rests on sampling distributions and the central limit theorem (sample means are approximately normal with SE = σ/√n).</p>
+      <h4>Areas</h4>
+      <ol>
+        <li><b>Estimation</b>: point estimate (x̄ for μ) and interval estimate (95% CI = x̄ ± 1.96 SE).</li>
+        <li><b>Hypothesis testing</b>: H₀ vs H₁, level of significance, p-value; z, t, χ², F tests.</li>
+        <li><b>Relationship &amp; prediction</b>: correlation (r), regression (Y = a + bX).</li>
+        <li><b>Comparison of groups</b>: t-test for two, ANOVA for three or more.</li>
+      </ol>
+      <h4>Different models</h4>
+      <ul>
+        <li><b>Probability distribution models</b>: normal, binomial, Poisson; t, χ², F.</li>
+        <li><b>Parametric models</b>: assume normality and use parameters μ, σ (t-test, ANOVA, Pearson r, linear regression).</li>
+        <li><b>Non-parametric models</b>: distribution-free, based on ranks (Mann–Whitney, Wilcoxon, Kruskal–Wallis, χ², Spearman).</li>
+        <li><b>Regression models</b>: simple and multiple linear, logistic (binary outcome; odds ratio), survival models.</li>
+        <li><b>Frequentist vs Bayesian</b> approaches.</li>
+      </ul>
+      <p><b>Application</b>: generalising clinical-trial results to all patients, bioequivalence decisions, prevalence estimation from surveys.</p>
+    </div>
+  </div>
+
+  <!-- SN: sampling techniques - one -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. What are the different sampling techniques? Describe any ONE technique.</div>
+      <div class="meta">Short note · 5 marks · KUHS Nov 2022 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition (½) → classification chart (1½) → ONE technique in depth: stratified random sampling with steps, example, merits, demerits (3)</div>
+      <p><b>Sampling</b> is selecting a representative part of a population to draw conclusions about the whole.</p>
+      <div class="table-wrap"><table class="nice">
+        <tr><th>Probability</th><th>Non-probability</th></tr>
+        <tr><td>Simple random, Systematic, Stratified random, Cluster, Multistage, Multiphase</td><td>Convenience, Purposive, Quota, Snowball, Consecutive</td></tr>
+      </table></div>
+      <h4>Stratified random sampling (described)</h4>
+      <p>Used when the population is <b>heterogeneous</b>. The population is divided into mutually exclusive, internally homogeneous sub-groups called <b>strata</b> (e.g., age groups, sex, wards, urban/rural), and a simple random sample is drawn from each stratum.</p>
+      <p><b>Steps</b>: (1) define population; (2) identify stratifying variable; (3) list units in each stratum; (4) decide total n and allocate to strata, proportionately (n<sub>i</sub> = n × N<sub>i</sub>/N) or disproportionately; (5) draw random samples within each stratum; (6) combine.</p>
+      <p><b>Example</b>: to study self-medication among 1000 pharmacy students (400 first-years, 300 second-years, 300 final-years), a 10% proportionate sample takes 40, 30 and 30 students randomly from each year.</p>
+      <p><b>Merits</b>: ensures representation of every subgroup; more precise than SRS for the same n; allows separate subgroup analysis. <b>Demerits</b>: requires prior information to stratify; more complex and time-consuming; wrong stratification can introduce bias.</p>
+    </div>
+  </div>
+
+  <!-- SN: probability sampling -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Explain the probability sampling methods.</div>
+      <div class="meta">Short note · 5 marks · KUHS Jul 2023 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition + features (1) → 5–6 methods with one example each (3) → Fig 4.6 sketch (1)</div>
+      <p><b>Probability sampling</b> is a method in which every unit of the population has a known, non-zero chance of being selected, and selection is by a random process. It gives representative samples and allows calculation of sampling error.</p>
+      <ol>
+        <li><b>Simple random</b>: equal chance for each unit; lottery, random number table, computer.</li>
+        <li><b>Systematic</b>: every k-th unit (k = N/n) after a random start; e.g., every 10th prescription.</li>
+        <li><b>Stratified</b>: population divided into homogeneous strata; random sample from each (proportionate/disproportionate).</li>
+        <li><b>Cluster</b>: random selection of natural groups (villages, schools) and study of all members; WHO 30 × 7 immunisation survey.</li>
+        <li><b>Multistage</b>: random selection in stages (district → village → household).</li>
+        <li><b>Multiphase</b>: basic information from all, detailed information from a sub-sample.</li>
+      </ol>
+      <p><b>Advantages</b>: minimal selection bias, generalisable, error measurable. <b>Disadvantages</b>: need a sampling frame, more time and cost. (Sketch the four-panel dot diagram.)</p>
+    </div>
+  </div>
+
+  <!-- BRIEFS -->
+  <h3>Brief answers (2 marks each)</h3>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Define sample and population.</div><div class="meta">Brief · 2 marks · May 2022</div></div>
+    <div class="answer-body"><p><b>Population</b>: the entire group of individuals or items possessing the characteristic of interest, about which conclusions are to be drawn (e.g., all hypertensive patients in Kerala). Its numerical characteristics are <b>parameters</b> (μ, σ). <b>Sample</b>: a representative subset of the population actually selected and studied (e.g., 200 hypertensives from 4 hospitals); its values are <b>statistics</b> (x̄, s), used to estimate parameters.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Define probability.</div><div class="meta">Brief · 2 marks · May 2022</div></div>
+    <div class="answer-body"><p>Probability is the numerical measure of the likelihood that an event will occur: the ratio of favourable outcomes to the total number of equally likely outcomes. P(A) = m/n; it ranges from 0 (impossible) to 1 (certain), and P(not A) = 1 − P(A). e.g., probability of a head on tossing a coin = ½. Empirically, P = relative frequency f/n in a long series of trials. It is the basis of sampling, p-values and confidence intervals.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Define statistics.</div><div class="meta">Brief · 2 marks · May 2022</div></div>
+    <div class="answer-body"><p>Statistics is the science of collection, organisation, presentation, analysis and interpretation of numerical data, to draw valid conclusions and make decisions in the face of uncertainty (Croxton &amp; Cowden: collection, presentation, analysis and interpretation of numerical data). It has two branches: descriptive and inferential. Its application to biological, medical and pharmaceutical data is <b>biostatistics</b>.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Different types of sampling techniques.</div><div class="meta">Brief · 2 marks · May 2022</div></div>
+    <div class="answer-body"><p><b>Probability sampling</b>: simple random, systematic, stratified random, cluster, multistage, multiphase. <b>Non-probability sampling</b>: convenience, purposive (judgement), quota, snowball, consecutive. Probability methods give every unit a known chance of selection and permit generalisation; non-probability methods are quicker but prone to bias.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Probability sampling.</div><div class="meta">Brief · 2 marks · Dec 2023</div></div>
+    <div class="answer-body"><p>A sampling method in which every unit of the population has a known, non-zero chance of selection and units are chosen by a random process. Types: simple random, systematic, stratified, cluster, multistage. Advantages: representative, free from selection bias, sampling error can be estimated, results generalisable.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Non-probability sampling methods. Enlist four methods.</div><div class="meta">Brief · 2 marks · Jul 2023</div></div>
+    <div class="answer-body"><p>Non-probability sampling selects units by convenience or the researcher's judgement, so the probability of selection is unknown and sampling error cannot be estimated. Four methods: (1) <b>Convenience</b> sampling, (2) <b>Purposive/judgement</b> sampling, (3) <b>Quota</b> sampling, (4) <b>Snowball</b> sampling (also consecutive and volunteer sampling). Used in pilot, qualitative and rare-population studies.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Why sample size is important for the analysis?</div><div class="meta">Brief · 2 marks · Nov 2022</div></div>
+    <div class="answer-body"><p>An adequate sample size (1) gives sufficient <b>power</b> to detect a real difference, avoiding Type II error; (2) gives <b>precise</b> estimates with narrow confidence intervals (SE = SD/√n); (3) makes results valid and generalisable; (4) is <b>ethical and economical</b>: too small wastes subjects' participation, too large exposes extra subjects and resources. It depends on α, power, effect size, variability and expected dropouts.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Write the relationship between sample size and power of the test.</div><div class="meta">Brief · 2 marks · Jul 2023</div></div>
+    <div class="answer-body"><p><b>Power</b> (1 − β) is the probability of correctly rejecting a false null hypothesis. Sample size and power are <b>directly related</b>: as n increases, the standard error decreases, the H₀ and H₁ distributions overlap less, so power increases and Type II error (β) decreases, until the curve plateaus. Studies are usually planned for 80–90% power; a small sample is "underpowered". Power also depends on effect size, variability and α.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. What are the measures of central tendency?</div><div class="meta">Brief · 2 marks · Nov 2022</div></div>
+    <div class="answer-body"><p>Measures of central tendency are single values that represent the centre of a data set around which observations cluster. They are: <b>arithmetic mean</b> (Σx/n), <b>median</b> (middle value of ordered data), <b>mode</b> (most frequent value), plus geometric mean and harmonic mean. In a normal distribution mean = median = mode.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Define mode.</div><div class="meta">Brief · 2 marks · Dec 2023</div></div>
+    <div class="answer-body"><p>Mode is the value that occurs most frequently in a set of observations. e.g., in 86, 90, 92, 95, 95, 95, 98, mode = 95. For grouped data: Mode = L + [(f₁ − f₀)/(2f₁ − f₀ − f₂)] × h. A distribution may be uni-, bi- or multimodal. Mode is useful for nominal data (commonest blood group) and is unaffected by extreme values.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Define dropouts / What are dropouts in clinical research?</div><div class="meta">Brief · 2 marks · Dec 2023, Model paper</div></div>
+    <div class="answer-body"><p><b>Dropouts</b> are subjects who were enrolled/randomised in a clinical study but discontinued before completion, so their final outcome is not available as per protocol. Reasons: adverse effects, lack of efficacy, withdrawal of consent, loss to follow-up, relocation, death. They reduce power and may cause attrition bias; handled by inflating sample size [n/(1 − d)], intention-to-treat analysis and reporting in a CONSORT diagram.</p></div>
+  </div>
+
+  <!-- PREDICTED -->
+  <h3>🔮 Predicted questions (never asked yet, but very likely)</h3>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. What are measures of dispersion? Calculate the mean and standard deviation of the following systolic BP data: 91–100 (8), 101–110 (14), 111–120 (20), 121–130 (26), 131–140 (24), 141–150 (18).</div>
+      <div class="meta"><span class="pill model">Predicted</span> Essay · 10 marks · numerical common in question banks · ~25 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition + significance (2) → list of measures with formulae (3) → table with step deviation (3) → mean, SD, CV + interpretation (2)</div>
+      <h4>1. Definition &amp; significance</h4>
+      <p>Dispersion is the degree to which observations scatter around the central value. It shows how representative the average is, compares the consistency of groups, is the basis of SE, CI and tests of significance, and is used in quality control (%RSD) and to set reference ranges (mean ± 2 SD).</p>
+      <h4>2. Measures</h4>
+      <p>Absolute: range (H − L), quartile deviation ((Q₃ − Q₁)/2), mean deviation (Σ|x − x̄|/n), variance and standard deviation (√[Σ(x − x̄)²/(n − 1)]). Relative: coefficient of range, coefficient of QD, coefficient of variation (SD/x̄ × 100). SD is the best measure since it uses all values and allows algebraic treatment.</p>
+      <h4>3. Calculation (step-deviation method, A = 125.5, h = 10)</h4>
+      <div class="table-wrap"><table class="nice">
+        <tr><th>SBP (mmHg)</th><th>Mid x</th><th>f</th><th>u = (x − 125.5)/10</th><th>fu</th><th>fu²</th></tr>
+        <tr><td>91–100</td><td>95.5</td><td>8</td><td>−3</td><td>−24</td><td>72</td></tr>
+        <tr><td>101–110</td><td>105.5</td><td>14</td><td>−2</td><td>−28</td><td>56</td></tr>
+        <tr><td>111–120</td><td>115.5</td><td>20</td><td>−1</td><td>−20</td><td>20</td></tr>
+        <tr><td>121–130</td><td>125.5</td><td>26</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>131–140</td><td>135.5</td><td>24</td><td>+1</td><td>24</td><td>24</td></tr>
+        <tr><td>141–150</td><td>145.5</td><td>18</td><td>+2</td><td>36</td><td>72</td></tr>
+        <tr><td>Total</td><td></td><td>N = 110</td><td></td><td>Σfu = −12</td><td>Σfu² = 244</td></tr>
+      </table></div>
+      <div class="formula">Mean = A + (Σfu/N) × h = 125.5 + (−12/110) × 10 = 125.5 − 1.09 = <b>124.41 mmHg</b></div>
+      <div class="formula">SD = h × √[Σfu²/N − (Σfu/N)²] = 10 × √[2.2182 − 0.0119] = 10 × √2.2063 = <b>14.85 mmHg</b></div>
+      <p>CV = 14.85/124.41 × 100 = <b>11.9%</b>. (Bonus: median = 120.5 + [(55 − 42)/26] × 10 = 125.5 mmHg; mode = 120.5 + [6/8] × 10 = 128.0 mmHg.)</p>
+      <h4>4. Interpretation</h4>
+      <p>The volunteers' average SBP is about 124 mmHg; about two-thirds lie within 124.4 ± 14.9 (≈110–139 mmHg) if the data are near-normal. A CV of ~12% indicates moderate variability.</p>
+    </div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Write a note on inclusion and exclusion criteria with examples. / Factors affecting sample size.</div>
+      <div class="meta"><span class="pill model">Predicted</span> Short note · 5 marks</div></div>
+    <div class="answer-body">
+      <p><b>Inclusion criteria</b>: characteristics a subject must have to enter the study (age, diagnosis, severity, consent). <b>Exclusion criteria</b>: characteristics that disqualify otherwise eligible subjects (pregnancy, organ impairment, hypersensitivity, concomitant drugs, other trials). Purposes: subject safety, homogeneous sample, control of confounding, ethics, reproducibility; over-strict criteria reduce generalisability. Give the hypertension-trial example from Section 11.</p>
+      <p><b>Factors affecting sample size</b>: α, power, effect size, SD, one- vs two-tailed test, dropout rate, design, prevalence and precision, resources. Formula: n = Z²pq/d² (proportion) or 2(Z<sub>α/2</sub> + Z<sub>β</sub>)²σ²/Δ² (two means).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. FLASHCARDS + QUIZ ===== -->
+<section class="section">
+  <h2><span class="num">🃏</span> Magic Flashcards</h2>
+  <p>Tap a card to reveal ✨, saying the answer aloud first!</p>
+  <div class="flashcards">
+    <details class="flash"><summary>Parameter vs statistic?</summary><div>Parameter describes the population (μ, σ); statistic describes the sample (x̄, s) and estimates the parameter.</div></details>
+    <details class="flash"><summary>NOIR stands for?</summary><div>Nominal, Ordinal, Interval (no true zero), Ratio (true zero): scales of measurement.</div></details>
+    <details class="flash"><summary>Dwarfs: mean, median, mode?</summary><div>93 cm, 95 cm, 95 cm → negatively skewed (Dopey's tail).</div></details>
+    <details class="flash"><summary>Grouped median formula?</summary><div>L + [(N/2 − cf)/f] × h</div></details>
+    <details class="flash"><summary>KUHS Nov 2022 median answer?</summary><div>29.54 (median class 20.5–30.5; N/2 = 227.5; cf = 110; f = 130).</div></details>
+    <details class="flash"><summary>SD of the dwarfs?</summary><div>Σd² = 96; s² = 96/6 = 16; SD = 4 cm; CV = 4.3%; SEM = 1.51 cm.</div></details>
+    <details class="flash"><summary>68–95–99.7 rule?</summary><div>In a normal curve, ±1 SD ≈ 68%, ±2 SD ≈ 95% (exactly ±1.96), ±3 SD ≈ 99.7% of values.</div></details>
+    <details class="flash"><summary>SD vs SEM?</summary><div>SD = spread of individuals; SEM = SD/√n = precision of the mean; SEM shrinks with larger n.</div></details>
+    <details class="flash"><summary>Four areas of inferential statistics?</summary><div>Estimation (point &amp; interval), hypothesis testing, relationship/prediction (correlation, regression), comparison of groups (t, ANOVA).</div></details>
+    <details class="flash"><summary>Stratified vs cluster?</summary><div>Stratified: sample from EVERY stratum. Cluster: select SOME whole clusters and study everyone in them.</div></details>
+    <details class="flash"><summary>Systematic sampling interval?</summary><div>k = N/n, random start between 1 and k, then every k-th unit.</div></details>
+    <details class="flash"><summary>Sample size for a proportion?</summary><div>n = Z²pq/d² (Z = 1.96) or the shortcut 4pq/L².</div></details>
+    <details class="flash"><summary>Power = ?</summary><div>1 − β: probability of detecting a true effect; increases with n, effect size, α; decreases with SD.</div></details>
+    <details class="flash"><summary>ITT vs PP?</summary><div>ITT analyses everyone as randomised; per-protocol analyses only completers.</div></details>
+  </div>
+
+  <h2 style="margin-top:1em"><span class="num">🎯</span> 1-Minute Quiz</h2>
+  <div class="quiz">
+    <div class="qitem">Which average is best for a positively skewed variable like length of hospital stay?
+      <div class="opts"><button class="opt">Mean</button><button class="opt" data-right>Median</button><button class="opt">Harmonic mean</button></div>
+      <div class="why">The median is not pulled by the long right tail of a few very long stays.</div></div>
+    <div class="qitem">Temperature in °C is measured on which scale?
+      <div class="opts"><button class="opt">Ratio</button><button class="opt">Ordinal</button><button class="opt" data-right>Interval</button></div>
+      <div class="why">Equal intervals but 0 °C is not "no temperature", so there is no true zero.</div></div>
+    <div class="qitem">Choosing whole villages at random and surveying everyone in them is…
+      <div class="opts"><button class="opt">Stratified sampling</button><button class="opt" data-right>Cluster sampling</button><button class="opt">Quota sampling</button></div>
+      <div class="why">Whole natural groups (clusters) are the sampling unit.</div></div>
+    <div class="qitem">If n increases (all else equal), the standard error of the mean…
+      <div class="opts"><button class="opt" data-right>Decreases</button><button class="opt">Increases</button><button class="opt">Stays the same</button></div>
+      <div class="why">SEM = SD/√n: bigger n, smaller SE, higher power.</div></div>
+    <div class="qitem">Which is a NON-probability sampling method?
+      <div class="opts"><button class="opt">Systematic</button><button class="opt">Multistage</button><button class="opt" data-right>Snowball</button></div>
+      <div class="why">Snowball relies on referrals; the selection probability is unknown.</div></div>
+    <div class="qitem">A patient randomised to the drug arm stops attending after week 2. In ITT analysis she is…
+      <div class="opts"><button class="opt">Removed from analysis</button><button class="opt" data-right>Analysed in the drug arm</button><button class="opt">Moved to the placebo arm</button></div>
+      <div class="why">"Once randomised, always analysed" in the assigned group.</div></div>
+    <div class="qitem">CV of the dwarfs (mean 93, SD 4) is about…
+      <div class="opts"><button class="opt">0.43%</button><button class="opt" data-right>4.3%</button><button class="opt">23%</button></div>
+      <div class="why">CV = 4/93 × 100 = 4.3%.</div></div>
+  </div>
+</section>
+
+<!-- ===== 9. CHEAT SHEET ===== -->
+<section class="cheatsheet">
+  <h2>📝 One-Page Cheat Sheet: Unit 4</h2>
+  <p><small>Read this the night before the exam. Everything important, nothing extra.</small></p>
+  <div class="grid-3">
+    <div class="card"><h4>Definitions</h4><ul><li><b>Statistics</b>: collection, presentation, analysis, interpretation of numerical data</li><li><b>Biostatistics</b>: statistics applied to biology/medicine/pharmacy</li><li>Descriptive vs inferential</li><li>Population → parameter (μ, σ); sample → statistic (x̄, s)</li></ul></div>
+    <div class="card"><h4>Variables</h4><ul><li>Qualitative: nominal, ordinal</li><li>Quantitative: discrete, continuous</li><li>Role: independent, dependent, confounding, control</li><li>Scales: NOIR</li></ul></div>
+    <div class="card"><h4>Central tendency</h4><ul><li>Mean Σx/n · Median (n+1)/2 th · Mode = most frequent</li><li>Grouped median: L + [(N/2 − cf)/f]h</li><li>Grouped mode: L + [(f₁−f₀)/(2f₁−f₀−f₂)]h</li><li>AM ≥ GM ≥ HM · Mode ≈ 3Md − 2Mean</li></ul></div>
+    <div class="card"><h4>Dispersion</h4><ul><li>Range H − L · QD = (Q₃ − Q₁)/2</li><li>MD = Σ|d|/n · s² = Σd²/(n − 1)</li><li>CV = SD/x̄ × 100 (= %RSD)</li><li>SEM = SD/√n · 68–95–99.7</li></ul></div>
+    <div class="card"><h4>Inferential</h4><ul><li>Estimation (point, CI = x̄ ± 1.96 SE)</li><li>Hypothesis testing</li><li>Correlation/regression, group comparison</li><li>Models: parametric, non-parametric, regression, distributions; CLT</li></ul></div>
+    <div class="card"><h4>Probability &amp; r</h4><ul><li>P = favourable/total, 0–1</li><li>Add: P(A)+P(B)−P(AB) · Multiply: P(A)P(B)</li><li>Binomial, Poisson, Normal</li><li>r: −1 to +1; Y = a + bX</li></ul></div>
+    <div class="card"><h4>Sampling</h4><ul><li>Need: cost, time, accuracy, destructive tests, infinite pop., ethics</li><li>Probability: SRS, systematic (k = N/n), stratified, cluster, multistage, multiphase</li><li>Non-prob: convenience, purposive, quota, snowball, consecutive</li></ul></div>
+    <div class="card"><h4>Sample size</h4><ul><li>↑ with ↓α, ↑power, ↓effect, ↑SD, two-tailed, dropouts</li><li>n = Z²pq/d² · 2(Zα/2 + Zβ)²σ²/Δ²</li><li>1.96 · 2.58 · 0.84 · 1.28</li><li>Power = 1 − β; ↑n → ↑power</li></ul></div>
+    <div class="card"><h4>Inclusion / exclusion / dropouts</h4><ul><li>Inclusion = must have; exclusion = disqualifies eligible</li><li>Dropout = enrolled but left before completion</li><li>n/(1 − d) · ITT vs PP · CONSORT</li></ul></div>
+  </div>
+</section>
+
+<!-- ===== 10. BADGE ===== -->
+<section class="badge-unlock">
+  <span class="medal">🍎🏅</span>
+  <h2>Badge Unlocked: Heigh-Ho Data Detective!</h2>
+  <p>Mimosa, you just measured seven dwarfs, solved a KUHS numerical, and picked the perfect guests for the royal ball. Snow White would bake you a gooseberry pie and Judy would pin a shiny badge on you. Adipoli! 💙</p>
+  <ul class="checklist">
+    <li><label><input type="checkbox"> I can define statistics, biostatistics, population, sample, parameter and statistic</label></li>
+    <li><label><input type="checkbox"> I can classify variables and explain NOIR scales with examples</label></li>
+    <li><label><input type="checkbox"> I can calculate mean, median and mode, including a grouped median</label></li>
+    <li><label><input type="checkbox"> I can calculate range, SD, variance, CV and SEM, and draw the normal curve</label></li>
+    <li><label><input type="checkbox"> I can explain every probability and non-probability sampling method with a diagram</label></li>
+    <li><label><input type="checkbox"> I can explain sample size, power, inclusion/exclusion criteria and dropouts</label></li>
+  </ul>
+  <button class="done-btn" data-unit="rmb-4">🏆 Mark Unit 4 complete</button>
+</section>
+
+<!-- ===== 11. FOOTER NAV ===== -->
+<nav class="next-nav">
+  <a href="unit-3.html"><small>⬅ Previous adventure</small>Unit 3 · Epidemiological Methods</a>
+  <a class="next" href="unit-5.html"><small>Next adventure ➜</small>Unit 5 · Hypothesis Testing &amp; Thesis Writing</a>
+</nav>
+<p class="footer-love">Made with 💖 for Mimosa · B.Pharm Final Semester · KUHS 2017 Scheme</p>
+
+</div>
+</body>
+</html>

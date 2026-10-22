@@ -1,0 +1,1388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RMB Unit 2 · Types of Data &amp; Data Collection</title>
+<link rel="stylesheet" href="../assets/kingdom.css">
+<script src="../assets/kingdom.js" defer></script>
+</head>
+<body class="theme-rmb">
+<div class="wrap">
+
+<!-- ===== 1. TOP NAV ===== -->
+<nav class="topbar">
+  <a href="../index.html">🏰 Kingdom Home</a>
+  <a href="../00-Study-Plan/study-plan.html">🗓️ Study Plan</a>
+  <a href="pyq-bank.html">📜 PYQ Bank</a>
+  <span class="spacer"></span>
+  <a href="unit-1.html">U1</a><a href="unit-2.html">U2</a><a href="unit-3.html">U3</a><a href="unit-4.html">U4</a><a href="unit-5.html">U5</a>
+</nav>
+
+<!-- ===== 2. HERO ===== -->
+<header class="hero">
+  <div class="hero-emoji">🤖🌱</div>
+  <div class="hero-kicker">BP801T · Research Methodology &amp; Biostatistics · Unit 2 of 5</div>
+  <h1>Types of Data, Data Collection &amp; Presentation</h1>
+  <p class="hero-sub">Case File #2 — The WALL·E Evidence Room. The Bureau has loaned Officer Mimosa to the best evidence clerk in the galaxy: a little robot who collects, compacts, shelves and stacks everything he finds.</p>
+  <div class="hero-chips">
+    <span class="chip">⏱️ 6 syllabus hours</span>
+    <span class="chip">📜 Asked 15× in KUHS (2022–23) + 4 model-paper Qs</span>
+    <span class="chip">🎯 Priority: MUST-DO</span>
+    <span class="chip">📖 ~75 min read</span>
+  </div>
+</header>
+
+<!-- ===== 3. WISH CARD ===== -->
+<section class="wish">
+  <div class="wish-to">Dear Mimosa,</div>
+  <p>Remember WALL·E rolling across the empty Earth, scooping up bits of the world, squeezing them into neat little cubes, sorting his treasures onto shelves, and stacking the cubes into towers taller than skyscrapers? That lonely little robot is secretly a statistician! He <b>collects</b> his own data, <b>codes</b> it into cubes, <b>tabulates</b> it on shelves and <b>presents</b> it as towers you can compare at a glance. And EVE, who silently scans before she acts, shows you the difference between observing and experimenting. This unit is full of easy marks, kutty — let's collect them all like WALL·E collects spoons and sporks. 🤖💚</p>
+  <div class="wish-hook">WALL·E's day = Collect (primary/secondary) → Compact (code) → Shelve (classify &amp; tabulate) → Stack (graph). And NOIR is the detective's data scale: Nominal, Ordinal, Interval, Ratio.</div>
+  <div class="wish-from">— with love, your biggest fan ✨</div>
+</section>
+
+<!-- ===== 4. UNIT MAP ===== -->
+<section class="section">
+  <h2><span class="num">🗺️</span> Unit Map</h2>
+  <div class="map">
+    <div class="map-center">📦 Types of Data &amp; Data Collection</div>
+    <div class="branch"><span class="ico">🔢</span><b>Types of data</b><span>Qualitative/quantitative · NOIR scales</span></div>
+    <div class="branch"><span class="ico">🥇</span><b>Primary &amp; secondary data</b><span>Meaning, sources, pros &amp; cons</span></div>
+    <div class="branch"><span class="ico">🧺</span><b>Methods of data collection</b><span>Observation, interview, questionnaire, schedule, case study…</span></div>
+    <div class="branch"><span class="ico">🔬</span><b>Experimental vs observational</b><span>+ DoE / factorial design</span></div>
+    <div class="branch"><span class="ico">📝</span><b>Questionnaires</b><span>Types, construction steps, merits</span></div>
+    <div class="branch"><span class="ico">📏</span><b>Rating scales</b><span>Likert, VAS, semantic differential…</span></div>
+    <div class="branch"><span class="ico">🔔</span><b>Data distributions</b><span>Normal, skewed, binomial, Poisson</span></div>
+    <div class="branch"><span class="ico">🗃️</span><b>Coding &amp; tabulation</b><span>Editing → coding → classification → table</span></div>
+    <div class="branch"><span class="ico">📊</span><b>Graphical representation</b><span>Bar, pie, histogram, polygon, ogive, line, scatter</span></div>
+  </div>
+  <p><b>Syllabus checklist</b> (tick as you finish):</p>
+  <ul class="checklist">
+    <li><label><input type="checkbox"> Different types of data</label></li>
+    <li><label><input type="checkbox"> Different methods for data collection</label></li>
+    <li><label><input type="checkbox"> Experimental and observational studies (+ factorial design box)</label></li>
+    <li><label><input type="checkbox"> Questionnaires and rating scales</label></li>
+    <li><label><input type="checkbox"> Primary and secondary data</label></li>
+    <li><label><input type="checkbox"> Different types of data distribution</label></li>
+    <li><label><input type="checkbox"> Coding and tabulation of data</label></li>
+    <li><label><input type="checkbox"> Graphical representation of data</label></li>
+  </ul>
+  <div class="meter" data-meter=".section .checklist"><i></i></div>
+</section>
+
+<!-- ===== 5. WHAT KUHS ASKS ===== -->
+<section class="section">
+  <h2><span class="num">📜</span> What KUHS Asks From This Unit</h2>
+  <p class="lead">All real KUHS (2022–23) and model-paper questions mapping to Unit 2. Answers are in <a href="#answers">✍️ Model Answers</a>.</p>
+  <div class="pyq-row"><div class="q">List the advantages of representing data in graphical form. Convert the given table (patients with eye problems by age group, %) to graphical form. (5+5)</div><span class="pill essay">Essay 10m</span><span class="pill">Dec 2023</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Discuss the different methods usually adopted for graphical representation of data.</div><span class="pill short">Short 5m</span><span class="pill">Model</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Compare graphical representation of data with representation in table form.</div><span class="pill short">Short 5m</span><span class="pill">May 2022</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Define and detail the primary and secondary data with examples.</div><span class="pill short">Short 5m</span><span class="pill">May 2022</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Write the various sources of primary and secondary data.</div><span class="pill short">Short 5m</span><span class="pill">Jul 2023</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Differentiate between primary and secondary data.</div><span class="pill brief">Brief 2m</span><span class="pill">Model</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Explain primary data. Give its limitations.</div><span class="pill brief">Brief 2m</span><span class="pill">Nov 2022</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Describe the steps involved in construction of a questionnaire.</div><span class="pill short">Short 5m</span><span class="pill">Nov 2022</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Write the meaning of questionnaire.</div><span class="pill brief">Brief 2m</span><span class="pill">Jul 2023</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">List out methods of data collection.</div><span class="pill brief">Brief 2m</span><span class="pill">Jul 2023</span><span class="stars">★</span></div>
+  <div class="pyq-row"><div class="q">Give the advantages of observation method of data collection.</div><span class="pill brief">Brief 2m</span><span class="pill">Nov 2022</span><span class="stars">★</span></div>
+  <div class="pyq-row"><div class="q">Explain case study. Write its importance.</div><span class="pill brief">Brief 2m</span><span class="pill">Nov 2022</span><span class="stars">★</span></div>
+  <div class="pyq-row"><div class="q">Observational study. <small>(design details in Unit 3)</small></div><span class="pill brief">Brief 2m</span><span class="pill">Jul 2023</span><span class="stars">★</span></div>
+  <div class="pyq-row"><div class="q">Explain normal distributions with examples. / What is meant by normal distribution of data?</div><span class="pill short">Short 5m</span><span class="pill brief">Brief 2m</span><span class="pill">Dec 23 · Model</span><span class="stars">★★★</span></div>
+  <div class="pyq-row"><div class="q">Classify the types of data distribution.</div><span class="pill brief">Brief 2m</span><span class="pill">Dec 2023</span><span class="stars">★</span></div>
+  <div class="pyq-row"><div class="q">Write a short note on coding and tabulation of data.</div><span class="pill short">Short 5m</span><span class="pill">Model</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">Enlist screening designs. What is two-level factorial design? What are the advantages of factorial design?</div><span class="pill short">Short 5m</span><span class="pill">Jul 2023</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">With suitable examples, explain various types of variables. <small>(full model answer in <a href="unit-4.html#answers">Unit 4</a>)</small></div><span class="pill short">Short 5m</span><span class="pill">Nov 2022</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">Discuss the various methods of data collection with their merits and demerits.</div><span class="pill model">Predicted essay</span><span class="pill">syllabus line</span><span class="stars">★★</span></div>
+  <div class="pyq-row"><div class="q">Rating scales — types and uses.</div><span class="pill model">Predicted short</span><span class="pill">syllabus line</span><span class="stars">★★</span></div>
+  <div class="callout tip"><span class="callout-title">⭐ Smart-study verdict</span>
+    <span class="priority must">MUST</span> Graphical representation (all 7 graphs + advantages + table vs graph), primary vs secondary data (asked 5 ways!), questionnaire, normal distribution.
+    <span class="priority high">HIGH</span> Coding &amp; tabulation, methods of data collection (observation, case study), factorial design.
+    <span class="priority med">MED</span> Rating scales, types of distribution, NOIR scales.</div>
+</section>
+
+<!-- ===== 6. CONTENT SECTIONS ===== -->
+
+<!-- T1 -->
+<section class="section" id="t1">
+  <h2><span class="num">1</span> Different Types of Data</h2>
+  <p class="lead">Before WALL·E compacts anything, he decides what kind of thing it is. Statisticians do the same with data.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode — sorting the treasures</span>
+    <p>WALL·E's shelves hold a Rubik's cube, a lighter, a spork, a bra he wears as goggles… Some things he can only <b>name</b> (a spork is not "more" than a spoon — <i>nominal</i>). Some he can <b>rank</b> (his favourite, second favourite… — <i>ordinal</i>). Some he can <b>count</b> (17 hubcaps — <i>discrete</i>). Some he can <b>measure</b> (the plant is 6.4 cm tall — <i>continuous</i>). The kind of data decides which statistics and graphs you may use.</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definition</span>
+    <p><b>Data</b> are <span class="hl">facts, observations or measurements collected for a purpose</span>, which, after processing, give information. A single value is a <i>datum</i>; a characteristic that varies from one individual to another is a <b>variable</b>.</p></div>
+
+  <figure class="fig">
+    <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Classification of data into qualitative and quantitative types">
+      <rect x="360" y="10" width="160" height="44" rx="22" fill="#2563eb"/>
+      <text x="440" y="39" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="20" fill="#fff">DATA</text>
+      <g stroke="#94a3b8" stroke-width="2.5" fill="none">
+        <path d="M440 54 V74 H220 V92"/><path d="M440 74 H660 V92"/>
+        <path d="M220 140 V158 H120 V176"/><path d="M220 158 H320 V176"/>
+        <path d="M660 140 V158 H560 V176"/><path d="M660 158 H760 V176"/>
+        <path d="M760 222 V236 H700 V250"/><path d="M760 236 H820 V250"/>
+      </g>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" text-anchor="middle">
+        <rect x="110" y="92" width="220" height="48" rx="14" fill="#ffedd5" stroke="#f97316" stroke-width="2.5"/>
+        <text x="220" y="114" font-size="16" fill="#9a3412">QUALITATIVE</text><text x="220" y="132" font-size="12.5" fill="#9a3412">(categorical / attributes)</text>
+        <rect x="550" y="92" width="220" height="48" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+        <text x="660" y="114" font-size="16" fill="#14532d">QUANTITATIVE</text><text x="660" y="132" font-size="12.5" fill="#14532d">(numerical / variables)</text>
+        <rect x="55" y="176" width="130" height="46" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/><text x="120" y="197" font-size="14" fill="#9a3412">Nominal</text><text x="120" y="214" font-size="11.5" fill="#64748b" font-weight="700">names, no order</text>
+        <rect x="255" y="176" width="130" height="46" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/><text x="320" y="197" font-size="14" fill="#9a3412">Ordinal</text><text x="320" y="214" font-size="11.5" fill="#64748b" font-weight="700">ordered categories</text>
+        <rect x="495" y="176" width="130" height="46" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/><text x="560" y="197" font-size="14" fill="#14532d">Discrete</text><text x="560" y="214" font-size="11.5" fill="#64748b" font-weight="700">counts (whole nos.)</text>
+        <rect x="695" y="176" width="130" height="46" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/><text x="760" y="197" font-size="14" fill="#14532d">Continuous</text><text x="760" y="214" font-size="11.5" fill="#64748b" font-weight="700">measured, any value</text>
+        <rect x="645" y="250" width="110" height="38" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="700" y="274" font-size="13.5" fill="#1e3a8a">Interval</text>
+        <rect x="765" y="250" width="110" height="38" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="820" y="274" font-size="13.5" fill="#1e3a8a">Ratio</text>
+      </g>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12.5" fill="#334155">
+        <text x="20" y="248">e.g. blood group, gender,</text><text x="20" y="264">dosage form, drug class</text>
+        <text x="250" y="248">e.g. pain: mild/moderate/</text><text x="250" y="264">severe; cancer stage I–IV</text>
+        <text x="470" y="248">e.g. no. of tablets,</text><text x="470" y="264">no. of ADRs, pulse count</text>
+      </g>
+    </svg>
+    <figcaption>Fig 2.1 — Classification of data. Draw this tree for any "types of data" question.</figcaption>
+  </figure>
+
+  <h3>The four scales of measurement — NOIR</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Scale</th><th>Property</th><th>Pharmacy example</th><th>Valid summary</th><th>Typical test</th></tr>
+    <tr><td>Nominal</td><td>Names/labels only; no order (=, ≠)</td><td>Blood group, gender, route of administration</td><td>Mode, %</td><td>Chi-square</td></tr>
+    <tr><td>Ordinal</td><td>Ordered categories; gaps not equal (&lt;, &gt;)</td><td>Pain score mild/moderate/severe; Likert responses; NYHA class</td><td>Median, percentiles</td><td>Non-parametric (Mann–Whitney, Wilcoxon)</td></tr>
+    <tr><td>Interval</td><td>Equal intervals; <b>no true zero</b> (+, −)</td><td>Body temperature in °C, calendar year</td><td>Mean, SD</td><td>Parametric (t-test, ANOVA)</td></tr>
+    <tr><td>Ratio</td><td>Equal intervals <b>+ true zero</b> (×, ÷)</td><td>Weight, height, dose in mg, plasma concentration, BP</td><td>Mean, SD, CV, geometric mean</td><td>Parametric</td></tr>
+  </table></div>
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic — every detective film is NOIR</span>
+    <div class="acro"><span><b>N</b>ominal</span><span><b>O</b>rdinal</span><span><b>I</b>nterval</span><span><b>R</b>atio</span></div>
+    <p>“Film <b>NOIR</b>: Names → Order → Intervals → Ratios (true zero).” Each step up adds one property.</p></div>
+
+  <h3>Other ways to classify data</h3>
+  <div class="grid-3">
+    <div class="card c1"><h4>By source</h4><b>Primary</b> (collected first-hand) vs <b>secondary</b> (already collected by someone else) — see topic 2.</div>
+    <div class="card c2"><h4>By time</h4><b>Cross-sectional</b> (one point in time) vs <b>time-series</b> (same variable over time) vs <b>panel/longitudinal</b>.</div>
+    <div class="card c1"><h4>By arrangement</h4><b>Raw / ungrouped</b> (individual values) vs <b>grouped</b> (frequency distribution with class intervals).</div>
+    <div class="card c2"><h4>By number of variables</h4><b>Univariate</b> (one), <b>bivariate</b> (two, e.g. dose &amp; response), <b>multivariate</b>.</div>
+    <div class="card c1"><h4>By distribution</h4><b>Parametric</b> (normally distributed, interval/ratio) vs <b>non-parametric</b> (skewed, ordinal/nominal).</div>
+    <div class="card c2"><h4>By variable role</h4>Independent, dependent, confounding, control, intervening variables — <a href="unit-4.html#t2">full answer in Unit 4</a>.</div>
+  </div>
+  <div class="callout warn"><span class="callout-title">⚠️ Common mistake</span><p>Coding a nominal variable with numbers (Male = 1, Female = 2) does <b>not</b> make it quantitative — you can't calculate a "mean gender". Also, temperature in °C is interval, not ratio: 40 °C is not "twice as hot" as 20 °C.</p></div>
+</section>
+
+<!-- T2 -->
+<section class="section" id="t2">
+  <h2><span class="num">2</span> Primary and Secondary Data</h2>
+  <p class="lead">Asked five different ways in KUHS papers — the most "guaranteed" topic of this unit.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode — WALL·E's own finds vs the Axiom archives</span>
+    <p>Everything WALL·E picks up with his own claws is <b>primary data</b> — collected first-hand, for his own purpose. On the Axiom, Captain McCrea asks the ship computer to "define Earth" and watches old recorded videos of BnL's CEO, made 700 years earlier for a completely different purpose. That's <b>secondary data</b> — collected by someone else, already available, cheap and quick, but you must check whether it is still reliable and suitable.</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definitions</span>
+    <p><b>Primary data</b> are <span class="hl">original data collected for the first time by the investigator himself/herself, for the specific purpose of the study</span> (first-hand data).</p>
+    <p><b>Secondary data</b> are <span class="hl">data that have already been collected and processed by someone else for some other purpose</span>, and are used by the investigator (second-hand data).</p>
+    <p><small>The same data are primary for the agency that collects them and secondary for anyone who uses them later — e.g. NFHS data are primary for the survey team, secondary for your thesis.</small></p></div>
+
+  <div class="vs">
+    <div class="card c1"><h4>🥇 Primary data</h4><ul><li>Original, first-hand</li><li>Collected by investigator</li><li>For the present purpose → highly suitable</li><li>Costly, time-consuming, needs trained staff</li><li>Accuracy under researcher's control</li><li>Raw form → needs processing</li></ul></div>
+    <div class="mid">VS</div>
+    <div class="card c2"><h4>🥈 Secondary data</h4><ul><li>Already collected (second-hand)</li><li>Collected by others</li><li>For another purpose → may not fit</li><li>Cheap, quick, readily available</li><li>Accuracy not in researcher's control</li><li>Usually already processed / tabulated</li></ul></div>
+  </div>
+
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Basis</th><th>Primary data</th><th>Secondary data</th></tr>
+    <tr><td>Meaning</td><td>First-hand data collected by the researcher</td><td>Data already collected by someone else</td></tr>
+    <tr><td>Originality</td><td>Original</td><td>Not original (compiled)</td></tr>
+    <tr><td>Purpose</td><td>Collected for the present study</td><td>Collected for some other purpose</td></tr>
+    <tr><td>Methods</td><td>Observation, interview, questionnaire, schedule, experiment, case study</td><td>Publications, records, reports, databases</td></tr>
+    <tr><td>Cost &amp; time</td><td>High</td><td>Low</td></tr>
+    <tr><td>Reliability / suitability</td><td>More reliable and suitable</td><td>Less — must be checked</td></tr>
+    <tr><td>Form</td><td>Raw, unprocessed</td><td>Processed, refined</td></tr>
+    <tr><td>Example</td><td>BP measured in your own clinical study; your survey of pharmacists</td><td>Census of India, NFHS reports, WHO statistics, hospital records, published papers</td></tr>
+  </table></div>
+
+  <h3>Sources of primary data (Jul 2023)</h3>
+  <div class="grid-4">
+    <div class="card">👁️ Observation (direct / participant)</div>
+    <div class="card">🗣️ Personal &amp; telephone interviews</div>
+    <div class="card">📝 Questionnaires (mail / online)</div>
+    <div class="card">📋 Schedules filled by enumerators</div>
+    <div class="card">🧪 Experiments &amp; laboratory measurements</div>
+    <div class="card">🩺 Clinical examination, case record forms (CRF)</div>
+    <div class="card">🔎 Case studies &amp; focus-group discussions</div>
+    <div class="card">🏪 Surveys, panels, audits, mechanical devices</div>
+  </div>
+
+  <h3>Sources of secondary data</h3>
+  <div class="grid-2">
+    <div class="card c1"><h4>📚 Published sources</h4><ul>
+      <li><b>Government</b>: Census of India, National Family Health Survey (NFHS), Sample Registration System (SRS), NSSO surveys, Economic Survey, Health Ministry reports, CDSCO / PvPI publications</li>
+      <li><b>International</b>: WHO World Health Statistics, UNICEF, World Bank, UN reports</li>
+      <li>Journals, books, magazines, newspapers, pharmacopoeias, drug compendia</li>
+      <li>Reports of committees, research institutes (ICMR), industry and trade associations, market-research data</li>
+      <li>Online databases (PubMed, ClinicalTrials.gov, CTRI)</li></ul></div>
+    <div class="card c2"><h4>🗄️ Unpublished sources</h4><ul>
+      <li>Hospital records, case sheets, prescriptions, pharmacy dispensing registers</li>
+      <li>Records of companies, NGOs and research workers</li>
+      <li>Theses and dissertations, diaries, letters</li>
+      <li>Internal reports, ADR forms kept at monitoring centres</li></ul></div>
+  </div>
+
+  <h3>Advantages &amp; limitations</h3>
+  <div class="grid-2">
+    <div class="card c1"><h4>Primary data</h4><p><b>Advantages:</b> original and specific to the problem; more accurate and reliable; researcher controls quality and definitions; up-to-date; confidential/proprietary.</p><p><b>Limitations (Nov 2022):</b> expensive; time-consuming; needs trained investigators and planning; large samples difficult; respondents may refuse or give biased answers; risk of interviewer bias; sometimes impossible (past events).</p></div>
+    <div class="card c2"><h4>Secondary data</h4><p><b>Advantages:</b> cheap; quick; readily available; large coverage (national data); useful for historical/trend analysis and as a base for primary research.</p><p><b>Limitations:</b> may not suit the present purpose; definitions/units may differ; may be outdated; accuracy unknown; may be incomplete or biased.</p></div>
+  </div>
+  <div class="callout warn"><span class="callout-title">⚠️ Precautions before using secondary data (Kothari)</span><p>Check its <b>Reliability</b> (who collected it, by what method, when, with what accuracy and bias?), <b>Suitability</b> (same definitions, units and scope as your study?) and <b>Adequacy</b> (enough coverage of area and time?). Mnemonic: <b>RSA</b> — "Really Suitable &amp; Adequate?"</p></div>
+  <p class="hand">Psst, Mimosa… "primary = WALL·E's own claw, secondary = the Axiom's old videos". Five KUHS questions answered with one picture! 🤖</p>
+</section>
+
+<!-- T3 -->
+<section class="section" id="t3">
+  <h2><span class="num">3</span> Different Methods for Data Collection</h2>
+  <p class="lead">The tools in the evidence clerk's toolbox.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode — how the Axiom gathers information</span>
+    <p>EVE <b>observes</b> (she scans everything silently, changing nothing). Captain McCrea <b>interviews</b> the ship's computer, question after question. Imagine the computer pinging every passenger's hover-chair screen with a quick poll — a <b>questionnaire</b>. M-O follows one contaminated robot all over the ship — a <b>case study</b>. And WALL·E and EVE's little plant test is an <b>experiment</b>. Different questions need different tools.</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definition</span>
+    <p><b>Data collection</b> is the <span class="hl">systematic process of gathering information on variables of interest, in an established way, to answer research questions, test hypotheses and evaluate outcomes</span>. Methods are grouped into methods for <b>primary data</b> and for <b>secondary data</b>.</p></div>
+
+  <div class="flow">
+    <div class="step"><span class="e">👁️</span>Observation</div>
+    <div class="step"><span class="e">🗣️</span>Interview</div>
+    <div class="step"><span class="e">📝</span>Questionnaire</div>
+    <div class="step"><span class="e">📋</span>Schedule</div>
+    <div class="step"><span class="e">🔎</span>Case study</div>
+    <div class="step"><span class="e">👥</span>Focus group</div>
+    <div class="step"><span class="e">🧪</span>Experiment</div>
+    <div class="step"><span class="e">🗄️</span>Secondary sources</div>
+  </div>
+
+  <h3>1. Observation method</h3>
+  <p><b>Observation</b> is the systematic viewing and recording of behaviour, events or phenomena as they occur, <b>without asking the respondent</b>. Kothari calls it the most commonly used method, especially in studies of behavioural sciences.</p>
+  <div class="grid-3">
+    <div class="card"><h4>Structured vs unstructured</h4>Pre-defined units, standardised recording vs free, flexible recording.</div>
+    <div class="card"><h4>Participant vs non-participant</h4>Observer becomes part of the group vs observes from outside (disguised = observer's presence unknown).</div>
+    <div class="card"><h4>Controlled vs uncontrolled</h4>Under a pre-arranged plan / laboratory vs in natural settings.</div>
+  </div>
+  <div class="grid-2">
+    <div class="card c1"><h4>✅ Advantages (Nov 2022 2-marker)</h4><ul>
+      <li>Subjective bias is eliminated if done accurately.</li>
+      <li>Information relates to what is happening <b>now</b> — not complicated by past behaviour or future intentions.</li>
+      <li>Independent of respondents' willingness to respond; little active cooperation needed.</li>
+      <li>Suitable for subjects who cannot give verbal reports (infants, animals, patients with impaired speech).</li>
+      <li>Records actual behaviour, not what people <i>say</i> they do (e.g. hand-washing by staff).</li></ul></div>
+    <div class="card c2"><h4>❌ Limitations</h4><ul>
+      <li>Expensive and time-consuming.</li>
+      <li>Information is limited; can't study past events, opinions or attitudes.</li>
+      <li>Unforeseen factors may interfere.</li>
+      <li>Observer bias; people may change behaviour when watched (Hawthorne effect).</li></ul></div>
+  </div>
+  <div class="callout example"><span class="callout-title">💊 Pharmacy example</span><p>Observing how patients use their metered-dose inhalers in an OPD with a checklist of 8 steps; observing dispensing practices in community pharmacies; observing animal behaviour in a CNS screening study.</p></div>
+
+  <h3>2. Interview method</h3>
+  <p>Collection of data through <b>oral-verbal questions and responses</b>. <b>Personal (face-to-face)</b> interview — direct personal investigation or indirect oral investigation (of other persons with knowledge); <b>telephone / online</b> interview. Types: <b>structured</b> (pre-determined questions, standard order), <b>unstructured</b> (flexible), <b>focused</b>, <b>clinical</b>, <b>depth</b> interviews.</p>
+  <p><b>Merits:</b> more information in greater depth; flexibility to clarify and probe; high response rate; works with illiterate respondents; non-verbal cues observed. <b>Demerits:</b> expensive for large, widespread samples; interviewer bias; respondent may give "socially desirable" answers; time-consuming; needs trained interviewers.</p>
+
+  <h3>3. Questionnaire method</h3>
+  <p>A set of questions printed/typed in a definite order, sent (by post, email, online form) to respondents who read and answer <b>on their own</b>. Detailed in <a href="#t5">topic 5</a>.</p>
+
+  <h3>4. Schedule method</h3>
+  <p>A <b>schedule</b> is a proforma of questions, like a questionnaire, but <b>filled in by trained enumerators</b> who meet the respondents, ask the questions and record the replies. Used in census and large health surveys.</p>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Point</th><th>Questionnaire</th><th>Schedule</th></tr>
+    <tr><td>Filled by</td><td>Respondent</td><td>Enumerator</td></tr>
+    <tr><td>Cost</td><td>Cheaper</td><td>Costlier (enumerators)</td></tr>
+    <tr><td>Response rate</td><td>Low; many non-responses</td><td>High</td></tr>
+    <tr><td>Literacy needed</td><td>Yes</td><td>No — usable for illiterate respondents</td></tr>
+    <tr><td>Identity of respondent</td><td>Not certain</td><td>Known</td></tr>
+    <tr><td>Clarification of doubts</td><td>Not possible</td><td>Possible</td></tr>
+    <tr><td>Coverage</td><td>Wide area</td><td>Limited by enumerators</td></tr>
+  </table></div>
+
+  <h3>5. Case study method</h3>
+  <div class="callout def"><span class="callout-title">📘 Definition (Nov 2022 2-marker)</span>
+    <p>A <b>case study</b> is an <span class="hl">in-depth, intensive and qualitative study of a single unit</span> — a person, family, patient, institution, event or community — studying its many aspects and the interrelationships among them over time, to understand it completely.</p></div>
+  <ul>
+    <li><b>Characteristics:</b> single unit, studied intensively, in its natural setting, holistic, often over a long time, qualitative, uses multiple sources (interviews, records, observation).</li>
+    <li><b>Importance:</b> gives deep insight into complex, rare or new phenomena; generates hypotheses for larger studies; useful in clinical medicine (e.g. first reports of a new ADR or rare disease), in teaching, and in evaluating programmes and institutions; helps understand behaviour and causation in context; flexible.</li>
+    <li><b>Limitations:</b> findings can't be generalised; subjective; time-consuming; researcher bias; costly.</li>
+  </ul>
+  <div class="callout example"><span class="callout-title">💊 Pharmacy example</span><p>A detailed case study of one patient who developed Stevens–Johnson syndrome after carbamazepine — history, genetics, timeline of drug intake, management, outcome. Such single cases have often been the first signal of a serious drug reaction.</p></div>
+
+  <h3>6. Other methods</h3>
+  <div class="grid-3">
+    <div class="card"><h4>👥 Focus group discussion</h4>6–10 people discuss a topic guided by a moderator — attitudes, beliefs.</div>
+    <div class="card"><h4>🧪 Experiments / measurement</h4>Laboratory tests, clinical measurements, assays, pill counts, electronic monitoring.</div>
+    <div class="card"><h4>🛒 Kothari's "other methods"</h4>Warranty cards, distributor / store audits, pantry audits, consumer panels, mechanical devices (eye-camera, audiometer), projective techniques, depth interviews, content analysis.</div>
+  </div>
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic — methods of primary data collection</span>
+    <div class="acro"><span><b>O</b>bservation</span><span><b>I</b>nterview</span><span><b>Q</b>uestionnaire</span><span><b>S</b>chedule</span><span><b>C</b>ase study</span><span><b>E</b>xperiment</span><span><b>F</b>ocus group</span></div>
+    <p>“<b>O</b>h, <b>I</b> <b>Q</b>uietly <b>S</b>can <b>C</b>lues <b>E</b>very <b>F</b>riday!” — that's EVE on duty.</p></div>
+  <div class="callout tip"><span class="callout-title">⭐ Exam tip</span><p>"List out methods of data collection" (2 marks): write two headings — <b>Primary</b> (observation, interview, questionnaire, schedule, case study, experiment, FGD) and <b>Secondary</b> (published: government, international, journals; unpublished: records, theses). Done in four lines.</p></div>
+</section>
+
+<!-- T4 -->
+<section class="section" id="t4">
+  <h2><span class="num">4</span> Experimental and Observational Studies</h2>
+  <p class="lead">Does the researcher just watch, or does she change something on purpose? That one question decides the study type.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode — EVE scans, the Captain plants</span>
+    <p>When EVE lands on Earth she <b>scans</b> rocks, fridges, WALL·E himself — recording what she finds, never changing anything. That's an <b>observational study</b>. Back on the Axiom, Captain McCrea decides to <b>plant the seedling</b> and see whether Earth can support life again — he deliberately <i>does something</i> and watches the result. That's an <b>experimental study</b>. EVE asks "what is out there?"; the Captain asks "what happens if I do this?"</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definitions</span>
+    <p><b>Observational study</b>: a study in which the investigator <span class="hl">only observes and measures</span> exposures and outcomes as they occur naturally, <b>without assigning any intervention</b>. (Jul 2023 2-marker.)</p>
+    <p><b>Experimental (interventional) study</b>: a study in which the investigator <span class="hl">deliberately introduces or manipulates an intervention</span> (drug, procedure, formulation variable) under controlled conditions and measures its effect, usually comparing with a control group.</p></div>
+
+  <figure class="fig">
+    <svg viewBox="0 0 880 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Observational versus experimental study design">
+      <defs>
+        <marker id="u2f2a" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="13" refY="7.0" orient="auto"><path d="M0,0 L14,7.0 L0,14 z" fill="#2563eb"/></marker>
+        <marker id="u2f2b" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="13" refY="7.0" orient="auto"><path d="M0,0 L14,7.0 L0,14 z" fill="#f97316"/></marker>
+      </defs>
+      <rect x="10" y="10" width="420" height="250" rx="20" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"/>
+      <rect x="450" y="10" width="420" height="250" rx="20" fill="#fff7ed" stroke="#f97316" stroke-width="2.5"/>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif" text-anchor="middle">
+        <text x="220" y="40" font-weight="800" font-size="18" fill="#1e3a8a">OBSERVATIONAL (EVE scans) 👀</text>
+        <rect x="30" y="100" width="120" height="70" rx="14" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+        <text x="90" y="128" font-weight="800" font-size="14" fill="#1e3a8a">Population</text><text x="90" y="148" font-size="12" fill="#334155">exposure occurs</text><text x="90" y="163" font-size="12" fill="#334155">naturally</text>
+        <rect x="200" y="62" width="100" height="46" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="250" y="90" font-weight="800" font-size="13" fill="#1e3a8a">Exposed</text>
+        <rect x="200" y="162" width="100" height="46" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="250" y="190" font-weight="800" font-size="13" fill="#1e3a8a">Not exposed</text>
+        <rect x="335" y="110" width="80" height="50" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2"/><text x="375" y="140" font-weight="800" font-size="13" fill="#1e3a8a">Outcome</text>
+        <text x="220" y="240" font-size="13" fill="#334155">Researcher only WATCHES and RECORDS</text>
+        <text x="660" y="40" font-weight="800" font-size="18" fill="#9a3412">EXPERIMENTAL (Captain plants) 🌱</text>
+        <rect x="470" y="100" width="110" height="70" rx="14" fill="#fff" stroke="#f97316" stroke-width="2"/>
+        <text x="525" y="130" font-weight="800" font-size="14" fill="#9a3412">Subjects</text><text x="525" y="150" font-size="12" fill="#334155">🎲 randomised</text>
+        <rect x="625" y="62" width="110" height="46" rx="12" fill="#ffedd5" stroke="#f97316" stroke-width="2"/><text x="680" y="90" font-weight="800" font-size="13" fill="#9a3412">Intervention</text>
+        <rect x="625" y="162" width="110" height="46" rx="12" fill="#ffedd5" stroke="#f97316" stroke-width="2"/><text x="680" y="190" font-weight="800" font-size="13" fill="#9a3412">Control</text>
+        <rect x="775" y="110" width="80" height="50" rx="12" fill="#fff" stroke="#f97316" stroke-width="2"/><text x="815" y="140" font-weight="800" font-size="13" fill="#9a3412">Outcome</text>
+        <text x="660" y="240" font-size="13" fill="#334155">Researcher ASSIGNS the intervention</text>
+      </g>
+      <g stroke-width="3" fill="none">
+        <path d="M150 125 L199 91" stroke="#2563eb" marker-end="url(#u2f2a)"/><path d="M150 145 L199 179" stroke="#2563eb" marker-end="url(#u2f2a)"/>
+        <path d="M300 90 L334 118" stroke="#2563eb" marker-end="url(#u2f2a)"/><path d="M300 180 L334 152" stroke="#2563eb" marker-end="url(#u2f2a)"/>
+        <path d="M580 125 L624 91" stroke="#f97316" marker-end="url(#u2f2b)"/><path d="M580 145 L624 179" stroke="#f97316" marker-end="url(#u2f2b)"/>
+        <path d="M735 90 L774 118" stroke="#f97316" marker-end="url(#u2f2b)"/><path d="M735 180 L774 152" stroke="#f97316" marker-end="url(#u2f2b)"/>
+      </g>
+    </svg>
+    <figcaption>Fig 2.2 — Observational vs experimental study. The single difference: who decides the exposure? Draw it in any comparison question.</figcaption>
+  </figure>
+
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Basis</th><th>Observational study</th><th>Experimental study</th></tr>
+    <tr><td>Role of investigator</td><td>Passive — observes, measures</td><td>Active — assigns and controls the intervention</td></tr>
+    <tr><td>Exposure</td><td>Occurs naturally / chosen by subjects</td><td>Allocated by investigator (ideally randomly)</td></tr>
+    <tr><td>Randomisation</td><td>Not possible</td><td>Possible (RCT)</td></tr>
+    <tr><td>Control of confounders</td><td>Poor — confounding and bias likely</td><td>Good — randomisation balances confounders</td></tr>
+    <tr><td>Proof of causation</td><td>Suggests association</td><td>Strongest evidence of cause–effect</td></tr>
+    <tr><td>Ethics &amp; cost</td><td>Fewer ethical issues; cheaper; can study harmful exposures (smoking)</td><td>Ethical limits (can't assign harm); costly</td></tr>
+    <tr><td>Types</td><td>Descriptive: case report, case series, cross-sectional; Analytical: ecological, case-control, cohort</td><td>RCT, non-randomised trials, crossover, field trial, community trial, laboratory experiments</td></tr>
+    <tr><td>Example</td><td>Comparing lung cancer rates among smokers and non-smokers</td><td>Randomising hypertensive patients to telmisartan or placebo</td></tr>
+  </table></div>
+  <p>Detailed epidemiological designs (cohort, case-control, RCT, phases of clinical trials) are in <a href="unit-3.html#t6">Unit 3</a>.</p>
+
+  <h3>Principles of experimental design (R. A. Fisher)</h3>
+  <div class="grid-3">
+    <div class="card c1"><span class="card-icon">🔁</span><h4>Replication</h4>Repeat each treatment on several units → estimate experimental error, improve precision.</div>
+    <div class="card c2"><span class="card-icon">🎲</span><h4>Randomisation</h4>Assign treatments by chance → removes selection bias, balances unknown factors.</div>
+    <div class="card c1"><span class="card-icon">🧱</span><h4>Local control (blocking)</h4>Group similar units into blocks → reduces variability due to known extraneous factors.</div>
+  </div>
+  <p><b>Informal designs</b> (Kothari): before-and-after without control · after-only with control · before-and-after with control. <b>Formal designs</b>: <b>Completely Randomised Design (CRD)</b> · <b>Randomised Block Design (RBD)</b> · <b>Latin Square Design (LSD)</b> · <b>Factorial designs</b>.</p>
+
+  <!-- DoE box -->
+  <div class="callout example"><span class="callout-title">🧪 Design of Experiments (DoE) &amp; Factorial Design — KUHS Jul 2023 short note</span>
+    <p><b>Design of Experiments</b> is a structured, statistical approach to planning experiments so that the effects of several input variables (<b>factors</b>) on an output (<b>response</b>) can be studied together with the fewest runs. It is central to <b>Quality by Design (QbD)</b> in formulation and process development.</p>
+    <p><b>Key terms:</b> <b>Factor</b> = independent variable (e.g. binder concentration) · <b>Level</b> = value of a factor (low/high) · <b>Response</b> = measured outcome (e.g. disintegration time) · <b>Main effect</b> = change in response when a factor goes from low to high · <b>Interaction</b> = when the effect of one factor depends on the level of another.</p>
+    <p><b>Factorial design</b>: an experimental design in which <b>all possible combinations of the levels of all factors</b> are studied. Number of runs = (levels)<sup>factors</sup>.</p>
+    <p><b>Two-level factorial design (2<sup>k</sup>)</b>: each of <i>k</i> factors is studied at only two levels — low (coded <b>−1</b>) and high (coded <b>+1</b>). A 2² design needs 4 runs; 2³ needs 8; 2⁴ needs 16. It estimates all main effects and interactions, assuming the response is roughly linear between the two levels. Runs are written in <b>Yates' notation</b>: (1), a, b, ab, c, ac, bc, abc.</p>
+  </div>
+
+  <figure class="fig">
+    <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two squared factorial square and two cubed factorial cube">
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <text x="190" y="22" text-anchor="middle" font-weight="800" font-size="16" fill="#1e3a8a">2² design — tablet disintegration time (min)</text>
+        <rect x="90" y="50" width="200" height="170" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+        <circle cx="90" cy="220" r="26" fill="#2563eb"/><text x="90" y="216" text-anchor="middle" font-weight="800" font-size="13" fill="#fff">(1)</text><text x="90" y="232" text-anchor="middle" font-weight="800" font-size="13" fill="#fff">10</text>
+        <circle cx="290" cy="220" r="26" fill="#2563eb"/><text x="290" y="216" text-anchor="middle" font-weight="800" font-size="13" fill="#fff">a</text><text x="290" y="232" text-anchor="middle" font-weight="800" font-size="13" fill="#fff">14</text>
+        <circle cx="90" cy="50" r="26" fill="#f97316"/><text x="90" y="46" text-anchor="middle" font-weight="800" font-size="13" fill="#fff">b</text><text x="90" y="62" text-anchor="middle" font-weight="800" font-size="13" fill="#fff">6</text>
+        <circle cx="290" cy="50" r="26" fill="#f97316"/><text x="290" y="46" text-anchor="middle" font-weight="800" font-size="13" fill="#fff">ab</text><text x="290" y="62" text-anchor="middle" font-weight="800" font-size="13" fill="#fff">8</text>
+        <text x="190" y="272" text-anchor="middle" font-weight="800" font-size="13.5" fill="#1e3a8a">Factor A: binder  (−1 = 2%  →  +1 = 4%)</text>
+        <text x="40" y="135" text-anchor="middle" font-weight="800" font-size="13.5" fill="#9a3412" transform="rotate(-90 40 135)">Factor B: disintegrant (1% → 3%)</text>
+      </g>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <text x="640" y="22" text-anchor="middle" font-weight="800" font-size="16" fill="#14532d">2³ design — 8 runs (a cube)</text>
+        <g stroke="#16a34a" stroke-width="2.5" fill="none">
+          <rect x="520" y="90" width="170" height="150"/><rect x="590" y="45" width="170" height="150" stroke-dasharray="7 5"/>
+          <line x1="520" y1="90" x2="590" y2="45"/><line x1="690" y1="90" x2="760" y2="45"/><line x1="520" y1="240" x2="590" y2="195" stroke-dasharray="7 5"/><line x1="690" y1="240" x2="760" y2="195"/>
+        </g>
+        <g font-weight="800" font-size="13" text-anchor="middle" fill="#14532d">
+          <circle cx="520" cy="240" r="15" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="520" y="245">(1)</text>
+          <circle cx="690" cy="240" r="15" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="690" y="245">a</text>
+          <circle cx="520" cy="90" r="15" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="520" y="95">b</text>
+          <circle cx="690" cy="90" r="15" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="690" y="95">ab</text>
+          <circle cx="590" cy="195" r="15" fill="#fff" stroke="#16a34a" stroke-width="2"/><text x="590" y="200">c</text>
+          <circle cx="760" cy="195" r="15" fill="#fff" stroke="#16a34a" stroke-width="2"/><text x="760" y="200">ac</text>
+          <circle cx="590" cy="45" r="15" fill="#fff" stroke="#16a34a" stroke-width="2"/><text x="590" y="50">bc</text>
+          <circle cx="760" cy="45" r="17" fill="#fff" stroke="#16a34a" stroke-width="2"/><text x="760" y="50">abc</text>
+        </g>
+        <text x="605" y="272" text-anchor="middle" font-weight="800" font-size="13.5" fill="#14532d">A → right · B ↑ up · C ↗ depth</text>
+      </g>
+    </svg>
+    <figcaption>Fig 2.3 — 2² factorial square (with worked responses) and 2³ cube. Draw the square with corner labels for the Jul 2023 question.</figcaption>
+  </figure>
+
+  <h4>Worked example — calculating effects in a 2² design</h4>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Run (Yates)</th><th>A: binder</th><th>B: disintegrant</th><th>AB</th><th>Disintegration time (min)</th></tr>
+    <tr><td>(1)</td><td>−1 (2%)</td><td>−1 (1%)</td><td>+1</td><td>10</td></tr>
+    <tr><td>a</td><td>+1 (4%)</td><td>−1</td><td>−1</td><td>14</td></tr>
+    <tr><td>b</td><td>−1</td><td>+1 (3%)</td><td>−1</td><td>6</td></tr>
+    <tr><td>ab</td><td>+1</td><td>+1</td><td>+1</td><td>8</td></tr>
+  </table></div>
+  <div class="formula">Effect A = [(a + ab) − ((1) + b)] / 2 = [(14 + 8) − (10 + 6)] / 2 = <b>+3 min</b><small>raising binder from 2% to 4% slows disintegration by 3 min</small></div>
+  <div class="formula">Effect B = [(b + ab) − ((1) + a)] / 2 = [(6 + 8) − (10 + 14)] / 2 = <b>−5 min</b><small>raising disintegrant from 1% to 3% speeds disintegration by 5 min</small></div>
+  <div class="formula">Interaction AB = [((1) + ab) − (a + b)] / 2 = [(10 + 8) − (14 + 6)] / 2 = <b>−1 min</b><small>the disintegrant works slightly better when binder is high (−6 at high binder vs −4 at low binder)</small></div>
+
+  <div class="grid-2">
+    <div class="card c1"><h4>🔎 Screening designs (enlist)</h4><ul>
+      <li>Full two-level factorial (2<sup>k</sup>)</li>
+      <li>Fractional factorial (2<sup>k−p</sup>, e.g. half-fraction 2<sup>4−1</sup> = 8 runs)</li>
+      <li>Plackett–Burman design (N runs, N a multiple of 4, screens up to N−1 factors)</li>
+      <li>Taguchi orthogonal arrays</li>
+      <li>Definitive screening designs</li></ul>
+      <p><small>Screening designs identify the few <b>important</b> factors out of many. Then <b>optimisation designs</b> — central composite, Box–Behnken, mixture designs (response surface methodology) — find the best levels.</small></p></div>
+    <div class="card c2"><h4>✅ Advantages of factorial design</h4><ul>
+      <li><b>Efficient</b> — all factors studied together; fewer runs than one-factor-at-a-time (OFAT) for the same precision.</li>
+      <li>Estimates <b>interactions</b>, which OFAT completely misses.</li>
+      <li>Every run contributes to every effect estimate (hidden replication).</li>
+      <li>Conclusions valid over a <b>range of conditions</b> (wider inductive basis).</li>
+      <li>Helps locate the <b>optimum</b> formulation/process; saves time, material and cost.</li>
+      <li>Results analysed objectively by ANOVA / regression; supports QbD design space.</li></ul>
+      <p><small><b>Limitations:</b> runs grow exponentially (2<sup>k</sup>); two levels can't detect curvature; high-order interactions hard to interpret.</small></p></div>
+  </div>
+  <div class="callout tip"><span class="callout-title">⭐ Exam tip</span><p>For the Jul 2023 short note: enlist 5 screening designs (1 m) → define two-level factorial with −1/+1 coding, 2² table and square diagram (2½ m) → 5–6 advantages (1½ m). Pharmaceutical applications to mention: tablet/capsule formulation, microspheres and nanoparticles, dissolution optimisation, granulation process parameters, HPLC robustness.</p></div>
+</section>
+
+<!-- T5 -->
+<section class="section" id="t5">
+  <h2><span class="num">5</span> Questionnaires and Rating Scales</h2>
+  <p class="lead">The most widely used tool in pharmacy-practice projects — and asked three times by KUHS.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode — the Captain's 20 questions</span>
+    <p>When Captain McCrea first meets WALL·E, he wants to know everything about Earth. If he asked only "Is Earth nice?" he'd learn nothing. Good questions are short, clear, one idea at a time, in a sensible order — from easy ("What is this?") to deep ("Can we live there?"). And to know <i>how much</i> the passengers miss Earth, he'd need a <b>rating scale</b>: "Rate from 0 to 10".</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definition (Jul 2023 2-marker)</span>
+    <p>A <b>questionnaire</b> is a <span class="hl">structured set of written questions arranged in a definite order, which respondents read and answer by themselves</span> (on paper, by post, email or online form). It is the main tool for collecting primary data in surveys. When the same form is filled in by an interviewer/enumerator it is called a <b>schedule</b>.</p></div>
+
+  <h3>Types of questionnaire and questions</h3>
+  <div class="grid-3">
+    <div class="card c1"><h4>By structure</h4><b>Structured</b> (fixed questions and answer options) · <b>Unstructured</b> (open, flexible) · <b>Semi-structured</b> (mix).</div>
+    <div class="card c2"><h4>By answer form</h4><b>Closed-ended</b> (choose an option; easy to code) · <b>Open-ended</b> (free text; rich but hard to analyse).</div>
+    <div class="card c1"><h4>Question formats</h4>Dichotomous (Yes/No) · multiple choice · Likert / rating · ranking · filter (contingency) · matrix · open-ended.</div>
+  </div>
+
+  <h3>Steps in construction of a questionnaire (Nov 2022)</h3>
+  <div class="flow vertical numbered">
+    <div class="step"><span class="e">🎯</span>Decide the information required<small>from the objectives and variables of the study</small></div>
+    <div class="step"><span class="e">👥</span>Define the target respondents<small>age, literacy, language, setting</small></div>
+    <div class="step"><span class="e">📮</span>Choose the method of administration<small>self-administered paper, online, mail, telephone, face-to-face</small></div>
+    <div class="step"><span class="e">🧩</span>Decide the content of each question<small>Is it necessary? Can the respondent answer it? Will they?</small></div>
+    <div class="step"><span class="e">🔘</span>Decide the question type &amp; response format<small>open/closed, multiple choice, Likert scale</small></div>
+    <div class="step"><span class="e">✍️</span>Word the questions carefully<small>simple, short, specific; no leading, loaded or double-barrelled questions; no double negatives; translate to local language and back-translate</small></div>
+    <div class="step"><span class="e">🔀</span>Arrange the sequence<small>funnel: easy &amp; general → specific; sensitive questions later; demographics at end; filter questions</small></div>
+    <div class="step"><span class="e">🎨</span>Design layout &amp; physical form<small>cover letter, instructions, numbering, codes, adequate space</small></div>
+    <div class="step"><span class="e">🧪</span>Pre-test (pilot study) &amp; validate<small>on 10–30 similar respondents; check clarity, time; content validity by experts; reliability (Cronbach's α ≥ 0.7, test–retest)</small></div>
+    <div class="step"><span class="e">✅</span>Revise and finalise<small>prepare the coding scheme; print / publish</small></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card c1"><h4>Characteristics of a good questionnaire</h4><ul>
+      <li>Short and simple; covers all objectives</li>
+      <li>Questions in logical sequence, easy → difficult</li>
+      <li>Clear instructions; attractive layout</li>
+      <li>Avoids ambiguous, leading, personal or embarrassing questions</li>
+      <li>Pre-tested, valid and reliable</li>
+      <li>Easy to code and analyse</li></ul></div>
+    <div class="card c2"><h4>Bad question → good question</h4>
+      <p>❌ "Don't you agree that generic medicines are cheap and effective?" <small>(leading + double-barrelled)</small></p>
+      <p>✅ "Generic medicines are as effective as branded medicines." Strongly agree … Strongly disagree</p>
+      <p>✅ "Generic medicines are affordable." Strongly agree … Strongly disagree</p></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card c1"><h4>✅ Advantages (Kothari)</h4><ul><li>Low cost even for a large, widely spread population</li><li>Free from interviewer bias; answers in respondents' own words</li><li>Respondents have time to give well-thought answers</li><li>Reaches respondents who are not easily approachable</li><li>Large samples possible → more dependable results; anonymity</li></ul></div>
+    <div class="card c2"><h4>❌ Disadvantages</h4><ul><li>Low rate of return / non-response bias</li><li>Only for literate and cooperative respondents</li><li>No control once sent; ambiguous replies can't be clarified</li><li>Slow; omissions in some questions</li><li>Not certain who actually filled it</li></ul></div>
+  </div>
+
+  <h3>Rating scales</h3>
+  <div class="callout def"><span class="callout-title">📘 Definition</span>
+    <p>A <b>rating scale</b> is a <span class="hl">measuring instrument in which the respondent (or an observer) assigns a value, category or score to an object, person, attitude or symptom along a continuum</span>, e.g. from "strongly agree" to "strongly disagree" or from 0 (no pain) to 10 (worst pain). Rating scales convert qualitative judgements into (usually ordinal) numbers.</p></div>
+
+  <figure class="fig">
+    <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Examples of Likert scale, visual analogue scale, numeric rating scale and semantic differential">
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <text x="20" y="28" font-weight="800" font-size="15" fill="#1e3a8a">① Likert scale (5-point): "I take my medicines on time."</text>
+        <g font-size="12.5" font-weight="700" text-anchor="middle">
+          <rect x="20" y="40" width="160" height="40" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="100" y="65" fill="#14532d">Strongly agree (5)</text>
+          <rect x="190" y="40" width="160" height="40" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/><text x="270" y="65" fill="#14532d">Agree (4)</text>
+          <rect x="360" y="40" width="160" height="40" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/><text x="440" y="65" fill="#334155">Neutral (3)</text>
+          <rect x="530" y="40" width="160" height="40" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="2"/><text x="610" y="65" fill="#9a3412">Disagree (2)</text>
+          <rect x="700" y="40" width="160" height="40" rx="10" fill="#ffedd5" stroke="#f97316" stroke-width="2"/><text x="780" y="65" fill="#9a3412">Strongly disagree (1)</text>
+        </g>
+        <text x="20" y="118" font-weight="800" font-size="15" fill="#1e3a8a">② Visual analogue scale (VAS): a 100 mm line — patient marks a point</text>
+        <line x1="120" y1="145" x2="720" y2="145" stroke="#2563eb" stroke-width="4"/>
+        <line x1="120" y1="133" x2="120" y2="157" stroke="#2563eb" stroke-width="4"/><line x1="720" y1="133" x2="720" y2="157" stroke="#2563eb" stroke-width="4"/>
+        <text x="110" y="150" text-anchor="end" font-size="13" font-weight="700" fill="#334155">No pain</text><text x="730" y="150" font-size="13" font-weight="700" fill="#334155">Worst pain imaginable</text>
+        <path d="M462 128 L470 145 L478 128 Z" fill="#db2777"/><text x="470" y="172" text-anchor="middle" font-size="12.5" font-weight="800" fill="#db2777">patient’s mark = 57 mm</text>
+        <text x="20" y="196" font-weight="800" font-size="15" fill="#1e3a8a">③ Numeric rating scale (NRS, 0–10) + faces scale for children</text>
+        <g font-size="13" font-weight="800" text-anchor="middle" fill="#1e3a8a">
+          <line x1="120" y1="215" x2="720" y2="215" stroke="#94a3b8" stroke-width="2"/>
+          <text x="120" y="235">0</text><text x="180" y="235">1</text><text x="240" y="235">2</text><text x="300" y="235">3</text><text x="360" y="235">4</text><text x="420" y="235">5</text><text x="480" y="235">6</text><text x="540" y="235">7</text><text x="600" y="235">8</text><text x="660" y="235">9</text><text x="720" y="235">10</text>
+        </g>
+        <g font-size="24" text-anchor="middle"><text x="120" y="268">😀</text><text x="240" y="268">🙂</text><text x="360" y="268">😐</text><text x="480" y="268">🙁</text><text x="600" y="268">😢</text><text x="720" y="268">😭</text></g>
+        <text x="20" y="306" font-weight="800" font-size="15" fill="#1e3a8a">④ Semantic differential (7-point):</text>
+        <text x="380" y="306" text-anchor="end" font-size="13" font-weight="700" fill="#334155">Effective</text>
+        <g fill="#fff" stroke="#f97316" stroke-width="2"><circle cx="405" cy="301" r="9"/><circle cx="445" cy="301" r="9"/><circle cx="485" cy="301" r="9"/><circle cx="525" cy="301" r="9"/><circle cx="565" cy="301" r="9"/><circle cx="605" cy="301" r="9"/><circle cx="645" cy="301" r="9"/></g>
+        <circle cx="445" cy="301" r="5" fill="#f97316"/>
+        <text x="672" y="306" font-size="13" font-weight="700" fill="#334155">Ineffective</text>
+      </g>
+    </svg>
+    <figcaption>Fig 2.4 — Common rating scales. Sketch any two in a rating-scale answer.</figcaption>
+  </figure>
+
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Scale</th><th>How it works</th><th>Pharmacy use</th></tr>
+    <tr><td>Graphic rating scale</td><td>A line/continuum with descriptive points; rater ticks a position (VAS is a type).</td><td>Pain, nausea, itching intensity</td></tr>
+    <tr><td>Itemised (numerical / category) scale</td><td>A series of numbered or described categories to choose from.</td><td>Patient satisfaction 1–5</td></tr>
+    <tr><td>Likert (summated) scale</td><td>Agreement with statements on 5 or 7 points; item scores summed.</td><td>Knowledge–attitude–practice (KAP) surveys</td></tr>
+    <tr><td>Semantic differential</td><td>7-point scale between bipolar adjectives (good–bad, effective–ineffective).</td><td>Perception of a brand or service</td></tr>
+    <tr><td>Thurstone (equal-appearing intervals)</td><td>Statements pre-rated by judges; respondent agrees/disagrees; scale values averaged.</td><td>Attitude research</td></tr>
+    <tr><td>Guttman (cumulative) scale</td><td>Items in increasing order of intensity; agreeing with one implies agreeing with all milder ones.</td><td>Functional disability</td></tr>
+    <tr><td>Ranking scales</td><td>Paired comparison or rank order of items.</td><td>Ranking preferred dosage forms</td></tr>
+    <tr><td>Clinical rating scales</td><td>Standardised clinician-scored scales.</td><td>Glasgow Coma Scale (3–15), Hamilton Depression Rating Scale, Apgar score</td></tr>
+  </table></div>
+  <div class="callout warn"><span class="callout-title">⚠️ Errors in rating (Kothari)</span><p><b>Error of leniency (generosity)</b> — rating everyone too high; <b>error of central tendency</b> — avoiding extremes, marking everything "average"; <b>halo effect</b> — one good/bad trait colouring all other ratings. Reduce them with clear anchors, training of raters and balanced (positive + negative) statements.</p></div>
+  <div class="callout tip"><span class="callout-title">⭐ Exam tip</span><p>For "steps in construction of a questionnaire", the vertical 10-step flow chart <i>is</i> your diagram. Always mention <b>pilot testing</b> and <b>validity &amp; reliability</b> (Cronbach's alpha) — examiners check for them.</p></div>
+</section>
+
+<!-- T6 -->
+<section class="section" id="t6">
+  <h2><span class="num">6</span> Different Types of Data Distribution</h2>
+  <p class="lead">How are the values spread out? Piled in the middle like a bell, or leaning to one side?</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode — WALL·E's cube towers</span>
+    <p>Suppose WALL·E weighs every cube he makes. Most cubes weigh about the same; a few are a bit lighter or heavier; very few are extremely light or heavy. Stack the cubes by weight class and the towers form a smooth hill — tallest in the middle, falling off evenly on both sides. That hill is the famous <b>bell-shaped normal distribution</b>. If instead most cubes were light with a few very heavy fridges, the hill would lean — a <b>skewed</b> distribution.</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Definition</span>
+    <p>A <b>data (frequency) distribution</b> is the <span class="hl">pattern showing how often each value or class of values of a variable occurs</span>. A <b>probability distribution</b> is the theoretical model giving the probability of each possible value of a random variable.</p></div>
+
+  <h3>Classification of data distributions (Dec 2023 2-marker)</h3>
+  <div class="grid-2">
+    <div class="card c1"><h4>A. By shape of frequency distribution</h4><ul>
+      <li><b>Symmetrical</b> — normal (bell-shaped), uniform/rectangular</li>
+      <li><b>Asymmetrical (skewed)</b> — positively (right) skewed; negatively (left) skewed</li>
+      <li><b>J-shaped</b> and <b>reverse J-shaped</b></li>
+      <li><b>U-shaped</b></li>
+      <li><b>Bimodal / multimodal</b> (two or more peaks)</li>
+      <li>By peakedness (<b>kurtosis</b>): leptokurtic (tall, thin), mesokurtic (normal), platykurtic (flat)</li></ul></div>
+    <div class="card c2"><h4>B. Theoretical (probability) distributions</h4><ul>
+      <li><b>Discrete</b>: Binomial, Poisson</li>
+      <li><b>Continuous</b>: Normal (Gaussian), standard normal (z)</li>
+      <li><b>Sampling distributions</b> used in tests: Student's t, chi-square (χ²), F-distribution</li>
+      <li>Others: log-normal, exponential</li></ul></div>
+  </div>
+
+  <h3>The normal (Gaussian) distribution</h3>
+  <div class="callout def"><span class="callout-title">📘 Exam definition (Dec 2023 short · Model brief)</span>
+    <p>The <b>normal distribution</b> is a <span class="hl">continuous, symmetrical, bell-shaped probability distribution in which most values cluster around the mean and frequencies fall off equally on both sides</span>. It is completely described by two parameters — the mean (μ) and the standard deviation (σ).</p></div>
+  <div class="formula">f(x) = [1 / (σ√(2π))] · e<sup>−(x − μ)² / 2σ²</sup> <small>Standard normal variate: z = (x − μ) / σ, which has mean 0 and SD 1</small></div>
+
+  <figure class="fig">
+    <svg viewBox="0 0 820 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Normal distribution curve with 68, 95 and 99.7 percent areas">
+      <path d="M100,260 L100,257.6 L125,255 L150,250.3 L175,242.5 L200,230.2 L225,212.4 L250,188.6 L275,159.3 L300,126.6 L325,93.9 L350,65.8 L375,46.8 L400,40 L425,46.8 L450,65.8 L475,93.9 L500,126.6 L525,159.3 L550,188.6 L575,212.4 L600,230.2 L625,242.5 L650,250.3 L675,255 L700,257.6 L700,260 Z" fill="#dbeafe"/>
+      <path d="M200,260 L200,230.2 L225,212.4 L250,188.6 L275,159.3 L300,126.6 L325,93.9 L350,65.8 L375,46.8 L400,40 L425,46.8 L450,65.8 L475,93.9 L500,126.6 L525,159.3 L550,188.6 L575,212.4 L600,230.2 L600,260 Z" fill="#93c5fd"/>
+      <path d="M300,260 L300,126.6 L325,93.9 L350,65.8 L375,46.8 L400,40 L425,46.8 L450,65.8 L475,93.9 L500,126.6 L500,260 Z" fill="#2563eb" fill-opacity="0.85"/>
+      <path d="M50,259.5 L100,257.6 L125,255 L150,250.3 L175,242.5 L200,230.2 L225,212.4 L250,188.6 L275,159.3 L300,126.6 L325,93.9 L350,65.8 L375,46.8 L400,40 L425,46.8 L450,65.8 L475,93.9 L500,126.6 L525,159.3 L550,188.6 L575,212.4 L600,230.2 L625,242.5 L650,250.3 L675,255 L700,257.6 L750,259.5" fill="none" stroke="#1e3a8a" stroke-width="3"/>
+      <line x1="40" y1="260" x2="760" y2="260" stroke="#334155" stroke-width="2"/>
+      <line x1="400" y1="34" x2="400" y2="260" stroke="#f97316" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <text x="408" y="30" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="13" fill="#c2410c">mean = median = mode</text>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="13" text-anchor="middle" fill="#334155">
+        <text x="100" y="280">μ−3σ</text><text x="200" y="280">μ−2σ</text><text x="300" y="280">μ−σ</text><text x="400" y="280">μ</text><text x="500" y="280">μ+σ</text><text x="600" y="280">μ+2σ</text><text x="700" y="280">μ+3σ</text>
+      </g>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#64748b">
+        <text x="100" y="296">485</text><text x="200" y="296">490</text><text x="300" y="296">495</text><text x="400" y="296">500 mg</text><text x="500" y="296">505</text><text x="600" y="296">510</text><text x="700" y="296">515</text>
+      </g>
+      <text x="400" y="200" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="17" fill="#fff">68.27%</text>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="13">
+        <line x1="300" y1="314" x2="500" y2="314" stroke="#2563eb" stroke-width="3"/><text x="508" y="319" fill="#1d4ed8">±1σ = 68.27%</text>
+        <line x1="200" y1="330" x2="600" y2="330" stroke="#60a5fa" stroke-width="3"/><text x="608" y="335" fill="#1d4ed8">±2σ = 95.45%</text>
+        <line x1="100" y1="346" x2="700" y2="346" stroke="#93c5fd" stroke-width="3"/><text x="708" y="351" fill="#1d4ed8">±3σ = 99.73%</text>
+      </g>
+      <text x="150" y="118" font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="700" font-size="12.5" fill="#64748b">point of inflection</text>
+      <line x1="258" y1="116" x2="294" y2="124" stroke="#94a3b8" stroke-width="1.5"/>
+      <circle cx="300" cy="126.6" r="5" fill="#f97316"/><circle cx="500" cy="126.6" r="5" fill="#f97316"/>
+      <text x="650" y="222" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" fill="#64748b">tails never touch</text><text x="650" y="236" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="12" fill="#64748b">x-axis (asymptotic)</text>
+    </svg>
+    <figcaption>Fig 2.5 — Normal curve with the 68–95–99.7 rule (example: tablet weights, mean 500 mg, SD 5 mg). This is the most drawn diagram of the paper — practise it!</figcaption>
+  </figure>
+
+  <div class="grid-2">
+    <div class="card c1"><h4>Properties of the normal curve</h4><ol>
+      <li>Bell-shaped and <b>symmetrical</b> about the mean.</li>
+      <li><b>Mean = median = mode</b> (all at the centre); unimodal.</li>
+      <li>Defined completely by <b>μ and σ</b>.</li>
+      <li><b>Asymptotic</b> — tails approach but never touch the x-axis.</li>
+      <li>Total area under the curve = <b>1 (100%)</b>.</li>
+      <li>μ ± 1σ covers 68.27%, μ ± 2σ covers 95.45%, μ ± 3σ covers 99.73% of values; μ ± 1.96σ covers exactly 95%.</li>
+      <li>Points of inflection at μ ± σ.</li>
+      <li>Skewness = 0; it is mesokurtic.</li></ol></div>
+    <div class="card c2"><h4>Examples &amp; importance</h4>
+      <p><b>Examples:</b> height, weight, blood pressure, haemoglobin and serum cholesterol in healthy adults; weights of tablets in a batch; fill volumes of ampoules; IQ; random errors of measurement.</p>
+      <p><b>Importance:</b> basis of <b>parametric tests</b> (t-test, ANOVA, z-test) · used to set <b>normal reference ranges</b> (mean ± 2 SD) · <b>quality-control charts</b> (±3σ limits) · confidence intervals · sampling distributions of means tend to normal for large samples (central limit theorem).</p></div>
+  </div>
+  <div class="callout example"><span class="callout-title">💊 Worked example — tablet weights</span><p>Paracetamol tablets: mean 500 mg, SD 5 mg, normally distributed. → 68% of tablets lie between <b>495–505 mg</b>, 95% between <b>490–510 mg</b>, 99.7% between <b>485–515 mg</b>. A 510 mg tablet has z = (510 − 500)/5 = <b>+2</b>, i.e. it is 2 SD above the mean; only about 2.3% of tablets are heavier than this.</p></div>
+
+  <h3>Skewed distributions</h3>
+  <figure class="fig">
+    <svg viewBox="0 0 840 236" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Positively skewed, symmetrical and negatively skewed distributions">
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <g>
+          <path d="M20,170 C50,170 60,40 85,40 C120,40 150,135 250,168" fill="#ffedd5" stroke="#f97316" stroke-width="3"/>
+          <line x1="20" y1="170" x2="255" y2="170" stroke="#334155" stroke-width="2"/>
+          <line x1="85" y1="40" x2="85" y2="170" stroke="#9a3412" stroke-width="2" stroke-dasharray="4 3"/><line x1="105" y1="62" x2="105" y2="170" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 3"/><line x1="128" y1="92" x2="128" y2="170" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3"/>
+          <text x="135" y="20" text-anchor="middle" font-weight="800" font-size="14.5" fill="#9a3412">Positive (right) skew</text>
+          <text x="135" y="192" text-anchor="middle" font-size="12.5" font-weight="700" fill="#334155">Mode &lt; Median &lt; Mean</text>
+          <text x="135" y="210" text-anchor="middle" font-size="12" fill="#64748b">tail to the right</text><text x="135" y="227" text-anchor="middle" font-size="12" fill="#64748b">e.g. length of hospital stay, income</text>
+        </g>
+        <g transform="translate(290 0)">
+          <path d="M20,170 C70,170 90,40 130,40 C170,40 190,170 240,170" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+          <line x1="15" y1="170" x2="245" y2="170" stroke="#334155" stroke-width="2"/>
+          <line x1="130" y1="40" x2="130" y2="170" stroke="#9a3412" stroke-width="2.5" stroke-dasharray="4 3"/>
+          <text x="130" y="20" text-anchor="middle" font-weight="800" font-size="14.5" fill="#1e3a8a">Symmetrical (normal)</text>
+          <text x="130" y="192" text-anchor="middle" font-size="12.5" font-weight="700" fill="#334155">Mean = Median = Mode</text>
+          <text x="130" y="210" text-anchor="middle" font-size="12" fill="#64748b">e.g. tablet weights, adult height</text>
+        </g>
+        <g transform="translate(570 0)">
+          <path d="M15,168 C115,135 145,40 180,40 C205,40 215,170 245,170" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+          <line x1="10" y1="170" x2="250" y2="170" stroke="#334155" stroke-width="2"/>
+          <line x1="180" y1="40" x2="180" y2="170" stroke="#9a3412" stroke-width="2" stroke-dasharray="4 3"/><line x1="160" y1="62" x2="160" y2="170" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 3"/><line x1="137" y1="92" x2="137" y2="170" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3"/>
+          <text x="130" y="20" text-anchor="middle" font-weight="800" font-size="14.5" fill="#14532d">Negative (left) skew</text>
+          <text x="130" y="192" text-anchor="middle" font-size="12.5" font-weight="700" fill="#334155">Mean &lt; Median &lt; Mode</text>
+          <text x="130" y="210" text-anchor="middle" font-size="12" fill="#64748b">tail to the left</text><text x="130" y="227" text-anchor="middle" font-size="12" fill="#64748b">e.g. marks in an easy exam</text>
+        </g>
+      </g>
+    </svg>
+    <figcaption>Fig 2.6 — Skewness. Brown dashed = mode (peak), blue = median, green = mean (pulled towards the tail).</figcaption>
+  </figure>
+  <p>Karl Pearson's empirical relation for moderately skewed data: <b>Mode ≈ 3 Median − 2 Mean</b>. Skewed data are usually summarised by the <b>median</b> and analysed by <b>non-parametric tests</b> (or after log transformation).</p>
+
+  <h3>Binomial and Poisson distributions (discrete)</h3>
+  <div class="grid-2">
+    <div class="card c1"><h4>🎯 Binomial distribution</h4>
+      <p>For <i>n</i> independent trials, each with only two outcomes (success/failure) and a constant probability of success <i>p</i> (q = 1 − p).</p>
+      <div class="formula">P(X = r) = ⁿCᵣ · pʳ · qⁿ⁻ʳ <small>mean = np · variance = npq</small></div>
+      <p><b>Example:</b> a drug cures 60% of patients. Probability that exactly 2 of 5 patients are cured = ⁵C₂ × 0.6² × 0.4³ = 10 × 0.36 × 0.064 = <b>0.2304</b>.</p></div>
+    <div class="card c2"><h4>🚨 Poisson distribution</h4>
+      <p>For the number of <b>rare events</b> occurring in a fixed interval of time or space, when events are independent; a limiting case of binomial (n large, p very small).</p>
+      <div class="formula">P(X = r) = e<sup>−λ</sup> · λʳ / r! <small>mean = variance = λ</small></div>
+      <p><b>Example:</b> a hospital receives on average λ = 2 ADR reports per week. Probability of a week with no reports = e<sup>−2</sup> = <b>0.135</b>. Other uses: rare drug reactions, radioactive counts, colonies per plate.</p></div>
+  </div>
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic</span><p><b>"Bi = two outcomes, Poi = rare Poisson-ous events, Normal = the bell."</b> Binomial: mean np. Poisson: mean = variance. Normal: mean = median = mode.</p></div>
+  <p class="hand">Psst, Mimosa… in an exam, a normal curve without "68–95–99.7" written under it is like WALL·E without EVE — incomplete! 💚</p>
+</section>
+
+<!-- T7 -->
+<section class="section" id="t7">
+  <h2><span class="num">7</span> Coding and Tabulation of Data</h2>
+  <p class="lead">Raw data is a mountain of trash. Processing turns it into neat cubes on labelled shelves.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode — M-O cleans, WALL·E compacts, the shelves organise</span>
+    <p>First <b>M-O</b>, the tiny cleaning robot, wipes away every "foreign contaminant" — that's <b>editing</b> (removing errors and gaps). Then WALL·E squeezes each messy item into a standard cube with a label — <b>coding</b>. He groups similar cubes together — <b>classification</b>. Finally he arranges them on shelves in rows and columns with a name-plate on top — <b>tabulation</b>. Only then can EVE glance at the shelf and understand everything.</p></div>
+
+  <div class="flow numbered">
+    <div class="step"><span class="e">🧹</span>Editing<small>check completeness, accuracy, consistency</small></div>
+    <div class="step"><span class="e">🔢</span>Coding<small>assign numbers/symbols to answers</small></div>
+    <div class="step"><span class="e">🗂️</span>Classification<small>group into classes</small></div>
+    <div class="step"><span class="e">📋</span>Tabulation<small>arrange in rows &amp; columns</small></div>
+    <div class="step"><span class="e">📊</span>Analysis &amp; graphs</div>
+  </div>
+  <p><b>Editing</b> is examining collected raw data to detect errors and omissions and correct them where possible. <b>Field editing</b> is done by the investigator soon after the interview; <b>central editing</b> is done in the office when all forms are received.</p>
+
+  <h3>Coding</h3>
+  <div class="callout def"><span class="callout-title">📘 Definition (Kothari)</span>
+    <p><b>Coding</b> is the <span class="hl">process of assigning numerals or other symbols to answers so that responses can be put into a limited number of categories or classes</span>, which makes computer entry and analysis possible.</p></div>
+  <ul>
+    <li><b>Rules for categories:</b> appropriate to the research problem; <b>exhaustive</b> (a class for every response); <b>mutually exclusive</b> (each response fits only one class); <b>unidimensional</b> (one concept per category set).</li>
+    <li><b>Pre-coding</b> for closed questions (codes printed on the questionnaire) vs <b>post-coding</b> for open-ended answers (codes decided after reading the answers).</li>
+    <li>A <b>codebook (coding frame)</b> lists each variable, its column/name, codes and meaning; a special code (e.g. 9 or 99) is kept for missing data.</li>
+    <li>Data are then entered in Excel/SPSS; <b>double data entry</b> and range checks reduce entry errors.</li>
+  </ul>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Question</th><th>Variable name</th><th>Codes</th></tr>
+    <tr><td>Q1. Gender</td><td>GENDER</td><td>1 = Male · 2 = Female · 3 = Other · 9 = Missing</td></tr>
+    <tr><td>Q2. Age (completed years)</td><td>AGE</td><td>Actual number (e.g. 21) · 99 = Missing</td></tr>
+    <tr><td>Q3. Took antibiotics without prescription in last 6 months?</td><td>SELFMED</td><td>1 = Yes · 0 = No</td></tr>
+    <tr><td>Q4. Source of antibiotic</td><td>SOURCE</td><td>1 = Pharmacy · 2 = Leftover at home · 3 = Friends/family · 4 = Online</td></tr>
+    <tr><td>Q5. "Antibiotics cure viral fever." (Likert)</td><td>KNOW5</td><td>5 = Strongly agree … 1 = Strongly disagree</td></tr>
+  </table></div>
+  <p><small>Example codebook for a student survey on antibiotic self-medication.</small></p>
+
+  <h3>Classification</h3>
+  <p><b>Classification</b> is the process of arranging data into groups or classes according to their common characteristics. Types: <b>geographical</b> (by area — district, state), <b>chronological</b> (by time — year, month), <b>qualitative</b> (by attribute — gender, blood group, drug class) and <b>quantitative</b> (by magnitude in class intervals — age, weight, dose).</p>
+  <p><b>Class-interval terms:</b> class limits (lower/upper), class width, mid-point = (lower + upper)/2, frequency. <b>Exclusive</b> classes (0–10, 10–20: upper limit not included) vs <b>inclusive</b> classes (0–9, 10–19). Open-ended classes ("above 60"). Number of classes by <b>Sturges' rule</b>: k = 1 + 3.322 log₁₀N.</p>
+  <div class="callout example"><span class="callout-title">💊 Worked example — building a frequency distribution</span>
+    <p>Length of hospital stay (days) of 20 patients: 3, 5, 2, 7, 4, 6, 3, 8, 5, 4, 9, 2, 6, 5, 3, 7, 4, 5, 6, 10</p>
+    <div class="table-wrap"><table class="nice">
+      <tr><th>Stay (days)</th><th>Tally</th><th>Frequency</th><th>Relative freq. (%)</th><th>Cumulative freq.</th></tr>
+      <tr><td>1–2</td><td>||</td><td>2</td><td>10</td><td>2</td></tr>
+      <tr><td>3–4</td><td><s>||||</s> |</td><td>6</td><td>30</td><td>8</td></tr>
+      <tr><td>5–6</td><td><s>||||</s> ||</td><td>7</td><td>35</td><td>15</td></tr>
+      <tr><td>7–8</td><td>|||</td><td>3</td><td>15</td><td>18</td></tr>
+      <tr><td>9–10</td><td>||</td><td>2</td><td>10</td><td>20</td></tr>
+      <tr><td>Total</td><td></td><td>20</td><td>100</td><td></td></tr>
+    </table></div></div>
+
+  <h3>Tabulation</h3>
+  <div class="callout def"><span class="callout-title">📘 Definition</span>
+    <p><b>Tabulation</b> is the <span class="hl">systematic and logical arrangement of classified data in rows and columns</span> (a statistical table) for easy understanding, comparison and further analysis.</p></div>
+  <p><b>Objectives / importance:</b> simplifies complex data · makes comparison easy · saves space and words · reveals patterns and trends · basis for statistical analysis and graphs · helps detect errors and omissions · gives a permanent record for reference.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Parts of a statistical table">
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <text x="380" y="24" text-anchor="middle" font-weight="800" font-size="14.5" fill="#1e3a8a">Table 2.1: Antibiotic self-medication among students by year of study (n = 200)</text>
+        <text x="640" y="54" text-anchor="end" font-size="12.5" font-style="italic" fill="#64748b">(figures in numbers)</text>
+        <rect x="120" y="62" width="520" height="38" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+        <rect x="120" y="100" width="140" height="140" fill="#ffedd5" stroke="#f97316" stroke-width="2"/>
+        <rect x="260" y="100" width="380" height="140" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+        <g stroke="#cbd5e1" stroke-width="1.5"><line x1="260" y1="62" x2="260" y2="240"/><line x1="390" y1="62" x2="390" y2="240"/><line x1="520" y1="62" x2="520" y2="240"/>
+          <line x1="120" y1="128" x2="640" y2="128"/><line x1="120" y1="156" x2="640" y2="156"/><line x1="120" y1="184" x2="640" y2="184"/><line x1="120" y1="212" x2="640" y2="212"/></g>
+        <g font-weight="800" font-size="13" text-anchor="middle" fill="#1e3a8a"><text x="190" y="86">Year of study</text><text x="325" y="86">Self-medicated*</text><text x="455" y="86">Not self-medicated</text><text x="580" y="86">Total</text></g>
+        <g font-size="13" text-anchor="middle" fill="#334155">
+          <text x="190" y="119" font-weight="700">1st year</text><text x="325" y="119">12</text><text x="455" y="119">38</text><text x="580" y="119">50</text>
+          <text x="190" y="147" font-weight="700">2nd year</text><text x="325" y="147">15</text><text x="455" y="147">35</text><text x="580" y="147">50</text>
+          <text x="190" y="175" font-weight="700">3rd year</text><text x="325" y="175">20</text><text x="455" y="175">30</text><text x="580" y="175">50</text>
+          <text x="190" y="203" font-weight="700">4th year</text><text x="325" y="203">23</text><text x="455" y="203">27</text><text x="580" y="203">50</text>
+          <text x="190" y="231" font-weight="800">Total</text><text x="325" y="231" font-weight="800">70</text><text x="455" y="231" font-weight="800">130</text><text x="580" y="231" font-weight="800">200</text>
+        </g>
+        <text x="120" y="262" font-size="12" fill="#64748b">* Use of antibiotics without a prescription in the last 6 months.</text>
+        <text x="120" y="282" font-size="12" fill="#64748b">Source: Primary survey data (hypothetical, for illustration).</text>
+        <g font-weight="800" font-size="12.5">
+          <text x="10" y="28" fill="#db2777">① Number</text><text x="10" y="42" fill="#db2777">&amp; title</text>
+          <text x="650" y="56" fill="#db2777">② Head note</text>
+          <text x="650" y="86" fill="#2563eb">③ Caption</text><text x="650" y="100" fill="#2563eb" font-size="11">(column headings)</text>
+          <text x="10" y="166" fill="#c2410c">④ Stub</text><text x="10" y="180" fill="#c2410c" font-size="11">(row headings)</text>
+          <text x="650" y="172" fill="#334155">⑤ Body</text><text x="650" y="186" fill="#334155" font-size="11">(the numbers)</text>
+          <text x="10" y="266" fill="#64748b">⑥ Footnote</text>
+          <text x="10" y="286" fill="#64748b">⑦ Source note</text>
+        </g>
+        <g stroke="#cbd5e1" stroke-width="1.5"><line x1="78" y1="170" x2="118" y2="170"/><line x1="642" y1="168" x2="600" y2="168"/></g>
+      </g>
+    </svg>
+    <figcaption>Fig 2.7 — Parts of a table. Draw this labelled table in the "coding &amp; tabulation" answer.</figcaption>
+  </figure>
+  <div class="callout mnemonic"><span class="callout-title">🧠 Mnemonic — parts of a table</span>
+    <div class="acro"><span><b>N</b>umber</span><span><b>T</b>itle</span><span><b>H</b>ead note</span><span><b>C</b>aption</span><span><b>S</b>tub</span><span><b>B</b>ody</span><span><b>F</b>ootnote</span><span><b>S</b>ource</span></div>
+    <p>“<b>N</b>ice <b>T</b>ables <b>H</b>elp <b>C</b>aptain <b>S</b>ee <b>B</b>ig <b>F</b>acts <b>S</b>imply.”</p></div>
+
+  <div class="grid-2">
+    <div class="card c1"><h4>Types of tables</h4><ul>
+      <li><b>By purpose</b>: general-purpose (reference) tables vs special-purpose (summary/text) tables</li>
+      <li><b>By originality</b>: primary (original) vs derived tables (%, ratios)</li>
+      <li><b>By construction</b>: <b>simple / one-way</b> (one characteristic) vs <b>complex</b> — two-way, three-way, manifold (higher-order)</li></ul></div>
+    <div class="card c2"><h4>Rules of tabulation</h4><ul>
+      <li>Number and a clear, self-explanatory title</li>
+      <li>Column &amp; row headings short, with units</li>
+      <li>Logical arrangement (time, size, alphabet); totals given</li>
+      <li>Not overcrowded; comparable figures side by side</li>
+      <li>Footnotes for explanations; source always stated</li>
+      <li>Consistent units and approximations indicated</li></ul></div>
+  </div>
+  <div class="callout tip"><span class="callout-title">⭐ Exam tip</span><p>Model-paper "coding and tabulation" (5 m): processing flow (½ m) → coding definition, rules, codebook example (2 m) → tabulation definition, parts diagram, types, rules (2½ m). The labelled table diagram is the scoring visual.</p></div>
+</section>
+
+<!-- T8 -->
+<section class="section" id="t8">
+  <h2><span class="num">8</span> Graphical Representation of Data</h2>
+  <p class="lead">KUHS's favourite Unit 2 topic: an essay (Dec 2023), a short note (May 2022) and a model-paper short note.</p>
+
+  <div class="callout story"><span class="callout-title">🎬 Story mode — the cube towers</span>
+    <p>From space, Earth's surface looks like a city of skyscrapers — but they are WALL·E's towers of trash cubes. Taller tower = more trash in that spot. Nobody needs to count cubes: one glance shows which pile is biggest. That's the magic of a <b>bar diagram</b>. A graph tells the story at a glance; a table gives the exact numbers.</p></div>
+
+  <div class="callout def"><span class="callout-title">📘 Exam definition</span>
+    <p><b>Graphical representation</b> is the <span class="hl">presentation of statistical data in the form of diagrams and graphs</span> (geometric figures, pictures, charts drawn to scale) so that the data can be understood, compared and interpreted quickly.</p>
+    <p><small><b>Diagrams</b> (bar, pie, pictogram) are mainly for qualitative/discrete data and comparison; <b>graphs</b> (histogram, frequency polygon, ogive, line, scatter) are drawn on graph paper with scales, mainly for frequency distributions and time series, and can be used to locate values like mode and median.</small></p></div>
+
+  <h3>The 7 must-draw graphs</h3>
+  <div class="grid-3">
+    <figure class="fig">
+      <svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Simple bar diagram">
+        <line x1="30" y1="140" x2="228" y2="140" stroke="#334155" stroke-width="2"/><line x1="30" y1="140" x2="30" y2="12" stroke="#334155" stroke-width="2"/>
+        <rect x="45" y="50" width="30" height="90" rx="3" fill="#2563eb"/><rect x="90" y="80" width="30" height="60" rx="3" fill="#f97316"/><rect x="135" y="100" width="30" height="40" rx="3" fill="#16a34a"/><rect x="180" y="65" width="30" height="75" rx="3" fill="#db2777"/>
+        <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#334155"><text x="60" y="156">Tab</text><text x="105" y="156">Cap</text><text x="150" y="156">Syr</text><text x="195" y="156">Inj</text></g>
+      </svg>
+      <figcaption>Bar diagram — separate bars of equal width with gaps; height ∝ value. For categories (dosage forms sold).</figcaption>
+    </figure>
+    <figure class="fig">
+      <svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Histogram">
+        <line x1="30" y1="140" x2="228" y2="140" stroke="#334155" stroke-width="2"/><line x1="30" y1="140" x2="30" y2="12" stroke="#334155" stroke-width="2"/>
+        <g fill="#93c5fd" stroke="#1e3a8a" stroke-width="1.5"><rect x="40" y="120" width="30" height="20"/><rect x="70" y="95" width="30" height="45"/><rect x="100" y="60" width="30" height="80"/><rect x="130" y="40" width="30" height="100"/><rect x="160" y="80" width="30" height="60"/><rect x="190" y="110" width="30" height="30"/></g>
+        <text x="130" y="158" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#334155">class intervals (continuous)</text>
+      </svg>
+      <figcaption>Histogram — adjacent rectangles, no gaps; area ∝ frequency. For continuous frequency distributions; mode can be located.</figcaption>
+    </figure>
+    <figure class="fig">
+      <svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Frequency polygon">
+        <line x1="20" y1="140" x2="235" y2="140" stroke="#334155" stroke-width="2"/><line x1="20" y1="140" x2="20" y2="12" stroke="#334155" stroke-width="2"/>
+        <g fill="none" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3 3"><rect x="40" y="120" width="30" height="20"/><rect x="70" y="95" width="30" height="45"/><rect x="100" y="60" width="30" height="80"/><rect x="130" y="40" width="30" height="100"/><rect x="160" y="80" width="30" height="60"/><rect x="190" y="110" width="30" height="30"/></g>
+        <polyline points="25,140 55,120 85,95 115,60 145,40 175,80 205,110 235,140" fill="none" stroke="#f97316" stroke-width="3"/>
+        <g fill="#f97316"><circle cx="55" cy="120" r="4"/><circle cx="85" cy="95" r="4"/><circle cx="115" cy="60" r="4"/><circle cx="145" cy="40" r="4"/><circle cx="175" cy="80" r="4"/><circle cx="205" cy="110" r="4"/></g>
+      </svg>
+      <figcaption>Frequency polygon — join mid-points of the tops of histogram bars; close to the x-axis at both ends. Good for comparing two distributions.</figcaption>
+    </figure>
+    <figure class="fig">
+      <svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pie chart">
+        <path d="M120,85 L120,25 A60,60 0 0,1 120,145 Z" fill="#2563eb"/>
+        <path d="M120,85 L120,145 A60,60 0 0,1 62.94,66.46 Z" fill="#f97316"/>
+        <path d="M120,85 L62.94,66.46 A60,60 0 0,1 120,25 Z" fill="#16a34a"/>
+        <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="12" fill="#fff" text-anchor="middle"><text x="150" y="90">50%</text><text x="90" y="112">30%</text><text x="100" y="58">20%</text></g>
+        <text x="120" y="164" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#334155">angle = (value ÷ total) × 360°</text>
+      </svg>
+      <figcaption>Pie chart — circle divided into sectors proportional to parts of a whole. Best for ≤ 6–7 components (share of drug classes).</figcaption>
+    </figure>
+    <figure class="fig">
+      <svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line graph">
+        <line x1="30" y1="140" x2="228" y2="140" stroke="#334155" stroke-width="2"/><line x1="30" y1="140" x2="30" y2="12" stroke="#334155" stroke-width="2"/>
+        <polyline points="40,110 70,95 100,100 130,70 160,60 190,45 220,30" fill="none" stroke="#16a34a" stroke-width="3"/>
+        <g fill="#16a34a"><circle cx="40" cy="110" r="4"/><circle cx="70" cy="95" r="4"/><circle cx="100" cy="100" r="4"/><circle cx="130" cy="70" r="4"/><circle cx="160" cy="60" r="4"/><circle cx="190" cy="45" r="4"/><circle cx="220" cy="30" r="4"/></g>
+        <text x="130" y="158" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#334155">time (months / years)</text>
+      </svg>
+      <figcaption>Line graph (historigram) — values plotted against time and joined; shows trends (monthly dengue cases, plasma concentration–time curve).</figcaption>
+    </figure>
+    <figure class="fig">
+      <svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Less-than ogive">
+        <line x1="30" y1="140" x2="228" y2="140" stroke="#334155" stroke-width="2"/><line x1="30" y1="140" x2="30" y2="12" stroke="#334155" stroke-width="2"/>
+        <path d="M40,138 C70,134 90,116 110,96 C130,72 150,46 170,36 C190,27 205,24 220,22" fill="none" stroke="#7c3aed" stroke-width="3"/>
+        <line x1="30" y1="81" x2="119" y2="81" stroke="#db2777" stroke-width="1.8" stroke-dasharray="4 3"/><line x1="119" y1="81" x2="119" y2="140" stroke="#db2777" stroke-width="1.8" stroke-dasharray="4 3"/>
+        <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="800" fill="#db2777"><text x="34" y="76">N/2</text><text x="122" y="135">median</text></g>
+        <text x="130" y="158" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#334155">upper class limits</text>
+      </svg>
+      <figcaption>Ogive (cumulative frequency curve) — "less than" (upper limits) or "more than" (lower limits); the two cross at the median; used for percentiles.</figcaption>
+    </figure>
+    <figure class="fig">
+      <svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scatter diagram">
+        <line x1="30" y1="140" x2="228" y2="140" stroke="#334155" stroke-width="2"/><line x1="30" y1="140" x2="30" y2="12" stroke="#334155" stroke-width="2"/>
+        <line x1="40" y1="128" x2="222" y2="35" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+        <g fill="#2563eb"><circle cx="45" cy="125" r="4"/><circle cx="60" cy="118" r="4"/><circle cx="70" cy="108" r="4"/><circle cx="85" cy="114" r="4"/><circle cx="95" cy="98" r="4"/><circle cx="110" cy="96" r="4"/><circle cx="120" cy="84" r="4"/><circle cx="135" cy="82" r="4"/><circle cx="145" cy="70" r="4"/><circle cx="160" cy="72" r="4"/><circle cx="170" cy="58" r="4"/><circle cx="185" cy="56" r="4"/><circle cx="200" cy="44" r="4"/><circle cx="215" cy="38" r="4"/></g>
+        <text x="130" y="158" text-anchor="middle" font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#334155">dose (x) vs response (y)</text>
+      </svg>
+      <figcaption>Scatter diagram — dots for paired values of two variables; shows correlation (here positive). Basis of regression.</figcaption>
+    </figure>
+    <div class="card c2"><h4>➕ Also know</h4><ul>
+      <li><b>Multiple (grouped) bar</b> — 2+ bars per category (male vs female)</li>
+      <li><b>Component / sub-divided &amp; percentage bar</b> — parts of a total in one bar</li>
+      <li><b>Pictogram</b> — pictures/symbols</li>
+      <li><b>Frequency curve</b> — smoothed polygon</li>
+      <li><b>Box-and-whisker plot</b> — median, IQR, outliers</li>
+      <li><b>Stem-and-leaf</b> plot</li>
+      <li><b>Semi-log graph</b> — log scale on y; exponential drug elimination becomes a straight line</li>
+      <li>Spot maps (epidemiology), forest plot (meta-analysis)</li></ul></div>
+  </div>
+  <p class="hand">Psst, Mimosa… bars with GAPS = bar diagram (separate categories). Bars TOUCHING = histogram (continuous classes). That one line has saved many students! 📊</p>
+
+  <h3>General rules for constructing a graph</h3>
+  <div class="grid-4">
+    <div class="card">🏷️ Clear, numbered title</div>
+    <div class="card">📏 Suitable scale; both axes labelled with units</div>
+    <div class="card">➡️ Independent variable on X-axis, dependent on Y</div>
+    <div class="card">0️⃣ Start Y-axis at zero, or show a "false base line" with a break</div>
+    <div class="card">🎨 Legend / key for colours and shading</div>
+    <div class="card">✏️ Neat, simple, not overcrowded</div>
+    <div class="card">📐 Proportionate size (width ≈ 1.5 × height)</div>
+    <div class="card">📝 Source and footnotes given</div>
+  </div>
+
+  <h3>Advantages and limitations of graphical representation</h3>
+  <div class="grid-2">
+    <div class="card c1"><h4>✅ Advantages (Dec 2023 — 5 marks)</h4><ol>
+      <li>Easy and quick to understand — complex data simplified at a glance.</li>
+      <li>Attractive and impressive; easily remembered.</li>
+      <li>Easy comparison between groups, places or periods.</li>
+      <li>Shows trends, patterns and relationships (time series, correlation).</li>
+      <li>Universal — understood even by lay people; no language barrier.</li>
+      <li>Saves time and effort for the reader.</li>
+      <li>Helps locate averages — mode from histogram, median from ogive.</li>
+      <li>Helps detect errors, outliers and unusual values.</li>
+      <li>Useful for forecasting and decision-making; for presentations and reports.</li></ol></div>
+    <div class="card c2"><h4>❌ Limitations</h4><ol>
+      <li>Give only approximate values, not exact figures.</li>
+      <li>Can be misleading (wrong scale, false base line, 3-D effects).</li>
+      <li>Only a limited number of variables can be shown.</li>
+      <li>Not a substitute for tables for detailed analysis.</li>
+      <li>Construction needs skill and time.</li></ol></div>
+  </div>
+
+  <h3>Tabular vs graphical representation (May 2022)</h3>
+  <div class="vs">
+    <div class="card c1"><h4>📋 Table</h4><ul><li>Rows and columns of numbers</li><li>Exact values</li><li>Detailed; many variables</li><li>Basis for further statistical analysis</li><li>Needs time and attention to read</li><li>Preferred by statisticians/experts</li></ul></div>
+    <div class="mid">VS</div>
+    <div class="card c2"><h4>📊 Graph</h4><ul><li>Geometric figures and pictures</li><li>Approximate values</li><li>Overall picture; few variables</li><li>For presentation, comparison, trends</li><li>Understood at a glance</li><li>Appeals to everyone, including lay people</li></ul></div>
+  </div>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Basis</th><th>Tabular representation</th><th>Graphical representation</th></tr>
+    <tr><td>Form</td><td>Systematic arrangement in rows &amp; columns</td><td>Diagrams/graphs drawn to scale</td></tr>
+    <tr><td>Accuracy</td><td>Exact figures</td><td>Approximate</td></tr>
+    <tr><td>Information</td><td>Detailed, large amount</td><td>Limited, summarised</td></tr>
+    <tr><td>Comprehension</td><td>Slower; needs careful reading</td><td>Quick, at a glance</td></tr>
+    <tr><td>Attractiveness &amp; memory</td><td>Less attractive</td><td>Attractive, memorable</td></tr>
+    <tr><td>Trends &amp; relationships</td><td>Not obvious</td><td>Clearly visible</td></tr>
+    <tr><td>Use</td><td>Analysis, reference</td><td>Presentation, comparison</td></tr>
+    <tr><td>Skill to prepare</td><td>Less</td><td>More (scale, design)</td></tr>
+  </table></div>
+  <p><b>Conclusion:</b> the two are complementary — a table first (for accuracy), a graph next (for impact).</p>
+
+  <h3>Worked example — KUHS Dec 2023 essay data</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Age of patients with eye problems (years)</th><th>10–20</th><th>20–30</th><th>30–40</th><th>40–50</th><th>50–60</th><th>Above 60</th></tr>
+    <tr><td>Percentage</td><td>10</td><td>10</td><td>25</td><td>30</td><td>15</td><td>10</td></tr>
+  </table></div>
+  <p>Age is <b>continuous</b> with class intervals → draw a <b>histogram</b> (+ frequency polygon). Percentages of a whole (total = 100) → also draw a <b>pie chart</b>. For the open-ended class "above 60", assume a width equal to other classes (60–70) and say so.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 580 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Histogram and frequency polygon of eye problems by age">
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <line x1="50" y1="270" x2="555" y2="270" stroke="#334155" stroke-width="2"/><line x1="50" y1="270" x2="50" y2="20" stroke="#334155" stroke-width="2"/>
+        <g stroke="#e2e8f0" stroke-width="1"><line x1="50" y1="235" x2="555" y2="235"/><line x1="50" y1="200" x2="555" y2="200"/><line x1="50" y1="165" x2="555" y2="165"/><line x1="50" y1="130" x2="555" y2="130"/><line x1="50" y1="95" x2="555" y2="95"/><line x1="50" y1="60" x2="555" y2="60"/><line x1="50" y1="25" x2="555" y2="25"/></g>
+        <g font-size="12" text-anchor="end" fill="#334155" font-weight="700"><text x="44" y="274">0</text><text x="44" y="239">5</text><text x="44" y="204">10</text><text x="44" y="169">15</text><text x="44" y="134">20</text><text x="44" y="99">25</text><text x="44" y="64">30</text><text x="44" y="29">35</text></g>
+        <g fill="#93c5fd" stroke="#1e3a8a" stroke-width="2">
+          <rect x="90" y="200" width="70" height="70"/><rect x="160" y="200" width="70" height="70"/><rect x="230" y="95" width="70" height="175"/><rect x="300" y="60" width="70" height="210" fill="#2563eb"/><rect x="370" y="165" width="70" height="105"/><rect x="440" y="200" width="70" height="70"/>
+        </g>
+        <polyline points="55,270 125,200 195,200 265,95 335,60 405,165 475,200 545,270" fill="none" stroke="#f97316" stroke-width="3"/>
+        <g fill="#f97316"><circle cx="125" cy="200" r="5"/><circle cx="195" cy="200" r="5"/><circle cx="265" cy="95" r="5"/><circle cx="335" cy="60" r="5"/><circle cx="405" cy="165" r="5"/><circle cx="475" cy="200" r="5"/></g>
+        <g font-size="12.5" font-weight="800" text-anchor="middle" fill="#1e3a8a"><text x="125" y="193">10</text><text x="195" y="193">10</text><text x="265" y="88">25</text><text x="335" y="52">30</text><text x="405" y="158">15</text><text x="475" y="193">10</text></g>
+        <g font-size="12" text-anchor="middle" fill="#334155" font-weight="700"><text x="90" y="288">10</text><text x="160" y="288">20</text><text x="230" y="288">30</text><text x="300" y="288">40</text><text x="370" y="288">50</text><text x="440" y="288">60</text><text x="510" y="288">70*</text></g>
+        <text x="300" y="312" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e3a8a">Age of patients (years) — X-axis · 1 cm = 10 years</text>
+        <text x="16" y="150" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1e3a8a" transform="rotate(-90 16 150)">Percentage of patients — Y-axis</text>
+        <rect x="390" y="28" width="160" height="44" rx="10" fill="#fff" stroke="#e2e8f0"/>
+        <rect x="400" y="38" width="14" height="10" fill="#93c5fd" stroke="#1e3a8a"/><text x="420" y="47" font-size="11.5" fill="#334155">Histogram</text>
+        <line x1="400" y1="61" x2="414" y2="61" stroke="#f97316" stroke-width="3"/><text x="420" y="65" font-size="11.5" fill="#334155">Frequency polygon</text>
+        <text x="555" y="326" text-anchor="end" font-size="10.5" fill="#64748b">*open class "above 60" drawn as 60–70</text>
+      </g>
+    </svg>
+    <figcaption>Fig 2.8 — Histogram with frequency polygon for the Dec 2023 data. Peak (modal class) = 40–50 years.</figcaption>
+  </figure>
+
+  <figure class="fig">
+    <svg viewBox="0 0 560 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pie chart of eye problems by age group">
+      <path d="M150,150 L150,30 A120,120 0 0,1 220.53,52.92 Z" fill="#93c5fd" stroke="#fff" stroke-width="2"/>
+      <path d="M150,150 L220.53,52.92 A120,120 0 0,1 264.13,112.92 Z" fill="#60a5fa" stroke="#fff" stroke-width="2"/>
+      <path d="M150,150 L264.13,112.92 A120,120 0 0,1 187.08,264.13 Z" fill="#f97316" stroke="#fff" stroke-width="2"/>
+      <path d="M150,150 L187.08,264.13 A120,120 0 0,1 30,150 Z" fill="#2563eb" stroke="#fff" stroke-width="2"/>
+      <path d="M150,150 L30,150 A120,120 0 0,1 79.47,52.92 Z" fill="#16a34a" stroke="#fff" stroke-width="2"/>
+      <path d="M150,150 L79.47,52.92 A120,120 0 0,1 150,30 Z" fill="#f9a8d4" stroke="#fff" stroke-width="2"/>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-weight="800" font-size="14" text-anchor="middle">
+        <text x="173" y="84" fill="#1e3a8a">10%</text><text x="211" y="111" fill="#1e3a8a">10%</text><text x="217" y="189" fill="#fff">25%</text><text x="106" y="215" fill="#fff">30%</text><text x="83" y="121" fill="#fff">15%</text><text x="127" y="84" fill="#9d174d">10%</text>
+      </g>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif" font-size="13.5" fill="#334155">
+        <text x="310" y="40" font-weight="800" fill="#1e3a8a">Age group · % · angle</text>
+        <rect x="310" y="56" width="16" height="16" fill="#93c5fd"/><text x="334" y="69">10–20 yrs · 10% · 36°</text>
+        <rect x="310" y="84" width="16" height="16" fill="#60a5fa"/><text x="334" y="97">20–30 yrs · 10% · 36°</text>
+        <rect x="310" y="112" width="16" height="16" fill="#f97316"/><text x="334" y="125">30–40 yrs · 25% · 90°</text>
+        <rect x="310" y="140" width="16" height="16" fill="#2563eb"/><text x="334" y="153">40–50 yrs · 30% · 108°</text>
+        <rect x="310" y="168" width="16" height="16" fill="#16a34a"/><text x="334" y="181">50–60 yrs · 15% · 54°</text>
+        <rect x="310" y="196" width="16" height="16" fill="#f9a8d4"/><text x="334" y="209">Above 60 · 10% · 36°</text>
+        <text x="310" y="240" font-weight="800">Total = 100% = 360°</text>
+        <text x="310" y="262" font-size="12.5" fill="#64748b">Angle = (% ÷ 100) × 360°</text>
+      </g>
+    </svg>
+    <figcaption>Fig 2.9 — Pie chart of the same data, with sector angles worked out. Show the angle calculation in your answer.</figcaption>
+  </figure>
+  <div class="callout example"><span class="callout-title">➕ Bonus: median age from the less-than ogive</span><p>Cumulative % at upper limits: 20 → 10, 30 → 20, 40 → 45, 50 → 75, 60 → 90, 70 → 100. The 50% point falls in the 40–50 class: median = 40 + [(50 − 45) / 30] × 10 = <b>≈ 41.7 years</b>. Writing one line like this impresses the examiner.</p></div>
+  <div class="callout warn"><span class="callout-title">⚠️ Common mistakes</span><p>Gaps between histogram bars; unlabelled axes; Y-axis not starting at zero without a break; pie charts with more than 7 slices; forgetting the title and legend; using a line graph for categories that have no order.</p></div>
+</section>
+
+<!-- ===== 7. MODEL ANSWERS ===== -->
+<section class="section" id="answers">
+  <h2><span class="num">✍️</span> Model Answers (KUHS style)</h2>
+  <p class="lead">Every Unit 2 question from KUHS papers and the model paper, written the way you should write it.</p>
+
+  <!-- ESSAY: graphs -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. List the advantages of representing data in graphical form. Convert the data presented in the following table to graphical form: Patient age range who report with eye problem — 10–20: 10%, 20–30: 10%, 30–40: 25%, 40–50: 30%, 50–60: 15%, above 60: 10%. (5+5)</div>
+      <div class="meta">Essay · 10 marks · KUHS Dec 2023 · ~25 min · ~3 pages incl. 2 graphs</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Part A: definition (½ m) + 9 advantages (4 m) + one-line limitation note (½ m) → Part B: choice of graph (½ m) + histogram &amp; frequency polygon on graph paper (2½ m) + pie chart with angle table (1½ m) + interpretation (½ m)</div>
+      <div class="timebar"><div style="flex:5;background:#2563eb">Part A · advantages</div><div style="flex:3;background:#f97316">Histogram + polygon</div><div style="flex:2;background:#16a34a">Pie + interpretation</div></div>
+      <h4>Part A — Graphical representation and its advantages</h4>
+      <p>Graphical representation is the presentation of statistical data in the form of diagrams and graphs drawn to scale, so that data can be understood and compared quickly.</p>
+      <ol>
+        <li><b>Simplicity:</b> complex numerical data become easy to understand at a glance.</li>
+        <li><b>Attractive and memorable:</b> pictures create a lasting impression.</li>
+        <li><b>Easy comparison</b> of groups, regions or periods.</li>
+        <li><b>Reveals trends, patterns and relationships</b> (e.g. trend over time, correlation in scatter diagrams).</li>
+        <li><b>Universal appeal:</b> understood by lay people, no language barrier.</li>
+        <li><b>Saves time</b> of the reader.</li>
+        <li><b>Locating averages:</b> mode from a histogram, median from an ogive.</li>
+        <li><b>Detects errors and outliers</b> in data.</li>
+        <li><b>Useful for forecasting, decision-making and presentations.</b></li>
+      </ol>
+      <p><small>(Limitation: graphs give approximate, not exact, values and can mislead if the scale is wrong.)</small></p>
+      <h4>Part B — Conversion of the given data</h4>
+      <p><b>Choice of graph:</b> age is a continuous variable grouped in class intervals of 10 years → <b>histogram</b> with a <b>frequency polygon</b>. Since the percentages add to 100, a <b>pie chart</b> also shows each age group's share. The open-ended class "above 60" is taken as 60–70 for drawing.</p>
+      <p><b>1. Histogram + frequency polygon</b> — X-axis: age (1 cm = 10 years); Y-axis: percentage (1 cm = 5%). Draw adjacent rectangles of heights 10, 10, 25, 30, 15, 10. Join mid-points (15, 25, 35, 45, 55, 65 years) of the tops of the bars and close the polygon at 5 and 75 years on the X-axis. <i>[Draw Fig 2.8.]</i></p>
+      <p><b>2. Pie chart</b> — angle of each sector = (% ÷ 100) × 360°.</p>
+      <div class="table-wrap"><table class="nice">
+        <tr><th>Age group (years)</th><th>%</th><th>Angle</th></tr>
+        <tr><td>10–20</td><td>10</td><td>36°</td></tr><tr><td>20–30</td><td>10</td><td>36°</td></tr><tr><td>30–40</td><td>25</td><td>90°</td></tr>
+        <tr><td>40–50</td><td>30</td><td>108°</td></tr><tr><td>50–60</td><td>15</td><td>54°</td></tr><tr><td>Above 60</td><td>10</td><td>36°</td></tr>
+        <tr><td>Total</td><td>100</td><td>360°</td></tr>
+      </table></div>
+      <p><i>[Draw Fig 2.9 with a legend.]</i></p>
+      <h4>Interpretation</h4>
+      <p>Eye problems are most common in the <b>40–50 year</b> group (30%, the modal class), followed by 30–40 years (25%). More than half (55%) of patients are between 30 and 50 years. From the less-than ogive, the median age is about 41.7 years.</p>
+    </div>
+  </div>
+
+  <!-- PREDICTED ESSAY: data collection -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Discuss the various methods of data collection with their merits and demerits. <span class="pill model">Predicted</span></div>
+      <div class="meta">Essay · 10 marks · syllabus line (parts asked as 2-markers in Nov 2022 &amp; Jul 2023) · ~25 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition + classification chart (1½ m) → Observation (2 m) → Interview (1½ m) → Questionnaire &amp; schedule (2 m) → Case study, FGD, experiment (1½ m) → Secondary data methods + precautions (1 m) → Conclusion (½ m)</div>
+      <h4>1. Introduction</h4>
+      <p>Data collection is the systematic gathering of information on variables of interest to answer research questions. Methods are classified as methods for <b>primary data</b> (observation, interview, questionnaire, schedule, case study, focus group, experiment) and <b>secondary data</b> (published and unpublished sources).</p>
+      <h4>2. Observation method</h4>
+      <p>Systematic viewing and recording of behaviour or events as they occur, without questioning the respondent. Types: structured/unstructured, participant/non-participant, controlled/uncontrolled. <b>Merits:</b> eliminates subjective bias, records current behaviour, needs no respondent cooperation, useful for infants and animals. <b>Demerits:</b> expensive, limited information, can't study opinions or past events, observer bias, Hawthorne effect.</p>
+      <h4>3. Interview method</h4>
+      <p>Oral-verbal questioning — personal (direct/indirect) or telephone; structured, unstructured, focused, clinical or depth interviews. <b>Merits:</b> in-depth information, flexibility, clarification possible, high response, usable with illiterate respondents. <b>Demerits:</b> costly, time-consuming, interviewer bias, needs trained interviewers.</p>
+      <h4>4. Questionnaire method</h4>
+      <p>A set of questions in a definite order answered by respondents themselves (mail/online). <b>Merits:</b> cheap for large, scattered samples; free from interviewer bias; time to think; anonymity. <b>Demerits:</b> low response rate, only for literate respondents, no clarification, incomplete answers.</p>
+      <h4>5. Schedule method</h4>
+      <p>Proforma filled in by trained enumerators who ask the questions. <b>Merits:</b> high response, usable for illiterate people, doubts clarified. <b>Demerits:</b> costly, enumerator bias, needs supervision.</p>
+      <h4>6. Other primary methods</h4>
+      <ul><li><b>Case study</b> — in-depth study of a single unit; gives insight and generates hypotheses but can't be generalised.</li><li><b>Focus group discussion</b> — moderated group of 6–10 people; reveals attitudes quickly; dominated by vocal members.</li><li><b>Experiments/measurements</b> — laboratory tests, clinical measurements, assays; accurate and objective but costly.</li><li>Others — consumer panels, audits, mechanical devices, projective techniques, content analysis.</li></ul>
+      <h4>7. Secondary data</h4>
+      <p>From published sources (Census, NFHS, WHO reports, journals) and unpublished records (hospital records, theses). <b>Merits:</b> cheap, quick, large coverage. <b>Demerits:</b> may be unsuitable, outdated or inaccurate — check reliability, suitability and adequacy before use.</p>
+      <h4>Conclusion</h4>
+      <p>No single method is best; the choice depends on the objectives, nature of respondents, resources, time and accuracy required. Often methods are combined (e.g. questionnaire + record review).</p>
+    </div>
+  </div>
+
+  <!-- SHORT: primary & secondary -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Define and detail the primary and secondary data with examples.</div>
+      <div class="meta">Short note · 5 marks · KUHS May 2022 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Two definitions (1 m) → primary: methods, merits, limits, example (1½ m) → secondary: sources, merits, limits, example (1½ m) → difference table (1 m)</div>
+      <p><b>Primary data</b> are original data collected for the first time by the investigator for the specific purpose of the study. <b>Secondary data</b> are data already collected by someone else for another purpose and used by the investigator.</p>
+      <h4>Primary data</h4>
+      <p>Collected by observation, interview, questionnaire, schedule, experiments, case study. <b>Merits:</b> original, specific, accurate, up to date. <b>Limitations:</b> costly, time-consuming, needs trained staff. <b>Example:</b> blood pressure readings recorded in your own clinical study; a survey of community pharmacists.</p>
+      <h4>Secondary data</h4>
+      <p>From published sources (Census of India, NFHS, WHO World Health Statistics, journals, books) and unpublished sources (hospital records, prescriptions, theses). <b>Merits:</b> cheap, quick, wide coverage. <b>Limitations:</b> may not suit the purpose, may be outdated or inaccurate. <b>Example:</b> using NFHS data on anaemia prevalence; analysing hospital prescription records.</p>
+      <div class="table-wrap"><table class="nice">
+        <tr><th>Point</th><th>Primary</th><th>Secondary</th></tr>
+        <tr><td>Originality</td><td>Original</td><td>Already existing</td></tr>
+        <tr><td>Purpose</td><td>Present study</td><td>Other purpose</td></tr>
+        <tr><td>Cost/time</td><td>High</td><td>Low</td></tr>
+        <tr><td>Reliability</td><td>More</td><td>Must be checked</td></tr>
+        <tr><td>Form</td><td>Raw</td><td>Processed</td></tr>
+      </table></div>
+    </div>
+  </div>
+
+  <!-- SHORT: sources -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Write the various sources of primary and secondary data.</div>
+      <div class="meta">Short note · 5 marks · KUHS July 2023 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definitions (1 m) → primary sources with one line each (2 m) → secondary: published + unpublished (2 m)</div>
+      <h4>Sources of primary data</h4>
+      <ol>
+        <li><b>Observation</b> — direct watching and recording of events (e.g. inhaler technique).</li>
+        <li><b>Personal interview</b> — face-to-face questioning; <b>telephone/online interview</b>.</li>
+        <li><b>Questionnaire</b> — mailed or online, filled by respondents.</li>
+        <li><b>Schedule</b> — filled by enumerators (e.g. census).</li>
+        <li><b>Experiments and laboratory measurements</b> — assays, clinical parameters, CRFs in trials.</li>
+        <li><b>Case study, focus group discussion</b>, panels, audits, mechanical devices.</li>
+      </ol>
+      <h4>Sources of secondary data</h4>
+      <p><b>(a) Published:</b> government publications (Census of India, NFHS, SRS, NSSO reports, Health Ministry and CDSCO/PvPI reports), international publications (WHO, UNICEF, World Bank), journals, books, newspapers, pharmacopoeias, reports of research institutions (ICMR), trade associations, online databases (PubMed, CTRI).</p>
+      <p><b>(b) Unpublished:</b> hospital and pharmacy records, case sheets, prescriptions, records of companies and NGOs, theses and dissertations, diaries and letters.</p>
+      <p><b>Note:</b> secondary data must be checked for reliability, suitability and adequacy before use.</p>
+    </div>
+  </div>
+
+  <!-- SHORT: graph vs table -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Compare graphical representation of data with representation in table form.</div>
+      <div class="meta">Short note · 5 marks · KUHS May 2022 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Define both (1 m) → comparison table of 8 points (3 m) → small sketch of a table + bar diagram of same data (½ m) → conclusion (½ m)</div>
+      <p><b>Tabular representation</b> is the systematic arrangement of classified data in rows and columns. <b>Graphical representation</b> is the presentation of data as diagrams and graphs drawn to scale.</p>
+      <div class="table-wrap"><table class="nice">
+        <tr><th>Basis</th><th>Table</th><th>Graph</th></tr>
+        <tr><td>Form</td><td>Rows and columns of figures</td><td>Geometric figures, pictures</td></tr>
+        <tr><td>Accuracy</td><td>Exact values</td><td>Approximate values</td></tr>
+        <tr><td>Amount of data</td><td>Large, detailed, many variables</td><td>Limited; few variables</td></tr>
+        <tr><td>Understanding</td><td>Takes time; needs attention</td><td>Quick, at a glance</td></tr>
+        <tr><td>Appeal &amp; memory</td><td>Less attractive</td><td>Attractive, remembered longer</td></tr>
+        <tr><td>Trends/relationships</td><td>Not obvious</td><td>Clearly visible</td></tr>
+        <tr><td>Purpose</td><td>Analysis and reference</td><td>Presentation and comparison</td></tr>
+        <tr><td>Audience</td><td>Experts</td><td>Everyone, including lay people</td></tr>
+      </table></div>
+      <p><b>Conclusion:</b> tables and graphs complement each other — tables give accuracy, graphs give impact. Usually data are tabulated first and then graphed.</p>
+    </div>
+  </div>
+
+  <!-- SHORT: questionnaire -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Describe the steps involved in construction of a questionnaire.</div>
+      <div class="meta">Short note · 5 marks · KUHS Nov 2022 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition (½ m) → 10 steps with one line each as a flow chart (3½ m) → qualities of a good questionnaire (1 m)</div>
+      <p>A <b>questionnaire</b> is a structured set of questions in a definite order answered by respondents themselves.</p>
+      <ol>
+        <li><b>Specify the information needed</b> from objectives and variables.</li>
+        <li><b>Define the target respondents</b> — age, literacy, language.</li>
+        <li><b>Select the method of administration</b> — self-administered, mail, online, telephone.</li>
+        <li><b>Decide the content</b> of each question — is it necessary and answerable?</li>
+        <li><b>Decide the response format</b> — open-ended, closed, multiple choice, Likert scale.</li>
+        <li><b>Word the questions</b> — simple, short, specific; avoid leading, loaded, double-barrelled and negative questions; translate and back-translate.</li>
+        <li><b>Arrange the sequence</b> — general to specific (funnel), easy first, sensitive later, demographics last.</li>
+        <li><b>Design the layout</b> — cover letter, instructions, numbering, codes.</li>
+        <li><b>Pre-test (pilot study)</b> on a small similar group; establish validity and reliability (Cronbach's α).</li>
+        <li><b>Revise and finalise</b> the questionnaire and coding scheme.</li>
+      </ol>
+      <p><b>A good questionnaire</b> is short, simple, logically ordered, covers all objectives, is unbiased, pre-tested, valid and reliable.</p>
+    </div>
+  </div>
+
+  <!-- SHORT: graphical methods -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Discuss the different methods usually adopted for graphical representation of data.</div>
+      <div class="meta">Short note · 5 marks · KUHS Model paper · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition + diagrams vs graphs (½ m) → 7 methods, each with 1–2 lines and a tiny sketch (4 m) → rules of construction (½ m)</div>
+      <p>Graphical representation presents data as diagrams and graphs drawn to scale for quick understanding and comparison.</p>
+      <ol>
+        <li><b>Bar diagram</b> — bars of equal width with equal gaps; length proportional to value; simple, multiple, component and percentage bars. For qualitative/discrete data.</li>
+        <li><b>Pie chart</b> — circle divided into sectors; angle = (value/total) × 360°; shows parts of a whole.</li>
+        <li><b>Histogram</b> — adjacent rectangles for a continuous frequency distribution; area proportional to frequency; mode can be located.</li>
+        <li><b>Frequency polygon</b> — joining mid-points of tops of histogram bars, closed at both ends; compares distributions.</li>
+        <li><b>Ogive (cumulative frequency curve)</b> — less-than and more-than types; intersection gives median.</li>
+        <li><b>Line graph</b> — values plotted against time and joined; shows trends (time series).</li>
+        <li><b>Scatter diagram</b> — paired values plotted as points; shows correlation.</li>
+      </ol>
+      <p>Others: pictogram, box plot, stem-and-leaf plot, semi-log graph. <b>Rules:</b> title, scale, labelled axes, zero base line, legend, source, neatness. <i>[Sketch the mini graphs from topic 8.]</i></p>
+    </div>
+  </div>
+
+  <!-- SHORT: coding & tabulation -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Write a short note on coding and tabulation of data.</div>
+      <div class="meta">Short note · 5 marks · KUHS Model paper · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Processing steps (½ m) → coding: definition, rules, codebook example (2 m) → tabulation: definition, parts diagram, types, rules (2½ m)</div>
+      <p>After collection, data are processed in the order: <b>editing → coding → classification → tabulation</b>.</p>
+      <h4>Coding</h4>
+      <p>Coding is assigning numerals or symbols to responses so that they can be put into a limited number of categories for analysis. Categories must be appropriate, <b>exhaustive</b>, <b>mutually exclusive</b> and <b>unidimensional</b>. Closed questions are pre-coded; open answers are post-coded. A <b>codebook</b> records the codes, e.g. Gender: 1 = Male, 2 = Female; Self-medication: 1 = Yes, 0 = No; missing = 9. Coded data are entered into Excel/SPSS.</p>
+      <h4>Tabulation</h4>
+      <p>Tabulation is the systematic arrangement of classified data in rows and columns. <b>Importance:</b> simplifies data, eases comparison, saves space, shows trends, basis for analysis and graphs.</p>
+      <p><b>Parts of a table:</b> table number, title, head note, caption (column headings), stub (row headings), body, footnote, source note. <i>[Draw Fig 2.7.]</i></p>
+      <p><b>Types:</b> simple (one-way) and complex (two-way, three-way, manifold); general-purpose and special-purpose; original and derived.</p>
+      <p><b>Rules:</b> clear title and number, headings with units, logical order, totals, not overcrowded, footnotes and source given.</p>
+    </div>
+  </div>
+
+  <!-- SHORT: normal distribution -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Explain normal distributions with examples.</div>
+      <div class="meta">Short note · 5 marks · KUHS Dec 2023 (2-mark version in Model paper) · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition + formula (1 m) → curve diagram with 68–95–99.7 (1½ m) → 6–8 properties (1½ m) → examples + importance (1 m)</div>
+      <p>The <b>normal (Gaussian) distribution</b> is a continuous, symmetrical, bell-shaped probability distribution in which most values lie near the mean and frequencies decrease equally on both sides. It is defined by its mean (μ) and standard deviation (σ). Standard normal variate z = (x − μ)/σ has mean 0 and SD 1.</p>
+      <p><i>[Draw Fig 2.5 — bell curve with μ ± 1σ = 68.27%, ± 2σ = 95.45%, ± 3σ = 99.73%.]</i></p>
+      <h4>Properties</h4>
+      <ol><li>Bell-shaped and symmetrical about the mean.</li><li>Mean = median = mode.</li><li>Unimodal; points of inflection at μ ± σ.</li><li>Asymptotic — tails never touch the X-axis.</li><li>Total area under the curve = 1.</li><li>Area rule: 68.27%, 95.45%, 99.73% within 1, 2, 3 SD; 95% within ± 1.96 SD.</li><li>Skewness zero; mesokurtic.</li></ol>
+      <h4>Examples</h4>
+      <p>Height, weight, blood pressure, haemoglobin of healthy adults; weights of tablets in a batch (e.g. mean 500 mg, SD 5 mg → 95% between 490 and 510 mg); IQ; measurement errors.</p>
+      <h4>Importance</h4>
+      <p>Basis of parametric tests (z, t, ANOVA), reference ranges (mean ± 2 SD), quality-control charts (± 3σ), confidence intervals and the central limit theorem.</p>
+    </div>
+  </div>
+
+  <!-- SHORT: factorial -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Enlist screening designs. What is two-level factorial design? What are the advantages of factorial design?</div>
+      <div class="meta">Short note · 5 marks · KUHS July 2023 · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Screening designs list (1 m) → two-level factorial: definition, coding, 2² table + square diagram, effect formula (2½ m) → advantages (1½ m)</div>
+      <h4>Screening designs</h4>
+      <p>Used to identify the few significant factors from many: (1) full two-level factorial design (2<sup>k</sup>), (2) fractional factorial design (2<sup>k−p</sup>), (3) Plackett–Burman design, (4) Taguchi orthogonal arrays, (5) definitive screening designs.</p>
+      <h4>Two-level factorial design</h4>
+      <p>A factorial design studies all combinations of the levels of all factors. In a <b>two-level factorial design (2<sup>k</sup>)</b>, each of <i>k</i> factors is studied at a low (−1) and high (+1) level, giving 2<sup>k</sup> runs: 2² = 4, 2³ = 8 runs. Runs are written in Yates' notation (1), a, b, ab. It estimates main effects and interactions.</p>
+      <div class="table-wrap"><table class="nice">
+        <tr><th>Run</th><th>A (binder)</th><th>B (disintegrant)</th><th>Response (DT, min)</th></tr>
+        <tr><td>(1)</td><td>−1</td><td>−1</td><td>10</td></tr><tr><td>a</td><td>+1</td><td>−1</td><td>14</td></tr><tr><td>b</td><td>−1</td><td>+1</td><td>6</td></tr><tr><td>ab</td><td>+1</td><td>+1</td><td>8</td></tr>
+      </table></div>
+      <p>Main effect of A = [(a + ab) − ((1) + b)]/2 = +3 min; effect of B = −5 min; interaction AB = −1 min. <i>[Draw the 2² square, Fig 2.3.]</i></p>
+      <h4>Advantages of factorial design</h4>
+      <ul><li>More efficient than one-factor-at-a-time — fewer runs for the same information.</li><li>Detects and estimates interactions between factors.</li><li>Each run contributes to all effect estimates.</li><li>Conclusions valid over a wide range of conditions.</li><li>Helps find the optimum formulation/process; saves time, material and cost.</li><li>Data analysed objectively by ANOVA/regression; supports QbD.</li></ul>
+    </div>
+  </div>
+
+  <!-- PREDICTED SHORT: rating scales -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Write a note on rating scales. <span class="pill model">Predicted</span></div>
+      <div class="meta">Short note · 5 marks · syllabus line · ~12 min</div></div>
+    <div class="answer-body">
+      <div class="answer-plan">Definition (½ m) → types with one line each + sketch of Likert/VAS (3 m) → uses + errors in rating (1½ m)</div>
+      <p>A <b>rating scale</b> is a measuring instrument in which a respondent or observer assigns a value or category to an attitude, trait or symptom along a continuum.</p>
+      <ol><li><b>Graphic rating scale</b> — a line with descriptive points; e.g. the <b>visual analogue scale</b> (100 mm line from "no pain" to "worst pain").</li><li><b>Itemised / numerical scale</b> — numbered categories, e.g. pain 0–10 (NRS).</li><li><b>Likert (summated) scale</b> — 5- or 7-point agreement with statements, scores summed.</li><li><b>Semantic differential</b> — 7 points between bipolar adjectives.</li><li><b>Thurstone</b> (equal-appearing intervals) and <b>Guttman</b> (cumulative) scales.</li><li><b>Ranking scales</b> — paired comparison, rank order.</li><li><b>Clinical scales</b> — Glasgow Coma Scale, Hamilton Depression Rating Scale, Wong–Baker faces scale.</li></ol>
+      <p><i>[Sketch Likert and VAS, Fig 2.4.]</i></p>
+      <p><b>Uses:</b> attitude and KAP surveys, patient satisfaction, pain and symptom assessment, quality-of-life measurement. <b>Errors:</b> leniency error, central tendency error, halo effect.</p>
+    </div>
+  </div>
+
+  <!-- SHORT pointer: variables -->
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. With suitable examples, explain various types of variables.</div>
+      <div class="meta">Short note · 5 marks · KUHS Nov 2022 · full model answer in Unit 4</div></div>
+    <div class="answer-body"><p>Outline: <b>by nature</b> — qualitative (nominal: blood group; ordinal: pain grade) and quantitative (discrete: number of tablets; continuous: weight, BP); <b>by role</b> — independent (dose), dependent (response), confounding (age, smoking), control, intervening/extraneous. Draw the data-classification tree (Fig 2.1). The complete 5-mark answer with examples is in <a href="unit-4.html#answers">Unit 4 → Model Answers</a>.</p></div>
+  </div>
+
+  <!-- BRIEFS -->
+  <h3>Answer-briefly questions (2 marks each)</h3>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Give the advantages of observation method of data collection.</div><div class="meta">Brief · 2 marks · Nov 2022</div></div>
+    <div class="answer-body"><ul><li>Subjective bias is eliminated if observation is done accurately.</li><li>Records what is happening now — not affected by past behaviour or future intentions.</li><li>Independent of respondents' willingness or ability to respond (useful for infants, animals).</li><li>Records actual behaviour rather than reported behaviour.</li></ul></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Explain primary data. Give its limitations.</div><div class="meta">Brief · 2 marks · Nov 2022</div></div>
+    <div class="answer-body"><p><b>Primary data</b> are original, first-hand data collected by the investigator for the specific purpose of the study, by observation, interview, questionnaire, schedule or experiment (e.g. BP recorded in one's own trial).</p><p><b>Limitations:</b> expensive; time-consuming; needs trained personnel and planning; non-response and respondent/interviewer bias; impractical for large populations or past events.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Explain case study. Write its importance.</div><div class="meta">Brief · 2 marks · Nov 2022</div></div>
+    <div class="answer-body"><p>A <b>case study</b> is an in-depth, intensive, qualitative study of a single unit — a patient, family, institution or event — covering all its aspects and their interrelations, often over time.</p><p><b>Importance:</b> gives deep insight into rare or complex situations (e.g. first report of a new ADR); generates hypotheses for larger studies; useful in clinical teaching and evaluating programmes; studies the unit in its natural context.</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Write the meaning of questionnaire.</div><div class="meta">Brief · 2 marks · July 2023</div></div>
+    <div class="answer-body"><p>A <b>questionnaire</b> is a structured set of written questions arranged in a definite order, which respondents read and answer by themselves (on paper, by post or online). It is a main tool for collecting primary data in surveys. Types: structured/unstructured; open-ended/closed-ended. (If an enumerator fills it, it is a <b>schedule</b>.)</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. List out methods of data collection.</div><div class="meta">Brief · 2 marks · July 2023</div></div>
+    <div class="answer-body"><ul><li><b>Primary data:</b> observation, interview (personal, telephone), questionnaire, schedule, case study, focus group discussion, experiments/measurements, panels and audits.</li><li><b>Secondary data:</b> published sources (government and international reports, journals, books) and unpublished sources (hospital records, theses, company records).</li></ul></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Observational study.</div><div class="meta">Brief · 2 marks · July 2023</div></div>
+    <div class="answer-body"><p>An <b>observational study</b> is one in which the investigator only observes and measures exposures and outcomes as they occur naturally, without assigning any intervention. Types: <b>descriptive</b> (case report, case series, cross-sectional) and <b>analytical</b> (ecological, case-control, cohort). E.g. comparing lung cancer incidence in smokers and non-smokers. It shows association but is prone to bias and confounding. (Details: <a href="unit-3.html#t6">Unit 3</a>.)</p></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Classify the types of data distribution.</div><div class="meta">Brief · 2 marks · Dec 2023</div></div>
+    <div class="answer-body"><ul><li><b>By shape:</b> symmetrical (normal, uniform); skewed — positive (right) and negative (left); J-shaped, U-shaped; bimodal/multimodal; by kurtosis — lepto-, meso-, platykurtic.</li><li><b>Theoretical (probability):</b> discrete — binomial, Poisson; continuous — normal (Gaussian); sampling distributions — t, chi-square, F.</li></ul></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. Differentiate between primary and secondary data.</div><div class="meta">Brief · 2 marks · Model paper</div></div>
+    <div class="answer-body"><div class="table-wrap"><table class="nice"><tr><th>Primary</th><th>Secondary</th></tr><tr><td>Original, first-hand, collected by the investigator</td><td>Already collected by others</td></tr><tr><td>For the present purpose</td><td>For another purpose</td></tr><tr><td>Costly, time-consuming, more reliable</td><td>Cheap, quick, reliability must be checked</td></tr><tr><td>E.g. own survey, clinical measurements</td><td>E.g. Census, NFHS, WHO reports, hospital records</td></tr></table></div></div>
+  </div>
+  <div class="answer">
+    <div class="answer-head"><div class="q">Q. What is meant by normal distribution of data?</div><div class="meta">Brief · 2 marks · Model paper</div></div>
+    <div class="answer-body"><p>A continuous, symmetrical, bell-shaped distribution in which mean = median = mode and values cluster around the mean; defined by μ and σ; 68.27%, 95.45% and 99.73% of values lie within ±1, ±2 and ±3 SD. E.g. heights of adults, tablet weights in a batch. <i>[Small sketch of the bell curve.]</i></p></div>
+  </div>
+</section>
+
+<!-- ===== 8. FLASHCARDS + QUIZ ===== -->
+<section class="section">
+  <h2><span class="num">🃏</span> Magic Flashcards</h2>
+  <p>Tap a card to reveal ✨ — say the answer aloud first!</p>
+  <div class="flashcards">
+    <details class="flash"><summary>NOIR = ?</summary><div>Nominal, Ordinal, Interval, Ratio — scales of measurement. Ratio has a true zero.</div></details>
+    <details class="flash"><summary>Primary vs secondary data in one line?</summary><div>Primary = first-hand, collected by you for your purpose. Secondary = already collected by others for another purpose.</div></details>
+    <details class="flash"><summary>RSA check for secondary data?</summary><div>Reliability, Suitability, Adequacy.</div></details>
+    <details class="flash"><summary>Questionnaire vs schedule?</summary><div>Questionnaire filled by the respondent; schedule filled by an enumerator.</div></details>
+    <details class="flash"><summary>Case study = ?</summary><div>In-depth, intensive study of a single unit (patient, institution, event) in all its aspects.</div></details>
+    <details class="flash"><summary>Fisher's 3 principles of experimental design?</summary><div>Replication, Randomisation, Local control (blocking).</div></details>
+    <details class="flash"><summary>Runs in a 2³ factorial design?</summary><div>2³ = 8 runs: (1), a, b, ab, c, ac, bc, abc.</div></details>
+    <details class="flash"><summary>Name 3 screening designs</summary><div>Fractional factorial, Plackett–Burman, two-level full factorial (also Taguchi, definitive screening).</div></details>
+    <details class="flash"><summary>68–95–99.7 rule?</summary><div>In a normal distribution, 68.27%, 95.45%, 99.73% of values lie within ±1, ±2, ±3 SD of the mean.</div></details>
+    <details class="flash"><summary>Positive skew: order of mean, median, mode?</summary><div>Mode &lt; Median &lt; Mean (tail and mean to the right).</div></details>
+    <details class="flash"><summary>Poisson distribution's special property?</summary><div>Mean = variance = λ; used for rare events.</div></details>
+    <details class="flash"><summary>Parts of a table?</summary><div>Number, title, head note, caption, stub, body, footnote, source note.</div></details>
+    <details class="flash"><summary>Histogram vs bar diagram?</summary><div>Histogram: continuous data, bars touch. Bar diagram: categories, bars separated by gaps.</div></details>
+    <details class="flash"><summary>Which graph gives the median?</summary><div>Ogive — the less-than and more-than ogives cross at the median (or read at N/2).</div></details>
+  </div>
+
+  <h2 style="margin-top:1em"><span class="num">🎯</span> 1-Minute Quiz</h2>
+  <div class="quiz">
+    <div class="qitem">Pain graded as mild / moderate / severe is on which scale?
+      <div class="opts"><button class="opt">Nominal</button><button class="opt" data-right>Ordinal</button><button class="opt">Ratio</button></div>
+      <div class="why">Ordered categories with unequal gaps = ordinal.</div></div>
+    <div class="qitem">Using NFHS-5 data for your thesis is an example of…
+      <div class="opts"><button class="opt">Primary data</button><button class="opt" data-right>Secondary data</button><button class="opt">Experimental data</button></div>
+      <div class="why">Collected by another agency for another purpose → secondary for you.</div></div>
+    <div class="qitem">Which method of data collection is best for infants who cannot answer questions?
+      <div class="opts"><button class="opt">Questionnaire</button><button class="opt">Interview</button><button class="opt" data-right>Observation</button></div>
+      <div class="why">Observation doesn't depend on the respondent's ability to respond.</div></div>
+    <div class="qitem">How many runs does a full 2⁴ factorial design need?
+      <div class="opts"><button class="opt">8</button><button class="opt" data-right>16</button><button class="opt">24</button></div>
+      <div class="why">2 levels, 4 factors: 2 × 2 × 2 × 2 = 16.</div></div>
+    <div class="qitem">In a normal distribution, about what % of values lie within mean ± 2 SD?
+      <div class="opts"><button class="opt">68%</button><button class="opt" data-right>95%</button><button class="opt">99.7%</button></div>
+      <div class="why">95.45% within ±2 SD (exactly 95% within ±1.96 SD).</div></div>
+    <div class="qitem">The row headings of a table are called the…
+      <div class="opts"><button class="opt">Caption</button><button class="opt" data-right>Stub</button><button class="opt">Body</button></div>
+      <div class="why">Caption = column headings; stub = row headings.</div></div>
+    <div class="qitem">Best graph to show the share of each drug class in total sales:
+      <div class="opts"><button class="opt" data-right>Pie chart</button><button class="opt">Ogive</button><button class="opt">Scatter diagram</button></div>
+      <div class="why">Parts of a whole → pie chart (angle = value/total × 360°).</div></div>
+    <div class="qitem">Rating everyone "average" to avoid extremes is called…
+      <div class="opts"><button class="opt">Halo effect</button><button class="opt">Leniency error</button><button class="opt" data-right>Error of central tendency</button></div>
+      <div class="why">Avoiding the ends of a scale = central tendency error.</div></div>
+  </div>
+</section>
+
+<!-- ===== 9. CHEAT SHEET ===== -->
+<section class="cheatsheet">
+  <h2>📝 One-Page Cheat Sheet — Unit 2</h2>
+  <p><small>Read this the night before the exam. Everything important, nothing extra.</small></p>
+  <div class="grid-3">
+    <div class="card"><h4>Types of data</h4>Qualitative (nominal, ordinal) · Quantitative (discrete, continuous → interval, ratio). <b>NOIR</b>. Also primary/secondary, cross-sectional/time-series, grouped/ungrouped.</div>
+    <div class="card"><h4>Primary vs secondary</h4>Primary: original, own purpose, costly, reliable (observation, interview, questionnaire, schedule, experiment). Secondary: existing, cheap, check <b>RSA</b> (Census, NFHS, WHO, hospital records).</div>
+    <div class="card"><h4>Data collection methods</h4><b>O-I-Q-S-C-E-F</b>: Observation, Interview, Questionnaire, Schedule, Case study, Experiment, Focus group. Observation advantages: no subjective bias, current, no cooperation needed.</div>
+    <div class="card"><h4>Experimental vs observational</h4>Investigator assigns intervention vs only observes. Fisher: replication, randomisation, local control. Designs: CRD, RBD, LSD, factorial.</div>
+    <div class="card"><h4>Factorial design</h4>2<sup>k</sup> runs; levels −1/+1; Yates (1), a, b, ab. Effect A = [(a+ab) − ((1)+b)]/2. Screening: fractional factorial, Plackett–Burman, Taguchi. Advantages: efficient, interactions, optimum.</div>
+    <div class="card"><h4>Questionnaire</h4>10 steps: info → respondents → method → content → format → wording → sequence → layout → pilot (validity, Cronbach α) → finalise.</div>
+    <div class="card"><h4>Rating scales</h4>Graphic (VAS 100 mm), numerical (NRS 0–10), Likert, semantic differential, Thurstone, Guttman, ranking. Errors: leniency, central tendency, halo.</div>
+    <div class="card"><h4>Distributions</h4>Shape: symmetric, +skew (mode&lt;median&lt;mean), −skew, J, U, bimodal; kurtosis. Theoretical: binomial (np, npq), Poisson (mean = variance), normal, t, χ², F.</div>
+    <div class="card"><h4>Normal curve</h4>Bell, symmetric, mean = median = mode, asymptotic, area 1, 68.27/95.45/99.73%, z = (x − μ)/σ. E.g. tablet weights, height, BP.</div>
+    <div class="card"><h4>Coding &amp; tabulation</h4>Edit → code → classify → tabulate. Codes: exhaustive, mutually exclusive. Table parts: <b>N-T-H-C-S-B-F-S</b>. Simple vs complex tables.</div>
+    <div class="card"><h4>Graphs</h4>Bar (gaps), pie (angle = %×3.6°), histogram (touching), frequency polygon (mid-points), ogive (median), line (trend), scatter (correlation).</div>
+    <div class="card"><h4>Graph vs table</h4>Graph: approximate, quick, attractive, trends, everyone. Table: exact, detailed, analysis, experts. Complementary.</div>
+  </div>
+</section>
+
+<!-- ===== 10. ACHIEVEMENT ===== -->
+<section class="badge-unlock">
+  <span class="medal">🤖🏅</span>
+  <h2>Badge Unlocked: WALL·E's Data Compactor!</h2>
+  <p>Mimosa, you can now collect data, squeeze it into codes, shelve it into tables and stack it into perfect graphs. WALL·E is holding up his best treasure for you — and EVE just gave you a little blue "directive complete" glow. 💚🌱</p>
+  <ul class="checklist">
+    <li><label><input type="checkbox"> I can classify data (NOIR) and differentiate primary and secondary data with sources</label></li>
+    <li><label><input type="checkbox"> I can list and explain methods of data collection, including observation and case study</label></li>
+    <li><label><input type="checkbox"> I can write the 10 steps of questionnaire construction and describe rating scales</label></li>
+    <li><label><input type="checkbox"> I can draw the normal curve with 68–95–99.7 and classify distributions</label></li>
+    <li><label><input type="checkbox"> I can explain coding, draw the parts of a table, and calculate effects in a 2² factorial</label></li>
+    <li><label><input type="checkbox"> I can draw all 7 graphs and convert a table into a histogram and pie chart</label></li>
+  </ul>
+  <button class="done-btn" data-unit="rmb-2">🏆 Mark Unit 2 complete</button>
+</section>
+
+<!-- ===== 11. FOOTER NAV ===== -->
+<nav class="next-nav">
+  <a href="unit-1.html"><small>⬅ Previous adventure</small>Unit 1 · Introduction to Research</a>
+  <a class="next" href="unit-3.html"><small>Next adventure ➜</small>Unit 3 · Epidemiological Methods</a>
+</nav>
+<p class="footer-love">Made with 💖 for Mimosa · B.Pharm Final Semester · KUHS 2017 Scheme</p>
+
+</div>
+</body>
+</html>

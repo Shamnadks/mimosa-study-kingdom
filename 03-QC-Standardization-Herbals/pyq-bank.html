@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QC Herbals PYQ Treasure Chest</title>
+<link rel="stylesheet" href="../assets/kingdom.css">
+<script src="../assets/kingdom.js" defer></script>
+<style>
+  .heat td.n { text-align: center; font-weight: 800; white-space: nowrap; }
+  .heat th.pc { font-size: .76rem; text-align: center; }
+  .heat td.kq { background: #fef3c7 !important; color: #92400e; }
+  .heat td.on { background: #ede9fe !important; color: #5b21b6; }
+  .heat td.off { color: #c4b5fd; }
+  .h5 { background: #5b21b6 !important; color: #fff; }
+  .h4 { background: #7c3aed !important; color: #fff; }
+  .h3 { background: #a78bfa !important; color: #fff; }
+  .h2 { background: #ddd6fe !important; color: #4c1d95; }
+  .h1 { background: #f5f3ff !important; color: #6d28d9; }
+  .pyq-row { flex-wrap: wrap; align-items: center; }
+  .pyq-row .q { flex: 1 1 300px; }
+  .pyq-row.kuhs { background: linear-gradient(90deg, #fef9c3, rgba(254,249,195,0) 75%); border-radius: 10px; padding-left: 8px; }
+  .pyq-row.bank .q { color: var(--ink-soft); font-size: .92rem; }
+  .pyq-row a.go { text-decoration: none; white-space: nowrap; font-size: .85rem; font-weight: 800; }
+  .src { display: inline-block; font-size: .72rem; font-weight: 800; padding: 1px 8px; border-radius: 999px; border: 1px solid #e9e3f5; background: #fff; color: #4b5563; vertical-align: middle; }
+  .src.k { background: #7c3aed; color: #fff; border-color: #7c3aed; }
+  .src.b { background: #e0e7ff; color: #4338ca; border-color: #c7d2fe; }
+  .unit-head .ubadge { display: inline-block; background: var(--c1); color: #fff; border-radius: 10px; padding: 0 10px; margin-right: 6px; }
+  .unit-meta { font-size: .9rem; color: var(--ink-soft); margin: .2em 0 .6em; }
+  .utag { display: inline-block; font-size: .72rem; font-weight: 800; padding: 0 8px; border-radius: 999px; background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; margin-left: 4px; vertical-align: middle; }
+  .mock .paper { background: #fff; border: 2px dashed #c4b5fd; border-radius: 16px; padding: 16px 20px; margin: 14px 0; }
+  .mock .paper-head { text-align: center; border-bottom: 2px solid var(--line); padding-bottom: 8px; margin-bottom: 8px; }
+  .mock .paper-head b { font-size: 1.05rem; }
+  .mock .paper h4 { margin: .9em 0 .3em; color: var(--c1); }
+  .mock ol li { margin: .4em 0; }
+  details.rubric { background: #f0fdf4; border: 2px solid #bbf7d0; border-radius: 14px; margin: 12px 0; }
+  details.rubric > summary { cursor: pointer; font-weight: 800; padding: 10px 14px; color: #166534; }
+  details.rubric > div { padding: 4px 14px 12px; }
+  .rubric td { font-size: .9rem; }
+  .src-key td:first-child { white-space: nowrap; }
+  .tier { font-size: .75rem; font-weight: 800; border-radius: 999px; padding: 1px 8px; margin-left: 6px; vertical-align: middle; }
+  .tier.k { background: #7c3aed; color: #fff; }
+  .tier.s { background: #ede9fe; color: #5b21b6; }
+  ol.top12 li { margin: .5em 0; }
+</style>
+</head>
+<body class="theme-qc">
+<div class="wrap">
+
+<!-- ===== TOP NAV ===== -->
+<nav class="topbar">
+  <a href="../index.html">🏰 Kingdom Home</a>
+  <a href="../00-Study-Plan/study-plan.html">🗓️ Study Plan</a>
+  <a href="pyq-bank.html">📜 PYQ Bank</a>
+  <span class="spacer"></span>
+  <a href="unit-1.html">U1</a><a href="unit-2.html">U2</a><a href="unit-3.html">U3</a><a href="unit-4.html">U4</a><a href="unit-5.html">U5</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-emoji">📜🏮</div>
+  <div class="hero-kicker">BP806ET · Quality Control &amp; Standardization of Herbals · Question Bank</div>
+  <h1>📜 PYQ Treasure Chest</h1>
+  <p class="hero-sub">Welcome back to the Tangled Herb Garden, Mimosa! Rapunzel has climbed down the tower with a basket of every question paper we could find for this elective: the official KUHS model paper plus five real papers from RGUHS, Tamil Nadu MGR and AKTU (127 questions). Here is the lantern map: what keeps coming back, what to learn first, two full mock papers and your exam-hall plan.</p>
+  <div class="hero-chips">
+    <span class="chip">⚠️ No real KUHS papers online</span>
+    <span class="chip">📜 KUHS model + 5 papers = 127 Qs</span>
+    <span class="chip">🔥 Top 12 must-prepare</span>
+    <span class="chip">🔮 Dec 2026 predictions</span>
+    <span class="chip">📝 Mock Paper A &amp; B</span>
+  </div>
+</header>
+
+<!-- ===== WISH ===== -->
+<section class="wish">
+  <div class="wish-to">Dear Mimosa,</div>
+  <p>Every birthday, Rapunzel watched the floating lanterns from her tower window and worked out exactly where they rose, so when she finally stepped outside she knew where to look. This page is your lantern map. KUHS has never put a real paper for this elective online, so the map is drawn from the one paper KUHS wrote itself (the official model paper) and checked against the lanterns from RGUHS, MGR and AKTU, who teach the same PCI syllabus. 🏮</p>
+  <p>The lights keep rising from the same few spots: WHO quality control, regulations, HPTLC, stability, NDA papers, GACP and the classic crude-drug tests. Learn those first, write the two mock papers with a timer, and you'll walk into the hall on 28 December like Rapunzel stepping onto the grass: a little nervous and completely ready. Adipoli, Mimosa-kutty! 🌼</p>
+  <div class="wish-hook">Model paper first, other universities second: Unit 1 alone = 33 of the 75 model-paper marks, and Units 4 + 5 add 29 more.</div>
+  <div class="wish-from">— with love, your biggest fan ✨</div>
+</section>
+
+<!-- ===== 0. SOURCES (read first) ===== -->
+<section class="section" id="sources">
+  <h2><span class="num">⚠️</span> Read This First: Where These Questions Come From</h2>
+  <div class="callout warn"><span class="callout-title">⚠️ There are no real KUHS papers for this elective online</span>
+    <p>We searched for past KUHS papers for <b>BP806ET Quality Control &amp; Standardization of Herbals</b> and found none. The only question paper KUHS itself has published for this subject is the <b>official model question paper (2017 scheme)</b>. So this bank is built in three layers, and every question below carries a label telling you which layer it comes from.</p></div>
+
+  <div class="grid-3">
+    <div class="card c1"><span class="card-icon">👑</span><h4>1 · KUHS Model (weight ×3)</h4>The only KUHS source. Same format as your exam (2 essays, 7 short notes, 10 briefs, answer all). It gets the <b>highest weight</b> in the Top 12, the predictions and both mock papers.</div>
+    <div class="card c2"><span class="card-icon">🏮</span><h4>2 · Other universities (×1)</h4>Five real papers from RGUHS (Karnataka), Tamil Nadu Dr. M.G.R. Medical University and AKTU (Uttar Pradesh). They follow the <b>same PCI 2017 syllabus</b>, so they show how examiners phrase each syllabus line.</div>
+    <div class="card"><span class="card-icon">📚</span><h4>3 · Question bank (lowest)</h4>The Brainkart "important questions" list. Not a real exam paper: used only for extra practice ideas, never counted in the numbers.</div>
+  </div>
+
+  <div class="callout tip"><span class="callout-title">⭐ Why trust the model paper so much?</span>
+    <p>In your other three subjects, the real KUHS papers (2022–2023) kept re-asking model-paper topics: <b>SPP</b> brought back UIP, family welfare, pulse polio, PHC functions, NUHM and balanced diet; <b>RMB</b> repeated parametric vs non-parametric tests, sampling and the research-protocol format; <b>Cosmetic Science</b> repeated the hair growth cycle, vanishing cream, surfactants, sunscreen classification and shampoo. Expect the QC Herbals setter to lean on the model paper in the same way.</p></div>
+
+  <h3>Paper key (labels used on this page)</h3>
+  <div class="table-wrap"><table class="nice src-key">
+    <tr><th>Label</th><th>Paper</th><th>Format</th><th>Weight</th></tr>
+    <tr><td><span class="src k">KUHS Model</span></td><td>KUHS official model question paper, QC &amp; Standardization of Herbals, 2017 scheme</td><td>2×10 + 7×5 + 10×2 = 75, answer all (your exact exam)</td><td>★★★ ×3</td></tr>
+    <tr><td><span class="src o">MGR Apr 2022</span></td><td>Tamil Nadu Dr. M.G.R. Medical University, April 2022 (September 2021 session), Q.P. 562082</td><td>2 of 3 essays · 7 of 9 notes · 10 × 2</td><td>×1</td></tr>
+    <tr><td><span class="src o">MGR Mar 2023</span></td><td>MGR University, March 2023 (September 2022 session)</td><td>same as above</td><td>×1</td></tr>
+    <tr><td><span class="src o">MGR Aug 2023</span></td><td>MGR University, August 2023 (March 2023 session)</td><td>same as above</td><td>×1</td></tr>
+    <tr><td><span class="src o">RGUHS Nov 2023</span></td><td>Rajiv Gandhi University of Health Sciences, Karnataka, 15 Nov 2023, Q.P. 5038</td><td>2×10 + 7×5 + 10×2, all compulsory (3 questions have an internal OR)</td><td>×1</td></tr>
+    <tr><td><span class="src o">AKTU 2022-23</span></td><td>Dr. A.P.J. Abdul Kalam Technical University, BP-806ET, theory exam 2022-23</td><td>10×2 + 2 of 3 long (10 m) + 5 of 7 (7 m each)</td><td>×1</td></tr>
+    <tr><td><span class="src b">Question bank</span></td><td>Brainkart important-questions list (10 m / 5 m / 2 m)</td><td>not a real paper</td><td>practice only</td></tr>
+  </table></div>
+  <p class="hand">Psst, Mimosa… the MGR April 2022 paper turned up twice in our downloads; it is counted only once. On your Unit 1–2 pages, MGR papers are named by session year (MGR 2021 = the Apr 2022 paper, MGR 2022 = Mar 2023, MGR 2023 = Aug 2023); Units 4–5 and this page use the exam month. Same papers, different name tags! 🦎</p>
+</section>
+
+<!-- ===== 1. EXAM PATTERN ===== -->
+<section class="section" id="pattern">
+  <h2><span class="num">1</span> Exam Pattern &amp; Time Plan</h2>
+  <div class="grid-3">
+    <div class="card c1"><span class="card-icon">📕</span><h4>Essays: 2 × 10 = 20</h4>About 2.5–3 pages each · headings + a table or flowchart + example + conclusion · ~25 min each.</div>
+    <div class="card c2"><span class="card-icon">📒</span><h4>Short notes: 7 × 5 = 35</h4>About 1–1.5 pages · definition + 5–8 points + one small diagram, formula or table · ~12 min each.</div>
+    <div class="card c1"><span class="card-icon">📗</span><h4>Answer briefly: 10 × 2 = 20</h4>4–5 lines: a definition plus 2–4 bullets, a formula or two examples · ~3.5 min each.</div>
+  </div>
+  <p><b>3 hours · 75 marks · answer ALL questions (no choice) · “Draw diagrams wherever necessary.”</b></p>
+  <div class="timebar">
+    <div style="width:28%;background:#7c3aed">Essays 2×25 = 50 min</div>
+    <div style="width:47%;background:#16a34a">Short notes 7×12 = 84 min</div>
+    <div style="width:19.5%;background:#ca8a04">Brief 10×3.5 = 35 min</div>
+    <div style="width:5.5%;background:#be185d">10′</div>
+  </div>
+  <p><small>Total 179 min. Keep the last 10 minutes for revision: underline keywords, check question numbers in the margin, finish any half-drawn diagram.</small></p>
+
+  <h3>How to write each type in QC Herbals</h3>
+  <div class="grid-3">
+    <div class="card"><h4>📕 Essay (10 m)</h4><ol><li>Definition with its source (WHO / EU / ICH / D&amp;C Act) and year.</li><li>6–8 underlined headings in the order of the guideline.</li><li>One <b>flowchart or labelled diagram</b> (HPTLC steps, GACP chain, stability timeline) and one <b>table</b> (limits, zones, documents).</li><li>A herbal example (e.g. curcuminoids in turmeric, withanolides in ashwagandha).</li><li>Two-line conclusion: why it protects the patient.</li></ol></div>
+    <div class="card"><h4>📒 Short note (5 m)</h4><ol><li>Definition (1 mark).</li><li>Procedure as numbered steps, or 5–8 points under 2–3 headings.</li><li>Formula or small table: % ash, % extractive, stomatal index, lycopodium formula, Rf value.</li><li>One line of significance or example.</li></ol></div>
+    <div class="card"><h4>📗 Brief (2 m)</h4><ol><li>Exact definition (1 mark).</li><li>Two examples, a formula, or 2–3 bullets (1 mark).</li><li>No long introductions: 4–5 lines and move on.</li></ol></div>
+  </div>
+
+  <h3>How to write a 10-mark answer (draw this plan in your head)</h3>
+  <figure class="fig">
+    <svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Six-step flow for writing a 10-mark essay in 25 minutes">
+      <defs>
+        <marker id="pq-arr" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker>
+      </defs>
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <!-- row 1 -->
+        <rect x="20" y="30" width="220" height="110" rx="18" fill="#f5f3ff" stroke="#7c3aed" stroke-width="3"/>
+        <circle cx="46" cy="56" r="16" fill="#7c3aed"/><text x="46" y="62" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">1</text>
+        <text x="70" y="62" font-size="15" font-weight="800" fill="#4c1d95">Read &amp; underline</text>
+        <text x="34" y="90" font-size="12" fill="#1f2937">Circle the command word:</text>
+        <text x="34" y="106" font-size="12" fill="#1f2937">describe · discuss · enumerate</text>
+        <rect x="150" y="116" width="80" height="18" rx="9" fill="#7c3aed"/><text x="190" y="129" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">1 min</text>
+
+        <rect x="270" y="30" width="220" height="110" rx="18" fill="#f5f3ff" stroke="#7c3aed" stroke-width="3"/>
+        <circle cx="296" cy="56" r="16" fill="#7c3aed"/><text x="296" y="62" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">2</text>
+        <text x="320" y="62" font-size="15" font-weight="800" fill="#4c1d95">Plan in the margin</text>
+        <text x="284" y="90" font-size="12" fill="#1f2937">6–8 headings + where the</text>
+        <text x="284" y="106" font-size="12" fill="#1f2937">diagram and table will go</text>
+        <rect x="400" y="116" width="80" height="18" rx="9" fill="#7c3aed"/><text x="440" y="129" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">2 min</text>
+
+        <rect x="520" y="30" width="220" height="110" rx="18" fill="#f0fdf4" stroke="#16a34a" stroke-width="3"/>
+        <circle cx="546" cy="56" r="16" fill="#16a34a"/><text x="546" y="62" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">3</text>
+        <text x="570" y="62" font-size="15" font-weight="800" fill="#14532d">Define / introduce</text>
+        <text x="534" y="90" font-size="12" fill="#1f2937">2–3 lines: WHO / EU / ICH</text>
+        <text x="534" y="106" font-size="12" fill="#1f2937">or textbook definition + year</text>
+        <rect x="610" y="116" width="120" height="18" rx="9" fill="#16a34a"/><text x="670" y="129" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">3 min · 1 mark</text>
+
+        <path d="M242 85 H 264" stroke="#7c3aed" stroke-width="3" marker-end="url(#pq-arr)"/>
+        <path d="M492 85 H 514" stroke="#7c3aed" stroke-width="3" marker-end="url(#pq-arr)"/>
+        <path d="M630 142 V 182" stroke="#7c3aed" stroke-width="3" marker-end="url(#pq-arr)"/>
+
+        <!-- row 2 (right to left) -->
+        <rect x="520" y="190" width="220" height="110" rx="18" fill="#f0fdf4" stroke="#16a34a" stroke-width="3"/>
+        <circle cx="546" cy="216" r="16" fill="#16a34a"/><text x="546" y="222" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">4</text>
+        <text x="570" y="222" font-size="15" font-weight="800" fill="#14532d">Body under headings</text>
+        <text x="534" y="250" font-size="12" fill="#1f2937">numbered points, keywords</text>
+        <text x="534" y="266" font-size="12" fill="#1f2937">underlined, limits in a table</text>
+        <rect x="600" y="276" width="130" height="18" rx="9" fill="#16a34a"/><text x="665" y="289" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">12 min · 5 marks</text>
+
+        <rect x="270" y="190" width="220" height="110" rx="18" fill="#fefce8" stroke="#ca8a04" stroke-width="3"/>
+        <circle cx="296" cy="216" r="16" fill="#ca8a04"/><text x="296" y="222" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">5</text>
+        <text x="320" y="222" font-size="15" font-weight="800" fill="#713f12">Diagram / flow / table</text>
+        <text x="284" y="250" font-size="12" fill="#1f2937">labelled + titled, e.g. HPTLC</text>
+        <text x="284" y="266" font-size="12" fill="#1f2937">steps or the GACP chain</text>
+        <rect x="350" y="276" width="130" height="18" rx="9" fill="#ca8a04"/><text x="415" y="289" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">5 min · 2 marks</text>
+
+        <rect x="20" y="190" width="220" height="110" rx="18" fill="#fdf2f8" stroke="#be185d" stroke-width="3"/>
+        <circle cx="46" cy="216" r="16" fill="#be185d"/><text x="46" y="222" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">6</text>
+        <text x="70" y="222" font-size="15" font-weight="800" fill="#831843">Example + conclusion</text>
+        <text x="34" y="250" font-size="12" fill="#1f2937">one herbal example (drug +</text>
+        <text x="34" y="266" font-size="12" fill="#1f2937">marker), 2-line conclusion</text>
+        <rect x="100" y="276" width="130" height="18" rx="9" fill="#be185d"/><text x="165" y="289" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">2 min · 1 mark</text>
+
+        <path d="M518 245 H 496" stroke="#7c3aed" stroke-width="3" marker-end="url(#pq-arr)"/>
+        <path d="M268 245 H 246" stroke="#7c3aed" stroke-width="3" marker-end="url(#pq-arr)"/>
+
+        <rect x="170" y="318" width="420" height="32" rx="16" fill="#4c1d95"/>
+        <text x="380" y="339" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">Total ≈ 25 min → 10 marks · about 2.5–3 pages</text>
+      </g>
+    </svg>
+    <figcaption>Fig 1 · The 6-step essay recipe. Steps 1–2 happen on the margin of your answer sheet; the marks sit in steps 3–6.</figcaption>
+  </figure>
+  <div class="answer-plan">Worked plan for KUHS Model Q1 “Discuss the WHO guidelines for quality control of herbal drugs”: introduction (WHO QC methods manual 1998, updated 2011; aim = identity, purity, quality) → table of parameters → macroscopy &amp; microscopy → foreign matter, ash, extractive, moisture → swelling, foaming, bitterness, haemolytic activity, tannins → contaminants (pesticides, heavy metals, microbes, aflatoxins, radioactivity) with a limits table → TLC fingerprint → flowchart “sample → identity → purity → safety → assay” → conclusion.</div>
+</section>
+
+<!-- ===== 2. MARKS PER UNIT ===== -->
+<section class="section" id="units-chart">
+  <h2><span class="num">2</span> Where the Marks Come From</h2>
+  <p class="lead">Purple = what the KUHS model paper gives each unit. Green = the average of the five other-university papers, scaled to 75 so you can compare them directly.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart of marks per unit: KUHS model paper versus average of other universities">
+      <g font-family="Nunito, Segoe UI, Arial, sans-serif">
+        <!-- legend -->
+        <rect x="60" y="12" width="14" height="14" rx="3" fill="#7c3aed"/><text x="80" y="24" font-size="13" font-weight="700" fill="#1f2937">KUHS model paper (marks out of 75)</text>
+        <rect x="340" y="12" width="14" height="14" rx="3" fill="#16a34a"/><text x="360" y="24" font-size="13" font-weight="700" fill="#1f2937">Other 5 papers (average, scaled to 75)</text>
+        <!-- grid -->
+        <g stroke="#e9e3f5" stroke-width="1">
+          <line x1="60" y1="250" x2="700" y2="250"/><line x1="60" y1="170" x2="700" y2="170"/><line x1="60" y1="90" x2="700" y2="90"/>
+        </g>
+        <line x1="60" y1="330" x2="700" y2="330" stroke="#9ca3af" stroke-width="1.5"/>
+        <g font-size="11" fill="#6b7280" text-anchor="end">
+          <text x="52" y="334">0</text><text x="52" y="254">10</text><text x="52" y="174">20</text><text x="52" y="94">30</text>
+        </g>
+        <text x="18" y="200" font-size="11" fill="#6b7280" transform="rotate(-90 18 200)" text-anchor="middle">marks</text>
+        <!-- U1 -->
+        <rect x="82" y="66" width="38" height="264" rx="4" fill="#7c3aed"><title>U1 · KUHS model: 33 of 75 marks</title></rect>
+        <rect x="128" y="166" width="38" height="164" rx="4" fill="#16a34a"><title>U1 · other universities: about 20.5 of 75</title></rect>
+        <!-- U2 -->
+        <rect x="210" y="274" width="38" height="56" rx="4" fill="#7c3aed"><title>U2 · KUHS model: 7 of 75 marks</title></rect>
+        <rect x="256" y="203.6" width="38" height="126.4" rx="4" fill="#16a34a"><title>U2 · other universities: about 15.8 of 75</title></rect>
+        <!-- U3 -->
+        <rect x="338" y="282" width="38" height="48" rx="4" fill="#7c3aed"><title>U3 · KUHS model: 6 of 75 marks</title></rect>
+        <rect x="384" y="210.8" width="38" height="119.2" rx="4" fill="#16a34a"><title>U3 · other universities: about 14.9 of 75</title></rect>
+        <!-- U4 -->
+        <rect x="466" y="210" width="38" height="120" rx="4" fill="#7c3aed"><title>U4 · KUHS model: 15 of 75 marks</title></rect>
+        <rect x="512" y="199.6" width="38" height="130.4" rx="4" fill="#16a34a"><title>U4 · other universities: about 16.3 of 75</title></rect>
+        <!-- U5 -->
+        <rect x="594" y="218" width="38" height="112" rx="4" fill="#7c3aed"><title>U5 · KUHS model: 14 of 75 marks</title></rect>
+        <rect x="640" y="270" width="38" height="60" rx="4" fill="#16a34a"><title>U5 · other universities: about 7.5 of 75</title></rect>
+        <!-- value labels -->
+        <g font-size="12" font-weight="800" fill="#1f2937" text-anchor="middle">
+          <text x="101" y="60">33</text><text x="147" y="160">20.5</text>
+          <text x="229" y="268">7</text><text x="275" y="197">15.8</text>
+          <text x="357" y="276">6</text><text x="403" y="204">14.9</text>
+          <text x="485" y="204">15</text><text x="531" y="193">16.3</text>
+          <text x="613" y="212">14</text><text x="659" y="264">7.5</text>
+        </g>
+        <!-- axis labels -->
+        <g text-anchor="middle" fill="#1f2937">
+          <text x="124" y="352" font-size="13" font-weight="800">U1</text><text x="124" y="368" font-size="11">WHO QC &amp; tests</text><text x="124" y="384" font-size="11" fill="#6b7280">10 h</text>
+          <text x="252" y="352" font-size="13" font-weight="800">U2</text><text x="252" y="368" font-size="11">GAP · GMP · GLP</text><text x="252" y="384" font-size="11" fill="#6b7280">10 h</text>
+          <text x="380" y="352" font-size="13" font-weight="800">U3</text><text x="380" y="368" font-size="11">EU · ICH · safety</text><text x="380" y="384" font-size="11" fill="#6b7280">10 h</text>
+          <text x="508" y="352" font-size="13" font-weight="800">U4</text><text x="508" y="368" font-size="11">Stability · chrom · NDA</text><text x="508" y="384" font-size="11" fill="#6b7280">8 h</text>
+          <text x="636" y="352" font-size="13" font-weight="800">U5</text><text x="636" y="368" font-size="11">Regs · markers</text><text x="636" y="384" font-size="11" fill="#6b7280">7 h</text>
+        </g>
+      </g>
+    </svg>
+    <figcaption>Fig 2 · Marks per unit. Hover a bar for its value. Other-university marks count every question offered (including choice questions), then scale the total to 75.</figcaption>
+  </figure>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Unit</th><th>Syllabus hours</th><th>KUHS model marks</th><th>Other 5 papers (avg / 75)</th><th>Questions in all 6 papers</th></tr>
+    <tr><td>U1 · Basic tests, WHO QC, crude-drug evaluation</td><td>10 h</td><td><b>33</b> (44%)</td><td>20.5 (27%)</td><td>42</td></tr>
+    <tr><td>U2 · GAP, GACP, GMP, cGMP, GLP</td><td>10 h</td><td><b>7</b> (9%)</td><td>15.8 (21%)</td><td>22</td></tr>
+    <tr><td>U3 · EU &amp; ICH, safety/efficacy research</td><td>10 h</td><td><b>6</b> (8%)</td><td>14.9 (20%)</td><td>24</td></tr>
+    <tr><td>U4 · Stability, chromatography, NDA &amp; export, GMP &amp; D&amp;C Act</td><td>8 h</td><td><b>15</b> (20%)</td><td>16.3 (22%)</td><td>25</td></tr>
+    <tr><td>U5 · Regulations, PV, pharmacopoeias, markers</td><td>7 h</td><td><b>14</b> (19%)</td><td>7.5 (10%)</td><td>14</td></tr>
+  </table></div>
+  <div class="callout tip"><span class="callout-title">⭐ What the chart tells you</span>
+    <p><b>Unit 1 is the giant</b> in every source: start your revision there. <b>Unit 5</b> looks small elsewhere but holds a whole <b>essay</b> in the KUHS model paper, so don't skip it. <b>Units 2 and 3</b> carry only briefs and one short note in the model paper, yet other universities give each of them about 15 marks, including essays (GMP, GACP, ICH, EMA). A real KUHS paper could easily do the same, so prepare at least one essay-sized answer from each.</p></div>
+</section>
+
+<!-- ===== 3. HEAT TABLE + TOP 12 ===== -->
+<section class="section" id="heat">
+  <h2><span class="num">3</span> Topic Heat Table &amp; Top 12</h2>
+  <p class="lead">Every one of the 127 questions, grouped into 21 topics. Each cell shows what that paper asked: <b>E</b> = essay, <b>S</b> = short note, <b>B</b> = brief (2 m); “2S” = two short notes. Gold cells = KUHS model paper.</p>
+  <p><small><b>Score</b> = 3 × (KUHS model marks) + (marks in the five other papers). This is how the KUHS model paper gets the highest weight. “Times” = how many questions on that topic across all six papers.</small></p>
+<div class="table-wrap"><table class="nice heat">
+<tr><th>#</th><th>Topic</th><th>Unit</th><th class="pc kcol">KUHS Model</th><th class="pc">MGR Apr 22</th><th class="pc">MGR Mar 23</th><th class="pc">MGR Aug 23</th><th class="pc">RGUHS Nov 23</th><th class="pc">AKTU 22-23</th><th>Times</th><th>Score</th></tr>
+<tr><td class="n">1</td><td>Chromatography in standardization: HPTLC, TLC, HPLC, GC, GPC</td><td class="n">U4</td><td class="n kq">S</td><td class="n on">S+B</td><td class="n on">S+B</td><td class="n on">E+2B</td><td class="n on">E+B</td><td class="n on">2S+B</td><td class="n h5">13</td><td class="n"><b>71</b></td></tr>
+<tr><td class="n">2</td><td>WHO research guidelines: safety &amp; efficacy, clinical trials, toxicity, ethics</td><td class="n">U3</td><td class="n kq">B</td><td class="n on">2S</td><td class="n on">2S+B</td><td class="n on">S</td><td class="n on">2S+B</td><td class="n on">E+S</td><td class="n h5">12</td><td class="n"><b>62</b></td></tr>
+<tr><td class="n">3</td><td>WHO guidelines for quality control of herbal drugs</td><td class="n">U1</td><td class="n kq">E</td><td class="n on">E</td><td class="n on">E</td><td class="n off">·</td><td class="n on">E</td><td class="n off">·</td><td class="n h3">4</td><td class="n"><b>60</b></td></tr>
+<tr><td class="n">4</td><td>Regulatory requirements &amp; objectives of herbal regulation (+ AYUSH)</td><td class="n">U5</td><td class="n kq">E+B</td><td class="n on">E+B</td><td class="n off">·</td><td class="n off">·</td><td class="n on">S</td><td class="n off">·</td><td class="n h3">5</td><td class="n"><b>53</b></td></tr>
+<tr><td class="n">5</td><td>GAP / GACP: cultivation, collection, harvest, processing, storage</td><td class="n">U2</td><td class="n kq">S</td><td class="n on">E</td><td class="n on">S+2B</td><td class="n on">S+B</td><td class="n on">S</td><td class="n on">B</td><td class="n h5">9</td><td class="n"><b>48</b></td></tr>
+<tr><td class="n">6</td><td>EU (EMA/HMPC) &amp; ICH guidelines: definitions, objectives, significance</td><td class="n">U3 (+U5)</td><td class="n kq">2B</td><td class="n on">B</td><td class="n on">E</td><td class="n on">E+S</td><td class="n on">2B</td><td class="n on">B</td><td class="n h5">9</td><td class="n"><b>45</b></td></tr>
+<tr><td class="n">7</td><td>QA, GMP / cGMP in the herbal industry (infrastructure, hygiene)</td><td class="n">U2 (+U4)</td><td class="n kq">B</td><td class="n on">S</td><td class="n off">·</td><td class="n on">E</td><td class="n on">E+2B</td><td class="n on">E</td><td class="n h4">7</td><td class="n"><b>45</b></td></tr>
+<tr><td class="n">8</td><td>Extractive value, ash value, foreign organic matter, moisture</td><td class="n">U1</td><td class="n kq">2S</td><td class="n on">B</td><td class="n off">·</td><td class="n on">B</td><td class="n on">S+B</td><td class="n on">B</td><td class="n h4">7</td><td class="n"><b>43</b></td></tr>
+<tr><td class="n">9</td><td>Stability testing, protocol &amp; shelf life</td><td class="n">U4</td><td class="n kq">S</td><td class="n on">S</td><td class="n off">·</td><td class="n on">S+B</td><td class="n on">S</td><td class="n on">S+B</td><td class="n h4">7</td><td class="n"><b>41</b></td></tr>
+<tr><td class="n">10</td><td>NDA &amp; export registration documents</td><td class="n">U4</td><td class="n kq">S</td><td class="n on">S</td><td class="n on">E</td><td class="n on">S</td><td class="n off">·</td><td class="n on">B</td><td class="n h3">5</td><td class="n"><b>37</b></td></tr>
+<tr><td class="n">11</td><td>Evaluation of crude drugs: physical &amp; biological</td><td class="n">U1</td><td class="n kq">S</td><td class="n off">·</td><td class="n on">S</td><td class="n off">·</td><td class="n off">·</td><td class="n on">E+S</td><td class="n h3">4</td><td class="n"><b>37</b></td></tr>
+<tr><td class="n">12</td><td>Chemical tests: alkaloids, glycosides, tannins, steroids</td><td class="n">U1</td><td class="n kq">B</td><td class="n on">S</td><td class="n on">S+B</td><td class="n on">S</td><td class="n off">·</td><td class="n on">S</td><td class="n h4">6</td><td class="n"><b>30</b></td></tr>
+<tr><td class="n">13</td><td>GLP in traditional system of medicine &amp; SOP</td><td class="n">U2</td><td class="n off">·</td><td class="n on">S+B</td><td class="n on">S</td><td class="n on">S</td><td class="n on">S</td><td class="n on">S</td><td class="n h4">6</td><td class="n"><b>29</b></td></tr>
+<tr><td class="n">14</td><td>Standardization &amp; authentication: definitions, need</td><td class="n">U1 (+U5)</td><td class="n kq">2B</td><td class="n on">B</td><td class="n on">B</td><td class="n on">B</td><td class="n off">·</td><td class="n on">B</td><td class="n h4">6</td><td class="n"><b>20</b></td></tr>
+<tr><td class="n">15</td><td>Markers &amp; biomarkers</td><td class="n">U5</td><td class="n kq">B</td><td class="n on">B</td><td class="n off">·</td><td class="n on">S</td><td class="n on">S</td><td class="n on">B</td><td class="n h3">5</td><td class="n"><b>20</b></td></tr>
+<tr><td class="n">16</td><td>Contaminants: heavy metals, pesticides, aflatoxins</td><td class="n">U1</td><td class="n kq">B</td><td class="n on">B</td><td class="n off">·</td><td class="n on">B</td><td class="n on">S+2B</td><td class="n off">·</td><td class="n h4">6</td><td class="n"><b>19</b></td></tr>
+<tr><td class="n">17</td><td>Microscopy &amp; quantitative microscopy (stomata, palisade, lycopodium)</td><td class="n">U1</td><td class="n off">·</td><td class="n on">B</td><td class="n on">3B</td><td class="n on">S</td><td class="n off">·</td><td class="n on">B</td><td class="n h4">6</td><td class="n"><b>15</b></td></tr>
+<tr><td class="n">18</td><td>Herbal pharmacopoeias</td><td class="n">U5</td><td class="n off">·</td><td class="n on">S</td><td class="n on">S</td><td class="n on">B</td><td class="n off">·</td><td class="n off">·</td><td class="n h2">3</td><td class="n"><b>12</b></td></tr>
+<tr><td class="n">19</td><td>Bitterness, swelling &amp; astringency values</td><td class="n">U1</td><td class="n off">·</td><td class="n off">·</td><td class="n off">·</td><td class="n on">B</td><td class="n on">B</td><td class="n on">B</td><td class="n h2">3</td><td class="n"><b>6</b></td></tr>
+<tr><td class="n">20</td><td>Herb–drug interactions</td><td class="n">U3 (+U5)</td><td class="n off">·</td><td class="n on">B</td><td class="n on">B</td><td class="n on">B</td><td class="n off">·</td><td class="n off">·</td><td class="n h2">3</td><td class="n"><b>6</b></td></tr>
+<tr><td class="n">21</td><td>Pharmacovigilance / ADR monitoring of herbals</td><td class="n">U5</td><td class="n off">·</td><td class="n off">·</td><td class="n on">S</td><td class="n off">·</td><td class="n off">·</td><td class="n off">·</td><td class="n h1">1</td><td class="n"><b>5</b></td></tr>
+</table></div>
+
+  <h3>🔥 Top 12 must-prepare</h3>
+  <p>The two KUHS model essays come first; the rest follow the score above. Each links to the unit page that has the full model answer.</p>
+  <ol class="top12">
+    <li><b>WHO guidelines for quality control of herbal drugs</b> <span class="utag">U1</span><span class="tier k">KUHS essay</span> Essay in 3 of the 5 other papers too. Learn the parameter list, the contaminant limits table and the flowchart. <a href="unit-1.html#answers">✍️ answer</a></li>
+    <li><b>Regulatory requirements of herbal drugs</b> (+ objectives of regulation, AYUSH) <span class="utag">U5</span><span class="tier k">KUHS essay + brief</span> India (D&amp;C Act Ch. IVA, Schedule T, phytopharmaceuticals), USA (DSHEA 1994), EU (2004/24/EC), WHO. <a href="unit-5.html#answers">✍️ answer</a></li>
+    <li><b>Chromatography in standardization: HPTLC first</b>, then TLC, HPLC, GC, GPC <span class="utag">U4</span><span class="tier k">KUHS short</span> The most-asked topic of all (13 questions, 2 essays). <a href="unit-4.html#answers">✍️ answer</a></li>
+    <li><b>WHO research guidelines for safety &amp; efficacy</b> (+ why herbal safety is complex, clinical trials, toxicity tests) <span class="utag">U3</span><span class="tier s">KUHS brief</span> 11 more questions in the other papers. <a href="unit-3.html#answers">✍️ answer</a></li>
+    <li><b>GAP / GACP for medicinal plants</b> (cultivation → harvest → processing → storage) <span class="utag">U2</span><span class="tier k">KUHS short</span> <a href="unit-2.html#answers">✍️ answer</a></li>
+    <li><b>EU &amp; ICH guidelines</b> (EU definition of herbal medicinal product, objective of ICH) <span class="utag">U3</span><span class="tier s">KUHS 2 briefs</span> Essays at MGR in 2023 (ICH; EMA). <a href="unit-3.html#answers">✍️ answer</a></li>
+    <li><b>GMP / cGMP for herbal medicines</b> (infrastructure, hygiene, Schedule T) <span class="utag">U2</span><span class="utag">U4</span><span class="tier s">KUHS brief</span> 3 essays elsewhere. <a href="unit-2.html#answers">✍️ answer</a></li>
+    <li><b>Extractive value, ash value, foreign organic matter, moisture</b> <span class="utag">U1</span><span class="tier k">KUHS 2 shorts</span> Procedures + formulas. <a href="unit-1.html#answers">✍️ answer</a></li>
+    <li><b>Stability testing of herbal medicines</b> (protocol, zones, shelf life) <span class="utag">U4</span><span class="tier k">KUHS short</span> <a href="unit-4.html#answers">✍️ answer</a></li>
+    <li><b>Documents for NDA &amp; export registration</b> <span class="utag">U4</span><span class="tier k">KUHS short</span> Essay at MGR Mar 2023. <a href="unit-4.html#answers">✍️ answer</a></li>
+    <li><b>Physical (and biological) evaluation of crude drugs</b> <span class="utag">U1</span><span class="tier k">KUHS short</span> Essay at AKTU. <a href="unit-1.html#answers">✍️ answer</a></li>
+    <li><b>Chemical tests: alkaloids, glycosides, tannins, steroids</b> <span class="utag">U1</span><span class="tier s">KUHS brief</span> 4 short notes + 1 brief in the other papers. <a href="unit-1.html#answers">✍️ answer</a></li>
+  </ol>
+  <div class="callout example"><span class="callout-title">🌟 Next in line (learn after the Top 12)</span>
+    <p>GLP in traditional system of medicine <span class="utag">U2</span> (6 times, never in the KUHS model) · markers &amp; biomarkers <span class="utag">U5</span> · standardization: definition &amp; need <span class="utag">U1</span> · contaminants: heavy metals, pesticides, aflatoxins <span class="utag">U1</span> · quantitative microscopy <span class="utag">U1</span> · herbal pharmacopoeias <span class="utag">U5</span> · herb–drug interactions <span class="utag">U3</span>.</p></div>
+</section>
+
+<!-- ===== 4. EVERY QUESTION BY UNIT ===== -->
+<section class="section" id="by-unit">
+  <h2><span class="num">4</span> Every Question, Unit by Unit</h2>
+  <p class="lead">All 127 questions, with repeats merged into one row. <b>Yellow rows = KUHS model paper.</b> The purple tag names the KUHS source; white tags name the other universities (“· essay”, “· short”, “· 2m” shows where that paper asked it at a different size). Tap ✍️ to open the model answers on the unit page.</p>
+  <p><b>Jump to:</b> <a href="#u1-list">Unit 1</a> · <a href="#u2-list">Unit 2</a> · <a href="#u3-list">Unit 3</a> · <a href="#u4-list">Unit 4</a> · <a href="#u5-list">Unit 5</a></p>
+  <p><small>Stars: ★★★ = KUHS model + asked again, or asked 3+ times, or asked as an essay more than once · ★★ = KUHS model, or asked twice, or once as an essay · ★ = asked once. AKTU short questions carry 7 marks.</small></p>
+<h3 id="u1-list" class="unit-head"><span class="ubadge">U1</span> Basic Tests, WHO Quality Control &amp; Evaluation of Crude Drugs</h3>
+<p class="unit-meta">⏱️ 10 h · 📜 42 questions in the 6 papers · 🎯 KUHS model: <b>33 / 75 marks</b> · other universities: ≈20.5 / 75 · <a href="unit-1.html#answers">✍️ open Unit 1 model answers</a></p>
+<div class="pyq-row kuhs"><div class="q">Discuss the WHO guidelines for quality control of herbal drugs (MGR: “Explain the quality control of herbal drugs as per WHO guidelines”)</div><span class="pill essay">Essay 10m</span><span class="src k">KUHS Model</span><span class="src o">MGR Apr 2022</span><span class="src o">MGR Mar 2023</span><span class="stars">★★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row kuhs"><div class="q">Describe briefly the physical evaluation of crude drugs</div><span class="pill short">Short 5m</span><span class="src k">KUHS Model</span><span class="src o">MGR Mar 2023</span><span class="src o">AKTU 2022-23 · essay</span><span class="stars">★★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row kuhs"><div class="q">What is meant by foreign organic matter? How will you determine foreign organic matter?</div><span class="pill short">Short 5m</span><span class="src k">KUHS Model</span><span class="stars">★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row kuhs"><div class="q">Define extractive value. Give the procedure for determining alcohol-soluble extractive value</div><span class="pill short">Short 5m</span><span class="src k">KUHS Model</span><span class="stars">★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row kuhs"><div class="q">Define the term herbal drug standardization (AKTU: “Discuss herbal drug standardization”)</div><span class="pill brief">Brief 2m</span><span class="src k">KUHS Model</span><span class="src o">AKTU 2022-23</span><span class="stars">★★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a> <a class="go" href="unit-5.html#answers">+U5</a></div>
+<div class="pyq-row kuhs"><div class="q">What are the hazardous chemical contaminants present in herbal formulations?</div><span class="pill brief">Brief 2m</span><span class="src k">KUHS Model</span><span class="stars">★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row kuhs"><div class="q">Why is standardization essential for a herbal formulation?</div><span class="pill brief">Brief 2m</span><span class="src k">KUHS Model</span><span class="stars">★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a> <a class="go" href="unit-5.html#answers">+U5</a></div>
+<div class="pyq-row kuhs"><div class="q">Describe any one basic test for detection of steroids in medicinal plant materials</div><span class="pill brief">Brief 2m</span><span class="src k">KUHS Model</span><span class="stars">★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">List the WHO guidelines for the assessment of herbal drugs. Explain the determination of heavy metals in herbal drugs</div><span class="pill essay">Essay 10m</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Identification tests for alkaloids · basic tests for alkaloids and glycosides · alkaloids and tannins</div><span class="pill short">Short 5m</span><span class="src o">MGR Mar 2023</span><span class="src o">MGR Aug 2023</span><span class="src o">AKTU 2022-23</span><span class="stars">★★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Describe the basic tests for medicinal plant materials</div><span class="pill short">Short 5m</span><span class="src o">MGR Apr 2022</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Explain the procedure and significance of microscopical evaluation of herbal drugs</div><span class="pill short">Short 5m</span><span class="src o">MGR Aug 2023</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">What is biological evaluation? Discuss with example</div><span class="pill short">Short 7m</span><span class="src o">AKTU 2022-23</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Explain the method to determine the aflatoxin content in herbal drugs</div><span class="pill short">Short 5m</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Write a note on any two methods for determination of moisture content in herbal drugs</div><span class="pill short">Short 5m</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Pesticides: natural pesticide · what are pesticides (two examples) · define pesticide residue</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Apr 2022</span><span class="src o">MGR Aug 2023</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Define ash value and give its significance · importance of ash values</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Aug 2023</span><span class="src o">AKTU 2022-23</span><span class="stars">★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Lycopodium spore method: give the formula</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Mar 2023</span><span class="src o">AKTU 2022-23</span><span class="stars">★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Extractive value and its significance / importance</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Apr 2022</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Authentication of medicinal plants</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Mar 2023</span><span class="src o">MGR Aug 2023</span><span class="stars">★★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Give the importance of heavy-metal determination in herbal drugs</div><span class="pill brief">Brief 2m</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Define bitterness value with example</div><span class="pill brief">Brief 2m</span><span class="src o">AKTU 2022-23</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Swelling factor and its significance</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Aug 2023</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Define palisade ratio</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Mar 2023</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Different types of stomata</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Mar 2023</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Quantitative microscopy</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Apr 2022</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Identification test for glycosides</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Mar 2023</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row"><div class="q">Define the terms herbal medicine and crude drug</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Apr 2022</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a> <a class="go" href="unit-5.html#answers">+U5</a></div>
+<div class="pyq-row"><div class="q">Define astringency content</div><span class="pill brief">Brief 2m</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★</span><a class="go" href="unit-1.html#answers">✍️ U1</a></div>
+<div class="pyq-row bank"><div class="q"><i>Also in the Brainkart question bank:</i> Physico-chemical evaluation as per WHO · botanical evaluation · importance of physical constants · microbial contamination · toxicological &amp; biological evaluation</div><span class="pill model">Question bank</span><span class="src b">Brainkart bank</span><a class="go" href="unit-1.html">📖 U1</a></div>
+<h3 id="u2-list" class="unit-head"><span class="ubadge">U2</span> Quality Assurance: GAP, GACP, GMP, cGMP &amp; GLP</h3>
+<p class="unit-meta">⏱️ 10 h · 📜 22 questions in the 6 papers · 🎯 KUHS model: <b>7 / 75 marks</b> · other universities: ≈15.8 / 75 · <a href="unit-2.html#answers">✍️ open Unit 2 model answers</a></p>
+<div class="pyq-row kuhs"><div class="q">Describe the WHO guidelines on Good Agricultural Practices</div><span class="pill short">Short 5m</span><span class="src k">KUHS Model</span><span class="stars">★★</span><a class="go" href="unit-2.html#answers">✍️ U2</a></div>
+<div class="pyq-row kuhs"><div class="q">What is meant by cGMP?</div><span class="pill brief">Brief 2m</span><span class="src k">KUHS Model</span><span class="stars">★★</span><a class="go" href="unit-2.html#answers">✍️ U2</a> <a class="go" href="unit-4.html#answers">+U4</a></div>
+<div class="pyq-row"><div class="q">Describe the guidelines on GACP for medicinal plants · WHO guidelines on GACP</div><span class="pill essay">Essay 10m</span><span class="src o">MGR Apr 2022</span><span class="src o">MGR Mar 2023 · short</span><span class="stars">★★★</span><a class="go" href="unit-2.html#answers">✍️ U2</a></div>
+<div class="pyq-row"><div class="q">Discuss in detail about GMP · GMP requirement for herbal medicine</div><span class="pill essay">Essay 10m</span><span class="src o">MGR Apr 2022 · short</span><span class="src o">AKTU 2022-23</span><span class="stars">★★★</span><a class="go" href="unit-2.html#answers">✍️ U2</a> <a class="go" href="unit-4.html#answers">+U4</a></div>
+<div class="pyq-row"><div class="q">What do you understand by quality assurance in herbal industry? Explain the importance of GMP in herbal industry</div><span class="pill essay">Essay 10m</span><span class="src o">MGR Aug 2023</span><span class="stars">★★</span><a class="go" href="unit-2.html#answers">✍️ U2</a></div>
+<div class="pyq-row"><div class="q">Explain the infrastructural requirements under GMP for herbal industry</div><span class="pill essay">Essay 10m</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★★</span><a class="go" href="unit-2.html#answers">✍️ U2</a> <a class="go" href="unit-4.html#answers">+U4</a></div>
+<div class="pyq-row"><div class="q">GLP · aspects of GLP · GLP in traditional system of medicine (what is a traditional system of medicine?)</div><span class="pill short">Short 5m</span><span class="src o">MGR Apr 2022</span><span class="src o">MGR Mar 2023</span><span class="src o">MGR Aug 2023</span><span class="src o">RGUHS Nov 2023</span><span class="src o">AKTU 2022-23</span><span class="stars">★★★</span><a class="go" href="unit-2.html#answers">✍️ U2</a></div>
+<div class="pyq-row"><div class="q">Good practices for harvesting and storage · good practices for storage of herbal medicinal products</div><span class="pill short">Short 5m</span><span class="src o">MGR Aug 2023</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★★</span><a class="go" href="unit-2.html#answers">✍️ U2</a></div>
+<div class="pyq-row"><div class="q">What are the objectives of GAP?</div><span class="pill brief">Brief 2m</span><span class="src o">AKTU 2022-23</span><span class="stars">★</span><a class="go" href="unit-2.html#answers">✍️ U2</a></div>
+<div class="pyq-row"><div class="q">Secondary processing of medicinal plants</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Mar 2023</span><span class="stars">★</span><a class="go" href="unit-2.html#answers">✍️ U2</a></div>
+<div class="pyq-row"><div class="q">What are weedicides? Mention two examples</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Mar 2023</span><span class="stars">★</span><a class="go" href="unit-2.html#answers">✍️ U2</a></div>
+<div class="pyq-row"><div class="q">Define processed and finished herb as per WHO</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Aug 2023</span><span class="stars">★</span><a class="go" href="unit-2.html#answers">✍️ U2</a></div>
+<div class="pyq-row"><div class="q">Write a note on personal hygiene as per GMP</div><span class="pill brief">Brief 2m</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★</span><a class="go" href="unit-2.html#answers">✍️ U2</a> <a class="go" href="unit-4.html#answers">+U4</a></div>
+<div class="pyq-row"><div class="q">Scope of herbal drug industries</div><span class="pill brief">Brief 2m</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★</span><a class="go" href="unit-2.html#answers">✍️ U2</a></div>
+<div class="pyq-row"><div class="q">Define SOP</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Apr 2022</span><span class="stars">★</span><a class="go" href="unit-2.html#answers">✍️ U2</a></div>
+<div class="pyq-row bank"><div class="q"><i>Also in the Brainkart question bank:</i> Layout of factory premises (GMP) · documentation for GMP · complaints &amp; recalls · equipment qualification &amp; validation · pests &amp; pest control · factors affecting cultivation &amp; collection</div><span class="pill model">Question bank</span><span class="src b">Brainkart bank</span><a class="go" href="unit-2.html">📖 U2</a></div>
+<h3 id="u3-list" class="unit-head"><span class="ubadge">U3</span> EU, ICH &amp; Safety/Efficacy Research Guidelines</h3>
+<p class="unit-meta">⏱️ 10 h · 📜 24 questions in the 6 papers · 🎯 KUHS model: <b>6 / 75 marks</b> · other universities: ≈14.9 / 75 · <a href="unit-3.html#answers">✍️ open Unit 3 model answers</a></p>
+<div class="pyq-row kuhs"><div class="q">What is the EU definition of herbal medicinal product?</div><span class="pill brief">Brief 2m</span><span class="src k">KUHS Model</span><span class="stars">★★</span><a class="go" href="unit-3.html#answers">✍️ U3</a> <a class="go" href="unit-5.html#answers">+U5</a></div>
+<div class="pyq-row kuhs"><div class="q">What is the objective of ICH guidelines?</div><span class="pill brief">Brief 2m</span><span class="src k">KUHS Model</span><span class="stars">★★</span><a class="go" href="unit-3.html#answers">✍️ U3</a></div>
+<div class="pyq-row kuhs"><div class="q">Why is safety evaluation more complex in herbal medicines?</div><span class="pill brief">Brief 2m</span><span class="src k">KUHS Model</span><span class="stars">★★</span><a class="go" href="unit-3.html#answers">✍️ U3</a> <a class="go" href="unit-5.html#answers">+U5</a></div>
+<div class="pyq-row"><div class="q">Explain ICH guidelines for quality control of herbal drugs · write a note on ICH guidelines</div><span class="pill essay">Essay 10m</span><span class="src o">MGR Mar 2023</span><span class="src o">MGR Aug 2023 · short</span><span class="stars">★★★</span><a class="go" href="unit-3.html#answers">✍️ U3</a></div>
+<div class="pyq-row"><div class="q">Write about the European Medicines Agency (EMA). Enumerate the European guidelines on quality of herbal medicinal products</div><span class="pill essay">Essay 10m</span><span class="src o">MGR Aug 2023</span><span class="stars">★★</span><a class="go" href="unit-3.html#answers">✍️ U3</a></div>
+<div class="pyq-row"><div class="q">Guidelines for quality specifications of plant materials and preparations</div><span class="pill essay">Essay 10m</span><span class="src o">AKTU 2022-23</span><span class="stars">★★</span><a class="go" href="unit-3.html#answers">✍️ U3</a> <a class="go" href="unit-1.html#answers">+U1</a></div>
+<div class="pyq-row"><div class="q">Research guidelines for evaluating the safety and efficacy of herbal medicines (MGR Mar 23: efficacy · RGUHS: safety)</div><span class="pill short">Short 5m</span><span class="src o">MGR Apr 2022</span><span class="src o">MGR Mar 2023</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★★★</span><a class="go" href="unit-3.html#answers">✍️ U3</a></div>
+<div class="pyq-row"><div class="q">Protocol for clinical guidelines in herbal medicine · how clinical trials could be performed for herbals (with example)</div><span class="pill short">Short 5m</span><span class="src o">MGR Apr 2022</span><span class="src o">AKTU 2022-23</span><span class="stars">★★</span><a class="go" href="unit-3.html#answers">✍️ U3</a></div>
+<div class="pyq-row"><div class="q">Give the clinical guidelines on assessment of safety and efficacy of herbal medicine</div><span class="pill short">Short 5m</span><span class="src o">MGR Aug 2023</span><span class="stars">★</span><a class="go" href="unit-3.html#answers">✍️ U3</a></div>
+<div class="pyq-row"><div class="q">Guidelines on clinical assessment of fixed combinations of herbal preparations</div><span class="pill short">Short 5m</span><span class="src o">MGR Mar 2023</span><span class="stars">★</span><a class="go" href="unit-3.html#answers">✍️ U3</a></div>
+<div class="pyq-row"><div class="q">What are the ethical considerations in the research of herbal medicine?</div><span class="pill short">Short 5m</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★</span><a class="go" href="unit-3.html#answers">✍️ U3</a></div>
+<div class="pyq-row"><div class="q">Examples of herbal drug interaction</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Apr 2022</span><span class="src o">MGR Mar 2023</span><span class="src o">MGR Aug 2023</span><span class="stars">★★★</span><a class="go" href="unit-3.html#answers">✍️ U3</a> <a class="go" href="unit-5.html#answers">+U5</a></div>
+<div class="pyq-row"><div class="q">EU guidelines for quality control of herbal drugs · significance of EU guidelines</div><span class="pill brief">Brief 2m</span><span class="src o">RGUHS Nov 2023</span><span class="src o">AKTU 2022-23</span><span class="stars">★★</span><a class="go" href="unit-3.html#answers">✍️ U3</a></div>
+<div class="pyq-row"><div class="q">Significance of ICH (guidelines)</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Apr 2022</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★★</span><a class="go" href="unit-3.html#answers">✍️ U3</a></div>
+<div class="pyq-row"><div class="q">Give the protocol for evaluation of drug safety in animals</div><span class="pill brief">Brief 2m</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★</span><a class="go" href="unit-3.html#answers">✍️ U3</a></div>
+<div class="pyq-row"><div class="q">Test for teratogenicity</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Mar 2023</span><span class="stars">★</span><a class="go" href="unit-3.html#answers">✍️ U3</a></div>
+<div class="pyq-row bank"><div class="q"><i>Also in the Brainkart question bank:</i> Non-clinical studies · mutagenicity (two methods) · clinical-trial protocol for safety · EU regulatory requirements · role of EMA’s herbal committee (HMPC) · “natural is not always safe”</div><span class="pill model">Question bank</span><span class="src b">Brainkart bank</span><a class="go" href="unit-3.html">📖 U3</a></div>
+<h3 id="u4-list" class="unit-head"><span class="ubadge">U4</span> Stability, Chromatography, NDA &amp; Export, GMP &amp; D&amp;C Act</h3>
+<p class="unit-meta">⏱️ 8 h · 📜 25 questions in the 6 papers · 🎯 KUHS model: <b>15 / 75 marks</b> · other universities: ≈16.3 / 75 · <a href="unit-4.html#answers">✍️ open Unit 4 model answers</a></p>
+<div class="pyq-row kuhs"><div class="q">What are the applications of HPTLC in herbal drug standardization?</div><span class="pill short">Short 5m</span><span class="src k">KUHS Model</span><span class="src o">MGR Mar 2023</span><span class="stars">★★★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row kuhs"><div class="q">Describe stability testing of herbal medicines · stability studies of herbal medicinal products</div><span class="pill short">Short 5m</span><span class="src k">KUHS Model</span><span class="src o">MGR Apr 2022</span><span class="stars">★★★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row kuhs"><div class="q">What documents are to be produced for new drug application and export registration?</div><span class="pill short">Short 5m</span><span class="src k">KUHS Model</span><span class="stars">★★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row"><div class="q">Describe chromatography techniques in the standardization of herbal drugs · applications of chromatography in standardization</div><span class="pill essay">Essay 10m</span><span class="src o">MGR Apr 2022 · short</span><span class="src o">MGR Aug 2023</span><span class="stars">★★★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row"><div class="q">Preparation of documents for new drug application</div><span class="pill essay">Essay 10m</span><span class="src o">MGR Apr 2022 · short</span><span class="src o">MGR Mar 2023</span><span class="stars">★★★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row"><div class="q">Explain the importance of HPLC &amp; HPTLC in standardization of herbal products</div><span class="pill essay">Essay 10m</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row"><div class="q">Protocol for stability testing · parameters to be included in a stability-testing protocol</div><span class="pill short">Short 5m</span><span class="src o">MGR Aug 2023</span><span class="src o">RGUHS Nov 2023</span><span class="src o">AKTU 2022-23</span><span class="stars">★★★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row"><div class="q">Discuss the role of HPLC in standardization of herbals</div><span class="pill short">Short 7m</span><span class="src o">AKTU 2022-23</span><span class="stars">★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row"><div class="q">What is gel permeation chromatography? Give its applications</div><span class="pill short">Short 7m</span><span class="src o">AKTU 2022-23</span><span class="stars">★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row"><div class="q">Enlist the documents required for export registration</div><span class="pill short">Short 5m</span><span class="src o">MGR Aug 2023</span><span class="stars">★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row"><div class="q">Difference between TLC &amp; HPTLC · define TLC and HPTLC</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Apr 2022</span><span class="src o">MGR Aug 2023</span><span class="stars">★★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row"><div class="q">Components of HPLC</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Aug 2023</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row"><div class="q">Define shelf life (and give its significance)</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Aug 2023</span><span class="src o">AKTU 2022-23</span><span class="stars">★★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row"><div class="q">Applications of TLC with reference to herbal drug standardization</div><span class="pill brief">Brief 2m</span><span class="src o">AKTU 2022-23</span><span class="stars">★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row"><div class="q">Application of gas chromatography</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Mar 2023</span><span class="stars">★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row"><div class="q">What is new drug application?</div><span class="pill brief">Brief 2m</span><span class="src o">AKTU 2022-23</span><span class="stars">★</span><a class="go" href="unit-4.html#answers">✍️ U4</a></div>
+<div class="pyq-row bank"><div class="q"><i>Also in the Brainkart question bank:</i> D&amp;C Act provisions for herbal &amp; traditional products · predictable changes on storage · factors affecting stability · challenges in shelf-life studies · advanced chromatographic techniques</div><span class="pill model">Question bank</span><span class="src b">Brainkart bank</span><a class="go" href="unit-4.html">📖 U4</a></div>
+<h3 id="u5-list" class="unit-head"><span class="ubadge">U5</span> Regulations, Pharmacovigilance, Pharmacopoeias &amp; Markers</h3>
+<p class="unit-meta">⏱️ 7 h · 📜 14 questions in the 6 papers · 🎯 KUHS model: <b>14 / 75 marks</b> · other universities: ≈7.5 / 75 · <a href="unit-5.html#answers">✍️ open Unit 5 model answers</a></p>
+<div class="pyq-row kuhs"><div class="q">Describe the regulatory requirements of herbal drugs (MGR: “Enumerate the regulatory requirement of herbal drugs”)</div><span class="pill essay">Essay 10m</span><span class="src k">KUHS Model</span><span class="src o">MGR Apr 2022</span><span class="stars">★★★</span><a class="go" href="unit-5.html#answers">✍️ U5</a></div>
+<div class="pyq-row kuhs"><div class="q">What are the specific objectives of herbal drug regulation?</div><span class="pill brief">Brief 2m</span><span class="src k">KUHS Model</span><span class="stars">★★</span><a class="go" href="unit-5.html#answers">✍️ U5</a></div>
+<div class="pyq-row kuhs"><div class="q">Define biomarker giving example</div><span class="pill brief">Brief 2m</span><span class="src k">KUHS Model</span><span class="stars">★★</span><a class="go" href="unit-5.html#answers">✍️ U5</a></div>
+<div class="pyq-row"><div class="q">Define and classify markers with examples · role of markers in standardization of herbal products</div><span class="pill short">Short 5m</span><span class="src o">MGR Aug 2023</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★★</span><a class="go" href="unit-5.html#answers">✍️ U5</a></div>
+<div class="pyq-row"><div class="q">Write a note on regulatory requirements for herbal medicines in India</div><span class="pill short">Short 5m</span><span class="src o">RGUHS Nov 2023</span><span class="stars">★</span><a class="go" href="unit-5.html#answers">✍️ U5</a></div>
+<div class="pyq-row"><div class="q">Explain the various herbal pharmacopoeias</div><span class="pill short">Short 5m</span><span class="src o">MGR Apr 2022</span><span class="stars">★</span><a class="go" href="unit-5.html#answers">✍️ U5</a></div>
+<div class="pyq-row"><div class="q">Comparative study of African Herbal Pharmacopoeia and British Herbal Pharmacopoeia</div><span class="pill short">Short 5m</span><span class="src o">MGR Mar 2023</span><span class="stars">★</span><a class="go" href="unit-5.html#answers">✍️ U5</a></div>
+<div class="pyq-row"><div class="q">Challenges in monitoring adverse drug reactions in herbal medicines</div><span class="pill short">Short 5m</span><span class="src o">MGR Mar 2023</span><span class="stars">★</span><a class="go" href="unit-5.html#answers">✍️ U5</a></div>
+<div class="pyq-row"><div class="q">Types of markers with examples · write a note on marker compounds</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Apr 2022</span><span class="src o">AKTU 2022-23</span><span class="stars">★★</span><a class="go" href="unit-5.html#answers">✍️ U5</a></div>
+<div class="pyq-row"><div class="q">What is AYUSH?</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Apr 2022</span><span class="stars">★</span><a class="go" href="unit-5.html#answers">✍️ U5</a></div>
+<div class="pyq-row"><div class="q">List out any four pharmacopoeias</div><span class="pill brief">Brief 2m</span><span class="src o">MGR Aug 2023</span><span class="stars">★</span><a class="go" href="unit-5.html#answers">✍️ U5</a></div>
+<div class="pyq-row bank"><div class="q"><i>Also in the Brainkart question bank:</i> WHO guidelines on safety monitoring in pharmacovigilance systems · ADR &amp; safety challenges · assessment of case reports · herbal monograph · Ayurvedic vs herbal pharmacopoeia · marker-based standardization</div><span class="pill model">Question bank</span><span class="src b">Brainkart bank</span><a class="go" href="unit-5.html">📖 U5</a></div>
+  <p class="hand">Psst, Mimosa… notice how the yellow rows cluster in Unit 1? Pascal would turn yellow too if he hid there. Eight of the nineteen model-paper questions live in that one unit! 🦎💛</p>
+</section>
+
+<!-- ===== 5. PREDICTIONS ===== -->
+<section class="section" id="predict">
+  <h2><span class="num">5</span> 🔮 Likely in December 2026</h2>
+  <div class="callout warn"><span class="callout-title">⚠️ Honest note</span>
+    <p>These are <b>educated predictions</b> from the KUHS model paper (weighted ×3) and the five other-university papers, not leaked questions. KUHS may repeat a model-paper question word for word, reword it, or ask a syllabus line nobody has asked yet, so the “also prepare” lists matter too.</p></div>
+
+  <div class="grid-2">
+    <div class="card c1"><span class="card-icon">📕</span><h4>Essay slot 1: expect Unit 1 or Unit 4</h4>
+      <ul>
+        <li><span class="priority must">MUST</span> WHO guidelines for quality control of herbal drugs <span class="utag">U1</span>: model-paper essay, essay at MGR (twice) and RGUHS.</li>
+        <li><span class="priority high">HIGH</span> Chromatographic techniques / HPTLC &amp; HPLC in standardization <span class="utag">U4</span>: essay at MGR Aug 2023 and RGUHS.</li>
+        <li><span class="priority high">HIGH</span> Stability testing of herbal products: challenges + protocol <span class="utag">U4</span>.</li>
+        <li><span class="priority med">MED</span> Physical / physicochemical evaluation of crude drugs <span class="utag">U1</span>: essay at AKTU.</li>
+      </ul></div>
+    <div class="card c2"><span class="card-icon">📕</span><h4>Essay slot 2: expect Unit 5, 2 or 3</h4>
+      <ul>
+        <li><span class="priority must">MUST</span> Regulatory requirements of herbal drugs <span class="utag">U5</span>: model-paper essay and MGR essay.</li>
+        <li><span class="priority high">HIGH</span> WHO cGMP for herbal medicines / GMP infrastructure <span class="utag">U2</span>: three essays elsewhere.</li>
+        <li><span class="priority high">HIGH</span> WHO GACP for medicinal plants <span class="utag">U2</span>: MGR essay, model-paper short note.</li>
+        <li><span class="priority med">MED</span> EU &amp; ICH guidelines for quality control of herbal drugs <span class="utag">U3</span>: both were MGR essays in 2023.</li>
+        <li><span class="priority med">MED</span> WHO research guidelines for evaluating safety &amp; efficacy <span class="utag">U3</span>.</li>
+        <li>🐴 <b>Dark horse:</b> WHO guidelines on safety monitoring of herbal medicines in pharmacovigilance systems <span class="utag">U5</span>, a full syllabus line never yet asked as an essay.</li>
+      </ul></div>
+  </div>
+
+  <h3>Short notes most likely (★ = KUHS model short note)</h3>
+  <div class="table-wrap"><table class="nice">
+    <tr><th>Unit</th><th>Most likely</th><th>Also prepare</th></tr>
+    <tr><td>U1</td><td>Foreign organic matter ★ · alcohol-soluble extractive value ★ · physical evaluation of crude drugs ★</td><td>Ash values · tests for alkaloids &amp; glycosides · quantitative microscopy (stomatal index, palisade ratio, vein-islet number, lycopodium method) · aflatoxins / heavy metals · moisture content</td></tr>
+    <tr><td>U2</td><td>WHO GAP / GACP ★</td><td>GLP in traditional system of medicine (asked in all 5 other papers!) · good practices for harvesting &amp; storage · GMP: premises and personal hygiene</td></tr>
+    <tr><td>U3</td><td>EU guidelines (THMPD, traditional-use registration) · ICH guidelines</td><td>Research guidelines for safety (toxicity studies) · clinical trials of herbal medicines · ethics in herbal research · fixed combinations</td></tr>
+    <tr><td>U4</td><td>Applications of HPTLC ★ · NDA &amp; export documents ★ · stability testing ★</td><td>HPLC (role + components) · GPC · Schedule T and D&amp;C Act provisions for ASU drugs · climatic zones</td></tr>
+    <tr><td>U5</td><td>Markers (chemical &amp; biological)</td><td>Comparison of herbal pharmacopoeias · WHO PV guidelines &amp; ADR challenges · herbal regulation in India</td></tr>
+  </table></div>
+
+  <h3>2-mark questions most likely</h3>
+  <div class="grid-2">
+    <div class="card c1"><h4>👑 Straight from the KUHS model paper</h4><ul>
+      <li>EU definition of herbal medicinal product <span class="utag">U3</span></li>
+      <li>Hazardous chemical contaminants in herbal formulations <span class="utag">U1</span></li>
+      <li>Specific objectives of herbal drug regulation <span class="utag">U5</span></li>
+      <li>Define herbal drug standardization · why it is essential <span class="utag">U1</span></li>
+      <li>What is cGMP? <span class="utag">U2</span></li>
+      <li>Define biomarker with an example <span class="utag">U5</span></li>
+      <li>Objective of ICH guidelines <span class="utag">U3</span></li>
+      <li>Why is safety evaluation more complex for herbals? <span class="utag">U3</span></li>
+      <li>One test for steroids (Salkowski or Liebermann–Burchard) <span class="utag">U1</span></li>
+    </ul></div>
+    <div class="card c2"><h4>🏮 Repeated by other universities</h4><ul>
+      <li>Ash value &amp; its types · extractive value &amp; significance <span class="utag">U1</span></li>
+      <li>Lycopodium spore formula · stomatal index · palisade ratio · types of stomata <span class="utag">U1</span></li>
+      <li>Swelling index · bitterness value · pesticides / weedicides with examples <span class="utag">U1</span><span class="utag">U2</span></li>
+      <li>Shelf life · climatic zones (India = IVb) · TLC vs HPTLC · components of HPLC <span class="utag">U4</span></li>
+      <li>SOP · processed vs finished herbal material <span class="utag">U2</span></li>
+      <li>Herb–drug interactions (asked at all 3 MGR exams) <span class="utag">U3</span></li>
+      <li>Significance of ICH · AYUSH · any four pharmacopoeias <span class="utag">U3</span><span class="utag">U5</span></li>
+    </ul></div>
+  </div>
+
+  <div class="callout pyq"><span class="callout-title">⏰ Overdue: syllabus lines almost nobody has asked yet</span>
+    <ul>
+      <li><b>Basic tests for pharmaceutical substances and dosage forms</b> <span class="utag">U1</span>: the first words of the syllabus, never asked in any of the six papers.</li>
+      <li><b>Evaluation of commercial crude drugs intended for use</b> <span class="utag">U1</span>: asked only in pieces (physical, biological, microscopical evaluation), never as the whole syllabus line.</li>
+      <li><b>WHO guidelines on safety monitoring of herbal medicines in pharmacovigilance systems</b> <span class="utag">U5</span>: asked only once, indirectly (ADR challenges, MGR Mar 2023).</li>
+      <li><b>Drugs &amp; Cosmetics Act provisions for ASU drugs / Schedule T</b> <span class="utag">U4</span>: never asked by name.</li>
+    </ul>
+    <p>Read their sections on the unit pages once; they are good candidates for a 2-mark or 5-mark surprise.</p></div>
+</section>
+
+<!-- ===== 6. MOCK PAPERS ===== -->
+<section class="section mock" id="mock">
+  <h2><span class="num">6</span> 📝 Mock Paper A &amp; Mock Paper B</h2>
+  <p class="lead">Both follow the exact KUHS format and cover all five units. Set a 3-hour timer, write on paper, then open the self-marking key. Unit tags show where to check each answer.</p>
+  <div class="callout tip"><span class="callout-title">⭐ How to self-mark</span>
+    <p><b>Essay (10):</b> definition/intro 1 · content under headings 5 · diagram or table 2 · example 1 · conclusion 1. <b>Short note (5):</b> definition 1 · points/procedure 3 · diagram, formula or example 1. <b>Brief (2):</b> exact definition 1 · two supporting points 1. Give a point only if the key word is actually on your page.</p>
+    <p><b>Your score:</b> 60+ = exam-ready 🌟 · 45–59 = revise the units where you lost most · below 45 = go back to the Top 12, then retry the other mock.</p></div>
+
+  <!-- ===== MOCK PAPER A ===== -->
+  <h3>Mock Paper A · “The Lantern Paper” (highest-probability topics)</h3>
+  <div class="paper">
+    <div class="paper-head"><b>Eighth Semester B.Pharm Degree Examination (2017 Scheme) · Mock Paper A</b><br>QUALITY CONTROL AND STANDARDIZATION OF HERBALS<br><small>Time: 3 Hours · Max. marks: 75 · Answer all questions · Draw diagrams wherever necessary</small></div>
+    <h4>Essays (2 × 10 = 20)</h4>
+    <ol>
+      <li>Explain the WHO guidelines for quality control of herbal drugs. Add a note on the determination of heavy metals and pesticide residues. <span class="utag">U1</span></li>
+      <li>What is stability testing? Discuss the challenges in stability testing of herbal products and give a suitable stability-testing protocol. <span class="utag">U4</span></li>
+    </ol>
+    <h4>Short notes (7 × 5 = 35)</h4>
+    <ol start="3">
+      <li>Describe the WHO guidelines on good agricultural and collection practices (GACP) for medicinal plants. <span class="utag">U2</span></li>
+      <li>Write a note on GLP in the traditional system of medicine. <span class="utag">U2</span></li>
+      <li>Explain the ICH guidelines relevant to the quality control of herbal drugs. <span class="utag">U3</span></li>
+      <li>Give the applications of HPTLC and HPLC in herbal drug standardization. <span class="utag">U4</span></li>
+      <li>Define and classify markers. Explain the role of chemical and biological markers in the standardization of herbal products. <span class="utag">U5</span></li>
+      <li>Describe the chemical tests for alkaloids and glycosides in medicinal plant materials. <span class="utag">U1</span></li>
+      <li>Write a note on the WHO guidelines on safety monitoring of herbal medicines in pharmacovigilance systems. <span class="utag">U5</span></li>
+    </ol>
+    <h4>Answer briefly (10 × 2 = 20)</h4>
+    <ol start="10">
+      <li>Define ash value. Name the types of ash values. <span class="utag">U1</span></li>
+      <li>Define stomatal index and give its formula. <span class="utag">U1</span></li>
+      <li>What are the objectives of GAP? <span class="utag">U2</span></li>
+      <li>What is traditional-use registration under Directive 2004/24/EC? <span class="utag">U3</span></li>
+      <li>What is teratogenicity testing? <span class="utag">U3</span></li>
+      <li>Define shelf life. <span class="utag">U4</span></li>
+      <li>What is Schedule T? <span class="utag">U4</span></li>
+      <li>Mention the climatic zones for stability testing. Which zone applies to India? <span class="utag">U4</span></li>
+      <li>Name any four herbal pharmacopoeias. <span class="utag">U5</span></li>
+      <li>Give two examples of herb–drug interactions. <span class="utag">U3</span></li>
+    </ol>
+    <p><small><b>Marks per unit in Paper A:</b> U1 19 · U2 12 · U3 11 · U4 21 · U5 12 = 75</small></p>
+  </div>
+
+  <details class="rubric">
+    <summary>🔑 Mock Paper A · self-marking key (open only after you finish writing)</summary>
+    <div>
+    <div class="table-wrap"><table class="nice rubric">
+      <tr><th>Q</th><th>Tick these points (marks)</th><th>Check</th></tr>
+      <tr><td>1 (10)</td><td>Intro: WHO QC methods manual (1998, updated 2011) for identity, purity and safety (1) · parameter table: sampling, macroscopy &amp; microscopy, foreign matter, TLC, ash values, extractive values, water &amp; volatile oil, loss on drying, swelling &amp; foaming index, bitterness, haemolytic activity, tannins (3) · heavy metals: wet digestion then AAS or limit test; limits Pb 10, Cd 0.3 mg/kg (WHO), As 3, Hg 1 mg/kg (AYUSH/API) (2) · pesticide residues: organochlorine and organophosphorus types; extraction → clean-up → GC; ARL formula (2) · flowchart sample → identity → purity → contaminants → assay (1) · conclusion (1)</td><td><a href="unit-1.html#answers">U1</a></td></tr>
+      <tr><td>2 (10)</td><td>Definition of stability and shelf life (1) · challenges: complex mixtures, actives often unknown, raw-material variation, moisture &amp; microbes, volatile constituents, no single assay (2) · protocol: at least 3 batches, final container, conditions table: long-term 30 °C/75 % RH (Zone IVb, India), accelerated 40 °C/75 % RH for 6 months (3) · test points 0, 3, 6, 9, 12, 18, 24 months then yearly; tests: organoleptic, physicochemical (pH, moisture, viscosity), marker assay / HPTLC fingerprint, microbial limits (2) · timeline diagram (1) · evaluation → shelf life + conclusion (1)</td><td><a href="unit-4.html#answers">U4</a></td></tr>
+      <tr><td>3 (5)</td><td>WHO GACP (2003) and its aim (1) · authentication with voucher specimen, seeds &amp; propagation material (1) · cultivation: site, climate, soil, irrigation, fertilisers, crop protection with minimum pesticide (1) · harvest timing, wild-collection permits &amp; sustainability, primary processing: sorting, drying, packaging, storage, transport (1) · personnel, documentation + chain diagram (1)</td><td><a href="unit-2.html#answers">U2</a></td></tr>
+      <tr><td>4 (5)</td><td>GLP = quality system for how non-clinical studies are planned, performed, monitored, recorded, reported and archived; TSM = Ayurveda, Siddha, Unani etc. (1) · organisation &amp; personnel: study director, QA unit (1) · facilities, equipment calibration, SOPs (1) · test items: authenticated herbs, voucher, characterisation; study plan &amp; raw data (1) · final report &amp; archiving (1)</td><td><a href="unit-2.html#answers">U2</a></td></tr>
+      <tr><td>5 (5)</td><td>ICH: founded 1990 by regulators and industry of the EU, Japan and USA (1) · objectives: harmonised technical requirements, no duplicate testing, faster access to medicines (1) · Q-series: Q1A–Q1E stability, Q2 analytical validation, Q3 impurities (Q3C residual solvents, Q3D elemental impurities), Q6 specifications, Q7 GMP for APIs (2) · use for herbals: stability conditions, validating HPTLC/HPLC methods, residual solvents in extracts (1)</td><td><a href="unit-3.html#answers">U3</a></td></tr>
+      <tr><td>6 (5)</td><td>HPTLC steps flow: sample → band application → development → derivatisation → densitometric scan → fingerprint (2) · HPTLC uses: identity fingerprint, adulterant detection, marker quantification, batch consistency (1) · HPLC components: reservoir, pump, injector, C18 column, UV/PDA detector, data system (1) · HPLC uses with examples: curcuminoids (turmeric), glycyrrhizin (liquorice), andrographolide (kalmegh) (1)</td><td><a href="unit-4.html#answers">U4</a></td></tr>
+      <tr><td>7 (5)</td><td>Definition: chemically defined constituents used for control purposes, whether or not they are therapeutically active (1) · chemical: active markers (sennosides in senna, hyperforin) vs analytical markers (hypericin, valerenic acid); negative markers (ginkgolic acids, aristolochic acids) (2) · biological markers: bioassays / enzyme assays, DNA markers for identity (1) · role: identity, batch consistency, stability, dose (1)</td><td><a href="unit-5.html#answers">U5</a></td></tr>
+      <tr><td>8 (5)</td><td>Extract preparation (1) · alkaloids: Dragendorff (orange-red ppt), Mayer (cream ppt), Wagner (reddish-brown ppt), Hager (yellow ppt) (2) · glycosides: Keller–Killiani (cardiac: reddish-brown ring, bluish-green upper layer), Legal, Baljet; Borntrager (anthraquinone: pink-red ammoniacal layer) (2)</td><td><a href="unit-1.html#answers">U1</a></td></tr>
+      <tr><td>9 (5)</td><td>WHO 2004 guideline and aims (1) · why herbals need special PV: self-medication, misidentification, adulteration, confusing names, under-reporting, interactions (1) · who reports what: patients, pharmacists, doctors, traditional practitioners; suspected reaction + product, batch, plant name (1) · causality assessment, signal detection, national centre → WHO Uppsala Monitoring Centre (1) · communication, regulatory action, pharmacist's role (1)</td><td><a href="unit-5.html#answers">U5</a></td></tr>
+      <tr><td>10</td><td>Residue left after incineration = inorganic matter (1) · total, acid-insoluble, water-soluble, sulphated ash (1)</td><td><a href="unit-1.html#answers">U1</a></td></tr>
+      <tr><td>11</td><td>SI = S ÷ (E + S) × 100 (1) · S = stomata, E = epidermal cells in the same area; constant for a species, helps tell related species apart (1)</td><td><a href="unit-1.html#answers">U1</a></td></tr>
+      <tr><td>12</td><td>Any four: quality and safe raw material · sustainable cultivation/collection · minimum contamination (pesticides, heavy metals, microbes) · traceability &amp; records (2)</td><td><a href="unit-2.html#answers">U2</a></td></tr>
+      <tr><td>13</td><td>Simplified EU route for traditional herbal medicinal products (1) · ≥ 30 years of medicinal use incl. ≥ 15 years in the EU; efficacy plausible from long use, no clinical trials; safety from bibliography + expert report (1)</td><td><a href="unit-3.html#answers">U3</a></td></tr>
+      <tr><td>14</td><td>Tests whether a drug causes birth defects (1) · pregnant animals (rat/rabbit) dosed during organogenesis; foetuses examined for visceral and skeletal defects (1)</td><td><a href="unit-3.html#answers">U3</a></td></tr>
+      <tr><td>15</td><td>Time during which a product, stored as labelled, stays within its specifications (1) · fixed from stability data; printed as the expiry date (1)</td><td><a href="unit-4.html#answers">U4</a></td></tr>
+      <tr><td>16</td><td>GMP for Ayurvedic, Siddha &amp; Unani medicines in the Drugs and Cosmetics Rules, 1945, under Rule 157 (1) · Part I: premises, raw-material testing, hygiene, records; Part II: equipment &amp; space; needed for the manufacturing licence (1)</td><td><a href="unit-4.html#answers">U4</a></td></tr>
+      <tr><td>17</td><td>Zone I 21 °C/45 % RH · II 25 °C/60 % · III 30 °C/35 % · IVa 30 °C/65 % · IVb 30 °C/75 % (1) · India = Zone IVb (1)</td><td><a href="unit-4.html#answers">U4</a></td></tr>
+      <tr><td>18</td><td>Any four: Ayurvedic Pharmacopoeia of India, British Herbal Pharmacopoeia, Chinese Pharmacopoeia, Japanese Pharmacopoeia, European Pharmacopoeia, USP, African Herbal Pharmacopoeia (2)</td><td><a href="unit-5.html#answers">U5</a></td></tr>
+      <tr><td>19</td><td>St John's wort lowers cyclosporine and oral-contraceptive levels (enzyme induction) (1) · ginkgo with warfarin or aspirin raises bleeding risk (1)</td><td><a href="unit-3.html#answers">U3</a> · <a href="unit-5.html#answers">U5</a></td></tr>
+    </table></div>
+    </div>
+  </details>
+
+  <!-- ===== MOCK PAPER B ===== -->
+  <h3>Mock Paper B · “The Tower Paper” (the rest of the syllabus)</h3>
+  <div class="paper">
+    <div class="paper-head"><b>Eighth Semester B.Pharm Degree Examination (2017 Scheme) · Mock Paper B</b><br>QUALITY CONTROL AND STANDARDIZATION OF HERBALS<br><small>Time: 3 Hours · Max. marks: 75 · Answer all questions · Draw diagrams wherever necessary</small></div>
+    <h4>Essays (2 × 10 = 20)</h4>
+    <ol>
+      <li>What is cGMP? Discuss the WHO guidelines on good manufacturing practices for herbal medicines. <span class="utag">U2</span></li>
+      <li>Describe the regulatory requirements for herbal medicines in India, the USA and the European Union. <span class="utag">U5</span></li>
+    </ol>
+    <h4>Short notes (7 × 5 = 35)</h4>
+    <ol start="3">
+      <li>Explain the procedure and significance of microscopic evaluation of crude drugs, including quantitative microscopy. <span class="utag">U1</span></li>
+      <li>Describe the determination of ash values and give their significance. <span class="utag">U1</span></li>
+      <li>Write a note on the EU guidelines for herbal medicinal products. <span class="utag">U3</span></li>
+      <li>Explain the WHO research guidelines for evaluating the safety of herbal medicines. <span class="utag">U3</span></li>
+      <li>Write a note on the provisions of the Drugs and Cosmetics Act for Ayurvedic, Siddha and Unani drugs. <span class="utag">U4</span></li>
+      <li>Discuss the role of HPLC in the standardization of herbal drugs. <span class="utag">U4</span></li>
+      <li>Compare the various herbal pharmacopoeias. <span class="utag">U5</span></li>
+    </ol>
+    <h4>Answer briefly (10 × 2 = 20)</h4>
+    <ol start="10">
+      <li>Define swelling index. Give its significance. <span class="utag">U1</span></li>
+      <li>What is haemolytic activity? For which constituents is it determined? <span class="utag">U1</span></li>
+      <li>Define SOP. <span class="utag">U2</span></li>
+      <li>What are weedicides? Give two examples. <span class="utag">U2</span></li>
+      <li>What is the role of the HMPC? <span class="utag">U3</span></li>
+      <li>Name any four ICH quality guidelines with their topics. <span class="utag">U3</span></li>
+      <li>What is accelerated stability testing? <span class="utag">U4</span></li>
+      <li>What is a Certificate of Pharmaceutical Product (COPP)? <span class="utag">U4</span></li>
+      <li>Differentiate active markers and analytical markers. <span class="utag">U5</span></li>
+      <li>Define pharmacovigilance. <span class="utag">U5</span></li>
+    </ol>
+    <p><small><b>Marks per unit in Paper B:</b> U1 14 · U2 14 · U3 14 · U4 14 · U5 19 = 75. Together, Papers A and B cover all five units. For a third practice run, write the KUHS model paper itself (the yellow rows in section 4).</small></p>
+  </div>
+
+  <details class="rubric">
+    <summary>🔑 Mock Paper B · self-marking key (open only after you finish writing)</summary>
+    <div>
+    <div class="table-wrap"><table class="nice rubric">
+      <tr><th>Q</th><th>Tick these points (marks)</th><th>Check</th></tr>
+      <tr><td>1 (10)</td><td>GMP = part of quality assurance that makes sure products are consistently produced and controlled to quality standards; “c” = current; WHO GMP for herbal medicines (2007) (1) · QA elements: sanitation &amp; hygiene, qualification &amp; validation, complaints, recalls, contract work, self-inspection (2) · personnel training &amp; personal hygiene; premises: separate storage, dust control during cutting/milling, pest control; equipment (2) · materials &amp; documentation: specification of herbal substance (botanical name, part used, source, markers, limits), batch records, reference samples (2) · good practices in production &amp; QC: sampling, testing, stability, retained samples (1) · flow diagram of materials through the premises (1) · India: Schedule T + conclusion (1)</td><td><a href="unit-2.html#answers">U2</a></td></tr>
+      <tr><td>2 (10)</td><td>Objectives of regulation: safety, quality, efficacy, rational use (1) · India: D&amp;C Act 1940 Chapter IVA + Rules 1945; manufacturing licence from the State Licensing Authority (Form 25-D); Schedule T GMP; Schedule E1 &amp; labelling; classical vs patent/proprietary ASU drugs; phytopharmaceutical drugs through CDSCO; Ministry of Ayush (3) · USA: DSHEA 1994: herbals sold as dietary supplements, no pre-market approval, structure/function claims with disclaimer, FDA acts if unsafe; botanical drugs need an NDA (2) · EU: 2001/83/EC + 2004/24/EC: full MA, well-established use (≥ 10 years in EU), traditional-use registration (30 years incl. 15 in EU); HMPC monographs (2) · comparison table (1) · WHO's role + conclusion (1)</td><td><a href="unit-5.html#answers">U5</a></td></tr>
+      <tr><td>3 (5)</td><td>Sections / powder; stains: phloroglucinol + HCl (lignin, pink-red), iodine (starch, blue), Sudan III (oil, red) (1) · diagnostic features: trichomes, stomata, calcium oxalate crystals, starch grains (1) · quantitative: stomatal number &amp; index, vein-islet &amp; vein-termination number, palisade ratio (1) · lycopodium method: % purity = N × W × 94,000 × 100 ÷ (S × M × P) (1) · significance: identity of powders, adulterant detection, telling species apart (1)</td><td><a href="unit-1.html#answers">U1</a></td></tr>
+      <tr><td>4 (5)</td><td>Definition + significance: inorganic residue; shows earthy matter, sand, exhausted drug (1) · total ash: incinerate a weighed sample in a tared crucible until carbon-free (1) · acid-insoluble ash: boil total ash with dilute HCl, collect on ashless filter paper, ignite → silica/sand (1) · water-soluble ash: boil with water; loss in weight = water-soluble part (1) · sulphated ash with H₂SO₄; % ash = weight of ash ÷ weight of drug × 100 on air-dried basis (1)</td><td><a href="unit-1.html#answers">U1</a></td></tr>
+      <tr><td>5 (5)</td><td>Directive 2001/83/EC amended by 2004/24/EC (THMPD) (1) · definitions: herbal medicinal product, herbal substance, herbal preparation (1) · routes: full MA with own data · well-established use (≥ 10 years in EU, bibliographic) · traditional-use registration (30 years incl. 15 in EU) (2) · HMPC (2004): EU herbal monographs &amp; EU list; EMA quality guideline on herbal substances/preparations (1)</td><td><a href="unit-3.html#answers">U3</a></td></tr>
+      <tr><td>6 (5)</td><td>WHO 1993 research guidelines (reproduced in WHO 2000 methodology guidelines) (1) · acute (single-dose) toxicity in animals: signs, deaths, approximate lethal dose (1) · repeated-dose toxicity with duration tied to clinical use: &lt; 1 week → 2 weeks–1 month · 1–4 weeks → 4 weeks–3 months · 1–6 months → 3–6 months · &gt; 6 months → 9–12 months (2) · special tests: local toxicity, sensitisation, mutagenicity, carcinogenicity, reproductive/teratogenicity; observations: weight, haematology, biochemistry, histopathology (1)</td><td><a href="unit-3.html#answers">U3</a></td></tr>
+      <tr><td>7 (5)</td><td>Chapter IVA of the D&amp;C Act 1940: special provisions for ASU drugs (1) · definitions of ASU drug; misbranded, adulterated, spurious ASU drugs; penalties (1) · licensing: application Form 24-D, licence Form 25-D from the State Licensing Authority (1) · Schedule T GMP (Rule 157), Schedule E1 poisonous ingredients, labelling, shelf life (Rule 161-B) (1) · ASU Drugs Technical Advisory Board &amp; Consultative Committee; analysts and inspectors (1)</td><td><a href="unit-4.html#answers">U4</a></td></tr>
+      <tr><td>8 (5)</td><td>Principle: separation on a fine-particle column under high pressure, usually reverse phase C18 (1) · block diagram: reservoir → pump → injector → column → detector (UV/PDA) → data system (2) · uses: marker assay (curcuminoids, glycyrrhizin, andrographolide), fingerprinting, stability-indicating assay, adulterant detection (1) · advantages: precise, sensitive, validated as per ICH Q2 (1)</td><td><a href="unit-4.html#answers">U4</a></td></tr>
+      <tr><td>9 (5)</td><td>Pharmacopoeia = official book of drug standards (1) · table: API (India, Ministry of Ayush) · BHP (UK) · Ph. Eur. · USP · Chinese · Japanese · African Herbal Pharmacopoeia · WHO monographs on selected medicinal plants (2) · compare scope (single herbs vs formulations), tests (macroscopy, microscopy, TLC, assay, limits) and legal status (1) · conclusion: need for harmonisation (1)</td><td><a href="unit-5.html#answers">U5</a></td></tr>
+      <tr><td>10</td><td>Volume in mL taken up by the swelling of 1 g of plant material under specified conditions (1) · for mucilage drugs, e.g. ispaghula, linseed (1)</td><td><a href="unit-1.html#answers">U1</a></td></tr>
+      <tr><td>11</td><td>Ability of saponins to burst red blood cells (1) · measured against a reference saponin using diluted blood (haemolytic index); for saponin-containing drugs (1)</td><td><a href="unit-1.html">U1</a></td></tr>
+      <tr><td>12</td><td>Authorised written step-by-step instructions for a routine operation (1) · e.g. cleaning a dryer, running the HPTLC; part of GMP/GLP documentation (1)</td><td><a href="unit-2.html#answers">U2</a></td></tr>
+      <tr><td>13</td><td>Chemicals (herbicides) used to kill weeds (1) · e.g. 2,4-D, glyphosate, paraquat; residues are limited under GACP (1)</td><td><a href="unit-2.html#answers">U2</a></td></tr>
+      <tr><td>14</td><td>Committee on Herbal Medicinal Products of the EMA, set up in 2004 (1) · writes EU herbal monographs and the EU list of traditional herbal substances; scientific opinions for member states (1)</td><td><a href="unit-3.html#answers">U3</a></td></tr>
+      <tr><td>15</td><td>Any four: Q1A(R2) stability testing · Q1B photostability · Q2(R2) validation of analytical procedures · Q3C residual solvents · Q6A specifications · Q7 GMP for APIs (2)</td><td><a href="unit-3.html#answers">U3</a></td></tr>
+      <tr><td>16</td><td>Storage under exaggerated conditions to speed up degradation and predict shelf life (1) · ICH: 40 ± 2 °C / 75 ± 5 % RH for 6 months; a significant change triggers intermediate testing at 30 °C/65 % RH (1)</td><td><a href="unit-4.html#answers">U4</a></td></tr>
+      <tr><td>17</td><td>Certificate in the WHO-recommended format issued by the drug regulatory authority of the exporting country (1) · confirms the product's status and that the manufacturing site follows GMP and is inspected; needed for registration abroad (1)</td><td><a href="unit-4.html#answers">U4</a></td></tr>
+      <tr><td>18</td><td>Active marker: accepted to contribute to activity, e.g. sennosides in senna (1) · analytical marker: used only for identity/assay control, e.g. hypericin in St John's wort, valerenic acid in valerian (1)</td><td><a href="unit-5.html#answers">U5</a></td></tr>
+      <tr><td>19</td><td>WHO: the science and activities relating to the detection, assessment, understanding and prevention of adverse effects or any other drug-related problem (1) · for herbals: WHO 2004 guidelines; national centres report to the WHO Uppsala Monitoring Centre (1)</td><td><a href="unit-5.html#answers">U5</a></td></tr>
+    </table></div>
+    </div>
+  </details>
+</section>
+
+<!-- ===== 7. EXAM-HALL TIPS ===== -->
+<section class="section" id="tips">
+  <h2><span class="num">7</span> 🏰 Exam-Hall Tips</h2>
+  <div class="grid-2">
+    <div class="card c1"><span class="card-icon">⏱️</span><h4>Run the clock</h4>Read all 19 questions first and tick the ones you know. Then essays → short notes → briefs. Checkpoints: <b>0:50</b> essays done · <b>2:15</b> short notes done · <b>2:50</b> briefs done · last 10 min revision. All questions are compulsory: never leave a blank.</div>
+    <div class="card c2"><span class="card-icon">📅</span><h4>Quote the source and the year</h4>WHO QC methods 1998 (updated 2011) · ICH 1990 · WHO safety &amp; efficacy research guidelines 1993 · DSHEA 1994 · WHO GACP 2003 · EU THMPD 2004/24/EC and HMPC 2004 · WHO PV guidelines for herbals 2004 · WHO GMP for herbal medicines 2007 · Schedule T under Rule 157.</div>
+    <div class="card c1"><span class="card-icon">🧮</span><h4>Drop in a formula</h4>% foreign matter, % ash and % extractive (all on air-dried basis) · stomatal index S ÷ (E + S) × 100 · lycopodium % purity = N × W × 94,000 × 100 ÷ (S × M × P) · Rf = distance moved by spot ÷ distance moved by solvent front.</div>
+    <div class="card c2"><span class="card-icon">✏️</span><h4>Draw for marks</h4>HPTLC step flow · HPLC block diagram · TLC plate with Rf · GACP chain · stability timeline &amp; climatic-zone table · ash-value flowchart · the four stomata types · a regulation comparison table (India / USA / EU).</div>
+    <div class="card c1"><span class="card-icon">🌿</span><h4>Always name a herb</h4>Turmeric (curcuminoids) · ashwagandha (withanolides) · senna (sennosides) · liquorice (glycyrrhizin) · kalmegh (andrographolide) · St John's wort (hyperforin) · ispaghula (swelling index) · ginkgo (bleeding with warfarin).</div>
+    <div class="card c2"><span class="card-icon">🍎</span><h4>Use the exact words</h4>Write “identity, purity, quality, safety”, “traditional herbal medicinal product”, “well-established use”, “active vs analytical marker”. And never write that herbals are safe because they are natural: the poisoned apple looked natural too!</div>
+  </div>
+  <p class="hand">Psst, Mimosa… if your mind goes blank, do what Rapunzel did with her frying pan: grab the nearest tool. Start with the definition, draw the diagram, and the headings will come back to you. 🍳🌼</p>
+</section>
+
+<!-- ===== 8. NIGHT-BEFORE CHECKLIST ===== -->
+<section class="cheatsheet" id="night">
+  <h2>🌙 Night-Before Checklist</h2>
+  <p><small>Tick each one after you can say it aloud without looking. Your ticks are saved on this device.</small></p>
+  <div class="grid-2">
+    <div class="card"><h4>📗 Units 1 &amp; 2</h4>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> WHO QC parameter list in order: macro → micro → foreign matter → ash → extractive → moisture → special values → contaminants</label></li>
+        <li><label><input type="checkbox"> 4 ash values + formula; extractive value steps (shake 6 h, stand 18 h, evaporate an aliquot, dry at 105 °C)</label></li>
+        <li><label><input type="checkbox"> Foreign-matter %, stomatal index, palisade ratio, lycopodium formula (94,000 spores per mg)</label></li>
+        <li><label><input type="checkbox"> Limits: Pb 10 · Cd 0.3 · As 3 · Hg 1 mg/kg</label></li>
+        <li><label><input type="checkbox"> Alkaloid &amp; glycoside test colours; Salkowski / Liebermann–Burchard for steroids</label></li>
+        <li><label><input type="checkbox"> GACP chain: seed → cultivation → harvest → primary processing → packaging → storage → transport</label></li>
+        <li><label><input type="checkbox"> cGMP headings, GLP in TSM, SOP definition</label></li>
+      </ul></div>
+    <div class="card"><h4>📕 Units 3, 4 &amp; 5</h4>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> EU: 2001/83/EC, 2004/24/EC, 30 years (15 in EU), well-established use 10 years, HMPC</label></li>
+        <li><label><input type="checkbox"> ICH 1990 + Q1 to Q7 list; why herbal safety evaluation is complex</label></li>
+        <li><label><input type="checkbox"> Stability: Zone IVb 30 °C/75 % RH · accelerated 40 °C/75 % RH × 6 months · test points</label></li>
+        <li><label><input type="checkbox"> HPTLC steps and HPLC block diagram</label></li>
+        <li><label><input type="checkbox"> NDA &amp; export documents: COPP, free-sale certificate, GMP certificate, manufacturing licence, product dossier</label></li>
+        <li><label><input type="checkbox"> Schedule T (Rule 157), Chapter IVA, Form 25-D, Schedule E1</label></li>
+        <li><label><input type="checkbox"> Regulation trio: India · USA (DSHEA 1994) · EU (THMPD)</label></li>
+        <li><label><input type="checkbox"> Markers: active vs analytical vs negative + biomarker example; 3 herb–drug interactions</label></li>
+      </ul></div>
+  </div>
+  <div class="card" style="margin-top:10px"><h4>🎒 Exam bag</h4>
+    <ul class="checklist">
+      <li><label><input type="checkbox"> Hall ticket + college ID</label></li>
+      <li><label><input type="checkbox"> Two blue/black pens, pencil, eraser, scale (for diagrams and tables)</label></li>
+      <li><label><input type="checkbox"> Watch, water bottle, and a good night's sleep 😴</label></li>
+    </ul></div>
+</section>
+
+<!-- ===== 9. BADGE ===== -->
+<section class="badge-unlock">
+  <span class="medal">🏮👑</span>
+  <h2>Badge Unlocked: Keeper of the Lantern Map!</h2>
+  <p>Mimosa, you have charted every question KUHS and its neighbours have asked about herbal quality control. Rapunzel spent years waiting to see the lanterns up close; you are seeing yours before the exam even begins. Go and shine on 28 December! 💜🌼</p>
+  <ul class="checklist">
+    <li><label><input type="checkbox"> I can explain the three source layers and why the KUHS model paper weighs most</label></li>
+    <li><label><input type="checkbox"> I can list the Top 12 topics from memory</label></li>
+    <li><label><input type="checkbox"> I have written Mock Paper A in 3 hours and marked it</label></li>
+    <li><label><input type="checkbox"> I have written Mock Paper B in 3 hours and marked it</label></li>
+    <li><label><input type="checkbox"> I can draw the 6-step essay plan, the HPTLC flow and the GACP chain</label></li>
+  </ul>
+</section>
+
+<!-- ===== 10. FOOTER NAV ===== -->
+<nav class="next-nav">
+  <a href="unit-5.html"><small>⬅ Back to</small>Unit 5 · Regulations, Pharmacovigilance, Pharmacopoeias &amp; Markers</a>
+  <a class="next" href="../index.html"><small>Next adventure ➜</small>🏰 Kingdom Home</a>
+</nav>
+<p class="footer-love">Made with 💖 for Mimosa · B.Pharm Final Semester · KUHS 2017 Scheme</p>
+
+</div>
+</body>
+</html>
